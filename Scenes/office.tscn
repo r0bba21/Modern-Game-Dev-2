@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx2leahlppq4k"]
+
+[ext_resource type="Texture2D" uid="uid://2yy72ry4wst4" path="res://Assets/Backdrops/options.png" id="1_cdxys"]
+[ext_resource type="PackedScene" uid="uid://deskdqbrni8oa" path="res://Scenes/office_ui.tscn" id="2_bytoo"]
+
+[node name="Office" type="Node2D"]
+
+[node name="Options" type="Sprite2D" parent="."]
+texture = ExtResource("1_cdxys")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Office UI" parent="." instance=ExtResource("2_bytoo")]

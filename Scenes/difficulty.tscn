@@ -1,0 +1,218 @@
+[gd_scene load_steps=14 format=3 uid="uid://cbbw0ytomxkly"]
+
+[ext_resource type="Texture2D" uid="uid://2yy72ry4wst4" path="res://Assets/Backdrops/options.png" id="1_4me6v"]
+[ext_resource type="Script" path="res://Scenes/difficulty.gd" id="1_7gmah"]
+[ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="2_xhjfu"]
+[ext_resource type="Texture2D" uid="uid://dbr18m52hb2u" path="res://Assets/UI/baby-face (1).png" id="3_bk7up"]
+[ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="4_y0w4n"]
+[ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="5_p8w2g"]
+[ext_resource type="Texture2D" uid="uid://b4i6jssbac6qs" path="res://Assets/UI/techno-heart (1).png" id="6_0282a"]
+[ext_resource type="Texture2D" uid="uid://da0ffxi5wkmxe" path="res://Assets/UI/shattered-heart (2).png" id="7_q8ira"]
+[ext_resource type="StyleBox" uid="uid://dqutvjhnd0l0t" path="res://Assets/UI/menu_hover_blue.tres" id="8_qve5x"]
+[ext_resource type="StyleBox" uid="uid://b1007c7d3lso6" path="res://Assets/UI/menu_blue.tres" id="9_a0sp8"]
+[ext_resource type="Texture2D" uid="uid://cvvcdkusuv22h" path="res://Assets/UI/william-tell-skull (1).png" id="10_krv14"]
+[ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="11_skv2i"]
+[ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="12_m4ndm"]
+
+[node name="Difficulty" type="Node2D"]
+script = ExtResource("1_7gmah")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Backdrop" type="TextureRect" parent="Camera2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4me6v")
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -896.0
+offset_top = 18.0
+offset_right = 896.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="Easy" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_constants/icon_max_width = 0
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 100
+theme_override_icons/icon = ExtResource("3_bk7up")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_y0w4n")
+theme_override_styles/hover_pressed = ExtResource("4_y0w4n")
+theme_override_styles/hover = ExtResource("4_y0w4n")
+theme_override_styles/pressed = ExtResource("4_y0w4n")
+theme_override_styles/normal = ExtResource("5_p8w2g")
+text = "EASY
+
+"
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Easy"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -668.0
+offset_top = -112.0
+offset_right = 867.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 68
+text = "160% productivity, 130% sales, 120% pricing"
+horizontal_alignment = 1
+
+[node name="Normal" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 100
+theme_override_icons/icon = ExtResource("6_0282a")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_y0w4n")
+theme_override_styles/hover_pressed = ExtResource("4_y0w4n")
+theme_override_styles/hover = ExtResource("4_y0w4n")
+theme_override_styles/pressed = ExtResource("4_y0w4n")
+theme_override_styles/normal = ExtResource("5_p8w2g")
+text = "NORMAL
+
+"
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer/Normal"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -668.0
+offset_top = -114.0
+offset_right = 867.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 68
+text = "100% productivity, 100% sales, 100% pricing"
+horizontal_alignment = 1
+
+[node name="Hard" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 100
+theme_override_icons/icon = ExtResource("7_q8ira")
+theme_override_styles/hover_pressed_mirrored = ExtResource("8_qve5x")
+theme_override_styles/hover_pressed = ExtResource("8_qve5x")
+theme_override_styles/hover = ExtResource("8_qve5x")
+theme_override_styles/pressed = ExtResource("8_qve5x")
+theme_override_styles/normal = ExtResource("9_a0sp8")
+text = "HARD
+
+"
+
+[node name="Label3" type="Label" parent="Control/VBoxContainer/Hard"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -668.0
+offset_top = -113.0
+offset_right = 867.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 68
+text = "70% productivity, 65% sales, 60% pricing"
+horizontal_alignment = 1
+
+[node name="Impossible" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 100
+theme_override_icons/icon = ExtResource("10_krv14")
+theme_override_styles/hover_pressed_mirrored = ExtResource("11_skv2i")
+theme_override_styles/hover_pressed = ExtResource("11_skv2i")
+theme_override_styles/hover = ExtResource("11_skv2i")
+theme_override_styles/pressed = ExtResource("11_skv2i")
+theme_override_styles/normal = ExtResource("12_m4ndm")
+text = "IMPOSSIBLE
+
+"
+
+[node name="Label4" type="Label" parent="Control/VBoxContainer/Impossible"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -668.0
+offset_top = -110.0
+offset_right = 867.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 68
+text = "45% productivity, 40% sales, 40% pricing"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Control/VBoxContainer/Easy" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Normal" to="." method="_on_normal_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Hard" to="." method="_on_hard_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Impossible" to="." method="_on_impossible_pressed"]

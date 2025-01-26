@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://deskdqbrni8oa"]
+
+[ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
+[ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
+[ext_resource type="AudioStream" uid="uid://by52yorlkoepd" path="res://Assets/Music/D.MP3" id="3_p2eyy"]
+[ext_resource type="AudioStream" uid="uid://cptms4qpuvuw5" path="res://Assets/Music/F.MP3" id="4_lo43g"]
+[ext_resource type="AudioStream" uid="uid://vgsr7yxcqj11" path="res://Assets/Music/T.MP3" id="5_ldakp"]
+[ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="6_fk8re"]
+
+[node name="Office UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_frgb8")
+
+[node name="Sounds" type="Node2D" parent="."]
+position = Vector2(451, 91)
+
+[node name="Mouse" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("2_cow7g")
+volume_db = 1.0
+bus = &"SFX"
+
+[node name="Dullmouse" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("3_p2eyy")
+volume_db = 5.5
+bus = &"SFX"
+
+[node name="Filmic" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("4_lo43g")
+bus = &"SFX"
+
+[node name="Techno" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("5_ldakp")
+bus = &"SFX"
+
+[node name="Retro" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("6_fk8re")
+volume_db = -3.0
+bus = &"SFX"

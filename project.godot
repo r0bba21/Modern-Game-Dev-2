@@ -10,6 +10,31 @@ config_version=5
 
 [application]
 
-config/name="mgd2d"
+config/name="Modern Game Dev"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+Bgmusic="*res://Scenes/bgmusic.tscn"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/stretch/mode="viewport"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "blue",
+"res://Assets/Backdrops/": "green",
+"res://Assets/KenneyGenericItems/": "yellow",
+"res://Assets/Music/": "purple",
+"res://Assets/Sprites/": "red",
+"res://Scenes/": "gray",
+"res://Scripts/": "teal"
+}
