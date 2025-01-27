@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://cbbw0ytomxkly"]
 
 [ext_resource type="Texture2D" uid="uid://2yy72ry4wst4" path="res://Assets/Backdrops/options.png" id="1_4me6v"]
-[ext_resource type="Script" path="res://Scenes/difficulty.gd" id="1_7gmah"]
+[ext_resource type="Script" path="res://Scripts/difficulty.gd" id="1_7gmah"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="2_xhjfu"]
 [ext_resource type="Texture2D" uid="uid://dbr18m52hb2u" path="res://Assets/UI/baby-face (1).png" id="3_bk7up"]
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="4_y0w4n"]

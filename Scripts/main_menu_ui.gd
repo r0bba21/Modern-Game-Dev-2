@@ -4,13 +4,16 @@ func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
 
 func _on_tutorial_pressed() -> void:
-	OS.shell_open("https://docs.google.com/document/d/1-AW1nvLEzTf6L7M68kdvvJQkphw_LXrZ6YgWGZUDCwA/edit?usp=drive_link")
+	OS.shell_open("https://docs.google.com/document/d/1-AW1nvLEzTf6L7M68kdvvJQkphw_LXrZ6YgWGZUDCwA/")
 
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/options.tscn")
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+func credits():
+	OS.shell_open("https://docs.google.com/document/d/1eWvfiP7te0Zjdpcgn5vyqkyOff3nlJ6TJlTzNyRfFPY/")
 
 # OPTIONS LOADING:
 func load_settings():

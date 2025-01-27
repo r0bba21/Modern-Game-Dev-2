@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=101 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -6,6 +6,557 @@
 [ext_resource type="AudioStream" uid="uid://cptms4qpuvuw5" path="res://Assets/Music/F.MP3" id="4_lo43g"]
 [ext_resource type="AudioStream" uid="uid://vgsr7yxcqj11" path="res://Assets/Music/T.MP3" id="5_ldakp"]
 [ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="6_fk8re"]
+[ext_resource type="StyleBox" uid="uid://cdks4l1c2vhtw" path="res://Assets/UI/panel_info.tres" id="7_g83m7"]
+[ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="7_xpq5m"]
+[ext_resource type="Texture2D" uid="uid://bdm2qp3cm8y7m" path="res://Assets/UI/money-stack.png" id="8_knkym"]
+[ext_resource type="StyleBox" uid="uid://cdcsji5sxwawt" path="res://Assets/UI/info_green.tres" id="8_qjdlh"]
+[ext_resource type="Texture2D" uid="uid://ctwqvkfas7cxm" path="res://Assets/UI/calendar.png" id="9_36m77"]
+[ext_resource type="Texture2D" uid="uid://c0t5ny2gsyht2" path="res://Assets/UI/heart-shield.png" id="10_qfqgx"]
+[ext_resource type="Texture2D" uid="uid://brvij0q1tk1qd" path="res://Assets/UI/ui (2).png" id="11_22v70"]
+[ext_resource type="StyleBox" uid="uid://covfdek6mprnm" path="res://Assets/UI/staff.tres" id="12_qha5m"]
+[ext_resource type="Texture2D" uid="uid://db5hj7cklm16a" path="res://Assets/UI/ui (7).png" id="13_fx2l3"]
+[ext_resource type="Texture2D" uid="uid://b62l5wb3tku8t" path="res://Assets/UI/ui (1).png" id="14_kcsxu"]
+[ext_resource type="Texture2D" uid="uid://cvfppupn361s4" path="res://Assets/UI/ui (5).png" id="15_yfckf"]
+[ext_resource type="Texture2D" uid="uid://bd8qjjqojihl3" path="res://Assets/UI/ui (6).png" id="16_owjh5"]
+[ext_resource type="Texture2D" uid="uid://l4kafa5ydj6d" path="res://Assets/UI/ui (4).png" id="17_ghstj"]
+[ext_resource type="Texture2D" uid="uid://d0ojhgyr4xpv5" path="res://Assets/UI/ui (3).png" id="18_onm1x"]
+[ext_resource type="Texture2D" uid="uid://6w3kag7tdp43" path="res://Assets/UI/time (1).png" id="19_wu0jg"]
+[ext_resource type="StyleBox" uid="uid://dbaguallc4ejq" path="res://Assets/UI/pause_hover.tres" id="20_gdbgw"]
+[ext_resource type="Script" path="res://Scripts/time.gd" id="21_dpte1"]
+[ext_resource type="StyleBox" uid="uid://dtpabuonyqu8t" path="res://Assets/UI/pause.tres" id="21_sjs1w"]
+[ext_resource type="Texture2D" uid="uid://6j7i7q1at4x6" path="res://Assets/UI/time (3).png" id="22_j76tn"]
+[ext_resource type="StyleBox" uid="uid://bnyctodtap021" path="res://Assets/UI/speed_hover.tres" id="23_hlc20"]
+[ext_resource type="StyleBox" uid="uid://bnx0e5dpuvwfo" path="res://Assets/UI/speed.tres" id="24_c1wlf"]
+[ext_resource type="Texture2D" uid="uid://cippi6qg3264y" path="res://Assets/UI/s (1).png" id="25_87mlp"]
+[ext_resource type="Texture2D" uid="uid://cikggt0hwe5qo" path="res://Assets/UI/s (2).png" id="26_njloy"]
+[ext_resource type="Texture2D" uid="uid://ovf8nf50ij3f" path="res://Assets/UI/misdirection.png" id="29_e836y"]
+[ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="30_bycjq"]
+[ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="31_ydjad"]
+[ext_resource type="Script" path="res://Scripts/research.gd" id="32_o67hk"]
+[ext_resource type="Texture2D" uid="uid://7lyq115d0rkf" path="res://Assets/UI/cancel75.png" id="33_og82k"]
+[ext_resource type="Texture2D" uid="uid://bukqqfs3rgueu" path="res://Assets/UI/checklist.png" id="33_vl7bk"]
+[ext_resource type="Texture2D" uid="uid://dg70skn7suscm" path="res://Assets/UI/cancel.png" id="34_a2n7u"]
+[ext_resource type="Texture2D" uid="uid://qdngnbhhnobh" path="res://Assets/UI/pub (2).png" id="34_cuuo3"]
+[ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="35_nawnk"]
+[ext_resource type="Texture2D" uid="uid://dhnoyw8o2i7om" path="res://Assets/UI/pub (5).png" id="35_wuukt"]
+[ext_resource type="Texture2D" uid="uid://dx0g7xc8o36ky" path="res://Assets/UI/pub (3).png" id="36_1btaf"]
+[ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="36_1yad1"]
+[ext_resource type="Texture2D" uid="uid://1pfnph0xcktp" path="res://Assets/UI/pub (4).png" id="37_yq22j"]
+[ext_resource type="Texture2D" uid="uid://d8ntymrn6v2r" path="res://Assets/UI/pub (1).png" id="38_nunn4"]
+[ext_resource type="Texture2D" uid="uid://bp7ifqg5befx" path="res://Assets/UI/m (1).png" id="44_0jksb"]
+[ext_resource type="Texture2D" uid="uid://bvf5uw6yqrohs" path="res://Assets/UI/m (4).png" id="45_hc47v"]
+[ext_resource type="Texture2D" uid="uid://b5ny2pmhuftxd" path="res://Assets/UI/m (3).png" id="46_x47qs"]
+[ext_resource type="Texture2D" uid="uid://mb2a3r0w2nhy" path="res://Assets/UI/m (2).png" id="47_bn276"]
+[ext_resource type="Texture2D" uid="uid://bc1y18okk5fn4" path="res://Assets/UI/pay-money.png" id="48_o4fxy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkf5q"]
+bg_color = Color(0.243059, 0.490894, 0.722343, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fuj0"]
+bg_color = Color(0.243137, 0.490196, 0.721569, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huw6t"]
+bg_color = Color(1, 1, 1, 0.72549)
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvaot"]
+bg_color = Color(0.77403, 0.29301, 0.252739, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndk1n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v30ka"]
+bg_color = Color(0.320462, 0.247745, 0.0914751, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yao6"]
+bg_color = Color(0.108825, 0.162244, 0.170742, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3hmj"]
+bg_color = Color(0.280995, 0.384175, 0.400612, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_857wv"]
+bg_color = Color(0.1716, 0.230269, 0.121799, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y382h"]
+bg_color = Color(0.640065, 0.721343, 0.545676, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4usl"]
+bg_color = Color(0.228845, 0.056174, 0.0258892, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0lba"]
+bg_color = Color(0.506487, 0.165531, 0.102482, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vca5m"]
+bg_color = Color(0.202794, 0.12785, 0.256993, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wok5h"]
+bg_color = Color(0.555075, 0.40285, 0.668311, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fy7bh"]
+bg_color = Color(0.0159287, 0.167903, 0.230146, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pfew"]
+bg_color = Color(0.186842, 0.651564, 0.841945, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0phwb"]
+bg_color = Color(0.0269813, 0.166903, 1.3236e-07, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iixh5"]
+bg_color = Color(0.231366, 0.733103, 3.85046e-07, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8jhn"]
+bg_color = Color(0.0810669, 0.150354, 0.0685197, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk40f"]
+bg_color = Color(0.160279, 0.0233333, 0.0161493, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojmo3"]
+bg_color = Color(0.679751, 0.209633, 0.172187, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7k7k"]
+bg_color = Color(0.0275681, 0.101368, 0.0116647, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_153ao"]
+bg_color = Color(0.256983, 0.555236, 0.15786, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1plp"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8hly"]
+bg_color = Color(1, 0.81898, 0.37065, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flpi8"]
+bg_color = Color(0.244108, 0.527603, 0.267079, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ckyho"]
+bg_color = Color(0.728224, 0.573802, 0.259413, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igk02"]
+bg_color = Color(0.413215, 0.641761, 0.692933, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4dcy"]
+bg_color = Color(0.551038, 0.694284, 0.510231, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jqlcp"]
+bg_color = Color(0.730937, 0.559699, 0.424855, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aufia"]
+bg_color = Color(0.701338, 0.525842, 0.740932, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ms7wt"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.47451, 0.364706, 0.498039, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxalh"]
+bg_color = Color(0.199044, 0.141976, 0.211291, 1)
+border_width_top = 30
+border_color = Color(0.47451, 0.364706, 0.498039, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byhxu"]
+bg_color = Color(0.359311, 0.648818, 0.719132, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggxqg"]
+bg_color = Color(0.695162, 0.273494, 1.92523e-07, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26qb7"]
+bg_color = Color(0.205117, 0.205117, 0.205117, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cl57q"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sr1v"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgj8i"]
+bg_color = Color(0.664591, 0.00637563, 3.85046e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b1x7"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.466667, 0.211765, 0.0470588, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfdcx"]
+bg_color = Color(0.273946, 0.0776266, 0.0219242, 1)
+border_width_top = 30
+border_color = Color(0.466667, 0.211765, 0.0470588, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6jr5"]
+bg_color = Color(2.11775e-06, 0.667397, 0.800012, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wcbh"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rt7yc"]
+bg_color = Color(0.156538, 0.570642, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y77pj"]
+bg_color = Color(1, 0.218058, 0.346784, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jw3ej"]
+bg_color = Color(0.934726, 0.000394672, 0.868032, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gheu"]
+bg_color = Color(0.103901, 0.688382, 1.15514e-06, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7x80"]
+bg_color = Color(0.791303, 0.491887, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eg410"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.0470588, 0.45098, 0.533333, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oyhbg"]
+bg_color = Color(0.018046, 0.112805, 0.237085, 1)
+border_width_top = 30
+border_color = Color(0.0470588, 0.45098, 0.533333, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aldit"]
+bg_color = Color(0.0775473, 0.130887, 0.210209, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o325d"]
+bg_color = Color(0.363649, 0.95313, 0.876242, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
 
 [node name="Office UI" type="Control"]
 layout_mode = 3
@@ -17,7 +568,7 @@ grow_vertical = 2
 script = ExtResource("1_frgb8")
 
 [node name="Sounds" type="Node2D" parent="."]
-position = Vector2(451, 91)
+position = Vector2(25, 1060)
 
 [node name="Mouse" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("2_cow7g")
@@ -41,3 +592,2107 @@ bus = &"SFX"
 stream = ExtResource("6_fk8re")
 volume_db = -3.0
 bus = &"SFX"
+
+[node name="Info" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 24.0
+offset_right = 389.0
+offset_bottom = 314.0
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="BUILD" type="Label" parent="Info"]
+layout_mode = 0
+offset_top = -24.0
+offset_right = 364.0
+offset_bottom = -1.0
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+text = "ALPHA - VER. 1.0.3"
+
+[node name="M" type="Panel" parent="Info"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("8_qjdlh")
+
+[node name="Money" type="Label" parent="Info/M"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Bank: $65k"
+vertical_alignment = 1
+
+[node name="Expenses" type="Label" parent="Info/M"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Costs: $1.5k"
+vertical_alignment = 1
+
+[node name="M" type="TextureRect" parent="Info/M"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 40.0
+grow_vertical = 2
+texture = ExtResource("8_knkym")
+
+[node name="T" type="Panel" parent="Info"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 100.0
+offset_right = 175.0
+offset_bottom = 190.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hkf5q")
+
+[node name="Months" type="RichTextLabel" parent="Info/T"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 71.0
+offset_top = 4.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "Year 0, Month 0"
+fit_content = true
+
+[node name="C" type="TextureRect" parent="Info/T"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -40.0
+offset_right = 75.0
+offset_bottom = 40.0
+grow_vertical = 2
+texture = ExtResource("9_36m77")
+
+[node name="MonthProg" type="ProgressBar" parent="Info/T"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_6fuj0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_huw6t")
+max_value = 10.0
+step = 1.0
+show_percentage = false
+
+[node name="F" type="Panel" parent="Info"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 195.0
+offset_right = 175.0
+offset_bottom = 285.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bvaot")
+
+[node name="Fans" type="Label" parent="Info/F"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -17.0
+offset_right = 176.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Fans: 0"
+vertical_alignment = 1
+
+[node name="H" type="TextureRect" parent="Info/F"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 40.0
+grow_vertical = 2
+texture = ExtResource("10_qfqgx")
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -211.0
+offset_right = 389.0
+offset_bottom = 520.0
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Hire" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_icons/icon = ExtResource("11_22v70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ndk1n")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v30ka")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v30ka")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v30ka")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v30ka")
+theme_override_styles/normal = ExtResource("12_qha5m")
+text = "Staff"
+alignment = 2
+autowrap_mode = 3
+icon_alignment = 2
+
+[node name="RealEstate" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_icons/icon = ExtResource("13_fx2l3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_5yao6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_5yao6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5yao6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yao6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b3hmj")
+text = "Offices"
+alignment = 2
+autowrap_mode = 3
+icon_alignment = 2
+
+[node name="Contracts" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_icons/icon = ExtResource("14_kcsxu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_857wv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_857wv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_857wv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_857wv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y382h")
+text = "Contracts"
+alignment = 2
+autowrap_mode = 3
+icon_alignment = 2
+
+[node name="Loans" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_icons/icon = ExtResource("15_yfckf")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_t4usl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_t4usl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t4usl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t4usl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0lba")
+text = "Loans"
+alignment = 2
+autowrap_mode = 3
+icon_alignment = 2
+
+[node name="Publisher" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_icons/icon = ExtResource("16_owjh5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_vca5m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vca5m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vca5m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vca5m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wok5h")
+text = "Publisher"
+alignment = 2
+autowrap_mode = 3
+icon_alignment = 2
+
+[node name="Research" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_icons/icon = ExtResource("17_ghstj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_fy7bh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_fy7bh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fy7bh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fy7bh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6pfew")
+text = "Research"
+alignment = 2
+autowrap_mode = 3
+icon_alignment = 2
+
+[node name="Develop" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_icons/icon = ExtResource("18_onm1x")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_0phwb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0phwb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0phwb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0phwb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0phwb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0phwb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iixh5")
+text = "Develop!"
+alignment = 2
+autowrap_mode = 3
+icon_alignment = 2
+
+[node name="Mini" type="HBoxContainer" parent="Buttons"]
+layout_mode = 2
+theme_override_constants/separation = 19
+
+[node name="Time" type="VBoxContainer" parent="Buttons/Mini"]
+layout_mode = 2
+theme_override_constants/separation = 10
+script = ExtResource("21_dpte1")
+
+[node name="Pause" type="Button" parent="Buttons/Mini/Time"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_icons/icon = ExtResource("19_wu0jg")
+theme_override_styles/hover_pressed_mirrored = ExtResource("20_gdbgw")
+theme_override_styles/hover_pressed = ExtResource("20_gdbgw")
+theme_override_styles/hover = ExtResource("20_gdbgw")
+theme_override_styles/pressed = ExtResource("20_gdbgw")
+theme_override_styles/normal = ExtResource("21_sjs1w")
+text = " Pause "
+
+[node name="Speed" type="Button" parent="Buttons/Mini/Time"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_icons/icon = ExtResource("22_j76tn")
+theme_override_styles/hover_pressed_mirrored = ExtResource("23_hlc20")
+theme_override_styles/hover_pressed = ExtResource("23_hlc20")
+theme_override_styles/hover = ExtResource("23_hlc20")
+theme_override_styles/pressed = ExtResource("23_hlc20")
+theme_override_styles/normal = ExtResource("24_c1wlf")
+text = "2.5x"
+
+[node name="Saves" type="VBoxContainer" parent="Buttons/Mini"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Save" type="Button" parent="Buttons/Mini/Saves"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_icons/icon = ExtResource("25_87mlp")
+theme_override_styles/disabled = ExtResource("20_gdbgw")
+theme_override_styles/hover_pressed_mirrored = ExtResource("20_gdbgw")
+theme_override_styles/hover_pressed = ExtResource("20_gdbgw")
+theme_override_styles/hover = ExtResource("20_gdbgw")
+theme_override_styles/pressed = ExtResource("20_gdbgw")
+theme_override_styles/normal = ExtResource("21_sjs1w")
+text = "Save"
+
+[node name="Load" type="Button" parent="Buttons/Mini/Saves"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_icons/icon = ExtResource("26_njloy")
+theme_override_styles/disabled = ExtResource("23_hlc20")
+theme_override_styles/hover_pressed_mirrored = ExtResource("23_hlc20")
+theme_override_styles/hover_pressed = ExtResource("23_hlc20")
+theme_override_styles/hover = ExtResource("23_hlc20")
+theme_override_styles/pressed = ExtResource("23_hlc20")
+theme_override_styles/normal = ExtResource("24_c1wlf")
+text = " Load  "
+
+[node name="During" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -388.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 409.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="N" type="Panel" parent="During"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8jhn")
+
+[node name="Name" type="Label" parent="During/N"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Marketing" type="Button" parent="During"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 195.0
+offset_right = 357.0
+offset_bottom = 285.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+theme_override_icons/icon = ExtResource("29_e836y")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mk40f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mk40f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mk40f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mk40f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojmo3")
+text = "Marketing"
+
+[node name="Publish" type="Button" parent="During"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 290.0
+offset_right = 357.0
+offset_bottom = 380.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+theme_override_icons/icon = ExtResource("18_onm1x")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_t7k7k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_t7k7k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t7k7k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t7k7k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_153ao")
+text = "Publish!"
+
+[node name="GameProg" type="ProgressBar" parent="During"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 101.0
+offset_right = 357.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(1, 0.819608, 0.372549, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/background = SubResource("StyleBoxFlat_u1plp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_f8hly")
+
+[node name="Developing" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_flpi8")
+
+[node name="Header" type="VBoxContainer" parent="Developing"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 24.0
+offset_right = 321.0
+offset_bottom = -201.0
+grow_vertical = 2
+
+[node name="Genre" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Genre:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Genre" type="OptionButton" parent="Developing/Header/Genre"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -26.0
+offset_right = 1143.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+item_count = 8
+popup/item_0/text = "Adventure"
+popup/item_1/text = "FPS"
+popup/item_1/id = 1
+popup/item_2/text = "RPG"
+popup/item_2/id = 2
+popup/item_3/text = "Simulation"
+popup/item_3/id = 3
+popup/item_4/text = "Multiplayer"
+popup/item_4/id = 4
+popup/item_5/text = "Fighter"
+popup/item_5/id = 5
+popup/item_6/text = "Sports"
+popup/item_6/id = 6
+popup/item_7/text = "Action"
+popup/item_7/id = 7
+
+[node name="Size" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Size:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Size" type="OptionButton" parent="Developing/Header/Size"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -23.0
+offset_right = 1143.0
+offset_bottom = 29.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+item_count = 3
+popup/item_0/text = "Small"
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Large"
+popup/item_2/id = 2
+
+[node name="Platform" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Platform:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Platform" type="OptionButton" parent="Developing/Header/Platform"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 1143.0
+offset_bottom = 28.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+item_count = 4
+popup/item_0/text = "PC"
+popup/item_1/text = "Console"
+popup/item_1/id = 1
+popup/item_2/text = "Handheld"
+popup/item_2/id = 2
+popup/item_3/text = "Mobile"
+popup/item_3/id = 3
+
+[node name="Tech Level" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Tech Level:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TechL" type="OptionButton" parent="Developing/Header/Tech Level"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 1143.0
+offset_bottom = 28.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+item_count = 3
+popup/item_0/text = "Indie"
+popup/item_1/text = "Midrange"
+popup/item_1/id = 1
+popup/item_2/text = "Advanced"
+popup/item_2/id = 2
+
+[node name="Design" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Design:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Design" type="OptionButton" parent="Developing/Header/Design"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -23.0
+offset_right = 1143.0
+offset_bottom = 29.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+item_count = 3
+popup/item_0/text = "2D"
+popup/item_1/text = "3D"
+popup/item_1/id = 1
+popup/item_2/text = "Hybrid"
+popup/item_2/id = 2
+
+[node name="Target" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Target:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Audience" type="OptionButton" parent="Developing/Header/Target"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -23.0
+offset_right = 1143.0
+offset_bottom = 29.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+item_count = 3
+popup/item_0/text = "Young"
+popup/item_1/text = "All"
+popup/item_1/id = 1
+popup/item_2/text = "Mature"
+popup/item_2/id = 2
+
+[node name="Name" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Name:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="NameL" type="LineEdit" parent="Developing/Header/Name"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -26.0
+offset_right = 1143.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+
+[node name="Break" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "-----------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ETA" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "ETA:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MonthsL" type="Label" parent="Developing/Header/ETA"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -32.0
+offset_right = 1143.0
+offset_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "0 months"
+vertical_alignment = 1
+
+[node name="Marketshare" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "audience:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MShareL" type="Label" parent="Developing/Header/Marketshare"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.562
+anchor_right = 1.0
+anchor_bottom = 0.562
+offset_left = 15.0
+offset_top = -35.968
+offset_right = 1143.0
+offset_bottom = 28.032
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "0% Marketshare"
+vertical_alignment = 1
+
+[node name="Price" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Max price:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PriceL" type="Label" parent="Developing/Header/Price"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.562
+anchor_right = 1.0
+anchor_bottom = 0.562
+offset_left = 15.0
+offset_top = -35.968
+offset_right = 1143.0
+offset_bottom = 28.032
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "$0"
+vertical_alignment = 1
+
+[node name="Summary" type="Label" parent="Developing/Header"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+text = "Summary:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SummaryL" type="RichTextLabel" parent="Developing/Header/Summary"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -32.0
+offset_right = 1143.0
+offset_bottom = 197.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 55
+text = "???"
+fit_content = true
+
+[node name="Develop" type="Button" parent="Developing"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -192.0
+offset_right = 321.0
+offset_bottom = -33.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover_pressed_mirrored = ExtResource("30_bycjq")
+theme_override_styles/hover_pressed = ExtResource("30_bycjq")
+theme_override_styles/hover = ExtResource("30_bycjq")
+theme_override_styles/pressed = ExtResource("30_bycjq")
+theme_override_styles/normal = ExtResource("31_ydjad")
+text = "DEVELOP!"
+
+[node name="Staff" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ckyho")
+
+[node name="Offices" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_igk02")
+
+[node name="Contracts" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a4dcy")
+
+[node name="Loans" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jqlcp")
+
+[node name="Publisher" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aufia")
+
+[node name="Title" type="Label" parent="Publisher"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Publishing deals:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explain" type="RichTextLabel" parent="Publisher"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 1464.0
+offset_bottom = 242.0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 45
+text = "Publishers market your game far beyond anything you could do, but take a hefty cut of the profits. you can enter or exit a  deal at any time. The cut also applies to fan gain."
+fit_content = true
+
+[node name="PublisherList" type="OptionButton" parent="Publisher"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 298.5
+offset_right = -19.0
+offset_bottom = 392.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+alignment = 1
+selected = 0
+item_count = 6
+popup/item_0/text = "Self-Publishing"
+popup/item_0/icon = ExtResource("33_og82k")
+popup/item_1/text = "Jones Inc."
+popup/item_1/icon = ExtResource("34_cuuo3")
+popup/item_1/id = 1
+popup/item_2/text = "Gamebox"
+popup/item_2/icon = ExtResource("35_wuukt")
+popup/item_2/id = 2
+popup/item_3/text = "Chazzard"
+popup/item_3/icon = ExtResource("36_1btaf")
+popup/item_3/id = 3
+popup/item_4/text = "Indie Cult"
+popup/item_4/icon = ExtResource("37_yq22j")
+popup/item_4/id = 4
+popup/item_5/text = "YouBeHard"
+popup/item_5/icon = ExtResource("38_nunn4")
+popup/item_5/id = 5
+
+[node name="Stats" type="VBoxContainer" parent="Publisher"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 242.0
+offset_right = 1462.0
+offset_bottom = 629.0
+
+[node name="Level14" type="Label" parent="Publisher/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.839216, 0.701961, 0.717647, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+text = "Available contracts:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level9" type="Label" parent="Publisher/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+text = "Jones Inc. - 90% cut, + 30% outreach"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level11" type="Label" parent="Publisher/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+text = "GameBox - 85% cut, + 25% outreach"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level10" type="Label" parent="Publisher/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+text = "Chazzard - 70% cut, + 20% outreach"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level12" type="Label" parent="Publisher/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+text = "Indie cult - 45% cut, + 10% outreach"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level13" type="Label" parent="Publisher/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+text = "YouBeHard - 30% cut, + 5% outreach"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level15" type="Label" parent="Publisher/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.839216, 0.701961, 0.717647, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+text = "Sign to:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackP" type="Button" parent="Publisher"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -103.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ms7wt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ms7wt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ms7wt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ms7wt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pxalh")
+text = "BACK"
+
+[node name="Research" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_byhxu")
+script = ExtResource("32_o67hk")
+
+[node name="Title" type="Label" parent="Research"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Research:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explain" type="RichTextLabel" parent="Research"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 1464.0
+offset_bottom = 242.0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 45
+text = "Each research level gives you a new skill but costs a research token, you earn one token per game release. they also take time and money to research"
+fit_content = true
+
+[node name="Research2" type="Panel" parent="Research"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -741.5
+offset_top = -269.5
+offset_right = 741.5
+offset_bottom = -32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_byhxu")
+
+[node name="Details" type="VBoxContainer" parent="Research/Research2"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 7.0
+offset_right = 405.0
+offset_bottom = 230.0
+
+[node name="Level" type="Label" parent="Research/Research2/Details"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Your Level: 0"
+
+[node name="ETA" type="Label" parent="Research/Research2/Details"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Next Level Time: 10 Months"
+
+[node name="Cost" type="Label" parent="Research/Research2/Details"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Next Level Cost: $100k"
+
+[node name="Tokens" type="Label" parent="Research/Research2/Details"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Your Tokens: 0"
+
+[node name="Decide" type="HBoxContainer" parent="Research/Research2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -776.0
+offset_top = -101.5
+offset_right = -21.0
+offset_bottom = 101.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Begin" type="Button" parent="Research/Research2/Decide"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 100
+theme_override_icons/icon = ExtResource("33_vl7bk")
+theme_override_styles/hover_pressed_mirrored = ExtResource("30_bycjq")
+theme_override_styles/hover_pressed = ExtResource("30_bycjq")
+theme_override_styles/hover = ExtResource("30_bycjq")
+theme_override_styles/pressed = ExtResource("30_bycjq")
+theme_override_styles/normal = ExtResource("31_ydjad")
+text = "BEGIN"
+
+[node name="Exit" type="Button" parent="Research/Research2/Decide"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 100
+theme_override_icons/icon = ExtResource("34_a2n7u")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "EXIT"
+
+[node name="List" type="VBoxContainer" parent="Research/Research2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 126.5
+offset_right = 1270.0
+offset_bottom = 516.5
+grow_vertical = 2
+
+[node name="Level2" type="Label" parent="Research/Research2/List"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Level 1: Wishlists shown in publishing menu"
+
+[node name="Level3" type="Label" parent="Research/Research2/List"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Level 2: Marketshare shown in publishing menu"
+
+[node name="Level4" type="Label" parent="Research/Research2/List"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Level 3: Max price shown in development menu"
+
+[node name="Level5" type="Label" parent="Research/Research2/List"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Level 4: Marketshare shown in development menu"
+
+[node name="Level6" type="Label" parent="Research/Research2/List"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Level 5: ESTIMATED TIME shown in development menu"
+
+[node name="Level7" type="Label" parent="Research/Research2/List"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Level 6: 15% productivity increase"
+
+[node name="Level8" type="Label" parent="Research/Research2/List"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.561826, 0.668344, 0.695687, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 46
+text = "Level 7: 10% lower publisher cut"
+
+[node name="Market" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ggxqg")
+
+[node name="Title" type="Label" parent="Market"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Marketing your game:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tasks" type="VBoxContainer" parent="Market"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 95.0
+offset_right = 664.0
+offset_bottom = 620.0
+theme_override_constants/separation = 7
+
+[node name="Tasks" type="Label" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.466667, 0.211765, 0.0470588, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+text = "Tasks:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Price" type="Label" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.466667, 0.211765, 0.0470588, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$25,000:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PR" type="Button" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("44_0jksb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Press Release"
+
+[node name="Price2" type="Label" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.466667, 0.211765, 0.0470588, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$100,000:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="T" type="Button" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("45_hc47v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Trailers"
+
+[node name="Price3" type="Label" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.466667, 0.211765, 0.0470588, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$500,000:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DB2" type="Button" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("46_x47qs")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Demo Builds"
+
+[node name="Price4" type="Label" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.466667, 0.211765, 0.0470588, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$1,250,000:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="S" type="Button" parent="Market/Tasks"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("47_bn276")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_26qb7")
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Sponsorships"
+
+[node name="Explain" type="RichTextLabel" parent="Market"]
+layout_mode = 0
+offset_left = 681.0
+offset_top = 100.0
+offset_right = 1464.0
+offset_bottom = 363.0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 45
+text = "Marketing consists of 4 tasks, each adding 10% to the popularity, the remaining 60% comes from a $2,500,000 marketing budget."
+
+[node name="BUDGET" type="LineEdit" parent="Market"]
+layout_mode = 0
+offset_left = 681.0
+offset_top = 567.0
+offset_right = 1456.0
+offset_bottom = 636.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_cl57q")
+theme_override_styles/normal = ExtResource("7_g83m7")
+placeholder_text = "Press Enter After Typing"
+alignment = 1
+right_icon = ExtResource("48_o4fxy")
+
+[node name="Price5" type="Label" parent="Market/BUDGET"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -322.0
+offset_top = -77.0
+offset_right = 322.0
+offset_bottom = -4.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.466667, 0.211765, 0.0470588, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Submit your budget:
+DO NOT INCLUDE '$' OR LETTERS!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Price6" type="Label" parent="Market"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = 131.5
+offset_right = 322.0
+offset_bottom = 188.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.466667, 0.211765, 0.0470588, 1)
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+text = "Current Popularity:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PopProg" type="ProgressBar" parent="Market/Price6"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -415.0
+offset_top = 37.5
+offset_right = 416.0
+offset_bottom = 253.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.662745, 0.00784314, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 180
+theme_override_styles/background = SubResource("StyleBoxFlat_3sr1v")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xgj8i")
+
+[node name="BackP2" type="Button" parent="Market"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_1b1x7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_1b1x7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1b1x7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1b1x7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfdcx")
+text = "BACK"
+
+[node name="Publish" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -517.0
+offset_right = 936.0
+offset_bottom = 520.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y6jr5")
+
+[node name="CONGRATS" type="Label" parent="Publish"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "CONGRATULATIONS!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Summary" type="RichTextLabel" parent="Publish/CONGRATS"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 1464.0
+offset_bottom = 242.0
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 45
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Publish/CONGRATS"]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 242.0
+offset_right = 1456.0
+offset_bottom = 740.0
+
+[node name="Shelf" type="Label" parent="Publish/CONGRATS/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "Shelf life:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Marketshare" type="Label" parent="Publish/CONGRATS/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "Marketshare:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Price" type="Label" parent="Publish/CONGRATS/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "Price:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Wishlists" type="Label" parent="Publish/CONGRATS/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "Wishlists:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PublisherL" type="Label" parent="Publish/CONGRATS/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "Publisher:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ReviewsL" type="Label" parent="Publish/CONGRATS/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "Reviews:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Reviews" type="VBoxContainer" parent="Publish"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 242.0
+offset_right = 359.0
+offset_bottom = 1004.0
+
+[node name="Header" type="Label" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_offset_y = 9
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 9
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+text = "REVIEWS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+text = "POO JONES:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Review" type="ProgressBar" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_4wcbh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rt7yc")
+
+[node name="Label2" type="Label" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+text = "AGN:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Review2" type="ProgressBar" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_4wcbh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_y77pj")
+
+[node name="Label3" type="Label" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+text = "GRANDPA GAMEZ:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Review3" type="ProgressBar" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_4wcbh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jw3ej")
+
+[node name="Label4" type="Label" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+text = "BIG ROBBA:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Review4" type="ProgressBar" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/background = SubResource("StyleBoxFlat_4wcbh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5gheu")
+
+[node name="Label5" type="Label" parent="Publish/Reviews"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "TOTAL QUALITY:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QUALITYL" type="ProgressBar" parent="Publish/Reviews/Label5"]
+layout_direction = 2
+layout_mode = 2
+offset_top = 84.0
+offset_right = 715.0
+offset_bottom = 198.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/background = SubResource("StyleBoxFlat_4wcbh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a7x80")
+value = 50.0
+
+[node name="POPULARITYL" type="ProgressBar" parent="Publish"]
+layout_mode = 2
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -737.0
+offset_top = -218.0
+offset_right = -27.0
+offset_bottom = -104.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/background = SubResource("StyleBoxFlat_4wcbh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_a7x80")
+value = 50.0
+fill_mode = 1
+
+[node name="Label6" type="Label" parent="Publish/POPULARITYL"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -435.0
+offset_top = -78.0
+offset_bottom = 2.0
+grow_horizontal = 0
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+text = "POPULARITY:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="Publish"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -95.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_eg410")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_eg410")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eg410")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eg410")
+theme_override_styles/normal = SubResource("StyleBoxFlat_oyhbg")
+text = "CONTINUE"
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="Month" type="Timer" parent="Timers"]
+wait_time = 10.0
+autostart = true
+
+[node name="MonthProg" type="Timer" parent="Timers"]
+autostart = true
+
+[node name="DevProg" type="Timer" parent="Timers"]
+
+[node name="Market" type="Timer" parent="Timers"]
+wait_time = 10.0
+
+[node name="Research" type="Timer" parent="Timers"]
+
+[node name="DuringResearch" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -387.0
+offset_top = -111.0
+offset_right = -23.0
+offset_bottom = 82.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="P" type="Panel" parent="DuringResearch"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aldit")
+
+[node name="Levelinprog" type="Label" parent="DuringResearch/P"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResearchProg" type="ProgressBar" parent="DuringResearch"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 100.0
+offset_right = 174.0
+offset_bottom = 188.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.364706, 0.952941, 0.87451, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/background = SubResource("StyleBoxFlat_u1plp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
+
+[connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
+[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Research" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Research" to="Research" method="_on_research_pressed"]
+[connection signal="pressed" from="Buttons/Develop" to="." method="_on_develop_pressed"]
+[connection signal="pressed" from="Buttons/Mini/Time/Pause" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Mini/Time/Pause" to="Buttons/Mini/Time" method="_on_pause_pressed"]
+[connection signal="pressed" from="Buttons/Mini/Time/Speed" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Mini/Time/Speed" to="Buttons/Mini/Time" method="_on_speed_pressed"]
+[connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
+[connection signal="pressed" from="During/Publish" to="." method="PUBLISH"]
+[connection signal="pressed" from="During/Publish" to="." method="soundfx"]
+[connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
+[connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]
+[connection signal="item_selected" from="Developing/Header/Platform/Platform" to="." method="_on_platform_item_selected"]
+[connection signal="item_selected" from="Developing/Header/Tech Level/TechL" to="." method="_on_tech_l_item_selected"]
+[connection signal="item_selected" from="Developing/Header/Design/Design" to="." method="_on_design_item_selected"]
+[connection signal="item_selected" from="Developing/Header/Target/Audience" to="." method="_on_audience_item_selected"]
+[connection signal="text_changed" from="Developing/Header/Name/NameL" to="." method="_on_name_l_text_changed"]
+[connection signal="pressed" from="Developing/Develop" to="." method="DEVSTART"]
+[connection signal="item_selected" from="Publisher/PublisherList" to="." method="_on_publisher_list_item_selected"]
+[connection signal="item_selected" from="Publisher/PublisherList" to="." method="soundfx"]
+[connection signal="pressed" from="Publisher/BackP" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="Publisher/BackP" to="." method="soundfx"]
+[connection signal="pressed" from="Research/Research2/Decide/Begin" to="." method="soundfx"]
+[connection signal="pressed" from="Research/Research2/Decide/Begin" to="Research" method="_on_begin_pressed"]
+[connection signal="pressed" from="Research/Research2/Decide/Exit" to="." method="soundfx"]
+[connection signal="pressed" from="Research/Research2/Decide/Exit" to="Research" method="_on_exit_pressed"]
+[connection signal="pressed" from="Market/Tasks/PR" to="." method="_on_pr_pressed"]
+[connection signal="pressed" from="Market/Tasks/T" to="." method="_on_t_pressed"]
+[connection signal="pressed" from="Market/Tasks/DB2" to="." method="_on_db_2_pressed"]
+[connection signal="pressed" from="Market/Tasks/S" to="." method="_on_s_pressed"]
+[connection signal="text_submitted" from="Market/BUDGET" to="." method="_on_budget_text_submitted"]
+[connection signal="pressed" from="Market/BackP2" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="Market/BackP2" to="." method="soundfx"]
+[connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
+[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
+[connection signal="timeout" from="Timers/Month" to="." method="newmonth"]
+[connection signal="timeout" from="Timers/MonthProg" to="." method="monthprog"]
+[connection signal="timeout" from="Timers/DevProg" to="." method="_on_dev_prog_timeout"]
+[connection signal="timeout" from="Timers/Market" to="." method="monthsales"]
+[connection signal="timeout" from="Timers/Research" to="Research" method="_on_research_timeout"]

@@ -11,3 +11,17 @@ var autosave:int = 0
 
 # DIFFICULTY:
 var difficulty:int
+
+# IN MENU:
+var in_menu = false
+
+# RESEARCH:
+var research_tokens:int = 0
+var research_level:int = 0
+var in_research = false
+
+# MONEY ACROSS SCRIPTS:
+var charge:int = 0
+
+# CONTRACTS:
+var in_contract = false
