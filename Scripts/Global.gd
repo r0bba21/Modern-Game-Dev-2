@@ -25,3 +25,6 @@ var charge:int = 0
 
 # CONTRACTS:
 var in_contract = false
+
+# STAFF:
+var maxdesks:int = 5

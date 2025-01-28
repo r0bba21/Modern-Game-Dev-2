@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=107 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://bukqqfs3rgueu" path="res://Assets/UI/checklist.png" id="33_vl7bk"]
 [ext_resource type="Texture2D" uid="uid://dg70skn7suscm" path="res://Assets/UI/cancel.png" id="34_a2n7u"]
 [ext_resource type="Texture2D" uid="uid://qdngnbhhnobh" path="res://Assets/UI/pub (2).png" id="34_cuuo3"]
+[ext_resource type="Texture2D" uid="uid://7se3a2smhoj2" path="res://Assets/UI/bank.png" id="35_5w3yo"]
 [ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="35_nawnk"]
 [ext_resource type="Texture2D" uid="uid://dhnoyw8o2i7om" path="res://Assets/UI/pub (5).png" id="35_wuukt"]
 [ext_resource type="Texture2D" uid="uid://dx0g7xc8o36ky" path="res://Assets/UI/pub (3).png" id="36_1btaf"]
@@ -315,6 +316,40 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_size = 30
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecg1f"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.490196, 0.396078, 0.203922, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfdcx"]
+bg_color = Color(0.187297, 0.130501, 0, 1)
+border_width_top = 30
+border_color = Color(0.490196, 0.396078, 0.203922, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0k02e"]
+bg_color = Color(0.212305, 0.212305, 0.212305, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahmq4"]
+bg_color = Color(1, 1, 1, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igk02"]
 bg_color = Color(0.413215, 0.641761, 0.692933, 0.607843)
 border_width_left = 5
@@ -353,6 +388,24 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frpuc"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.490196, 0.388235, 0.301961, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fpmx1"]
+bg_color = Color(0.188714, 0.140639, 0.0997813, 1)
+border_width_top = 30
+border_color = Color(0.490196, 0.388235, 0.301961, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aufia"]
 bg_color = Color(0.701338, 0.525842, 0.740932, 0.607843)
@@ -435,15 +488,6 @@ bg_color = Color(0.664591, 0.00637563, 3.85046e-07, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b1x7"]
 bg_color = Color(0, 0, 0, 1)
-border_width_top = 30
-border_color = Color(0.466667, 0.211765, 0.0470588, 1)
-border_blend = true
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfdcx"]
-bg_color = Color(0.273946, 0.0776266, 0.0219242, 1)
 border_width_top = 30
 border_color = Color(0.466667, 0.211765, 0.0470588, 1)
 border_blend = true
@@ -1509,6 +1553,366 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ckyho")
 
+[node name="Title2" type="Label" parent="Staff"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "hiring staff:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackP3" type="Button" parent="Staff"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ecg1f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ecg1f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ecg1f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ecg1f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfdcx")
+text = "BACK"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Staff"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -653.0
+offset_top = -100.5
+offset_right = 653.0
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Tier" type="VBoxContainer" parent="Staff/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/Tier"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Tier:"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Staff/HBoxContainer/Tier"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Low Salary"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Staff/HBoxContainer/Tier"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Midrange"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Staff/HBoxContainer/Tier"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " High salary "
+horizontal_alignment = 1
+
+[node name="Tier2" type="VBoxContainer" parent="Staff/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/Tier2"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Salary: "
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Staff/HBoxContainer/Tier2"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$12,500"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Staff/HBoxContainer/Tier2"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$16,000"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Staff/HBoxContainer/Tier2"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$22,500"
+horizontal_alignment = 1
+
+[node name="Tier3" type="VBoxContainer" parent="Staff/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/Tier3"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " You Have: "
+horizontal_alignment = 1
+
+[node name="Lcount" type="Label" parent="Staff/HBoxContainer/Tier3"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "0"
+horizontal_alignment = 1
+
+[node name="Mcount" type="Label" parent="Staff/HBoxContainer/Tier3"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "0"
+horizontal_alignment = 1
+
+[node name="Hcount" type="Label" parent="Staff/HBoxContainer/Tier3"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "0"
+horizontal_alignment = 1
+
+[node name="Input" type="VBoxContainer" parent="Staff/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/Input"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Amount: "
+horizontal_alignment = 1
+
+[node name="Linput" type="LineEdit" parent="Staff/HBoxContainer/Input"]
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/focus = SubResource("StyleBoxFlat_0k02e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahmq4")
+placeholder_text = "Type number"
+alignment = 1
+
+[node name="Minput" type="LineEdit" parent="Staff/HBoxContainer/Input"]
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/focus = SubResource("StyleBoxFlat_0k02e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahmq4")
+placeholder_text = "Type number"
+alignment = 1
+
+[node name="Hinput" type="LineEdit" parent="Staff/HBoxContainer/Input"]
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/focus = SubResource("StyleBoxFlat_0k02e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ahmq4")
+placeholder_text = "Type number"
+alignment = 1
+
+[node name="Hire" type="Button" parent="Staff/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover_pressed_mirrored = ExtResource("30_bycjq")
+theme_override_styles/hover_pressed = ExtResource("30_bycjq")
+theme_override_styles/hover = ExtResource("30_bycjq")
+theme_override_styles/pressed = ExtResource("30_bycjq")
+theme_override_styles/normal = ExtResource("31_ydjad")
+text = "Hire"
+
+[node name="Fire" type="Button" parent="Staff/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Fire"
+
+[node name="Explain2" type="RichTextLabel" parent="Staff"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -421.5
+offset_right = -13.0
+offset_bottom = -344.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "You can hire three tiers of staff to increase productivity. Low salary has a 7.5% increase, medium 15% and high 25%. Your office (and wallet) can only hold a select amount of staff."
+
+[node name="Salaries" type="RichTextLabel" parent="Staff"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -325.5
+offset_right = -13.0
+offset_bottom = -281.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "Currently, you are paying a total of $0 in salaries."
+
+[node name="Amount left" type="RichTextLabel" parent="Staff"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -281.5
+offset_right = -13.0
+offset_bottom = -237.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "You have 0 staff members, meaning your office can hold 5 more."
+
+[node name="Explain3" type="RichTextLabel" parent="Staff"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 242.0
+offset_top = 117.5
+offset_right = -242.0
+offset_bottom = 189.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "There is a $50,000 severance pay fee upon firing and a $50,000 signing bonus on hiring, equal for every tier of staff member."
+
+[node name="Explain" type="RichTextLabel" parent="Staff"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -548.5
+offset_top = -141.5
+offset_right = 548.5
+offset_bottom = -101.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "Enter an amount (No Letters!) and press enter, then the big button."
+
 [node name="Offices" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -1541,7 +1945,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_a4dcy")
 
-[node name="Loans" type="Panel" parent="."]
+[node name="TheBank" type="Panel" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -1557,8 +1961,376 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jqlcp")
 
-[node name="Publisher" type="Panel" parent="."]
+[node name="Title3" type="Label" parent="TheBank"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Welcome to the bank:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackP4" type="Button" parent="TheBank"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_frpuc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_frpuc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frpuc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_frpuc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fpmx1")
+text = "BACK"
+
+[node name="InLoanMenu" type="Panel" parent="TheBank"]
 visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -408.5
+offset_right = -17.0
+offset_bottom = -190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="Pay" type="Button" parent="TheBank/InLoanMenu"]
+layout_mode = 2
+offset_left = 811.0
+offset_top = 28.0
+offset_right = 1439.0
+offset_bottom = 190.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 125
+theme_override_icons/icon = ExtResource("35_5w3yo")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Pay Off"
+
+[node name="Detailsposttake" type="VBoxContainer" parent="TheBank/InLoanMenu"]
+layout_mode = 2
+offset_left = 16.0
+offset_right = 596.0
+offset_bottom = 216.0
+grow_vertical = 2
+
+[node name="Rate" type="Label" parent="TheBank/InLoanMenu/Detailsposttake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "?% Interest"
+
+[node name="Term" type="Label" parent="TheBank/InLoanMenu/Detailsposttake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Remaining Term: ? Years"
+
+[node name="AmtRem" type="Label" parent="TheBank/InLoanMenu/Detailsposttake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "You owe: $?"
+
+[node name="Bill" type="Label" parent="TheBank/InLoanMenu/Detailsposttake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Monthly Payment: $?"
+
+[node name="Early" type="Label" parent="TheBank/InLoanMenu/Detailsposttake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Pay it off early: Save $?"
+
+[node name="OutLoan" type="Control" parent="TheBank"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Small" type="Panel" parent="TheBank/OutLoan"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -408.5
+offset_right = -17.0
+offset_bottom = -190.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="Decide" type="HBoxContainer" parent="TheBank/OutLoan/Small"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -832.0
+offset_top = -81.0
+offset_right = -14.0
+offset_bottom = 81.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="Take" type="Button" parent="TheBank/OutLoan/Small/Decide"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 125
+theme_override_icons/icon = ExtResource("35_5w3yo")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Take"
+
+[node name="Detailspretake" type="VBoxContainer" parent="TheBank/OutLoan/Small"]
+layout_mode = 2
+offset_left = 16.0
+offset_right = 596.0
+offset_bottom = 216.0
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="TheBank/OutLoan/Small/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Small Loan"
+
+[node name="Rate" type="Label" parent="TheBank/OutLoan/Small/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "60% Interest"
+
+[node name="Term" type="Label" parent="TheBank/OutLoan/Small/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Loan Term: 5 Years"
+
+[node name="Amount" type="Label" parent="TheBank/OutLoan/Small/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "You Get: $1,000,000"
+
+[node name="Amountwithinterest" type="Label" parent="TheBank/OutLoan/Small/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "You Pay: $1,600,000 over 5 years"
+
+[node name="Medium" type="Panel" parent="TheBank/OutLoan"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -162.5
+offset_right = -17.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="Decide" type="HBoxContainer" parent="TheBank/OutLoan/Medium"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -832.0
+offset_top = -81.0
+offset_right = -14.0
+offset_bottom = 81.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="TakeM" type="Button" parent="TheBank/OutLoan/Medium/Decide"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 125
+theme_override_icons/icon = ExtResource("35_5w3yo")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Take"
+
+[node name="Detailspretake" type="VBoxContainer" parent="TheBank/OutLoan/Medium"]
+layout_mode = 2
+offset_left = 16.0
+offset_right = 596.0
+offset_bottom = 216.0
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="TheBank/OutLoan/Medium/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Medium Loan"
+
+[node name="Rate" type="Label" parent="TheBank/OutLoan/Medium/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "75% Interest"
+
+[node name="Term" type="Label" parent="TheBank/OutLoan/Medium/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Loan Term: 8 Years"
+
+[node name="Amount" type="Label" parent="TheBank/OutLoan/Medium/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "You Get: $5,000,000"
+
+[node name="Amountwithinterest" type="Label" parent="TheBank/OutLoan/Medium/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "You Pay: $9,000,000 over 8 years"
+
+[node name="Large" type="Panel" parent="TheBank/OutLoan"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = 86.5
+offset_right = -17.0
+offset_bottom = 304.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="Decide" type="HBoxContainer" parent="TheBank/OutLoan/Large"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -832.0
+offset_top = -81.0
+offset_right = -14.0
+offset_bottom = 81.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 2
+
+[node name="TakeL" type="Button" parent="TheBank/OutLoan/Large/Decide"]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 125
+theme_override_icons/icon = ExtResource("35_5w3yo")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Take"
+
+[node name="Detailspretake" type="VBoxContainer" parent="TheBank/OutLoan/Large"]
+layout_mode = 2
+offset_left = 16.0
+offset_right = 596.0
+offset_bottom = 216.0
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="TheBank/OutLoan/Large/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Large Loan"
+
+[node name="Rate" type="Label" parent="TheBank/OutLoan/Large/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "85% Interest"
+
+[node name="Term" type="Label" parent="TheBank/OutLoan/Large/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Loan Term: 12 Years"
+
+[node name="Amount" type="Label" parent="TheBank/OutLoan/Large/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "You Get: $10,000,000"
+
+[node name="Amountwithinterest" type="Label" parent="TheBank/OutLoan/Large/Detailspretake"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "You Pay: $18,500,000 over 12 years"
+
+[node name="Publisher" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1592,16 +2364,16 @@ vertical_alignment = 1
 [node name="Explain" type="RichTextLabel" parent="Publisher"]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 85.0
+offset_top = 158.0
 offset_right = 1464.0
-offset_bottom = 242.0
+offset_bottom = 328.0
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/normal_font = ExtResource("7_xpq5m")
-theme_override_font_sizes/normal_font_size = 45
-text = "Publishers market your game far beyond anything you could do, but take a hefty cut of the profits. you can enter or exit a  deal at any time. The cut also applies to fan gain."
+theme_override_font_sizes/normal_font_size = 35
+text = "Publishers market your game far beyond anything you could do, but take a hefty cut of the profits. you can enter or exit a  deal at any time. The cut also applies to fan gain. If you produce a game below their quality while signed to them, they will take a 95% cut of the game as punishment."
 fit_content = true
 
 [node name="PublisherList" type="OptionButton" parent="Publisher"]
@@ -1642,9 +2414,9 @@ popup/item_5/id = 5
 [node name="Stats" type="VBoxContainer" parent="Publisher"]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 242.0
+offset_top = 355.0
 offset_right = 1462.0
-offset_bottom = 629.0
+offset_bottom = 806.0
 
 [node name="Level14" type="Label" parent="Publisher/Stats"]
 layout_mode = 2
@@ -1662,53 +2434,53 @@ vertical_alignment = 1
 
 [node name="Level9" type="Label" parent="Publisher/Stats"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_colors/font_color = Color(0.544798, 0.79002, 0.83026, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 65
-text = "Jones Inc. - 90% cut, + 30% outreach"
+theme_override_font_sizes/font_size = 45
+text = "90% quality - Jones Inc. - 90% cut, + 30% outreach"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level11" type="Label" parent="Publisher/Stats"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_colors/font_color = Color(0.982388, 0.643713, 0.540501, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 65
-text = "GameBox - 85% cut, + 25% outreach"
+theme_override_font_sizes/font_size = 45
+text = "85% quality - GameBox - 85% cut, + 25% outreach"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level10" type="Label" parent="Publisher/Stats"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_colors/font_color = Color(0.609192, 0.807346, 0.539597, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 65
-text = "Chazzard - 70% cut, + 20% outreach"
+theme_override_font_sizes/font_size = 45
+text = "75% quality - Chazzard - 70% cut, + 20% outreach"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level12" type="Label" parent="Publisher/Stats"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.839655, 0.701935, 0.716791, 1)
+theme_override_colors/font_color = Color(1, 0.544856, 0.971761, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 65
-text = "Indie cult - 45% cut, + 10% outreach"
+theme_override_font_sizes/font_size = 45
+text = "70% quality - Indie cult - 45% cut, + 10% outreach"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1720,8 +2492,8 @@ theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 65
-text = "YouBeHard - 30% cut, + 5% outreach"
+theme_override_font_sizes/font_size = 45
+text = "60% quality - YouBeHard - 30% cut, + 5% outreach"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -2654,8 +3426,11 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/background = SubResource("StyleBoxFlat_u1plp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 
-[connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
+[connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
+[connection signal="pressed" from="Buttons/Loans" to="." method="_on_loans_pressed"]
+[connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
 [connection signal="pressed" from="Buttons/Research" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Research" to="Research" method="_on_research_pressed"]
 [connection signal="pressed" from="Buttons/Develop" to="." method="_on_develop_pressed"]
@@ -2664,8 +3439,8 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="Buttons/Mini/Time" method="_on_speed_pressed"]
 [connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
-[connection signal="pressed" from="During/Publish" to="." method="PUBLISH"]
 [connection signal="pressed" from="During/Publish" to="." method="soundfx"]
+[connection signal="pressed" from="During/Publish" to="." method="PUBLISH"]
 [connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Platform/Platform" to="." method="_on_platform_item_selected"]
@@ -2674,10 +3449,22 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 [connection signal="item_selected" from="Developing/Header/Target/Audience" to="." method="_on_audience_item_selected"]
 [connection signal="text_changed" from="Developing/Header/Name/NameL" to="." method="_on_name_l_text_changed"]
 [connection signal="pressed" from="Developing/Develop" to="." method="DEVSTART"]
+[connection signal="pressed" from="Staff/BackP3" to="." method="soundfx"]
+[connection signal="pressed" from="Staff/BackP3" to="." method="_on_back_p_pressed"]
+[connection signal="text_submitted" from="Staff/HBoxContainer/Input/Linput" to="." method="_on_linput_text_submitted"]
+[connection signal="text_submitted" from="Staff/HBoxContainer/Input/Minput" to="." method="_on_minput_text_submitted"]
+[connection signal="text_submitted" from="Staff/HBoxContainer/Input/Hinput" to="." method="_on_hinput_text_submitted"]
+[connection signal="pressed" from="Staff/HBoxContainer/Hire" to="." method="_on_hire_pressed"]
+[connection signal="pressed" from="Staff/HBoxContainer/Fire" to="." method="_on_fire_pressed"]
+[connection signal="pressed" from="TheBank/BackP4" to="." method="soundfx"]
+[connection signal="pressed" from="TheBank/BackP4" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="TheBank/InLoanMenu/Pay" to="." method="_on_pay_pressed"]
+[connection signal="pressed" from="TheBank/OutLoan/Small/Decide/Take" to="." method="_on_take_pressed"]
+[connection signal="pressed" from="TheBank/OutLoan/Medium/Decide/TakeM" to="." method="_on_take_m_pressed"]
+[connection signal="pressed" from="TheBank/OutLoan/Large/Decide/TakeL" to="." method="_on_take_l_pressed"]
 [connection signal="item_selected" from="Publisher/PublisherList" to="." method="_on_publisher_list_item_selected"]
-[connection signal="item_selected" from="Publisher/PublisherList" to="." method="soundfx"]
-[connection signal="pressed" from="Publisher/BackP" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Publisher/BackP" to="." method="soundfx"]
+[connection signal="pressed" from="Publisher/BackP" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Research/Research2/Decide/Begin" to="." method="soundfx"]
 [connection signal="pressed" from="Research/Research2/Decide/Begin" to="Research" method="_on_begin_pressed"]
 [connection signal="pressed" from="Research/Research2/Decide/Exit" to="." method="soundfx"]
@@ -2687,10 +3474,10 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 [connection signal="pressed" from="Market/Tasks/DB2" to="." method="_on_db_2_pressed"]
 [connection signal="pressed" from="Market/Tasks/S" to="." method="_on_s_pressed"]
 [connection signal="text_submitted" from="Market/BUDGET" to="." method="_on_budget_text_submitted"]
-[connection signal="pressed" from="Market/BackP2" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Market/BackP2" to="." method="soundfx"]
-[connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
+[connection signal="pressed" from="Market/BackP2" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
+[connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
 [connection signal="timeout" from="Timers/Month" to="." method="newmonth"]
 [connection signal="timeout" from="Timers/MonthProg" to="." method="monthprog"]
 [connection signal="timeout" from="Timers/DevProg" to="." method="_on_dev_prog_timeout"]

@@ -33,7 +33,7 @@ var currentS: int = 0
 var highS: int = 0
 var lowS: int = 0
 var medS:int = 0
-var expenses:int = rent
+var expenses:int
 
 # DIFFICULTY MULTIPLIERS:
 var prodM:float
@@ -86,6 +86,7 @@ func REFRESH_ALL():
 	refresh_productivity()
 	refresh_dev_summary()
 	refresh_during_ui()
+	refresh_loan()
 
 @onready var develop: Button = $Buttons/Develop
 @onready var during: Panel = $During
@@ -111,6 +112,7 @@ func refresh_inprog_ui():
 			if publisher == true:
 				marketing.hide()
 			else:
+				print("failure")
 				marketing.show()
 		else:
 			during.hide()
@@ -137,12 +139,15 @@ func refresh_info_ui():
 		moneyL.text = "Bank: $" + str(moneyT / 10) + "B+"
 	fansL.text = str(fans) + " Fans"
 	monthsL.text = "Year " + str(years) + ", month " + str(months)
+	expenses = payroll + rent + interestBILL
 	if expenses < 1000000:
 		var expenseT:float = expenses / 100
 		expensesL.text = "Costs: $" + str(expenseT / 10) + "K+"
 	if expenses < 1000000000 and expenses > 1000000:
 		var expenseT = int(expenses / 1000000)
 		moneyL.text = "Costs: $" + str(expenseT / 10) + "M+"
+	MonthLoan += 1
+	amount_taken -= interestBILL
 
 @onready var nameL: Label = $During/N/Name
 @onready var game_prog: ProgressBar = $During/GameProg
@@ -157,7 +162,10 @@ func refresh_productivity():
 		prodBoost = 1.15
 	else:
 		prodBoost = 1
-	productivity = ((1 + (highS * .3) + (medS * .2) + (lowS * .1)) * prodM) * prodBoost
+	productivity = (1 + (highS * .25) + (medS * .12) + (lowS * .075)) * (prodM * prodBoost)
+	currentS = highS + medS + lowS
+	if gameinprog == true:
+		refreshdevtimer()
 
 @onready var months_l: Label = $Developing/Header/ETA/MonthsL
 @onready var m_share_l: Label = $Developing/Header/Marketshare/MShareL
@@ -205,7 +213,6 @@ var quality:float = 0
 func pre_dev_purge():
 	refresh_productivity()
 	devperc = 0
-	gameinprog = true
 	popularity = 1
 	quality = 0
 	press = 0
@@ -291,6 +298,7 @@ func _on_name_l_text_changed(new_text:String) -> void:
 func DEVSTART():
 	if AUDIENCE != -1 and DESIGN != -1 and GENRE != -1 and nameG != "?" and SIZE != -1 and TECH != -1 and PLATFORM != -1:
 		if money > devcost:
+			gameinprog = true
 			soundfx()
 			money -= devcost
 			Global.in_menu = false
@@ -345,10 +353,15 @@ func suggest():
 		suggestedP = 1
 
 @onready var dev_prog: Timer = $Timers/DevProg
+var fac
 
 func dev_time():
-	devtime = ((SIZE + TECH + DESIGN) * 100) / productivity
+	fac = ((SIZE + TECH + DESIGN) * 100)
+	devtime = fac / productivity
 	dev_prog.wait_time = float(devtime / 100)
+
+func refreshdevtimer():
+	devtime = (fac / productivity)
 
 func _on_dev_prog_timeout() -> void:
 	devperc += 1
@@ -368,10 +381,17 @@ func PUBLISH():
 	else:
 		universe = 1000000
 		refresh_popularity()
-	quality = (devperc - randi_range(0,15) * 0.7) + ((SIZE + DESIGN + TECH) * randi_range(1,3))
+	quality = ((devperc - randi_range(0,15)) * 0.7) + ((SIZE + DESIGN + TECH) * randi_range(1,3))
+	if quality > 100:
+		quality = 100
 	sales = ((universe * marketshare) * (((popularity * 0.4) + (quality * 0.7)) / 100)) * salesM
 	suggest()
-	revenue = (sales * suggestedP) * pubCut
+	var  pubMOD:float
+	if quality < contingency:
+		pubMOD = 0.05
+	if contingency < quality:
+		pubMOD = pubCut
+	revenue = (sales * suggestedP) * pubMOD
 	var newfans = (sales * 0.15 * pubCut) * (quality / 100)
 	var oldfans = (fans / 2) * (quality / 100)
 	fans = int(oldfans + newfans)
@@ -409,7 +429,12 @@ func publishedG():
 	else:
 		wishlists.text = "Wishlists: ???"
 	if publisher == true:
-		var pubPerc:int = (1 - pubCut) * 100
+		var pubMOD:float
+		if quality < contingency:
+			pubMOD = 0.05
+		if contingency > quality:
+			pubMOD = pubCut
+		var pubPerc = 100 - (pubMOD * 100)
 		publisher_l.text = "Publisher: " + str(pubPerc) + "% cut"
 	if publisher == false:
 		publisher_l.text = "Publisher: Self-Published"
@@ -463,11 +488,14 @@ func _on_publisher_pressed() -> void:
 	publishdeal.show()
 	Global.in_menu = true
 
+var pub_id:int = 0
 var pubCut:float
 var pubBoost:float
 var pubdiscount:float = 0
+var contingency:float = 0
 
 func _on_publisher_list_item_selected(index:int) -> void:
+	soundfx()
 	if Global.research_level == 7:
 		pubdiscount = 0.1
 	else:
@@ -477,31 +505,45 @@ func _on_publisher_list_item_selected(index:int) -> void:
 			pubCut = 0
 			pubBoost = 1
 			publisher = false
+			contingency = 0
+			pub_id = 0
 		1:
 			pubCut = 0.1 + pubdiscount
 			pubBoost = 1.3
 			publisher = true
+			contingency = 90
+			pub_id = 1
 		2:
 			pubCut = 0.15 + pubdiscount
 			pubBoost = 1.25
 			publisher = true
+			contingency = 85
+			pub_id = 2
 		3:
 			pubCut = 0.3 + pubdiscount
 			pubBoost = 1.2
 			publisher = true
+			contingency = 75
+			pub_id = 3
 		4:
 			pubCut = 0.55 + pubdiscount
 			pubBoost = 1.1
 			publisher = true
+			contingency = 60
+			pub_id = 4
 		5:
 			pubCut = 0.7 + pubdiscount
 			pubBoost = 1.05
 			publisher = true
+			contingency = 60
+			pub_id = 5
 
 func _on_back_p_pressed() -> void:
 	Global.in_menu = false
 	publishdeal.hide()
 	marketP.hide()
+	staff.hide()
+	the_bank.hide()
 	REFRESH_ALL()
 
 # MARKETING:
@@ -556,3 +598,160 @@ func _on_budget_text_submitted(new_text:float) -> void:
 		if paid < 60.1:
 			paid = 60.2
 		refresh_popularity()
+
+# STAFF:
+@onready var lcount: Label = $Staff/HBoxContainer/Tier3/Lcount
+@onready var mcount: Label = $Staff/HBoxContainer/Tier3/Mcount
+@onready var hcount: Label = $Staff/HBoxContainer/Tier3/Hcount
+@onready var salaries: RichTextLabel = $Staff/Salaries
+@onready var amount_left: RichTextLabel = $"Staff/Amount left"
+@onready var staff: Panel = $Staff
+
+var payroll:int = 0
+var Lconsidered:int = 0
+var Mconsidered:int = 0
+var Hconsidered:int = 0
+var consideredSum:int = 0
+
+func open_staff():
+	soundfx()
+	Global.in_menu = true
+	refresh_staff_ui()
+	staff.show()
+
+func _on_linput_text_submitted(new_text:int) -> void:
+	soundfx()
+	Lconsidered = new_text
+
+func _on_minput_text_submitted(new_text:int) -> void:
+	soundfx()
+	Mconsidered = new_text
+
+func _on_hinput_text_submitted(new_text:int) -> void:
+	soundfx()
+	Lconsidered = new_text
+
+func _on_hire_pressed() -> void:
+	consideredSum = Lconsidered + Mconsidered + Hconsidered
+	if consideredSum <= (Global.maxdesks - currentS) and money > (consideredSum * 50000):
+		soundfx()
+		lowS += Lconsidered
+		medS += Mconsidered
+		highS += Hconsidered
+		payroll = (lowS * 12500) + (medS * 16000) + (highS * 22500)
+		money -= (consideredSum * 50000)
+		refresh_info_ui()
+		refresh_productivity()
+		refresh_staff_ui()
+
+func _on_fire_pressed() -> void:
+	consideredSum = Lconsidered + Mconsidered + Hconsidered
+	if consideredSum <= currentS and money > (consideredSum * 50000):
+		lowS -= Lconsidered
+		medS -= Mconsidered
+		highS -= Hconsidered
+		payroll = (lowS * 12500) + (medS * 16000) + (highS * 22500)
+		money -= (consideredSum * 50000)
+		refresh_info_ui()
+		refresh_productivity()
+		refresh_staff_ui()
+
+func refresh_staff_ui():
+	lcount.text = str(lowS)
+	mcount.text = str(medS)
+	hcount.text = str(highS)
+	salaries.text= "Currently, you are paying a total of $" + str(payroll) + " in salaries."
+	amount_left.text = "You have " + str(currentS) + " staff members, meaning your office can hold " + str((Global.maxdesks - currentS)) + " more."
+
+# THE BANK:
+@onready var the_bank: Panel = $TheBank
+
+var interestBILL:int = 0
+var amount_taken:int = 0
+var in_loan = false
+var loan_id:int = 0
+var MonthLoan:int = 0
+
+@onready var in_loan_menu: Panel = $TheBank/InLoanMenu
+@onready var out_loan: Control = $TheBank/OutLoan
+
+func _on_take_pressed() -> void: # SMALL
+	soundfx()
+	out_loan.hide()
+	in_loan_menu.show()
+	interestBILL += 27000
+	money += 1000000
+	in_loan = true
+	amount_taken = 1600000
+	loan_id = 1
+	MonthLoan = 0
+	refresh_loan()
+
+func _on_take_m_pressed() -> void: # MEDIUM
+	soundfx()
+	out_loan.hide()
+	in_loan_menu.show()
+	interestBILL += 93750
+	money += 5000000
+	in_loan = true
+	amount_taken = 9000000
+	loan_id = 2
+	MonthLoan = 0
+	refresh_loan()
+
+func _on_take_l_pressed() -> void: # LARGE
+	soundfx()
+	out_loan.hide()
+	in_loan_menu.show()
+	interestBILL += 128500
+	money += 10000000
+	in_loan = true
+	amount_taken = 18500000
+	loan_id = 3
+	MonthLoan = 0
+	refresh_loan()
+
+@onready var rate: Label = $TheBank/InLoanMenu/Detailsposttake/Rate
+@onready var term: Label = $TheBank/InLoanMenu/Detailsposttake/Term
+@onready var amt_rem: Label = $TheBank/InLoanMenu/Detailsposttake/AmtRem
+@onready var bill: Label = $TheBank/InLoanMenu/Detailsposttake/Bill
+@onready var early: Label = $TheBank/InLoanMenu/Detailsposttake/Early
+
+func refresh_loan():
+	if amount_taken <= 0:
+		loan_paid()
+	else:
+		amt_rem.text = "You owe: $" + str(amount_taken)
+		early.text = "Save 15% by paying early: $" + str(int(amount_taken * .85))
+		match loan_id:
+			1:
+				rate.text = "60% interest small loan"
+				term.text = "Time remaining: " + str((60 - MonthLoan)) + " months"
+				bill.text = "Monthy payment: $27,000"
+			2:
+				rate.text = "75% interest medium loan"
+				term.text = "Time remaining: " + str((96 - MonthLoan)) + " months"
+				bill.text = "Monthy payment: $93,750"
+			3:
+				rate.text = "85% interest large loan"
+				term.text = "Time remaining: " + str((144 - MonthLoan)) + " months"
+				bill.text = "Monthy payment: $128,500"
+
+func loan_paid():
+	in_loan = false
+	interestBILL = 0
+	amount_taken = 0
+	loan_id = 0
+	out_loan.show()
+	in_loan_menu.hide()
+
+func _on_loans_pressed() -> void:
+	Global.in_menu = true
+	the_bank.show()
+	refresh_loan()
+
+func _on_pay_pressed() -> void:
+	if money > int(amount_taken * .85):
+		soundfx()
+		money -= int(amount_taken * .85)
+		loan_paid()
