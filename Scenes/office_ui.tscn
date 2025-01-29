@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=123 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -33,8 +33,10 @@
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="30_bycjq"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="31_ydjad"]
 [ext_resource type="Script" path="res://Scripts/research.gd" id="32_o67hk"]
+[ext_resource type="StyleBox" uid="uid://wnao1st57aem" path="res://Assets/UI/Contract.tres" id="33_jwco5"]
 [ext_resource type="Texture2D" uid="uid://7lyq115d0rkf" path="res://Assets/UI/cancel75.png" id="33_og82k"]
 [ext_resource type="Texture2D" uid="uid://bukqqfs3rgueu" path="res://Assets/UI/checklist.png" id="33_vl7bk"]
+[ext_resource type="Texture2D" uid="uid://co8gcioaqtu7t" path="res://Assets/UI/paper-clip.png" id="34_25tik"]
 [ext_resource type="Texture2D" uid="uid://dg70skn7suscm" path="res://Assets/UI/cancel.png" id="34_a2n7u"]
 [ext_resource type="Texture2D" uid="uid://qdngnbhhnobh" path="res://Assets/UI/pub (2).png" id="34_cuuo3"]
 [ext_resource type="Texture2D" uid="uid://7se3a2smhoj2" path="res://Assets/UI/bank.png" id="35_5w3yo"]
@@ -334,16 +336,32 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_size = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0k02e"]
-bg_color = Color(0.212305, 0.212305, 0.212305, 0.588235)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7vq0"]
+bg_color = Color(0.0828632, 0.156143, 0.0448275, 0.588235)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahmq4"]
-bg_color = Color(1, 1, 1, 0.588235)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyvv1"]
+bg_color = Color(0.0635623, 0.520021, 1.92523e-07, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujgqd"]
+bg_color = Color(0.191913, 0.0315867, 0.0281881, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lq2eq"]
+bg_color = Color(0.805239, 0, 0.118691, 0.588235)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -363,8 +381,82 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_size = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4dcy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ar04i"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.298039, 0.435294, 0.466667, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ku45w"]
+bg_color = Color(0.157781, 0.2281, 0.225808, 1)
+border_width_top = 30
+border_color = Color(0.298039, 0.435294, 0.466667, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mj1an"]
+bg_color = Color(0.0823529, 0.156863, 0.0431373, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iyhhy"]
+bg_color = Color(0.0627451, 0.521569, 0, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhqpd"]
+bg_color = Color(0.0856947, 0.129125, 0.073212, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7vhx"]
 bg_color = Color(0.551038, 0.694284, 0.510231, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpc5q"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.380392, 0.466667, 0.356863, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nowl1"]
+bg_color = Color(0.134914, 0.175979, 0.1237, 1)
+border_width_top = 30
+border_color = Color(0.380392, 0.466667, 0.356863, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byvpj"]
+bg_color = Color(0.241002, 0, 0.0170325, 0.607843)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -375,6 +467,24 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yncnx"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 30
+border_color = Color(0.192157, 0.0470588, 0.054902, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pm8jk"]
+bg_color = Color(0.0908529, 0.00838139, 0.00515837, 1)
+border_width_top = 30
+border_color = Color(0.192157, 0.0470588, 0.054902, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jqlcp"]
 bg_color = Color(0.730937, 0.559699, 0.424855, 0.607843)
@@ -590,6 +700,34 @@ shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o325d"]
 bg_color = Color(0.363649, 0.95313, 0.876242, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pin7l"]
+bg_color = Color(0.292043, 0.38502, 0.283456, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82luo"]
+bg_color = Color(0.290196, 0.384314, 0.282353, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -1595,9 +1733,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -653.0
+offset_left = -537.5
 offset_top = -100.5
-offset_right = 653.0
+offset_right = 538.5
 offset_bottom = 100.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -1655,11 +1793,11 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = " High salary "
 horizontal_alignment = 1
 
-[node name="Tier2" type="VBoxContainer" parent="Staff/HBoxContainer"]
+[node name="Salary" type="VBoxContainer" parent="Staff/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Label2" type="Label" parent="Staff/HBoxContainer/Tier2"]
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/Salary"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1671,7 +1809,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = " Salary: "
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="Staff/HBoxContainer/Tier2"]
+[node name="Label" type="Label" parent="Staff/HBoxContainer/Salary"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1683,7 +1821,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "$12,500"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="Staff/HBoxContainer/Tier2"]
+[node name="Label3" type="Label" parent="Staff/HBoxContainer/Salary"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1695,7 +1833,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "$16,000"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="Staff/HBoxContainer/Tier2"]
+[node name="Label4" type="Label" parent="Staff/HBoxContainer/Salary"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1707,11 +1845,11 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "$22,500"
 horizontal_alignment = 1
 
-[node name="Tier3" type="VBoxContainer" parent="Staff/HBoxContainer"]
+[node name="YouHave" type="VBoxContainer" parent="Staff/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Label2" type="Label" parent="Staff/HBoxContainer/Tier3"]
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/YouHave"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1723,7 +1861,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = " You Have: "
 horizontal_alignment = 1
 
-[node name="Lcount" type="Label" parent="Staff/HBoxContainer/Tier3"]
+[node name="Lcount" type="Label" parent="Staff/HBoxContainer/YouHave"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1735,7 +1873,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "0"
 horizontal_alignment = 1
 
-[node name="Mcount" type="Label" parent="Staff/HBoxContainer/Tier3"]
+[node name="Mcount" type="Label" parent="Staff/HBoxContainer/YouHave"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1747,7 +1885,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "0"
 horizontal_alignment = 1
 
-[node name="Hcount" type="Label" parent="Staff/HBoxContainer/Tier3"]
+[node name="Hcount" type="Label" parent="Staff/HBoxContainer/YouHave"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1759,11 +1897,11 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "0"
 horizontal_alignment = 1
 
-[node name="Input" type="VBoxContainer" parent="Staff/HBoxContainer"]
+[node name="Hire" type="VBoxContainer" parent="Staff/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 11
+theme_override_constants/separation = 10
 
-[node name="Label2" type="Label" parent="Staff/HBoxContainer/Input"]
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/Hire"]
 layout_mode = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
@@ -1772,60 +1910,102 @@ theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = ExtResource("7_g83m7")
-text = " Amount: "
+text = " Hire one: "
 horizontal_alignment = 1
 
-[node name="Linput" type="LineEdit" parent="Staff/HBoxContainer/Input"]
+[node name="LHire" type="Button" parent="Staff/HBoxContainer/Hire"]
 layout_mode = 2
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 27
-theme_override_styles/focus = SubResource("StyleBoxFlat_0k02e")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ahmq4")
-placeholder_text = "Type number"
-alignment = 1
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vyvv1")
+text = "$50,000"
 
-[node name="Minput" type="LineEdit" parent="Staff/HBoxContainer/Input"]
+[node name="MHire" type="Button" parent="Staff/HBoxContainer/Hire"]
 layout_mode = 2
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 27
-theme_override_styles/focus = SubResource("StyleBoxFlat_0k02e")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ahmq4")
-placeholder_text = "Type number"
-alignment = 1
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vyvv1")
+text = "$50,000"
 
-[node name="Hinput" type="LineEdit" parent="Staff/HBoxContainer/Input"]
+[node name="HHire" type="Button" parent="Staff/HBoxContainer/Hire"]
 layout_mode = 2
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 27
-theme_override_styles/focus = SubResource("StyleBoxFlat_0k02e")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ahmq4")
-placeholder_text = "Type number"
-alignment = 1
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v7vq0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vyvv1")
+text = "$50,000"
 
-[node name="Hire" type="Button" parent="Staff/HBoxContainer"]
+[node name="Fire" type="VBoxContainer" parent="Staff/HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 70
-theme_override_styles/hover_pressed_mirrored = ExtResource("30_bycjq")
-theme_override_styles/hover_pressed = ExtResource("30_bycjq")
-theme_override_styles/hover = ExtResource("30_bycjq")
-theme_override_styles/pressed = ExtResource("30_bycjq")
-theme_override_styles/normal = ExtResource("31_ydjad")
-text = "Hire"
+theme_override_constants/separation = 10
 
-[node name="Fire" type="Button" parent="Staff/HBoxContainer"]
+[node name="Label2" type="Label" parent="Staff/HBoxContainer/Fire"]
 layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 70
-theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
-theme_override_styles/hover_pressed = ExtResource("35_nawnk")
-theme_override_styles/hover = ExtResource("35_nawnk")
-theme_override_styles/pressed = ExtResource("35_nawnk")
-theme_override_styles/normal = ExtResource("36_1yad1")
-text = "Fire"
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Fire one: "
+horizontal_alignment = 1
+
+[node name="LFire" type="Button" parent="Staff/HBoxContainer/Fire"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lq2eq")
+text = "$50,000"
+
+[node name="MFire" type="Button" parent="Staff/HBoxContainer/Fire"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lq2eq")
+text = "$50,000"
+
+[node name="HFire" type="Button" parent="Staff/HBoxContainer/Fire"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ujgqd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lq2eq")
+text = "$50,000"
 
 [node name="Explain2" type="RichTextLabel" parent="Staff"]
 layout_mode = 1
@@ -1895,24 +2075,6 @@ theme_override_fonts/normal_font = ExtResource("7_xpq5m")
 theme_override_font_sizes/normal_font_size = 30
 text = "There is a $50,000 severance pay fee upon firing and a $50,000 signing bonus on hiring, equal for every tier of staff member."
 
-[node name="Explain" type="RichTextLabel" parent="Staff"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -548.5
-offset_top = -141.5
-offset_right = 548.5
-offset_bottom = -101.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/outline_size = 4
-theme_override_fonts/normal_font = ExtResource("7_xpq5m")
-theme_override_font_sizes/normal_font_size = 30
-text = "Enter an amount (No Letters!) and press enter, then the big button."
-
 [node name="Offices" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -1929,6 +2091,463 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_igk02")
 
+[node name="Title3" type="Label" parent="Offices"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Real Estate:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackP4" type="Button" parent="Offices"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ar04i")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ar04i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ar04i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ar04i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ku45w")
+text = "BACK"
+
+[node name="Table" type="HBoxContainer" parent="Offices"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -530.0
+offset_top = -214.5
+offset_right = 530.0
+offset_bottom = 214.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="Name" type="VBoxContainer" parent="Offices/Table"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Offices/Table/Name"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.468146, 0.634164, 0.672473, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Name: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Offices/Table/Name"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Starter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Offices/Table/Name"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Amateur"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Offices/Table/Name"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Small"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Offices/Table/Name"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Medium"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Offices/Table/Name"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Large"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Offices/Table/Name"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " skyscraper "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Desks" type="VBoxContainer" parent="Offices/Table"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Offices/Table/Desks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.468146, 0.634164, 0.672473, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Desks: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Offices/Table/Desks"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Offices/Table/Desks"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Offices/Table/Desks"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Offices/Table/Desks"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Offices/Table/Desks"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Offices/Table/Desks"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "60"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Price" type="VBoxContainer" parent="Offices/Table"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Offices/Table/Price"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.468146, 0.634164, 0.672473, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Rent: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Offices/Table/Price"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$1,500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Offices/Table/Price"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$7,500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Offices/Table/Price"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$25,000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Offices/Table/Price"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$75,000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Offices/Table/Price"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$150,000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Offices/Table/Price"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "$300,000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Move" type="VBoxContainer" parent="Offices/Table"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MOVE" type="Label" parent="Offices/Table/Move"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.468146, 0.634164, 0.672473, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 12
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Move: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Starter" type="Button" parent="Offices/Table/Move"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyhhy")
+text = " Sign Lease "
+
+[node name="Amareur" type="Button" parent="Offices/Table/Move"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyhhy")
+text = " Sign Lease "
+
+[node name="Small" type="Button" parent="Offices/Table/Move"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyhhy")
+text = " Sign Lease "
+
+[node name="Medium" type="Button" parent="Offices/Table/Move"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyhhy")
+text = " Sign Lease "
+
+[node name="Large" type="Button" parent="Offices/Table/Move"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyhhy")
+text = " Sign Lease "
+
+[node name="Skyscraper" type="Button" parent="Offices/Table/Move"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mj1an")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyhhy")
+text = " Sign Lease "
+
+[node name="Explain4" type="RichTextLabel" parent="Offices"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 166.0
+offset_top = -327.5
+offset_right = -166.0
+offset_bottom = -255.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "New offices allow you to hire more staff but can get expensive. There is also a $150,000 moving fee + $5,000 per staff member to relocate them."
+
 [node name="Contracts" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -1943,7 +2562,472 @@ offset_right = 936.0
 offset_bottom = 520.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_a4dcy")
+theme_override_styles/panel = ExtResource("33_jwco5")
+
+[node name="Title4" type="Label" parent="Contracts"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Contract work:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explain5" type="RichTextLabel" parent="Contracts"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -535.5
+offset_top = 105.0
+offset_right = 535.5
+offset_bottom = 217.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "Contracts are short and sweet tasks you can do for other companies at any time to get some extra cash, they're way quicker than making a game and are risk-free, but don't earn much."
+
+[node name="Contract1" type="Panel" parent="Contracts"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 29.0
+offset_top = -282.5
+offset_right = -29.0
+offset_bottom = -160.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("33_jwco5")
+
+[node name="Name" type="Label" parent="Contracts/Contract1"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 13.0
+offset_right = 408.0
+offset_bottom = -13.0
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+text = "Jones Inc."
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Contracts/Contract1"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -331.5
+offset_top = 5.0
+offset_right = 161.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Time" type="Label" parent="Contracts/Contract1/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "8 Months"
+vertical_alignment = 1
+
+[node name="Pay" type="Label" parent="Contracts/Contract1/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$500,000"
+vertical_alignment = 1
+
+[node name="Requests" type="Label" parent="Contracts/Contract1/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Requires one High Salary Staff"
+vertical_alignment = 1
+
+[node name="AcceptPJ" type="Button" parent="Contracts/Contract1"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -526.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+theme_override_icons/icon = ExtResource("34_25tik")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j7vhx")
+text = "Accept"
+
+[node name="Contract2" type="Panel" parent="Contracts"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 29.0
+offset_top = -132.5
+offset_right = -29.0
+offset_bottom = -10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("33_jwco5")
+
+[node name="Name" type="Label" parent="Contracts/Contract2"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 13.0
+offset_right = 408.0
+offset_bottom = -13.0
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+text = "AGN"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Contracts/Contract2"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -331.5
+offset_top = 5.0
+offset_right = 161.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Time" type="Label" parent="Contracts/Contract2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "6 Months"
+vertical_alignment = 1
+
+[node name="Pay" type="Label" parent="Contracts/Contract2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$250,000"
+vertical_alignment = 1
+
+[node name="Requests" type="Label" parent="Contracts/Contract2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Requires one of any Staff tier"
+vertical_alignment = 1
+
+[node name="AcceptAGN" type="Button" parent="Contracts/Contract2"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -526.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+theme_override_icons/icon = ExtResource("34_25tik")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j7vhx")
+text = "Accept"
+
+[node name="Contract3" type="Panel" parent="Contracts"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 29.0
+offset_top = 18.5
+offset_right = -29.0
+offset_bottom = 140.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("33_jwco5")
+
+[node name="Name" type="Label" parent="Contracts/Contract3"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 13.0
+offset_right = 408.0
+offset_bottom = -13.0
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+text = "Charity"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Contracts/Contract3"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -331.5
+offset_top = 5.0
+offset_right = 161.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Time" type="Label" parent="Contracts/Contract3/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "2 Months"
+vertical_alignment = 1
+
+[node name="Pay" type="Label" parent="Contracts/Contract3/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$100,000"
+vertical_alignment = 1
+
+[node name="Requests" type="Label" parent="Contracts/Contract3/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Requires 25,000 fans"
+vertical_alignment = 1
+
+[node name="AcceptC" type="Button" parent="Contracts/Contract3"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -526.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+theme_override_icons/icon = ExtResource("34_25tik")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j7vhx")
+text = "Accept"
+
+[node name="Contract4" type="Panel" parent="Contracts"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 29.0
+offset_top = 171.5
+offset_right = -29.0
+offset_bottom = 293.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("33_jwco5")
+
+[node name="Name" type="Label" parent="Contracts/Contract4"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 13.0
+offset_right = 408.0
+offset_bottom = -13.0
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+text = "Blaze"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Contracts/Contract4"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -331.5
+offset_top = 5.0
+offset_right = 161.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Time" type="Label" parent="Contracts/Contract4/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "1 Year"
+vertical_alignment = 1
+
+[node name="Pay" type="Label" parent="Contracts/Contract4/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "$800,000"
+vertical_alignment = 1
+
+[node name="Requests" type="Label" parent="Contracts/Contract4/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "No Requirements"
+vertical_alignment = 1
+
+[node name="AcceptB" type="Button" parent="Contracts/Contract4"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -526.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+theme_override_icons/icon = ExtResource("34_25tik")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uhqpd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j7vhx")
+text = "Accept"
+
+[node name="BackP5" type="Button" parent="Contracts"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_vpc5q")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vpc5q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vpc5q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vpc5q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nowl1")
+text = "BACK"
+
+[node name="ContractTime" type="Timer" parent="Contracts"]
+wait_time = 10.0
+
+[node name="BankruptcyWarning" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -395.0
+offset_top = -189.0
+offset_right = 784.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_byvpj")
+
+[node name="Title4" type="Label" parent="BankruptcyWarning"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 125
+text = "WARNING!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explain5" type="RichTextLabel" parent="BankruptcyWarning"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 148.0
+offset_top = -41.5
+offset_right = -148.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "If you go over $50,000 in debt the game will end! Loans are available for you to try bounce back. Good luck!"
+
+[node name="BackP5" type="Button" parent="BankruptcyWarning"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_yncnx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yncnx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yncnx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yncnx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pm8jk")
+text = "Continue"
 
 [node name="TheBank" type="Panel" parent="."]
 visible = false
@@ -2331,6 +3415,7 @@ theme_override_font_sizes/font_size = 35
 text = "You Pay: $18,500,000 over 12 years"
 
 [node name="Publisher" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -3360,9 +4445,14 @@ autostart = true
 [node name="DevProg" type="Timer" parent="Timers"]
 
 [node name="Market" type="Timer" parent="Timers"]
-wait_time = 10.0
+wait_time = 5.0
 
 [node name="Research" type="Timer" parent="Timers"]
+
+[node name="LOAN" type="Timer" parent="Timers"]
+wait_time = 10.0
+
+[node name="AutosaveWait" type="Timer" parent="Timers"]
 
 [node name="DuringResearch" type="Panel" parent="."]
 visible = false
@@ -3426,11 +4516,75 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/background = SubResource("StyleBoxFlat_u1plp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 
+[node name="DuringContract" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -387.0
+offset_top = 108.0
+offset_right = -23.0
+offset_bottom = 301.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="Panel" type="Panel" parent="DuringContract"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pin7l")
+
+[node name="Company" type="Label" parent="DuringContract/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+text = "Company"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressC" type="ProgressBar" parent="DuringContract"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 100.0
+offset_right = 174.0
+offset_bottom = 188.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.290196, 0.384314, 0.282353, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/background = SubResource("StyleBoxFlat_u1plp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_82luo")
+
 [connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
+[connection signal="pressed" from="Buttons/RealEstate" to="." method="RealEstateButton"]
+[connection signal="pressed" from="Buttons/Contracts" to="." method="_on_contracts_pressed"]
 [connection signal="pressed" from="Buttons/Loans" to="." method="_on_loans_pressed"]
 [connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
-[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
+[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Research" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Research" to="Research" method="_on_research_pressed"]
 [connection signal="pressed" from="Buttons/Develop" to="." method="_on_develop_pressed"]
@@ -3438,9 +4592,13 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 [connection signal="pressed" from="Buttons/Mini/Time/Pause" to="Buttons/Mini/Time" method="_on_pause_pressed"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="Buttons/Mini/Time" method="_on_speed_pressed"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="SAVEGAME"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="LOADGAME"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="soundfx"]
 [connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
-[connection signal="pressed" from="During/Publish" to="." method="soundfx"]
 [connection signal="pressed" from="During/Publish" to="." method="PUBLISH"]
+[connection signal="pressed" from="During/Publish" to="." method="soundfx"]
 [connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Platform/Platform" to="." method="_on_platform_item_selected"]
@@ -3449,22 +4607,39 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 [connection signal="item_selected" from="Developing/Header/Target/Audience" to="." method="_on_audience_item_selected"]
 [connection signal="text_changed" from="Developing/Header/Name/NameL" to="." method="_on_name_l_text_changed"]
 [connection signal="pressed" from="Developing/Develop" to="." method="DEVSTART"]
-[connection signal="pressed" from="Staff/BackP3" to="." method="soundfx"]
 [connection signal="pressed" from="Staff/BackP3" to="." method="_on_back_p_pressed"]
-[connection signal="text_submitted" from="Staff/HBoxContainer/Input/Linput" to="." method="_on_linput_text_submitted"]
-[connection signal="text_submitted" from="Staff/HBoxContainer/Input/Minput" to="." method="_on_minput_text_submitted"]
-[connection signal="text_submitted" from="Staff/HBoxContainer/Input/Hinput" to="." method="_on_hinput_text_submitted"]
-[connection signal="pressed" from="Staff/HBoxContainer/Hire" to="." method="_on_hire_pressed"]
-[connection signal="pressed" from="Staff/HBoxContainer/Fire" to="." method="_on_fire_pressed"]
-[connection signal="pressed" from="TheBank/BackP4" to="." method="soundfx"]
+[connection signal="pressed" from="Staff/BackP3" to="." method="soundfx"]
+[connection signal="pressed" from="Staff/HBoxContainer/Hire/LHire" to="." method="hireLOW"]
+[connection signal="pressed" from="Staff/HBoxContainer/Hire/MHire" to="." method="hireMED"]
+[connection signal="pressed" from="Staff/HBoxContainer/Hire/HHire" to="." method="hireHIGH"]
+[connection signal="pressed" from="Staff/HBoxContainer/Fire/LFire" to="." method="fireLOW"]
+[connection signal="pressed" from="Staff/HBoxContainer/Fire/MFire" to="." method="fireMED"]
+[connection signal="pressed" from="Staff/HBoxContainer/Fire/HFire" to="." method="fireHIGH"]
+[connection signal="pressed" from="Offices/BackP4" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="Offices/BackP4" to="." method="soundfx"]
+[connection signal="pressed" from="Offices/Table/Move/Starter" to="." method="_on_starter_pressed"]
+[connection signal="pressed" from="Offices/Table/Move/Amareur" to="." method="_on_amareur_pressed"]
+[connection signal="pressed" from="Offices/Table/Move/Small" to="." method="_on_small_pressed"]
+[connection signal="pressed" from="Offices/Table/Move/Medium" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="Offices/Table/Move/Large" to="." method="_on_large_pressed"]
+[connection signal="pressed" from="Offices/Table/Move/Skyscraper" to="." method="_on_skyscraper_pressed"]
+[connection signal="pressed" from="Contracts/Contract1/AcceptPJ" to="." method="_on_accept_pj_pressed"]
+[connection signal="pressed" from="Contracts/Contract2/AcceptAGN" to="." method="_on_accept_agn_pressed"]
+[connection signal="pressed" from="Contracts/Contract3/AcceptC" to="." method="_on_accept_c_pressed"]
+[connection signal="pressed" from="Contracts/Contract4/AcceptB" to="." method="_on_accept_b_pressed"]
+[connection signal="pressed" from="Contracts/BackP5" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="Contracts/BackP5" to="." method="soundfx"]
+[connection signal="timeout" from="Contracts/ContractTime" to="." method="_on_contract_time_timeout"]
+[connection signal="pressed" from="BankruptcyWarning/BackP5" to="." method="exit_warning"]
 [connection signal="pressed" from="TheBank/BackP4" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="TheBank/BackP4" to="." method="soundfx"]
 [connection signal="pressed" from="TheBank/InLoanMenu/Pay" to="." method="_on_pay_pressed"]
 [connection signal="pressed" from="TheBank/OutLoan/Small/Decide/Take" to="." method="_on_take_pressed"]
 [connection signal="pressed" from="TheBank/OutLoan/Medium/Decide/TakeM" to="." method="_on_take_m_pressed"]
 [connection signal="pressed" from="TheBank/OutLoan/Large/Decide/TakeL" to="." method="_on_take_l_pressed"]
 [connection signal="item_selected" from="Publisher/PublisherList" to="." method="_on_publisher_list_item_selected"]
-[connection signal="pressed" from="Publisher/BackP" to="." method="soundfx"]
 [connection signal="pressed" from="Publisher/BackP" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="Publisher/BackP" to="." method="soundfx"]
 [connection signal="pressed" from="Research/Research2/Decide/Begin" to="." method="soundfx"]
 [connection signal="pressed" from="Research/Research2/Decide/Begin" to="Research" method="_on_begin_pressed"]
 [connection signal="pressed" from="Research/Research2/Decide/Exit" to="." method="soundfx"]
@@ -3474,12 +4649,14 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 [connection signal="pressed" from="Market/Tasks/DB2" to="." method="_on_db_2_pressed"]
 [connection signal="pressed" from="Market/Tasks/S" to="." method="_on_s_pressed"]
 [connection signal="text_submitted" from="Market/BUDGET" to="." method="_on_budget_text_submitted"]
-[connection signal="pressed" from="Market/BackP2" to="." method="soundfx"]
 [connection signal="pressed" from="Market/BackP2" to="." method="_on_back_p_pressed"]
-[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
+[connection signal="pressed" from="Market/BackP2" to="." method="soundfx"]
 [connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
+[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="timeout" from="Timers/Month" to="." method="newmonth"]
 [connection signal="timeout" from="Timers/MonthProg" to="." method="monthprog"]
 [connection signal="timeout" from="Timers/DevProg" to="." method="_on_dev_prog_timeout"]
 [connection signal="timeout" from="Timers/Market" to="." method="monthsales"]
 [connection signal="timeout" from="Timers/Research" to="Research" method="_on_research_timeout"]
+[connection signal="timeout" from="Timers/LOAN" to="." method="loanTIMERend"]
+[connection signal="timeout" from="Timers/AutosaveWait" to="." method="_on_autosave_wait_timeout"]

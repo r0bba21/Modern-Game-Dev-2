@@ -27,3 +27,9 @@ func refresh_buttons():
 	if Engine.time_scale == 2.5:
 		pause.text = "Pause"
 		speed.text = " 1x  "
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Pause or Play"):
+		_on_pause_pressed()
+	if event.is_action_pressed("Speed Up"):
+		_on_speed_pressed()

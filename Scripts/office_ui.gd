@@ -1,8 +1,27 @@
 extends Control
+
 func _ready() -> void:
 	soundfx()
 	difficulty_select()
 	Engine.time_scale = 1
+
+func _input(event: InputEvent) -> void: # KEYBOARD SHORTCUTS
+	if event.is_action_pressed("Return to Main Menu"):
+		if Global.autosave < 2:
+			soundfx()
+			get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+		if Global.autosave > 1:
+			soundfx()
+			SAVEGAME()
+			autosave_wait.start()
+	if event.is_action_pressed("Develop Menu Open") and gameinprog == false:
+		_on_develop_pressed()
+	if event.is_action_pressed("Savegame"):
+		soundfx()
+		SAVEGAME()
+	if event.is_action_pressed("Load Game"):
+		soundfx()
+		LOADGAME()
 
 # TIMERS:
 func newmonth():
@@ -139,15 +158,17 @@ func refresh_info_ui():
 		moneyL.text = "Bank: $" + str(moneyT / 10) + "B+"
 	fansL.text = str(fans) + " Fans"
 	monthsL.text = "Year " + str(years) + ", month " + str(months)
-	expenses = payroll + rent + interestBILL
+	expenses = payroll + rent
 	if expenses < 1000000:
 		var expenseT:float = expenses / 100
 		expensesL.text = "Costs: $" + str(expenseT / 10) + "K+"
 	if expenses < 1000000000 and expenses > 1000000:
 		var expenseT = int(expenses / 1000000)
 		moneyL.text = "Costs: $" + str(expenseT / 10) + "M+"
-	MonthLoan += 1
-	amount_taken -= interestBILL
+	if money < 5000 and warning_shown == false:
+		warn_bankruptcy()
+	if money < -50000:
+		BANKRUPT()
 
 @onready var nameL: Label = $During/N/Name
 @onready var game_prog: ProgressBar = $During/GameProg
@@ -463,21 +484,28 @@ func publishedG():
 	summaryP.text = "You have completed " + nameG + "! Read the following analytics to see how well you did and press continue to put it on the market!"
 
 @onready var marketT: Timer = $Timers/Market
-var monthsdone = 0
-var expensesRem
+var monthsdone:float = 0 # SAVEGAME EXPENSES THING
+var expensesRem:int
+var moneyRem:int
 
 func onmarket():
 	gameinprog = false
 	Global.in_menu = false
 	publish.hide()
 	monthsdone = 0
+	moneyRem = revenue
 	REFRESH_ALL()
 	marketT.start()
+	if Global.autosave == 1 or 3:
+		print("autosaving")
+		SAVEGAME()
 
 func monthsales():
-	money += (revenue / marketmonths)
+	money += ((revenue / marketmonths) / 2) # BIWEEKLY PAY
+	moneyRem -= ((revenue / marketmonths) / 2)
 	expensesRem = expenses * (marketmonths - monthsdone)
-	monthsdone += 1
+	monthsdone += 0.5
+	expensesRem = expenses * marketmonths
 	if monthsdone == marketmonths:
 		marketT.stop()
 
@@ -538,12 +566,16 @@ func _on_publisher_list_item_selected(index:int) -> void:
 			contingency = 60
 			pub_id = 5
 
+@onready var officesPanel: Panel = $Offices
+
 func _on_back_p_pressed() -> void:
 	Global.in_menu = false
 	publishdeal.hide()
 	marketP.hide()
 	staff.hide()
 	the_bank.hide()
+	officesPanel.hide()
+	contractsPanel.hide()
 	REFRESH_ALL()
 
 # MARKETING:
@@ -600,61 +632,21 @@ func _on_budget_text_submitted(new_text:float) -> void:
 		refresh_popularity()
 
 # STAFF:
-@onready var lcount: Label = $Staff/HBoxContainer/Tier3/Lcount
-@onready var mcount: Label = $Staff/HBoxContainer/Tier3/Mcount
-@onready var hcount: Label = $Staff/HBoxContainer/Tier3/Hcount
+@onready var lcount: Label = $Staff/HBoxContainer/YouHave/Lcount
+@onready var mcount: Label = $Staff/HBoxContainer/YouHave/Mcount
+@onready var hcount: Label = $Staff/HBoxContainer/YouHave/Hcount
 @onready var salaries: RichTextLabel = $Staff/Salaries
 @onready var amount_left: RichTextLabel = $"Staff/Amount left"
 @onready var staff: Panel = $Staff
 
 var payroll:int = 0
-var Lconsidered:int = 0
-var Mconsidered:int = 0
-var Hconsidered:int = 0
-var consideredSum:int = 0
 
 func open_staff():
 	soundfx()
 	Global.in_menu = true
 	refresh_staff_ui()
 	staff.show()
-
-func _on_linput_text_submitted(new_text:int) -> void:
 	soundfx()
-	Lconsidered = new_text
-
-func _on_minput_text_submitted(new_text:int) -> void:
-	soundfx()
-	Mconsidered = new_text
-
-func _on_hinput_text_submitted(new_text:int) -> void:
-	soundfx()
-	Lconsidered = new_text
-
-func _on_hire_pressed() -> void:
-	consideredSum = Lconsidered + Mconsidered + Hconsidered
-	if consideredSum <= (Global.maxdesks - currentS) and money > (consideredSum * 50000):
-		soundfx()
-		lowS += Lconsidered
-		medS += Mconsidered
-		highS += Hconsidered
-		payroll = (lowS * 12500) + (medS * 16000) + (highS * 22500)
-		money -= (consideredSum * 50000)
-		refresh_info_ui()
-		refresh_productivity()
-		refresh_staff_ui()
-
-func _on_fire_pressed() -> void:
-	consideredSum = Lconsidered + Mconsidered + Hconsidered
-	if consideredSum <= currentS and money > (consideredSum * 50000):
-		lowS -= Lconsidered
-		medS -= Mconsidered
-		highS -= Hconsidered
-		payroll = (lowS * 12500) + (medS * 16000) + (highS * 22500)
-		money -= (consideredSum * 50000)
-		refresh_info_ui()
-		refresh_productivity()
-		refresh_staff_ui()
 
 func refresh_staff_ui():
 	lcount.text = str(lowS)
@@ -662,6 +654,60 @@ func refresh_staff_ui():
 	hcount.text = str(highS)
 	salaries.text= "Currently, you are paying a total of $" + str(payroll) + " in salaries."
 	amount_left.text = "You have " + str(currentS) + " staff members, meaning your office can hold " + str((Global.maxdesks - currentS)) + " more."
+
+func hireLOW():
+	soundfx()
+	if money > 50000 and currentS < Global.maxdesks:
+		payroll += 12500
+		lowS += 1
+		money -= 50000
+		refresh_productivity()
+		refresh_staff_ui()
+
+func hireMED():
+	soundfx()
+	if money > 50000 and currentS < Global.maxdesks:
+		payroll += 16000
+		medS += 1
+		money -= 50000
+		refresh_productivity()
+		refresh_staff_ui()
+
+func hireHIGH():
+	soundfx()
+	if money > 50000 and currentS < Global.maxdesks:
+		payroll += 22500
+		highS += 1
+		money -= 50000
+		refresh_productivity()
+		refresh_staff_ui()
+
+func fireLOW():
+	soundfx()
+	if money > 50000 and lowS > 0:
+		payroll -= 12500
+		lowS -= 1
+		money -= 50000
+		refresh_productivity()
+		refresh_staff_ui()
+
+func fireMED():
+	soundfx()
+	if money > 50000 and medS > 0:
+		payroll -= 16000
+		medS -= 1
+		money -= 50000
+		refresh_productivity()
+		refresh_staff_ui()
+
+func fireHIGH():
+	soundfx()
+	if money > 50000 and highS > 0:
+		payroll -= 22500
+		highS -= 1
+		money -= 50000
+		refresh_productivity()
+		refresh_staff_ui()
 
 # THE BANK:
 @onready var the_bank: Panel = $TheBank
@@ -674,6 +720,7 @@ var MonthLoan:int = 0
 
 @onready var in_loan_menu: Panel = $TheBank/InLoanMenu
 @onready var out_loan: Control = $TheBank/OutLoan
+@onready var loanTIMER: Timer = $Timers/LOAN
 
 func _on_take_pressed() -> void: # SMALL
 	soundfx()
@@ -686,6 +733,7 @@ func _on_take_pressed() -> void: # SMALL
 	loan_id = 1
 	MonthLoan = 0
 	refresh_loan()
+	loanTIMER.start()
 
 func _on_take_m_pressed() -> void: # MEDIUM
 	soundfx()
@@ -698,6 +746,7 @@ func _on_take_m_pressed() -> void: # MEDIUM
 	loan_id = 2
 	MonthLoan = 0
 	refresh_loan()
+	loanTIMER.start()
 
 func _on_take_l_pressed() -> void: # LARGE
 	soundfx()
@@ -710,12 +759,19 @@ func _on_take_l_pressed() -> void: # LARGE
 	loan_id = 3
 	MonthLoan = 0
 	refresh_loan()
+	loanTIMER.start()
 
 @onready var rate: Label = $TheBank/InLoanMenu/Detailsposttake/Rate
 @onready var term: Label = $TheBank/InLoanMenu/Detailsposttake/Term
 @onready var amt_rem: Label = $TheBank/InLoanMenu/Detailsposttake/AmtRem
 @onready var bill: Label = $TheBank/InLoanMenu/Detailsposttake/Bill
 @onready var early: Label = $TheBank/InLoanMenu/Detailsposttake/Early
+
+func loanTIMERend():
+	money -= interestBILL
+	MonthLoan += 1
+	amount_taken -= interestBILL
+	refresh_loan()
 
 func refresh_loan():
 	if amount_taken <= 0:
@@ -744,6 +800,7 @@ func loan_paid():
 	loan_id = 0
 	out_loan.show()
 	in_loan_menu.hide()
+	loanTIMER.stop()
 
 func _on_loans_pressed() -> void:
 	Global.in_menu = true
@@ -755,3 +812,284 @@ func _on_pay_pressed() -> void:
 		soundfx()
 		money -= int(amount_taken * .85)
 		loan_paid()
+
+# REAL ESTATE:
+@onready var starter: Button = $Offices/Table/Move/Starter
+@onready var amareur: Button = $Offices/Table/Move/Amareur
+@onready var small: Button = $Offices/Table/Move/Small
+@onready var medium: Button = $Offices/Table/Move/Medium
+@onready var large: Button = $Offices/Table/Move/Large
+@onready var skyscraper: Button = $Offices/Table/Move/Skyscraper
+
+func refresh_officeUI():
+	starter.text = " Sign Lease "
+	amareur.text = " Sign Lease "
+	small.text = " Sign Lease "
+	medium.text = " Sign Lease "
+	large.text = " Sign Lease "
+	skyscraper.text = " Sign Lease "
+	if Global.office_id == 0:
+		starter.text = " SIGNED "
+	if Global.office_id == 1:
+		amareur.text = " SIGNED "
+	if Global.office_id == 2:
+		small.text = " SIGNED "
+	if Global.office_id == 3:
+		medium.text = " SIGNED "
+	if Global.office_id == 4:
+		large.text = " SIGNED "
+	if Global.office_id == 5:
+		skyscraper.text = " SIGNED "
+
+func _on_starter_pressed() -> void:
+	soundfx()
+	if money > (150000 + (5000 * currentS)) and currentS < 7:
+		money -= (150000 + (5000 * currentS))
+		Global.maxdesks = 6
+		Global.office_id = 0
+		rent = 1500
+		refresh_info_ui()
+		refresh_officeUI()
+
+func _on_amareur_pressed() -> void:
+	soundfx()
+	if money > (150000 + (5000 * currentS)) and currentS < 11:
+		money -= (150000 + (5000 * currentS))
+		Global.maxdesks = 10
+		Global.office_id = 1
+		rent = 7500
+		refresh_info_ui()
+		refresh_officeUI()
+
+func _on_small_pressed() -> void:
+	soundfx()
+	if money > (150000 + (5000 * currentS)) and currentS < 16:
+		money -= (150000 + (5000 * currentS))
+		Global.maxdesks = 15
+		Global.office_id = 2
+		rent = 25000
+		refresh_info_ui()
+		refresh_officeUI()
+
+func _on_medium_pressed() -> void:
+	soundfx()
+	if money > (150000 + (5000 * currentS)) and currentS < 26:
+		money -= (150000 + (5000 * currentS))
+		Global.maxdesks = 25
+		Global.office_id = 3
+		rent = 75000
+		refresh_info_ui()
+		refresh_officeUI()
+
+func _on_large_pressed() -> void:
+	soundfx()
+	if money > (150000 + (5000 * currentS)) and currentS < 41:
+		money -= (150000 + (5000 * currentS))
+		Global.maxdesks = 40
+		Global.office_id = 4
+		rent = 150000
+		refresh_info_ui()
+		refresh_officeUI()
+
+func _on_skyscraper_pressed() -> void:
+	soundfx()
+	if money > (150000 + (5000 * currentS)) and currentS < 61:
+		money -= (150000 + (5000 * currentS))
+		Global.maxdesks = 60
+		Global.office_id = 5
+		rent = 300000
+		refresh_info_ui()
+		refresh_officeUI()
+
+func RealEstateButton():
+	refresh_officeUI()
+	officesPanel.show()
+	soundfx()
+	Global.in_menu = true
+
+# BANKRUPTCY:
+@onready var bankruptcy_warning: Panel = $BankruptcyWarning
+
+var warning_shown = false
+
+func warn_bankruptcy():
+	_on_back_p_pressed()
+	bankruptcy_warning.show()
+	Global.in_menu = true
+	warning_shown = true
+	soundfx()
+
+func exit_warning():
+	soundfx()
+	bankruptcy_warning.hide()
+	Global.in_menu = false
+	REFRESH_ALL()
+
+func BANKRUPT():
+	soundfx()
+	get_tree().change_scene_to_file("res://Scenes/bankrupt.tscn")
+
+# CONTRACT WORK:
+@onready var contractsPanel: Panel = $Contracts
+@onready var accept_pj: Button = $Contracts/Contract1/AcceptPJ
+@onready var accept_agn: Button = $Contracts/Contract2/AcceptAGN
+@onready var accept_c: Button = $Contracts/Contract3/AcceptC
+@onready var accept_b: Button = $Contracts/Contract4/AcceptB
+@onready var contract_time: Timer = $Contracts/ContractTime
+
+var contract_id:int
+var contract_length:int
+var payout:int
+var time_done:int
+
+func _on_contracts_pressed() -> void:
+	soundfx()
+	contractsPanel.show()
+	Global.in_menu = true
+
+func _on_accept_pj_pressed() -> void:
+	soundfx()
+	if highS > 0:
+		Global.in_contract = true
+		contractsPanel.hide()
+		REFRESH_ALL()
+		contract_id = 0
+		contract_length = 8
+		time_done = 0
+		payout = 500000
+		contract_time.start()
+		during_contract.show()
+		during_contract_ui()
+
+func _on_accept_agn_pressed() -> void:
+	soundfx()
+	if currentS > 0:
+		Global.in_contract = true
+		contractsPanel.hide()
+		REFRESH_ALL()
+		contract_id = 2
+		contract_length = 6
+		time_done = 0
+		payout = 250000
+		contract_time.start()
+		during_contract.show()
+		during_contract_ui()
+
+func _on_accept_c_pressed() -> void:
+	soundfx()
+	if fans > 25000:
+		Global.in_contract = true
+		contractsPanel.hide()
+		REFRESH_ALL()
+		contract_id = 3
+		contract_length = 2
+		time_done = 0
+		payout = 100000
+		contract_time.start()
+		during_contract.show()
+		during_contract_ui()
+
+func _on_accept_b_pressed() -> void:
+	soundfx()
+	Global.in_contract = true
+	contractsPanel.hide()
+	REFRESH_ALL()
+	contract_id = 3
+	contract_length = 12
+	time_done = 0
+	payout = 800000
+	contract_time.start()
+	during_contract.show()
+	during_contract_ui()
+
+@onready var company: Label = $DuringContract/Panel/Company
+@onready var progress_c: ProgressBar = $DuringContract/ProgressC
+@onready var during_contract: Panel = $DuringContract
+
+func during_contract_ui():
+	progress_c.value = time_done / contract_length
+	match contract_id:
+		0:
+			company.text = "Jones Inc."
+		2:
+			company.text = "AGN"
+		3:
+			company.text = "Charity"
+		4:
+			company.text = "Blaze"
+
+func _on_contract_time_timeout() -> void:
+	time_done += 1
+	if contract_length == time_done:
+		contract_time.stop()
+		Global.in_contract = false
+		money += payout
+		during_contract.hide()
+	during_contract_ui()
+
+# SAVING AND LOADING:
+
+func SAVEGAME():
+	print("saving")
+	var file = FileAccess.open("res://savegame.dat", FileAccess.WRITE)
+	file.store_var(money)
+	file.store_var(months)
+	file.store_var(years)
+	file.store_var(rent) # DONT NEED TO STORE EXPENSES BECAUSE OF THESE TWO
+	file.store_var(payroll)
+	file.store_var(Global.research_level)
+	file.store_var(Global.research_tokens)
+	file.store_var(Global.office_id)
+	file.store_var(Global.maxdesks)
+	file.store_var(lowS) # DONT NEED TO STORE CURRENTS BECAUSE OF THESE THREE
+	file.store_var(medS)
+	file.store_var(highS)
+	file.store_var(interestBILL)
+	file.store_var(amount_taken)
+	file.store_var(loan_id)
+	file.store_var(in_loan)
+	file.store_var(MonthLoan)
+	file.store_var(expensesRem)
+	file.store_var($Info/T/MonthProg.value)
+	file.store_var(moneyRem)
+	file.close()
+	print("game saved")
+
+func LOADGAME():
+	print("loading")
+	var file = FileAccess.open("res://savegame.dat", FileAccess.READ)
+	money = file.get_var(money)
+	months = file.get_var(months)
+	years = file.get_var(years)
+	rent = file.get_var(rent) # DONT NEED TO STORE EXPENSES BECAUSE OF THESE TWO
+	payroll = file.get_var(payroll)
+	Global.research_level = file.get_var(Global.research_level)
+	Global.research_tokens = file.get_var(Global.research_tokens)
+	Global.office_id = file.get_var(Global.office_id)
+	Global.maxdesks = file.get_var(Global.maxdesks)
+	lowS = file.get_var(lowS) # DONT NEED TO STORE CURRENTS BECAUSE OF THESE THREE
+	medS = file.get_var(medS)
+	highS = file.get_var(highS)
+	interestBILL = file.get_var(interestBILL)
+	amount_taken = file.get_var(amount_taken)
+	loan_id = file.get_var(loan_id)
+	in_loan = file.get_var(in_loan)
+	MonthLoan = file.get_var(MonthLoan)
+	expensesRem = file.get_var(expensesRem)
+	$Info/T/MonthProg.value = file.get_var($Info/T/MonthProg.value)
+	moneyRem = file.get_var(moneyRem)
+	file.close()
+	if in_loan != false:
+		refresh_loan()
+		loanTIMER.start()
+	if moneyRem != 0:
+		money += moneyRem - expensesRem
+	REFRESH_ALL()
+	print("loaded game")
+
+# AUTOSAVE ON RETURN TO MAIN MENU:
+@onready var autosave_wait: Timer = $Timers/AutosaveWait
+
+func _on_autosave_wait_timeout() -> void:
+	soundfx()
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
