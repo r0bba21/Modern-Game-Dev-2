@@ -26,12 +26,13 @@ script = ExtResource("1_2f11h")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 23.0
-offset_top = 37.0
-offset_right = 541.0
-offset_bottom = -37.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -450.0
+offset_right = 685.0
+offset_bottom = 450.0
 grow_vertical = 2
 theme_override_constants/separation = 55
 
@@ -40,34 +41,38 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 175
+theme_override_font_sizes/font_size = 85
 theme_override_icons/icon = ExtResource("2_kt10b")
 theme_override_styles/hover_pressed_mirrored = ExtResource("3_tsjpw")
 theme_override_styles/hover_pressed = ExtResource("3_tsjpw")
 theme_override_styles/hover = ExtResource("3_tsjpw")
 theme_override_styles/pressed = ExtResource("3_tsjpw")
 theme_override_styles/normal = ExtResource("4_uygc4")
-text = "PLAY!"
+text = "New Game"
 
-[node name="Tutorial" type="Button" parent="VBoxContainer"]
+[node name="Load" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 100
-theme_override_icons/icon = ExtResource("5_kq10f")
-theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
-theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
-theme_override_styles/hover = ExtResource("6_o2t4c")
-theme_override_styles/pressed = ExtResource("6_o2t4c")
-theme_override_styles/normal = ExtResource("7_ey7t4")
-text = "Tutorial"
+theme_override_font_sizes/font_size = 85
+theme_override_icons/icon = ExtResource("2_kt10b")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_tsjpw")
+theme_override_styles/hover_pressed = ExtResource("3_tsjpw")
+theme_override_styles/hover = ExtResource("3_tsjpw")
+theme_override_styles/pressed = ExtResource("3_tsjpw")
+theme_override_styles/normal = ExtResource("4_uygc4")
+text = "Load Game"
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Options" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 65
 theme_override_icons/icon = ExtResource("8_3vjs5")
 theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
 theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
@@ -76,22 +81,11 @@ theme_override_styles/pressed = ExtResource("6_o2t4c")
 theme_override_styles/normal = ExtResource("7_ey7t4")
 text = "Options"
 
-[node name="Load" type="Button" parent="VBoxContainer/Options"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 14.0
-offset_top = -49.0
-offset_right = 278.0
-offset_bottom = 51.0
-grow_horizontal = 0
-grow_vertical = 2
+[node name="Load" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 65
 theme_override_icons/icon = ExtResource("10_uvvfw")
 theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
 theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
@@ -100,11 +94,25 @@ theme_override_styles/pressed = ExtResource("6_o2t4c")
 theme_override_styles/normal = ExtResource("7_ey7t4")
 text = "load"
 
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 65
+theme_override_icons/icon = ExtResource("5_kq10f")
+theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
+theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
+theme_override_styles/hover = ExtResource("6_o2t4c")
+theme_override_styles/pressed = ExtResource("6_o2t4c")
+theme_override_styles/normal = ExtResource("7_ey7t4")
+text = "Tutorial"
+
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 65
 theme_override_icons/icon = ExtResource("9_fstcc")
 theme_override_styles/hover_pressed_mirrored = ExtResource("10_qmdt0")
 theme_override_styles/hover_pressed = ExtResource("10_qmdt0")
@@ -120,15 +128,15 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1547.0
-offset_top = 406.0
-offset_right = 1898.0
-offset_bottom = 506.0
+offset_left = -366.0
+offset_top = -115.0
+offset_right = -15.0
+offset_bottom = -15.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 65
 theme_override_icons/icon = ExtResource("14_5l1yp")
 theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
 theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
@@ -138,8 +146,9 @@ theme_override_styles/normal = ExtResource("7_ey7t4")
 text = "credits"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Load" to="." method="load_settings"]
 [connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options/Load" to="." method="load_settings"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Credits" to="." method="credits"]

@@ -29,3 +29,6 @@ var in_contract = false
 # STAFF:
 var maxdesks:int = 5
 var office_id:int = 0
+
+# LOADING GAME:
+var loading_game = false

@@ -4,6 +4,8 @@ func _ready() -> void:
 	soundfx()
 	difficulty_select()
 	Engine.time_scale = 1
+	if Global.loading_game == true:
+		LOADGAME()
 
 func _input(event: InputEvent) -> void: # KEYBOARD SHORTCUTS
 	if event.is_action_pressed("Return to Main Menu"):
@@ -564,6 +566,7 @@ func _on_publisher_list_item_selected(index:int) -> void:
 @onready var officesPanel: Panel = $Offices
 
 func _on_back_p_pressed() -> void:
+	soundfx()
 	Global.in_menu = false
 	publishdeal.hide()
 	marketP.hide()
@@ -571,6 +574,8 @@ func _on_back_p_pressed() -> void:
 	the_bank.hide()
 	officesPanel.hide()
 	contractsPanel.hide()
+	developing.hide()
+	research.hide()
 	REFRESH_ALL()
 
 # MARKETING:
@@ -1044,6 +1049,7 @@ func SAVEGAME():
 	file.store_var(expensesRem)
 	file.store_var($Info/T/MonthProg.value)
 	file.store_var(moneyRem)
+	file.store_var(Global.difficulty)
 	file.close()
 	print("game saved")
 
@@ -1070,7 +1076,9 @@ func LOADGAME():
 	expensesRem = file.get_var(expensesRem)
 	$Info/T/MonthProg.value = file.get_var($Info/T/MonthProg.value)
 	moneyRem = file.get_var(moneyRem)
+	Global.difficulty = file.get_var(Global.difficulty)
 	file.close()
+	difficulty_select()
 	if in_loan != false:
 		refresh_loan()
 		loanTIMER.start()

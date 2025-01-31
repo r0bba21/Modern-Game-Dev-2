@@ -63,11 +63,12 @@ libraries = {
 "": SubResource("AnimationLibrary_lor70")
 }
 
-[node name="MainMenuUI" parent="." instance=ExtResource("32_g8pvt")]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_right = 0.0
-anchor_bottom = 0.5
-offset_left = -2.0
-offset_right = -2.0
-grow_horizontal = 1
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -538.0
+offset_right = 1918.0
+offset_bottom = 542.0
+
+[node name="MainMenuUI" parent="Control" instance=ExtResource("32_g8pvt")]
+layout_mode = 1

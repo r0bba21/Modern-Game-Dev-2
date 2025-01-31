@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6ly1mauueubq"]
+[gd_scene load_steps=25 format=3 uid="uid://c6ly1mauueubq"]
 
 [ext_resource type="Texture2D" uid="uid://2yy72ry4wst4" path="res://Assets/Backdrops/options.png" id="1_hjv0l"]
 [ext_resource type="Script" path="res://Scripts/options.gd" id="1_yyuko"]
@@ -8,6 +8,7 @@
 [ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="5_sursf"]
 [ext_resource type="Texture2D" uid="uid://dt2d7tibk31cx" path="res://Assets/UI/pc.png" id="6_7o1mf"]
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="6_7wbvv"]
+[ext_resource type="Texture2D" uid="uid://do7ym2bg5qt8a" path="res://Assets/UI/click.png" id="6_316ru"]
 [ext_resource type="Texture2D" uid="uid://di862ta2317eg" path="res://Assets/UI/cancel (1).png" id="7_4htgf"]
 [ext_resource type="StyleBox" uid="uid://dqutvjhnd0l0t" path="res://Assets/UI/menu_hover_blue.tres" id="7_oeei4"]
 [ext_resource type="Texture2D" uid="uid://cj84m0lqhlcxe" path="res://Assets/UI/save.png" id="8_3gel1"]
@@ -17,6 +18,72 @@
 [ext_resource type="AudioStream" uid="uid://cptms4qpuvuw5" path="res://Assets/Music/F.MP3" id="15_a5nx3"]
 [ext_resource type="AudioStream" uid="uid://vgsr7yxcqj11" path="res://Assets/Music/T.MP3" id="16_hirbq"]
 [ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="17_h14v7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atirm"]
+content_margin_right = 15.0
+bg_color = Color(0.0666667, 0.145098, 0.207843, 1)
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.067954, 0.144444, 0.207656, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st31f"]
+content_margin_right = 20.0
+bg_color = Color(0.300097, 0.494749, 0.654174, 1)
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.067954, 0.144444, 0.207656, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5kte"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee26j"]
+bg_color = Color(0.301961, 0.494118, 0.654902, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hjij"]
+content_margin_right = 15.0
+bg_color = Color(0.0666667, 0.145098, 0.207843, 1)
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.067954, 0.144444, 0.207656, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i5qn"]
+content_margin_right = 20.0
+bg_color = Color(0.300097, 0.494749, 0.654174, 1)
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.067954, 0.144444, 0.207656, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -74,7 +141,7 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 6.0
+offset_left = 11.0
 offset_top = -32.5
 offset_right = 1107.0
 offset_bottom = 32.5
@@ -84,33 +151,68 @@ theme_override_constants/separation = 30
 
 [node name="Mouse" type="Button" parent="Panel/Labels/SFX/Buttons"]
 layout_mode = 2
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_61eya")
-theme_override_font_sizes/font_size = 50
-text = "MOUSE 1"
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_st31f")
+text = " MOUSE 1 "
 
 [node name="Dullmouse" type="Button" parent="Panel/Labels/SFX/Buttons"]
 layout_mode = 2
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_61eya")
-theme_override_font_sizes/font_size = 50
-text = "MOUSE 2"
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_st31f")
+text = " MOUSE 2 "
 
 [node name="Filmic" type="Button" parent="Panel/Labels/SFX/Buttons"]
 layout_mode = 2
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_61eya")
-theme_override_font_sizes/font_size = 50
-text = "MOUSE 3"
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_st31f")
+text = " MOUSE 3 "
 
 [node name="Techno" type="Button" parent="Panel/Labels/SFX/Buttons"]
 layout_mode = 2
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_61eya")
-theme_override_font_sizes/font_size = 50
-text = "bubble"
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_st31f")
+text = " bubble "
 
 [node name="Retro" type="Button" parent="Panel/Labels/SFX/Buttons"]
 layout_mode = 2
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_61eya")
-theme_override_font_sizes/font_size = 50
-text = "retro"
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_atirm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_st31f")
+text = " retro "
 
 [node name="MasterVol" type="Label" parent="Panel/Labels"]
 layout_mode = 2
@@ -139,6 +241,8 @@ grow_vertical = 2
 theme_override_icons/grabber = ExtResource("4_sk1bc")
 theme_override_icons/grabber_highlight = ExtResource("4_sk1bc")
 theme_override_icons/grabber_disabled = ExtResource("4_sk1bc")
+theme_override_styles/slider = SubResource("StyleBoxFlat_l5kte")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ee26j")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -170,6 +274,8 @@ grow_vertical = 2
 theme_override_icons/grabber = ExtResource("4_sk1bc")
 theme_override_icons/grabber_highlight = ExtResource("4_sk1bc")
 theme_override_icons/grabber_disabled = ExtResource("4_sk1bc")
+theme_override_styles/slider = SubResource("StyleBoxFlat_l5kte")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ee26j")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -201,6 +307,8 @@ grow_vertical = 2
 theme_override_icons/grabber = ExtResource("4_sk1bc")
 theme_override_icons/grabber_highlight = ExtResource("4_sk1bc")
 theme_override_icons/grabber_disabled = ExtResource("4_sk1bc")
+theme_override_styles/slider = SubResource("StyleBoxFlat_l5kte")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ee26j")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -221,8 +329,15 @@ layout_mode = 0
 offset_left = 535.0
 offset_right = 1626.0
 offset_bottom = 68.0
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_61eya")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0hjij")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0hjij")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5i5qn")
+theme_override_constants/arrow_margin = 10
+theme_override_icons/arrow = ExtResource("6_316ru")
 selected = 0
 item_count = 5
 popup/item_0/text = "1920x1080"
@@ -257,8 +372,15 @@ offset_left = 535.0
 offset_top = 2.0
 offset_right = 1626.0
 offset_bottom = 70.0
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_61eya")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0hjij")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0hjij")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5i5qn")
+theme_override_constants/arrow_margin = 10
+theme_override_icons/arrow = ExtResource("6_316ru")
 selected = 0
 item_count = 4
 popup/item_0/text = "Fullscreen"
@@ -290,8 +412,15 @@ offset_left = 535.0
 offset_top = 1.0
 offset_right = 1626.0
 offset_bottom = 69.0
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_61eya")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0hjij")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0hjij")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5i5qn")
+theme_override_constants/arrow_margin = 10
+theme_override_icons/arrow = ExtResource("6_316ru")
 selected = 0
 item_count = 4
 popup/item_0/text = "Off"

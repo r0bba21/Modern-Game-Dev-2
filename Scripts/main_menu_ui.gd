@@ -3,6 +3,10 @@ extends Control
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
 
+func _on_load_pressed() -> void:
+	Global.loading_game = true
+	get_tree().change_scene_to_file("res://Scenes/office.tscn")
+
 func _on_tutorial_pressed() -> void:
 	OS.shell_open("https://docs.google.com/document/d/1-AW1nvLEzTf6L7M68kdvvJQkphw_LXrZ6YgWGZUDCwA/")
 

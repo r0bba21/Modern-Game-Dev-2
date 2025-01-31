@@ -2,37 +2,27 @@
 
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_irf40"]
 [ext_resource type="Script" path="res://Scripts/gameover.gd" id="2_0wjqn"]
+[ext_resource type="StyleBox" uid="uid://boku5rwtcucw4" path="res://Assets/UI/bankrupt.tres" id="2_18jfa"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e8cc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41j2n"]
 bg_color = Color(0.241002, 0, 0.0170325, 0.607843)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.421162, 0, 0.049098, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_size = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbay1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qiro"]
 bg_color = Color(0, 0, 0, 1)
-border_width_top = 30
 border_color = Color(0.192157, 0.0470588, 0.054902, 1)
 border_blend = true
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y12lv"]
-bg_color = Color(0.0908529, 0.00838139, 0.00515837, 1)
-border_width_top = 30
-border_color = Color(0.192157, 0.0470588, 0.054902, 1)
-border_blend = true
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_size = 5
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Bankrupt" type="Control"]
 layout_mode = 3
@@ -42,22 +32,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BankruptcyWarning" type="Panel" parent="."]
+[node name="BankruptcyWarning2" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -589.5
-offset_top = -190.5
-offset_right = 589.5
-offset_bottom = 190.5
+offset_left = -476.542
+offset_top = -126.404
+offset_right = 450.458
+offset_bottom = 254.596
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_3e8cc")
+theme_override_styles/panel = SubResource("StyleBoxFlat_41j2n")
 
-[node name="Title4" type="Label" parent="BankruptcyWarning"]
+[node name="Title4" type="Label" parent="BankruptcyWarning2"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -73,42 +63,47 @@ text = "Good Game!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Explain5" type="RichTextLabel" parent="BankruptcyWarning"]
+[node name="Explain5" type="RichTextLabel" parent="BankruptcyWarning2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -341.5
-offset_top = -19.5
-offset_right = 342.5
-offset_bottom = 20.5
+offset_left = -297.5
+offset_top = -59.5
+offset_right = 296.5
+offset_bottom = 59.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/normal_font = ExtResource("1_irf40")
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 50
 text = "You went bankrupt! Better luck next time!"
 
-[node name="GAMEOVER" type="Button" parent="BankruptcyWarning"]
+[node name="GAMEOVER" type="Button" parent="BankruptcyWarning2"]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -105.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = 67.9036
+offset_right = 187.0
+offset_bottom = 172.904
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("1_irf40")
 theme_override_font_sizes/font_size = 65
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bbay1")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bbay1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_bbay1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bbay1")
-theme_override_styles/normal = SubResource("StyleBoxFlat_y12lv")
-text = "Return to main menu"
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0qiro")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0qiro")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0qiro")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0qiro")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0qiro")
+theme_override_styles/normal = ExtResource("2_18jfa")
+text = "Main Menu"
 script = ExtResource("2_0wjqn")
 
-[connection signal="pressed" from="BankruptcyWarning/GAMEOVER" to="BankruptcyWarning/GAMEOVER" method="_on_pressed"]
+[connection signal="pressed" from="BankruptcyWarning2/GAMEOVER" to="BankruptcyWarning2/GAMEOVER" method="_on_pressed"]
