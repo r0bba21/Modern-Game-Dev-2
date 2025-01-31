@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=153 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -8,19 +8,19 @@
 [ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="6_fk8re"]
 [ext_resource type="StyleBox" uid="uid://cdks4l1c2vhtw" path="res://Assets/UI/panel_info.tres" id="7_g83m7"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="7_xpq5m"]
-[ext_resource type="Texture2D" uid="uid://bdm2qp3cm8y7m" path="res://Assets/UI/money-stack.png" id="8_knkym"]
 [ext_resource type="StyleBox" uid="uid://cdcsji5sxwawt" path="res://Assets/UI/info_green.tres" id="8_qjdlh"]
 [ext_resource type="Texture2D" uid="uid://ctwqvkfas7cxm" path="res://Assets/UI/calendar.png" id="9_36m77"]
-[ext_resource type="Texture2D" uid="uid://c0t5ny2gsyht2" path="res://Assets/UI/heart-shield.png" id="10_qfqgx"]
-[ext_resource type="Texture2D" uid="uid://brvij0q1tk1qd" path="res://Assets/UI/ui (2).png" id="11_22v70"]
+[ext_resource type="Texture2D" uid="uid://cpa5nsq1inm0f" path="res://Assets/UI/piggy-bank.png" id="10_b27da"]
+[ext_resource type="Texture2D" uid="uid://bxt5r7k6cmiw4" path="res://Assets/UI/smitten.png" id="12_pb5te"]
 [ext_resource type="StyleBox" uid="uid://covfdek6mprnm" path="res://Assets/UI/staff.tres" id="12_qha5m"]
 [ext_resource type="Texture2D" uid="uid://db5hj7cklm16a" path="res://Assets/UI/ui (7).png" id="13_fx2l3"]
+[ext_resource type="Texture2D" uid="uid://dt2d7tibk31cx" path="res://Assets/UI/pc.png" id="13_lmow2"]
 [ext_resource type="Texture2D" uid="uid://b62l5wb3tku8t" path="res://Assets/UI/ui (1).png" id="14_kcsxu"]
 [ext_resource type="Texture2D" uid="uid://cvfppupn361s4" path="res://Assets/UI/ui (5).png" id="15_yfckf"]
 [ext_resource type="Texture2D" uid="uid://bd8qjjqojihl3" path="res://Assets/UI/ui (6).png" id="16_owjh5"]
 [ext_resource type="Texture2D" uid="uid://l4kafa5ydj6d" path="res://Assets/UI/ui (4).png" id="17_ghstj"]
-[ext_resource type="Texture2D" uid="uid://d0ojhgyr4xpv5" path="res://Assets/UI/ui (3).png" id="18_onm1x"]
 [ext_resource type="Texture2D" uid="uid://6w3kag7tdp43" path="res://Assets/UI/time (1).png" id="19_wu0jg"]
+[ext_resource type="Texture2D" uid="uid://dddy6db2rlfb5" path="res://Assets/UI/gamepad-cross.png" id="20_5mb34"]
 [ext_resource type="StyleBox" uid="uid://dbaguallc4ejq" path="res://Assets/UI/pause_hover.tres" id="20_gdbgw"]
 [ext_resource type="Script" path="res://Scripts/time.gd" id="21_dpte1"]
 [ext_resource type="StyleBox" uid="uid://dtpabuonyqu8t" path="res://Assets/UI/pause.tres" id="21_sjs1w"]
@@ -31,26 +31,51 @@
 [ext_resource type="Texture2D" uid="uid://cikggt0hwe5qo" path="res://Assets/UI/s (2).png" id="26_njloy"]
 [ext_resource type="Texture2D" uid="uid://ovf8nf50ij3f" path="res://Assets/UI/misdirection.png" id="29_e836y"]
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="30_bycjq"]
+[ext_resource type="Texture2D" uid="uid://do7ym2bg5qt8a" path="res://Assets/UI/click.png" id="31_j1x01"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="31_ydjad"]
+[ext_resource type="Texture2D" uid="uid://cyxgwh1xrwk41" path="res://Assets/UI/genres (2).png" id="32_jikvb"]
 [ext_resource type="Script" path="res://Scripts/research.gd" id="32_o67hk"]
+[ext_resource type="Texture2D" uid="uid://gkacovriy0k3" path="res://Assets/UI/genres (3).png" id="33_frgwy"]
 [ext_resource type="StyleBox" uid="uid://wnao1st57aem" path="res://Assets/UI/Contract.tres" id="33_jwco5"]
 [ext_resource type="Texture2D" uid="uid://7lyq115d0rkf" path="res://Assets/UI/cancel75.png" id="33_og82k"]
 [ext_resource type="Texture2D" uid="uid://bukqqfs3rgueu" path="res://Assets/UI/checklist.png" id="33_vl7bk"]
 [ext_resource type="Texture2D" uid="uid://co8gcioaqtu7t" path="res://Assets/UI/paper-clip.png" id="34_25tik"]
 [ext_resource type="Texture2D" uid="uid://dg70skn7suscm" path="res://Assets/UI/cancel.png" id="34_a2n7u"]
 [ext_resource type="Texture2D" uid="uid://qdngnbhhnobh" path="res://Assets/UI/pub (2).png" id="34_cuuo3"]
+[ext_resource type="Texture2D" uid="uid://dh053jrl28t84" path="res://Assets/UI/genres (4).png" id="34_yt8u7"]
+[ext_resource type="Texture2D" uid="uid://b52kduevwk6qn" path="res://Assets/UI/genres (5).png" id="35_5tl6v"]
 [ext_resource type="Texture2D" uid="uid://7se3a2smhoj2" path="res://Assets/UI/bank.png" id="35_5w3yo"]
 [ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="35_nawnk"]
 [ext_resource type="Texture2D" uid="uid://dhnoyw8o2i7om" path="res://Assets/UI/pub (5).png" id="35_wuukt"]
 [ext_resource type="Texture2D" uid="uid://dx0g7xc8o36ky" path="res://Assets/UI/pub (3).png" id="36_1btaf"]
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="36_1yad1"]
+[ext_resource type="Texture2D" uid="uid://by532k21khcbi" path="res://Assets/UI/genres (6).png" id="36_co2i5"]
+[ext_resource type="Texture2D" uid="uid://qlhuj21m5gp3" path="res://Assets/UI/genres (7).png" id="37_u85m6"]
 [ext_resource type="Texture2D" uid="uid://1pfnph0xcktp" path="res://Assets/UI/pub (4).png" id="37_yq22j"]
+[ext_resource type="Texture2D" uid="uid://cyqasysefxriu" path="res://Assets/UI/genres (8).png" id="38_7ocly"]
 [ext_resource type="Texture2D" uid="uid://d8ntymrn6v2r" path="res://Assets/UI/pub (1).png" id="38_nunn4"]
+[ext_resource type="Texture2D" uid="uid://ciekvfg8ihmvh" path="res://Assets/UI/genres (1).png" id="39_as6ri"]
+[ext_resource type="Texture2D" uid="uid://sml78f4mmn5t" path="res://Assets/UI/size (1).png" id="40_5q1qd"]
+[ext_resource type="Texture2D" uid="uid://dh1iv2rch3fs1" path="res://Assets/UI/size (2).png" id="41_o7x1i"]
+[ext_resource type="Texture2D" uid="uid://dcc6pw80f7emp" path="res://Assets/UI/size (3).png" id="42_sf3hj"]
+[ext_resource type="Texture2D" uid="uid://dsa24ej7k6exg" path="res://Assets/UI/platform (2).png" id="43_oi4ko"]
 [ext_resource type="Texture2D" uid="uid://bp7ifqg5befx" path="res://Assets/UI/m (1).png" id="44_0jksb"]
+[ext_resource type="Texture2D" uid="uid://brb5bgrmonlha" path="res://Assets/UI/platform (1).png" id="44_ujbm7"]
+[ext_resource type="Texture2D" uid="uid://bf1nwjgg60gdj" path="res://Assets/UI/platform (4).png" id="45_8lyll"]
 [ext_resource type="Texture2D" uid="uid://bvf5uw6yqrohs" path="res://Assets/UI/m (4).png" id="45_hc47v"]
+[ext_resource type="Texture2D" uid="uid://du2pry17co2vh" path="res://Assets/UI/platform (3).png" id="46_w3827"]
 [ext_resource type="Texture2D" uid="uid://b5ny2pmhuftxd" path="res://Assets/UI/m (3).png" id="46_x47qs"]
+[ext_resource type="Texture2D" uid="uid://3o1plqddv551" path="res://Assets/UI/processor.png" id="47_23eif"]
 [ext_resource type="Texture2D" uid="uid://mb2a3r0w2nhy" path="res://Assets/UI/m (2).png" id="47_bn276"]
 [ext_resource type="Texture2D" uid="uid://bc1y18okk5fn4" path="res://Assets/UI/pay-money.png" id="48_o4fxy"]
+[ext_resource type="Texture2D" uid="uid://c5h0ke1a8ap1n" path="res://Assets/UI/design (3).png" id="48_sskwc"]
+[ext_resource type="Texture2D" uid="uid://ckaefny0enbve" path="res://Assets/UI/design (1).png" id="49_w4bi1"]
+[ext_resource type="Texture2D" uid="uid://cbxhmapiaq53n" path="res://Assets/UI/aud (2).png" id="50_qkusl"]
+[ext_resource type="Texture2D" uid="uid://6swklu0knaea" path="res://Assets/UI/aud (1).png" id="51_tnouw"]
+[ext_resource type="Texture2D" uid="uid://bbgatxi8bvl8v" path="res://Assets/UI/check-mark.png" id="52_ebcv4"]
+[ext_resource type="Texture2D" uid="uid://iestlh4lhflb" path="res://Assets/UI/aud (3).png" id="52_xif8n"]
+[ext_resource type="Texture2D" uid="uid://c721npcgdwn7x" path="res://Assets/UI/cross40.png" id="53_sk8qy"]
+[ext_resource type="Texture2D" uid="uid://cje3htsavqce4" path="res://Assets/UI/check-mark (1).png" id="55_x4cqv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkf5q"]
 bg_color = Color(0.243059, 0.490894, 0.722343, 1)
@@ -236,22 +261,8 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7k7k"]
-bg_color = Color(0.0275681, 0.101368, 0.0116647, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_153ao"]
-bg_color = Color(0.256983, 0.555236, 0.15786, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_650ol"]
+bg_color = Color(0.28627, 0.418133, 0.48505, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -293,7 +304,7 @@ corner_radius_bottom_left = 15
 shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flpi8"]
-bg_color = Color(0.244108, 0.527603, 0.267079, 0.607843)
+bg_color = Color(0.156027, 0.354464, 0.171994, 0.607843)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -567,7 +578,7 @@ border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -591,7 +602,7 @@ corner_radius_bottom_left = 15
 shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sr1v"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgj8i"]
 bg_color = Color(0.664591, 0.00637563, 3.85046e-07, 1)
@@ -599,7 +610,16 @@ bg_color = Color(0.664591, 0.00637563, 3.85046e-07, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b1x7"]
 bg_color = Color(0, 0, 0, 1)
 border_width_top = 30
-border_color = Color(0.466667, 0.211765, 0.0470588, 1)
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsh05"]
+bg_color = Color(0.236424, 0.0940134, 0.0117269, 1)
+border_width_top = 30
+border_color = Color(0, 0, 0, 1)
 border_blend = true
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
@@ -740,6 +760,67 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yiup"]
+bg_color = Color(0.156863, 0.352941, 0.172549, 0.607843)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4k0d"]
+bg_color = Color(0.0632298, 0.134671, 0.0704063, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ny1wl"]
+bg_color = Color(0.141176, 0.258824, 0.152941, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1cft"]
+bg_color = Color(0.50056, 0.650431, 0.448411, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeijx"]
+bg_color = Color(0.877356, 0.460065, 0.432479, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
 [node name="Office UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -748,6 +829,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_frgb8")
+metadata/_edit_lock_ = true
 
 [node name="Sounds" type="Node2D" parent="."]
 position = Vector2(25, 1060)
@@ -851,7 +933,7 @@ offset_top = -40.0
 offset_right = 80.0
 offset_bottom = 40.0
 grow_vertical = 2
-texture = ExtResource("8_knkym")
+texture = ExtResource("10_b27da")
 
 [node name="T" type="Panel" parent="Info"]
 layout_mode = 1
@@ -954,7 +1036,7 @@ offset_top = -40.0
 offset_right = 80.0
 offset_bottom = 40.0
 grow_vertical = 2
-texture = ExtResource("10_qfqgx")
+texture = ExtResource("12_pb5te")
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -973,7 +1055,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 55
-theme_override_icons/icon = ExtResource("11_22v70")
+theme_override_icons/icon = ExtResource("13_lmow2")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_ndk1n")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v30ka")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v30ka")
@@ -1044,7 +1126,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vca5m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vca5m")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vca5m")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wok5h")
-text = "Publisher"
+text = "Publishers"
 alignment = 2
 autowrap_mode = 3
 icon_alignment = 2
@@ -1070,7 +1152,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 55
-theme_override_icons/icon = ExtResource("18_onm1x")
+theme_override_icons/icon = ExtResource("20_5mb34")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_0phwb")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_0phwb")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_0phwb")
@@ -1104,6 +1186,7 @@ theme_override_styles/hover = ExtResource("20_gdbgw")
 theme_override_styles/pressed = ExtResource("20_gdbgw")
 theme_override_styles/normal = ExtResource("21_sjs1w")
 text = " Pause "
+icon_alignment = 2
 
 [node name="Speed" type="Button" parent="Buttons/Mini/Time"]
 layout_mode = 2
@@ -1117,6 +1200,7 @@ theme_override_styles/hover = ExtResource("23_hlc20")
 theme_override_styles/pressed = ExtResource("23_hlc20")
 theme_override_styles/normal = ExtResource("24_c1wlf")
 text = "2.5x"
+icon_alignment = 2
 
 [node name="Saves" type="VBoxContainer" parent="Buttons/Mini"]
 layout_mode = 2
@@ -1135,6 +1219,7 @@ theme_override_styles/hover = ExtResource("20_gdbgw")
 theme_override_styles/pressed = ExtResource("20_gdbgw")
 theme_override_styles/normal = ExtResource("21_sjs1w")
 text = "Save"
+icon_alignment = 2
 
 [node name="Load" type="Button" parent="Buttons/Mini/Saves"]
 layout_mode = 2
@@ -1149,6 +1234,7 @@ theme_override_styles/hover = ExtResource("23_hlc20")
 theme_override_styles/pressed = ExtResource("23_hlc20")
 theme_override_styles/normal = ExtResource("24_c1wlf")
 text = " Load  "
+icon_alignment = 2
 
 [node name="During" type="Panel" parent="."]
 visible = false
@@ -1159,7 +1245,7 @@ anchor_right = 1.0
 offset_left = -388.0
 offset_top = 24.0
 offset_right = -24.0
-offset_bottom = 409.0
+offset_bottom = 313.0
 grow_horizontal = 0
 theme_override_styles/panel = ExtResource("7_g83m7")
 
@@ -1180,6 +1266,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -39.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/shadow_offset_x = 5
@@ -1189,6 +1276,27 @@ theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 30
 text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stage" type="Label" parent="During/N"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 57.0
+offset_right = -1.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 25
+text = "Design Stage"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1209,22 +1317,20 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_mk40f")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ojmo3")
 text = "Marketing"
 
-[node name="Publish" type="Button" parent="During"]
+[node name="Pub" type="Label" parent="During"]
+visible = false
 layout_mode = 0
 offset_left = 7.0
-offset_top = 290.0
+offset_top = 195.0
 offset_right = 357.0
-offset_bottom = 380.0
-theme_override_constants/outline_size = 8
+offset_bottom = 285.0
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 50
-theme_override_icons/icon = ExtResource("18_onm1x")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_t7k7k")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_t7k7k")
-theme_override_styles/hover = SubResource("StyleBoxFlat_t7k7k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_t7k7k")
-theme_override_styles/normal = SubResource("StyleBoxFlat_153ao")
-text = "Publish!"
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_650ol")
+text = "Publishing Deal"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GameProg" type="ProgressBar" parent="During"]
 layout_mode = 0
@@ -1284,28 +1390,37 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 7.0
-offset_top = -26.0
-offset_right = 1143.0
-offset_bottom = 26.0
+offset_top = -27.0
+offset_right = 1107.0
+offset_bottom = 27.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
+theme_override_icons/arrow = ExtResource("31_j1x01")
 item_count = 8
 popup/item_0/text = "Adventure"
+popup/item_0/icon = ExtResource("32_jikvb")
 popup/item_1/text = "FPS"
+popup/item_1/icon = ExtResource("33_frgwy")
 popup/item_1/id = 1
 popup/item_2/text = "RPG"
+popup/item_2/icon = ExtResource("34_yt8u7")
 popup/item_2/id = 2
 popup/item_3/text = "Simulation"
+popup/item_3/icon = ExtResource("35_5tl6v")
 popup/item_3/id = 3
 popup/item_4/text = "Multiplayer"
+popup/item_4/icon = ExtResource("36_co2i5")
 popup/item_4/id = 4
 popup/item_5/text = "Fighter"
+popup/item_5/icon = ExtResource("37_u85m6")
 popup/item_5/id = 5
 popup/item_6/text = "Sports"
+popup/item_6/icon = ExtResource("38_7ocly")
 popup/item_6/id = 6
 popup/item_7/text = "Action"
+popup/item_7/icon = ExtResource("39_as6ri")
 popup/item_7/id = 7
 
 [node name="Size" type="Label" parent="Developing/Header"]
@@ -1328,18 +1443,22 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 7.0
-offset_top = -23.0
-offset_right = 1143.0
-offset_bottom = 29.0
+offset_top = -24.0
+offset_right = 1107.0
+offset_bottom = 30.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
+theme_override_icons/arrow = ExtResource("31_j1x01")
 item_count = 3
 popup/item_0/text = "Small"
+popup/item_0/icon = ExtResource("40_5q1qd")
 popup/item_1/text = "Medium"
+popup/item_1/icon = ExtResource("41_o7x1i")
 popup/item_1/id = 1
 popup/item_2/text = "Large"
+popup/item_2/icon = ExtResource("42_sf3hj")
 popup/item_2/id = 2
 
 [node name="Platform" type="Label" parent="Developing/Header"]
@@ -1362,20 +1481,25 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 7.0
-offset_top = -24.0
-offset_right = 1143.0
-offset_bottom = 28.0
+offset_top = -25.0
+offset_right = 1107.0
+offset_bottom = 29.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
+theme_override_icons/arrow = ExtResource("31_j1x01")
 item_count = 4
 popup/item_0/text = "PC"
+popup/item_0/icon = ExtResource("43_oi4ko")
 popup/item_1/text = "Console"
+popup/item_1/icon = ExtResource("44_ujbm7")
 popup/item_1/id = 1
 popup/item_2/text = "Handheld"
+popup/item_2/icon = ExtResource("45_8lyll")
 popup/item_2/id = 2
 popup/item_3/text = "Mobile"
+popup/item_3/icon = ExtResource("46_w3827")
 popup/item_3/id = 3
 
 [node name="Tech Level" type="Label" parent="Developing/Header"]
@@ -1398,18 +1522,22 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 7.0
-offset_top = -24.0
-offset_right = 1143.0
-offset_bottom = 28.0
+offset_top = -25.0
+offset_right = 1107.0
+offset_bottom = 29.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
+theme_override_icons/arrow = ExtResource("31_j1x01")
 item_count = 3
 popup/item_0/text = "Indie"
+popup/item_0/icon = ExtResource("40_5q1qd")
 popup/item_1/text = "Midrange"
+popup/item_1/icon = ExtResource("41_o7x1i")
 popup/item_1/id = 1
 popup/item_2/text = "Advanced"
+popup/item_2/icon = ExtResource("47_23eif")
 popup/item_2/id = 2
 
 [node name="Design" type="Label" parent="Developing/Header"]
@@ -1432,18 +1560,22 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 7.0
-offset_top = -23.0
-offset_right = 1143.0
-offset_bottom = 29.0
+offset_top = -24.0
+offset_right = 1107.0
+offset_bottom = 30.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
+theme_override_icons/arrow = ExtResource("31_j1x01")
 item_count = 3
 popup/item_0/text = "2D"
+popup/item_0/icon = ExtResource("48_sskwc")
 popup/item_1/text = "3D"
+popup/item_1/icon = ExtResource("49_w4bi1")
 popup/item_1/id = 1
 popup/item_2/text = "Hybrid"
+popup/item_2/icon = ExtResource("49_w4bi1")
 popup/item_2/id = 2
 
 [node name="Target" type="Label" parent="Developing/Header"]
@@ -1466,18 +1598,22 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 7.0
-offset_top = -23.0
-offset_right = 1143.0
-offset_bottom = 29.0
+offset_top = -24.0
+offset_right = 1107.0
+offset_bottom = 30.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
+theme_override_icons/arrow = ExtResource("31_j1x01")
 item_count = 3
 popup/item_0/text = "Young"
+popup/item_0/icon = ExtResource("50_qkusl")
 popup/item_1/text = "All"
+popup/item_1/icon = ExtResource("51_tnouw")
 popup/item_1/id = 1
 popup/item_2/text = "Mature"
+popup/item_2/icon = ExtResource("52_xif8n")
 popup/item_2/id = 2
 
 [node name="Name" type="Label" parent="Developing/Header"]
@@ -1500,13 +1636,14 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 7.0
-offset_top = -26.0
-offset_right = 1143.0
-offset_bottom = 24.0
+offset_top = -25.0
+offset_right = 1107.0
+offset_bottom = 29.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
+right_icon = ExtResource("31_j1x01")
 
 [node name="Break" type="Label" parent="Developing/Header"]
 layout_mode = 2
@@ -1516,7 +1653,7 @@ theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 55
-text = "-----------"
+text = "Analytics:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1684,9 +1821,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -547.0
-offset_top = -517.0
+offset_top = -370.0
 offset_right = 936.0
-offset_bottom = 520.0
+offset_bottom = 370.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ckyho")
@@ -1733,10 +1870,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -537.5
-offset_top = -100.5
-offset_right = 538.5
-offset_bottom = 100.5
+offset_left = -605.5
+offset_top = -60.0
+offset_right = 606.5
+offset_bottom = 141.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -1918,6 +2055,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v7vq0")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v7vq0")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_v7vq0")
@@ -1931,6 +2069,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v7vq0")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v7vq0")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_v7vq0")
@@ -1944,6 +2083,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_v7vq0")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_v7vq0")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_v7vq0")
@@ -1973,6 +2113,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("53_sk8qy")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ujgqd")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ujgqd")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ujgqd")
@@ -1986,6 +2127,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("53_sk8qy")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ujgqd")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ujgqd")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ujgqd")
@@ -1999,6 +2141,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
+theme_override_icons/icon = ExtResource("53_sk8qy")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ujgqd")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ujgqd")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_ujgqd")
@@ -2014,9 +2157,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 13.0
-offset_top = -421.5
+offset_top = -273.0
 offset_right = -13.0
-offset_bottom = -344.5
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
@@ -2031,9 +2174,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 13.0
-offset_top = -325.5
+offset_top = -177.0
 offset_right = -13.0
-offset_bottom = -281.5
+offset_bottom = -133.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
@@ -2048,9 +2191,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 13.0
-offset_top = -281.5
+offset_top = -133.0
 offset_right = -13.0
-offset_bottom = -237.5
+offset_bottom = -89.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
@@ -2065,9 +2208,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 242.0
-offset_top = 117.5
+offset_top = 158.0
 offset_right = -242.0
-offset_bottom = 189.5
+offset_bottom = 230.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
@@ -2084,9 +2227,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -547.0
-offset_top = -517.0
+offset_top = -378.0
 offset_right = 936.0
-offset_bottom = 520.0
+offset_bottom = 378.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_igk02")
@@ -2134,9 +2277,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -530.0
-offset_top = -214.5
+offset_top = -178.0
 offset_right = 530.0
-offset_bottom = 214.5
+offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 11
@@ -2452,6 +2595,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 45
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
@@ -2466,6 +2610,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 45
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
@@ -2480,6 +2625,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 45
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
@@ -2494,6 +2640,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 45
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
@@ -2508,6 +2655,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 45
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
@@ -2522,6 +2670,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 45
+theme_override_icons/icon = ExtResource("55_x4cqv")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mj1an")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mj1an")
@@ -2538,9 +2687,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 166.0
-offset_top = -327.5
+offset_top = -270.5
 offset_right = -166.0
-offset_bottom = -255.5
+offset_bottom = -198.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
@@ -2557,9 +2706,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -547.0
-offset_top = -517.0
+offset_top = -470.5
 offset_right = 936.0
-offset_bottom = 520.0
+offset_bottom = 470.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("33_jwco5")
@@ -2602,9 +2751,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 29.0
-offset_top = -282.5
+offset_top = -240.5
 offset_right = -29.0
-offset_bottom = -160.5
+offset_bottom = -118.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("33_jwco5")
@@ -2688,9 +2837,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 29.0
-offset_top = -132.5
+offset_top = -90.5
 offset_right = -29.0
-offset_bottom = -10.5
+offset_bottom = 31.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("33_jwco5")
@@ -2774,9 +2923,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 29.0
-offset_top = 18.5
+offset_top = 60.5
 offset_right = -29.0
-offset_bottom = 140.5
+offset_bottom = 182.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("33_jwco5")
@@ -2860,9 +3009,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 29.0
-offset_top = 171.5
+offset_top = 213.5
 offset_right = -29.0
-offset_bottom = 293.5
+offset_bottom = 335.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("33_jwco5")
@@ -3038,9 +3187,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -547.0
-offset_top = -517.0
+offset_top = -473.5
 offset_right = 936.0
-offset_bottom = 520.0
+offset_bottom = 473.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jqlcp")
@@ -3159,6 +3308,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 102.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -3624,9 +3774,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -547.0
-offset_top = -517.0
+offset_top = -464.5
 offset_right = 936.0
-offset_bottom = 520.0
+offset_bottom = 464.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_byhxu")
@@ -3671,9 +3821,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -741.5
-offset_top = -269.5
+offset_top = -197.5
 offset_right = 741.5
-offset_bottom = -32.5
+offset_bottom = 39.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_byhxu")
@@ -4126,7 +4276,7 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_1b1x7")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_1b1x7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1b1x7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1b1x7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_qfdcx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wsh05")
 text = "BACK"
 
 [node name="Publish" type="Panel" parent="."]
@@ -4457,17 +4607,14 @@ wait_time = 10.0
 [node name="DuringResearch" type="Panel" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -387.0
-offset_top = -111.0
-offset_right = -23.0
-offset_bottom = 82.0
+offset_left = -388.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 217.0
 grow_horizontal = 0
-grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_g83m7")
 
 [node name="P" type="Panel" parent="DuringResearch"]
@@ -4519,17 +4666,14 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_o325d")
 [node name="DuringContract" type="Panel" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -387.0
-offset_top = 108.0
-offset_right = -23.0
-offset_bottom = 301.0
+offset_left = -388.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 217.0
 grow_horizontal = 0
-grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_g83m7")
 
 [node name="Panel" type="Panel" parent="DuringContract"]
@@ -4556,8 +4700,8 @@ theme_override_constants/shadow_offset_y = 5
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 30
-text = "Company"
+theme_override_font_sizes/font_size = 60
+text = "Contract"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -4578,6 +4722,1529 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/background = SubResource("StyleBoxFlat_u1plp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_82luo")
 
+[node name="DevstageOne" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -323.0
+offset_right = 845.0
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6yiup")
+
+[node name="ContinueOne" type="Button" parent="DevstageOne"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -330.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ny1wl")
+text = "Continue"
+
+[node name="Title2" type="Label" parent="DevstageOne"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -696.0
+offset_right = 366.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Design Stage:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DevstageOne"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -644.0
+offset_top = -365.0
+offset_right = 266.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 103
+alignment = 1
+
+[node name="2D" type="VBoxContainer" parent="DevstageOne/HBoxContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="DevstageOne/HBoxContainer/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+text = "2d:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Anim" type="Label" parent="DevstageOne/HBoxContainer/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Animation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2DAnim" type="CheckButton" parent="DevstageOne/HBoxContainer/2D/Anim"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Sprites" type="Label" parent="DevstageOne/HBoxContainer/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Sprites"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprites" type="CheckButton" parent="DevstageOne/HBoxContainer/2D/Sprites"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Music" type="Label" parent="DevstageOne/HBoxContainer/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2DMusic" type="CheckButton" parent="DevstageOne/HBoxContainer/2D/Music"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Pro Art" type="Label" parent="DevstageOne/HBoxContainer/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Pro art"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProArt" type="CheckButton" parent="DevstageOne/HBoxContainer/2D/Pro Art"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Realism" type="Label" parent="DevstageOne/HBoxContainer/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Realism"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2DRealism" type="CheckButton" parent="DevstageOne/HBoxContainer/2D/Realism"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="SFX" type="Label" parent="DevstageOne/HBoxContainer/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Sound FX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2DSFX" type="CheckButton" parent="DevstageOne/HBoxContainer/2D/SFX"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="3D" type="VBoxContainer" parent="DevstageOne/HBoxContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="DevstageOne/HBoxContainer/3D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+text = "3d:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Anim" type="Label" parent="DevstageOne/HBoxContainer/3D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Animation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3DAnim" type="CheckButton" parent="DevstageOne/HBoxContainer/3D/Anim"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Characters" type="Label" parent="DevstageOne/HBoxContainer/3D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Characters"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3DCharacters" type="CheckButton" parent="DevstageOne/HBoxContainer/3D/Characters"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Music" type="Label" parent="DevstageOne/HBoxContainer/3D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3DMusic" type="CheckButton" parent="DevstageOne/HBoxContainer/3D/Music"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="High Poly" type="Label" parent="DevstageOne/HBoxContainer/3D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "High Poly"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighPoly" type="CheckButton" parent="DevstageOne/HBoxContainer/3D/High Poly"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Realism" type="Label" parent="DevstageOne/HBoxContainer/3D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Realism"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3DRealism" type="CheckButton" parent="DevstageOne/HBoxContainer/3D/Realism"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="SFX" type="Label" parent="DevstageOne/HBoxContainer/3D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Sound FX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3DSFX" type="CheckButton" parent="DevstageOne/HBoxContainer/3D/SFX"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Hybrid" type="VBoxContainer" parent="DevstageOne/HBoxContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="DevstageOne/HBoxContainer/Hybrid"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 45
+text = "Hybrid:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Anim" type="Label" parent="DevstageOne/HBoxContainer/Hybrid"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Animation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HyAnim" type="CheckButton" parent="DevstageOne/HBoxContainer/Hybrid/Anim"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Characters" type="Label" parent="DevstageOne/HBoxContainer/Hybrid"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Characters"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HyCharacters" type="CheckButton" parent="DevstageOne/HBoxContainer/Hybrid/Characters"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Music" type="Label" parent="DevstageOne/HBoxContainer/Hybrid"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HyMusic" type="CheckButton" parent="DevstageOne/HBoxContainer/Hybrid/Music"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Cel Shading" type="Label" parent="DevstageOne/HBoxContainer/Hybrid"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Cel shaded"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CelShade" type="CheckButton" parent="DevstageOne/HBoxContainer/Hybrid/Cel Shading"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Cartoon" type="Label" parent="DevstageOne/HBoxContainer/Hybrid"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Cartoonish"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cartoon" type="CheckButton" parent="DevstageOne/HBoxContainer/Hybrid/Cartoon"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="SFX" type="Label" parent="DevstageOne/HBoxContainer/Hybrid"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Sound FX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HySFX" type="CheckButton" parent="DevstageOne/HBoxContainer/Hybrid/SFX"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Summary" type="Label" parent="DevstageOne"]
+layout_mode = 2
+anchor_left = 0.399
+anchor_top = 0.5
+anchor_right = 0.399
+anchor_bottom = 0.5
+offset_left = -514.408
+offset_top = -237.5
+offset_right = 461.592
+offset_bottom = -44.5
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Pick at least four features for high quality.
+Less features = worse quality but faster
+more features = more quality but longer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DevstageTwo" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -323.0
+offset_right = 845.0
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6yiup")
+
+[node name="ContinueTwo" type="Button" parent="DevstageTwo"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -330.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ny1wl")
+text = "Continue"
+
+[node name="Title2" type="Label" parent="DevstageTwo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -696.0
+offset_right = 366.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Gameplay stage:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2D" type="VBoxContainer" parent="DevstageTwo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -44.5
+offset_right = -68.0
+offset_bottom = 315.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Physics" type="Label" parent="DevstageTwo/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Physics"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Physics" type="CheckButton" parent="DevstageTwo/2D/Physics"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Difficulty" type="Label" parent="DevstageTwo/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Difficulty" type="CheckButton" parent="DevstageTwo/2D/Difficulty"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Procedural" type="Label" parent="DevstageTwo/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Procedural"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Procedural" type="CheckButton" parent="DevstageTwo/2D/Procedural"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Story" type="Label" parent="DevstageTwo/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Story-based"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Story" type="CheckButton" parent="DevstageTwo/2D/Story"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Innovative" type="Label" parent="DevstageTwo/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Innovative"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Innvoative" type="CheckButton" parent="DevstageTwo/2D/Innovative"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Open World" type="Label" parent="DevstageTwo/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Open world"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OpenWorld" type="CheckButton" parent="DevstageTwo/2D/Open World"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Immersive" type="Label" parent="DevstageTwo/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Immersive"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Immersive" type="CheckButton" parent="DevstageTwo/2D/Immersive"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Summary" type="Label" parent="DevstageTwo"]
+layout_mode = 2
+anchor_left = 0.399
+anchor_top = 0.5
+anchor_right = 0.399
+anchor_bottom = 0.5
+offset_left = -514.408
+offset_top = -237.5
+offset_right = 461.592
+offset_bottom = -44.5
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Pick at least five features for high quality.
+Less features = worse quality but faster
+more features = more quality but longer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DevstageThree" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -547.0
+offset_top = -323.0
+offset_right = 845.0
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6yiup")
+
+[node name="ContinueOne" type="Button" parent="DevstageThree"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -330.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n4k0d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ny1wl")
+text = "Continue"
+
+[node name="Title2" type="Label" parent="DevstageThree"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -696.0
+offset_right = 366.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Polish Stage:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2D" type="VBoxContainer" parent="DevstageThree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -22.5
+offset_right = -20.0
+offset_bottom = 305.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Translations" type="Label" parent="DevstageThree/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Translations"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Translations" type="CheckButton" parent="DevstageThree/2D/Translations"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Optimisations" type="Label" parent="DevstageThree/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Optimisation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Optimisations" type="CheckButton" parent="DevstageThree/2D/Optimisations"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Cosmetics" type="Label" parent="DevstageThree/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Free Cosmetics"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cosmetics" type="CheckButton" parent="DevstageThree/2D/Cosmetics"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Accesibility" type="Label" parent="DevstageThree/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Accesibility"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Accesibility" type="CheckButton" parent="DevstageThree/2D/Accesibility"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Updates" type="Label" parent="DevstageThree/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Updates"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Updates" type="CheckButton" parent="DevstageThree/2D/Updates"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Mod Support" type="Label" parent="DevstageThree/2D"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Mod Support"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModSupport" type="CheckButton" parent="DevstageThree/2D/Mod Support"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -24.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
+theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/unchecked = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
+theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
+theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
+icon_alignment = 1
+
+[node name="Summary" type="Label" parent="DevstageThree"]
+layout_mode = 2
+anchor_left = 0.399
+anchor_top = 0.5
+anchor_right = 0.399
+anchor_bottom = 0.5
+offset_left = -514.408
+offset_top = -237.5
+offset_right = 461.592
+offset_bottom = -44.5
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 40
+text = "Pick at least four features for high quality.
+Less features = worse quality but faster
+more features = more quality but longer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
 [connection signal="pressed" from="Buttons/RealEstate" to="." method="RealEstateButton"]
 [connection signal="pressed" from="Buttons/Contracts" to="." method="_on_contracts_pressed"]
@@ -4597,8 +6264,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_82luo")
 [connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="LOADGAME"]
 [connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="soundfx"]
 [connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
-[connection signal="pressed" from="During/Publish" to="." method="PUBLISH"]
-[connection signal="pressed" from="During/Publish" to="." method="soundfx"]
 [connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Platform/Platform" to="." method="_on_platform_item_selected"]
@@ -4660,3 +6325,37 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_82luo")
 [connection signal="timeout" from="Timers/Research" to="Research" method="_on_research_timeout"]
 [connection signal="timeout" from="Timers/LOAN" to="." method="loanTIMERend"]
 [connection signal="timeout" from="Timers/AutosaveWait" to="." method="_on_autosave_wait_timeout"]
+[connection signal="pressed" from="DevstageOne/ContinueOne" to="." method="destime"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/2D/Anim/2DAnim" to="." method="twoDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/2D/Sprites/Sprites" to="." method="twoDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/2D/Music/2DMusic" to="." method="twoDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/2D/Pro Art/ProArt" to="." method="twoDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/2D/Realism/2DRealism" to="." method="twoDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/2D/SFX/2DSFX" to="." method="twoDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/3D/Anim/3DAnim" to="." method="threeDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/3D/Characters/3DCharacters" to="." method="threeDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/3D/Music/3DMusic" to="." method="threeDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/3D/High Poly/HighPoly" to="." method="threeDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/3D/Realism/3DRealism" to="." method="threeDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/3D/SFX/3DSFX" to="." method="threeDchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/Hybrid/Anim/HyAnim" to="." method="HYchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/Hybrid/Characters/HyCharacters" to="." method="HYchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/Hybrid/Music/HyMusic" to="." method="HYchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/Hybrid/Cel Shading/CelShade" to="." method="HYchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/Hybrid/Cartoon/Cartoon" to="." method="HYchecker"]
+[connection signal="toggled" from="DevstageOne/HBoxContainer/Hybrid/SFX/HySFX" to="." method="HYchecker"]
+[connection signal="pressed" from="DevstageTwo/ContinueTwo" to="." method="GPtime"]
+[connection signal="toggled" from="DevstageTwo/2D/Physics/Physics" to="." method="GPchecker"]
+[connection signal="toggled" from="DevstageTwo/2D/Difficulty/Difficulty" to="." method="GPchecker"]
+[connection signal="toggled" from="DevstageTwo/2D/Procedural/Procedural" to="." method="GPchecker"]
+[connection signal="toggled" from="DevstageTwo/2D/Story/Story" to="." method="GPchecker"]
+[connection signal="toggled" from="DevstageTwo/2D/Innovative/Innvoative" to="." method="GPchecker"]
+[connection signal="toggled" from="DevstageTwo/2D/Open World/OpenWorld" to="." method="GPchecker"]
+[connection signal="toggled" from="DevstageTwo/2D/Immersive/Immersive" to="." method="GPchecker"]
+[connection signal="pressed" from="DevstageThree/ContinueOne" to="." method="POLtime"]
+[connection signal="toggled" from="DevstageThree/2D/Translations/Translations" to="." method="POLchecker"]
+[connection signal="toggled" from="DevstageThree/2D/Optimisations/Optimisations" to="." method="POLchecker"]
+[connection signal="toggled" from="DevstageThree/2D/Cosmetics/Cosmetics" to="." method="POLchecker"]
+[connection signal="toggled" from="DevstageThree/2D/Accesibility/Accesibility" to="." method="POLchecker"]
+[connection signal="toggled" from="DevstageThree/2D/Updates/Updates" to="." method="POLchecker"]
+[connection signal="toggled" from="DevstageThree/2D/Mod Support/ModSupport" to="." method="POLchecker"]

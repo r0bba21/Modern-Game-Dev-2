@@ -113,6 +113,7 @@ func REFRESH_ALL():
 @onready var contracts: Button = $Buttons/Contracts
 @onready var marketing: Button = $During/Marketing
 @onready var research: Button = $Buttons/Research
+@onready var pub: Label = $During/Pub
 
 func refresh_inprog_ui():
 	if gameinprog == false and Global.in_research == false and Global.in_contract == false:
@@ -130,9 +131,10 @@ func refresh_inprog_ui():
 			during.show()
 			if publisher == true:
 				marketing.hide()
+				pub.show()
 			else:
-				print("failure")
 				marketing.show()
+				pub.hide()
 		else:
 			during.hide()
 
@@ -172,10 +174,17 @@ func refresh_info_ui():
 
 @onready var nameL: Label = $During/N/Name
 @onready var game_prog: ProgressBar = $During/GameProg
+@onready var stage: Label = $During/N/Stage
 
 func refresh_during_ui():
 	nameL.text = nameG
 	game_prog.value = devperc
+	if in_des == true:
+		stage.text = "Design Stage"
+	if in_gp == true:
+		stage.text = "Gameplay Stage"
+	if in_pol == true:
+		stage.text = "Polish Stage"
 
 func refresh_productivity():
 	var prodBoost:float
@@ -185,8 +194,6 @@ func refresh_productivity():
 		prodBoost = 1
 	productivity = (1 + (highS * .25) + (medS * .12) + (lowS * .075)) * (prodM * prodBoost)
 	currentS = highS + medS + lowS
-	if gameinprog == true:
-		refreshdevtimer()
 
 @onready var months_l: Label = $Developing/Header/ETA/MonthsL
 @onready var m_share_l: Label = $Developing/Header/Marketshare/MShareL
@@ -196,7 +203,6 @@ func refresh_productivity():
 func refresh_dev_summary():
 	suggest()
 	Mshare()
-	dev_time()
 	if Global.research_level > 3:
 		months_l.text = str(devtime / 10) + " Months"
 	else:
@@ -241,6 +247,9 @@ func pre_dev_purge():
 	demo = 0
 	sponsor = 0
 	paid = 0
+	in_des = false
+	in_gp = false
+	in_pol = false
 
 @onready var developing: Panel = $Developing
 
@@ -325,7 +334,7 @@ func DEVSTART():
 			Global.in_menu = false
 			developing.hide()
 			REFRESH_ALL()
-			dev_prog.start()
+			openDESstage()
 
 # CALIBRATION:
 func Mshare():
@@ -373,27 +382,13 @@ func suggest():
 	if suggestedP < 0:
 		suggestedP = 1
 
-@onready var dev_prog: Timer = $Timers/DevProg
-var fac
-
-func dev_time():
-	fac = ((SIZE + TECH + DESIGN) * 100)
-	devtime = fac / productivity
-	dev_prog.wait_time = float(devtime / 100)
-
-func refreshdevtimer():
-	devtime = (fac / productivity)
-
-func _on_dev_prog_timeout() -> void:
-	devperc += 1
-	refresh_during_ui()
-
 # PUBLISHING:
 var universe:int
 var sales:float
 var publisher = false
 var revenue:int
 var marketmonths:int
+var pubMOD:float
 
 func PUBLISH():
 	if publisher == true:
@@ -402,16 +397,18 @@ func PUBLISH():
 	else:
 		universe = 1000000
 		refresh_popularity()
-	quality = ((devperc - randi_range(0,15)) * 0.7) + ((SIZE + DESIGN + TECH) * randi_range(1,3))
+	var FAC = (SIZE + DESIGN + TECH)
+	quality = (stagesFAC * 20) + ((FAC - randi_range(0,3)) * 4)
 	if quality > 100:
 		quality = 100
-	sales = ((universe * marketshare) * (((popularity * 0.4) + (quality * 0.7)) / 100)) * salesM
+	sales = ((universe * marketshare) * (((popularity * 0.35) + (quality * 0.7)) / 100)) * salesM
 	suggest()
-	var  pubMOD:float
-	if quality < contingency:
+	if quality < contingency and publisher == true:
+		print("contingency in place")
 		pubMOD = 0.05
-	if contingency < quality:
+	if contingency < quality and publisher == true:
 		pubMOD = pubCut
+		print("contingency avoided")
 	revenue = (sales * suggestedP) * pubMOD
 	var newfans = (sales * 0.15 * pubCut) * (quality / 100)
 	var oldfans = (fans / 2) * (quality / 100)
@@ -450,11 +447,6 @@ func publishedG():
 	else:
 		wishlists.text = "Wishlists: ???"
 	if publisher == true:
-		var pubMOD:float
-		if quality < contingency:
-			pubMOD = 0.05
-		if contingency > quality:
-			pubMOD = pubCut
 		var pubPerc = 100 - (pubMOD * 100)
 		publisher_l.text = "Publisher: " + str(pubPerc) + "% cut"
 	if publisher == false:
@@ -496,7 +488,10 @@ func onmarket():
 	moneyRem = revenue
 	REFRESH_ALL()
 	marketT.start()
-	if Global.autosave == 1 or 3:
+	if Global.autosave == 1:
+		print("autosaving")
+		SAVEGAME()
+	if Global.autosave == 3:
 		print("autosaving")
 		SAVEGAME()
 
@@ -913,7 +908,6 @@ func RealEstateButton():
 var warning_shown = false
 
 func warn_bankruptcy():
-	_on_back_p_pressed()
 	bankruptcy_warning.show()
 	Global.in_menu = true
 	warning_shown = true
@@ -938,7 +932,6 @@ func BANKRUPT():
 @onready var contract_time: Timer = $Contracts/ContractTime
 
 var contract_id:int
-var contract_length:int
 var payout:int
 var time_done:int
 
@@ -946,6 +939,7 @@ func _on_contracts_pressed() -> void:
 	soundfx()
 	contractsPanel.show()
 	Global.in_menu = true
+	progress_c.value = 0
 
 func _on_accept_pj_pressed() -> void:
 	soundfx()
@@ -954,7 +948,7 @@ func _on_accept_pj_pressed() -> void:
 		contractsPanel.hide()
 		REFRESH_ALL()
 		contract_id = 0
-		contract_length = 8
+		contract_time.wait_time = 0.8
 		time_done = 0
 		payout = 500000
 		contract_time.start()
@@ -968,7 +962,7 @@ func _on_accept_agn_pressed() -> void:
 		contractsPanel.hide()
 		REFRESH_ALL()
 		contract_id = 2
-		contract_length = 6
+		contract_time.wait_time = 0.6
 		time_done = 0
 		payout = 250000
 		contract_time.start()
@@ -982,7 +976,7 @@ func _on_accept_c_pressed() -> void:
 		contractsPanel.hide()
 		REFRESH_ALL()
 		contract_id = 3
-		contract_length = 2
+		contract_time.wait_time = 0.2
 		time_done = 0
 		payout = 100000
 		contract_time.start()
@@ -995,7 +989,7 @@ func _on_accept_b_pressed() -> void:
 	contractsPanel.hide()
 	REFRESH_ALL()
 	contract_id = 3
-	contract_length = 12
+	contract_time.wait_time = 1.2
 	time_done = 0
 	payout = 800000
 	contract_time.start()
@@ -1007,7 +1001,6 @@ func _on_accept_b_pressed() -> void:
 @onready var during_contract: Panel = $DuringContract
 
 func during_contract_ui():
-	progress_c.value = time_done / contract_length
 	match contract_id:
 		0:
 			company.text = "Jones Inc."
@@ -1019,13 +1012,12 @@ func during_contract_ui():
 			company.text = "Blaze"
 
 func _on_contract_time_timeout() -> void:
-	time_done += 1
-	if contract_length == time_done:
+	progress_c.value += 1
+	if progress_c.value == 100:
 		contract_time.stop()
 		Global.in_contract = false
 		money += payout
 		during_contract.hide()
-	during_contract_ui()
 
 # SAVING AND LOADING:
 
@@ -1093,3 +1085,256 @@ func LOADGAME():
 func _on_autosave_wait_timeout() -> void:
 	soundfx()
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
+# DESIGN STAGE:
+@onready var _2dDES: VBoxContainer = $"DevstageOne/HBoxContainer/2D"
+@onready var _3dDES: VBoxContainer = $"DevstageOne/HBoxContainer/3D"
+@onready var hybridDES: VBoxContainer = $DevstageOne/HBoxContainer/Hybrid
+
+func refreshDstage():
+	_2dDES.hide()
+	_3dDES.hide()
+	hybridDES.hide()
+	match DESIGN:
+		1:
+			_2dDES.show()
+		2:
+			_3dDES.show()
+		3:
+			hybridDES.show()
+
+var dphasemod:float
+var amtcheckedtwoD:int = 0
+var dstageog:float
+
+func twoDchecker(toggled_on: bool) -> void:
+	soundfx()
+	if toggled_on == true:
+		amtcheckedtwoD += 1
+	if toggled_on != true:
+		amtcheckedtwoD -= 1
+	refresh_TWOdphase()
+
+func refresh_TWOdphase():
+	match amtcheckedtwoD:
+		1:
+			dphasemod = 0.15
+		2:
+			dphasemod = 0.5
+		3:
+			dphasemod = 0.75
+		4:
+			dphasemod = 1
+		5:
+			dphasemod = 1.2
+		6:
+			dphasemod = 1.4
+	dstageog = dphasemod
+
+var amtcheckedthreeD:int = 0
+
+func threeDchecker(toggled_on: bool) -> void:
+	soundfx()
+	if toggled_on == true:
+		amtcheckedthreeD += 1
+	if toggled_on != true:
+		amtcheckedthreeD -= 1
+	refresh_THREEdphase()
+
+func refresh_THREEdphase():
+	match amtcheckedthreeD:
+		1:
+			dphasemod = 0.15
+		2:
+			dphasemod = 0.5
+		3:
+			dphasemod = 0.75
+		4:
+			dphasemod = 1
+		5:
+			dphasemod = 1.2
+		6:
+			dphasemod = 1.4
+	dstageog = dphasemod
+	dphasemod += 1
+
+var amtcheckedHYBRID:int = 0
+
+func HYchecker(toggled_on: bool) -> void:
+	soundfx()
+	if toggled_on == true:
+		amtcheckedHYBRID += 1
+	if toggled_on != true:
+		amtcheckedHYBRID -= 1
+	refresh_HYdphase()
+
+func refresh_HYdphase():
+	match amtcheckedHYBRID:
+		1:
+			dphasemod = 0.15
+		2:
+			dphasemod = 0.5
+		3:
+			dphasemod = 0.75
+		4:
+			dphasemod = 1
+		5:
+			dphasemod = 1.2
+		6:
+			dphasemod = 1.4
+	dstageog = dphasemod
+	dphasemod += 2
+
+# GAMEPLAY STAGE:
+var gstagemod:float
+var amtcheckedGSTAGE:int = 0
+var gstageog:float
+
+func GPchecker(toggled_on: bool) -> void:
+	
+	if toggled_on == true:
+		amtcheckedGSTAGE += 1
+	if toggled_on != true:
+		amtcheckedGSTAGE -= 1
+	refresh_GPphase()
+
+func refresh_GPphase():
+	soundfx()
+	match amtcheckedGSTAGE:
+		0:
+			print("AMTCHECKED for g stage is zero")
+		1:
+			gstagemod = 0.2
+			gstageog = 0.2
+		2:
+			gstagemod = 0.4
+			gstageog = 0.4
+		3:
+			gstagemod = 0.6
+			gstageog = 0.6
+		4:
+			gstagemod = 0.8
+			gstageog = 0.8
+		5:
+			gstagemod = 1
+			gstageog = 1
+		6:
+			gstagemod = 1.2
+			gstageog = 1.2
+		7:
+			gstagemod = 1.4
+			gstageog = 1.4
+	gstagemod += (SIZE - 1)
+
+# POLISH STAGE:
+var pstagemod:float
+var amtcheckedPOLISH:int = 0
+var pstageog:float
+
+func POLchecker(toggled_on: bool) -> void:
+	if toggled_on == true:
+		amtcheckedPOLISH += 1
+	if toggled_on != true:
+		amtcheckedPOLISH -= 1
+	refresh_POLphase()
+
+func refresh_POLphase():
+	soundfx()
+	match amtcheckedPOLISH:
+		0:
+			print("AMTCHECKED for POL stage is zero")
+		1:
+			pstagemod = 0.15
+			pstageog = 0.15
+		2:
+			pstagemod = 0.5
+			pstageog = 0.5
+		3:
+			pstagemod = 0.75
+			pstageog = 0.75
+		4:
+			pstagemod = 1
+			pstageog = 1
+		5:
+			pstagemod = 1.2
+			pstageog = 1.2
+		6:
+			pstagemod = 1.4
+			pstageog = 1.4
+	pstagemod += (SIZE - 1)
+
+# DEV CYCLE:
+@onready var dev_prog: Timer = $Timers/DevProg
+@onready var devstage_two: Panel = $DevstageTwo
+@onready var devstage_three: Panel = $DevstageThree
+@onready var devstage_one: Panel = $DevstageOne
+
+var in_des = false
+var in_gp = false
+var in_pol = false
+
+func openDESstage():
+	refreshDstage()
+	devstage_one.show()
+	in_des = true
+
+func destime():
+	soundfx()
+	refresh_productivity()
+	dev_prog.wait_time = float(0.4 * dphasemod * productivity)
+	print(str(float(0.4 * dphasemod * productivity)) + "timer")
+	dev_prog.start()
+	devstage_one.hide()
+	devperc = 0
+
+func openGPstage():
+	dev_prog.stop()
+	in_des = false
+	in_gp = true
+	devstage_two.show()
+	devperc = 0
+	print(str(dstageog) + "dstage")
+
+func GPtime():
+	soundfx()
+	refresh_productivity()
+	dev_prog.wait_time = float(0.5 * gstagemod * productivity)
+	print(str(float(0.5 * gstagemod * productivity)) + "timer")
+	dev_prog.start()
+	devstage_two.hide()
+
+func openPOLstage():
+	dev_prog.stop()
+	in_gp = false
+	in_pol = true
+	devstage_three.show()
+	devperc = 0
+	print(str(gstageog) + "gstage")
+
+func POLtime():
+	soundfx()
+	refresh_productivity()
+	dev_prog.wait_time = float(0.3 * pstagemod * productivity)
+	print(str(float(0.3 * pstagemod * productivity)) + "timer")
+	dev_prog.start()
+	devstage_three.hide()
+
+var stagesFAC:float = 0
+
+func GAMEDONE():
+	stagesFAC = gstageog + pstageog + dstageog
+	print(str(pstageog) + "pstage")
+	print(str(stagesFAC) + "STAGES FACTOR")
+	in_pol = false
+	dev_prog.stop()
+	PUBLISH()
+
+func _on_dev_prog_timeout() -> void:
+	devperc += 1
+	refresh_during_ui()
+	if devperc == 100 and in_des == true:
+		openGPstage()
+	if devperc == 100 and in_gp == true:
+		openPOLstage()
+	if devperc == 100 and in_pol == true:
+		GAMEDONE()
