@@ -3054,6 +3054,7 @@ text = "Accept"
 wait_time = 10.0
 
 [node name="Back3" type="Button" parent="Contracts"]
+layout_mode = 0
 offset_left = 33.0
 offset_top = 30.0
 offset_right = 99.0
@@ -3512,6 +3513,7 @@ theme_override_font_sizes/font_size = 35
 text = "You Pay: $18,500,000 over 12 years"
 
 [node name="Back2" type="Button" parent="TheBank"]
+layout_mode = 0
 offset_left = 29.0
 offset_top = 23.0
 offset_right = 95.0
@@ -3735,6 +3737,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back2" type="Button" parent="Publisher"]
+layout_mode = 0
 offset_left = 29.0
 offset_top = 23.0
 offset_right = 95.0
@@ -3769,6 +3772,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_byhxu")
 script = ExtResource("32_o67hk")
 
 [node name="Back2" type="Button" parent="Research"]
+layout_mode = 0
 offset_left = 29.0
 offset_top = 23.0
 offset_right = 95.0
@@ -4236,6 +4240,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Back2" type="Button" parent="Market"]
+layout_mode = 0
 offset_left = 29.0
 offset_top = 23.0
 offset_right = 95.0
@@ -6261,10 +6266,10 @@ vertical_alignment = 1
 [connection signal="pressed" from="Buttons/Mini/Time/Pause" to="Buttons/Mini/Time" method="_on_pause_pressed"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="Buttons/Mini/Time" method="_on_speed_pressed"]
-[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="SAVEGAME"]
-[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="LOADGAME"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="soundfx"]
 [connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
 [connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]

@@ -16,7 +16,7 @@ func _input(event: InputEvent) -> void: # KEYBOARD SHORTCUTS
 			soundfx()
 			SAVEGAME()
 			autosave_wait.start()
-	if event.is_action_pressed("Develop Menu Open") and gameinprog == false:
+	if event.is_action_pressed("Develop Menu Open") and Global.gameinprog == false:
 		_on_develop_pressed()
 	if event.is_action_pressed("Savegame"):
 		soundfx()
@@ -44,7 +44,6 @@ func monthprog():
 
 # CONTROL:
 var rent:int = 1500
-var gameinprog = false
 var fans:int = 0
 var months:int = 0
 var years:int = 0
@@ -118,13 +117,13 @@ func REFRESH_ALL():
 @onready var pub: Label = $During/Pub
 
 func refresh_inprog_ui():
-	if gameinprog == false and Global.in_research == false and Global.in_contract == false:
+	if Global.gameinprog == false and Global.in_research == false and Global.in_contract == false:
 		develop.show()
 		saves.show()
 		contracts.show()
 		research.show()
 		during.hide()
-	if gameinprog == true:
+	if Global.gameinprog == true:
 		contracts.hide()
 		develop.hide()
 		research.hide()
@@ -330,7 +329,7 @@ func _on_name_l_text_changed(new_text:String) -> void:
 func DEVSTART():
 	if AUDIENCE != -1 and DESIGN != -1 and GENRE != -1 and nameG != "?" and SIZE != -1 and TECH != -1 and PLATFORM != -1:
 		if money > devcost:
-			gameinprog = true
+			Global.gameinprog = true
 			soundfx()
 			money -= devcost
 			Global.in_menu = false
@@ -483,7 +482,7 @@ var expensesRem:int
 var moneyRem:int
 
 func onmarket():
-	gameinprog = false
+	Global.gameinprog = false
 	Global.in_menu = false
 	publish.hide()
 	monthsdone = 0
@@ -580,7 +579,7 @@ func _on_back_p_pressed() -> void:
 
 # MARKETING:
 @onready var marketP: Panel = $Market
-@onready var pop_prog: ProgressBar = $Market/Price6/PopProg
+@onready var pop_prog: ProgressBar = $Market/PopProg
 
 var press:int = 0
 var trailer:int = 0

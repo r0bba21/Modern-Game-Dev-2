@@ -1,5 +1,8 @@
 extends Node
 
+# IMPORTANT:
+var gameinprog = false
+
 # OPTIONS MENU:
 var chosen_sfx:int = 1
 var resindex:int = 0
