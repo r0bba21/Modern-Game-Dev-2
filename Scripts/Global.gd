@@ -16,7 +16,15 @@ var musicvol:float = 1
 var autosave:int = 0
 
 # DIFFICULTY:
-var difficulty:int
+var loans = true
+var pubs = true
+var conts = true
+var resM = true
+var prodM:float = 1
+var priceM:float = 1
+var salesM:float = 1
+var fansM:float = 1
+var expM: float = 1
 
 # RESEARCH:
 var research_tokens:int = 0
@@ -36,3 +44,9 @@ var office_id:int = 0
 
 # LOADING GAME:
 var loading_game = false
+
+# COMPANY:
+var CompName:String = "Cool Games Co."
+var FoundName:String = "Poo Jones"
+var CopiesSold:int = 0
+var LogoID:int = 0

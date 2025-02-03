@@ -9,6 +9,7 @@ size = Vector2(1920, 1080)
 orientation = 2
 
 [node name="Office" type="Node2D"]
+position = Vector2(960, 0)
 script = ExtResource("1_0wskg")
 
 [node name="Camera2D" type="Camera2D" parent="."]

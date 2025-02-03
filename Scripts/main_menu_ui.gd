@@ -1,26 +1,52 @@
 extends Control
 
 func _on_play_pressed() -> void:
+	soundfx()
 	get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
 
 func _on_load_pressed() -> void:
+	soundfx()
 	Global.loading_game = true
-	get_tree().change_scene_to_file("res://Scenes/office.tscn")
+	get_tree().change_scene_to_file("res://Scenes/customise_2.tscn")
 
 func _on_tutorial_pressed() -> void:
+	soundfx()
 	OS.shell_open("https://docs.google.com/document/d/1-AW1nvLEzTf6L7M68kdvvJQkphw_LXrZ6YgWGZUDCwA/")
 
 func _on_options_pressed() -> void:
+	soundfx()
 	get_tree().change_scene_to_file("res://Scenes/options.tscn")
 
 func _on_quit_pressed() -> void:
+	soundfx()
 	get_tree().quit()
 
 func credits():
+	soundfx()
 	OS.shell_open("https://docs.google.com/document/d/1eWvfiP7te0Zjdpcgn5vyqkyOff3nlJ6TJlTzNyRfFPY/")
 
 func bugs():
+	soundfx()
 	OS.shell_open("https://docs.google.com/forms/d/e/1FAIpQLSd4WdRtUWqOTgbtx84H234zPXNA7oHO2jcrWqht6YjOhDGyPA/viewform?usp=sharing")
+
+@onready var mouse: AudioStreamPlayer2D = $Sounds/Mouse
+@onready var dullmouse: AudioStreamPlayer2D = $Sounds/Dullmouse
+@onready var filmic: AudioStreamPlayer2D = $Sounds/Filmic
+@onready var techno: AudioStreamPlayer2D = $Sounds/Techno
+@onready var retro: AudioStreamPlayer2D = $Sounds/Retro
+
+func soundfx():
+	match Global.chosen_sfx:
+		1:
+			mouse.play()
+		2:
+			dullmouse.play()
+		3:
+			filmic.play()
+		4:
+			techno.play()
+		5:
+			retro.play()
 
 # OPTIONS LOADING:
 func load_settings():

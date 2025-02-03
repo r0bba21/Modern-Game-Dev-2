@@ -62,7 +62,7 @@ func _on_begin_pressed() -> void:
 		var productivity = (Global.PROD_research / 1.75)
 		if productivity < 1:
 			productivity = 1
-		research.wait_time = float((ETA / 100) * productivity)
+		research.wait_time = float((ETA / 100) / productivity)
 		research_prog = 0
 		research.start()
 		Global.research_tokens -= 1

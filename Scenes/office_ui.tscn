@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=152 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -18,8 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://dt2d7tibk31cx" path="res://Assets/UI/pc.png" id="13_lmow2"]
 [ext_resource type="Texture2D" uid="uid://b62l5wb3tku8t" path="res://Assets/UI/ui (1).png" id="14_kcsxu"]
 [ext_resource type="Texture2D" uid="uid://cvfppupn361s4" path="res://Assets/UI/ui (5).png" id="15_yfckf"]
+[ext_resource type="StyleBox" uid="uid://c7gcnvtwm0n4w" path="res://Assets/UI/menu_hovered.tres" id="16_ejao6"]
 [ext_resource type="Texture2D" uid="uid://bd8qjjqojihl3" path="res://Assets/UI/ui (6).png" id="16_owjh5"]
 [ext_resource type="Texture2D" uid="uid://l4kafa5ydj6d" path="res://Assets/UI/ui (4).png" id="17_ghstj"]
+[ext_resource type="StyleBox" uid="uid://d4g57lvyksawo" path="res://Assets/UI/menu.tres" id="17_wvmtv"]
 [ext_resource type="Texture2D" uid="uid://6w3kag7tdp43" path="res://Assets/UI/time (1).png" id="19_wu0jg"]
 [ext_resource type="Texture2D" uid="uid://dddy6db2rlfb5" path="res://Assets/UI/gamepad-cross.png" id="20_5mb34"]
 [ext_resource type="StyleBox" uid="uid://dbaguallc4ejq" path="res://Assets/UI/pause_hover.tres" id="20_gdbgw"]
@@ -33,7 +35,9 @@
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="30_bycjq"]
 [ext_resource type="StyleBox" uid="uid://cjl3vs67kylxq" path="res://Assets/UI/prog_back.tres" id="31_cv5j1"]
 [ext_resource type="Texture2D" uid="uid://do7ym2bg5qt8a" path="res://Assets/UI/click.png" id="31_j1x01"]
+[ext_resource type="Script" path="res://Scripts/companyUI.gd" id="31_v6gb0"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="31_ydjad"]
+[ext_resource type="Texture2D" uid="uid://dup0dvlwokm64" path="res://Assets/UI/LOGOS (1).png" id="32_5h4ff"]
 [ext_resource type="Texture2D" uid="uid://cyxgwh1xrwk41" path="res://Assets/UI/genres (2).png" id="32_jikvb"]
 [ext_resource type="Script" path="res://Scripts/research.gd" id="32_o67hk"]
 [ext_resource type="StyleBox" uid="uid://ca57s3ojla4ux" path="res://Assets/UI/prog.tres" id="32_qx3nf"]
@@ -41,17 +45,22 @@
 [ext_resource type="Texture2D" uid="uid://gkacovriy0k3" path="res://Assets/UI/genres (3).png" id="33_frgwy"]
 [ext_resource type="StyleBox" uid="uid://wnao1st57aem" path="res://Assets/UI/Contract.tres" id="33_jwco5"]
 [ext_resource type="Texture2D" uid="uid://7lyq115d0rkf" path="res://Assets/UI/cancel75.png" id="33_og82k"]
+[ext_resource type="Texture2D" uid="uid://dr7boudlevdmj" path="res://Assets/UI/LOGOS (2).png" id="33_q7pt6"]
 [ext_resource type="Texture2D" uid="uid://bukqqfs3rgueu" path="res://Assets/UI/checklist.png" id="33_vl7bk"]
+[ext_resource type="Texture2D" uid="uid://xp8nw2wit5ij" path="res://Assets/UI/LOGOS (3).png" id="34_3kq18"]
 [ext_resource type="Texture2D" uid="uid://qdngnbhhnobh" path="res://Assets/UI/pub (2).png" id="34_cuuo3"]
 [ext_resource type="StyleBox" uid="uid://dbccugfktu5v0" path="res://Assets/UI/dev.tres" id="34_pxscq"]
 [ext_resource type="Texture2D" uid="uid://dh053jrl28t84" path="res://Assets/UI/genres (4).png" id="34_yt8u7"]
 [ext_resource type="Texture2D" uid="uid://b52kduevwk6qn" path="res://Assets/UI/genres (5).png" id="35_5tl6v"]
 [ext_resource type="Texture2D" uid="uid://7se3a2smhoj2" path="res://Assets/UI/bank.png" id="35_5w3yo"]
+[ext_resource type="Texture2D" uid="uid://cb5uqhu5xutxm" path="res://Assets/UI/LOGOS (4).png" id="35_abbki"]
 [ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="35_nawnk"]
 [ext_resource type="Texture2D" uid="uid://dhnoyw8o2i7om" path="res://Assets/UI/pub (5).png" id="35_wuukt"]
 [ext_resource type="Texture2D" uid="uid://dx0g7xc8o36ky" path="res://Assets/UI/pub (3).png" id="36_1btaf"]
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="36_1yad1"]
 [ext_resource type="Texture2D" uid="uid://by532k21khcbi" path="res://Assets/UI/genres (6).png" id="36_co2i5"]
+[ext_resource type="Texture2D" uid="uid://dp3j7wgj2bw7r" path="res://Assets/UI/LOGOS (5).png" id="36_dp71l"]
+[ext_resource type="Texture2D" uid="uid://bpc84uefgxlcb" path="res://Assets/UI/LOGOS (6).png" id="37_ehnxk"]
 [ext_resource type="Texture2D" uid="uid://qlhuj21m5gp3" path="res://Assets/UI/genres (7).png" id="37_u85m6"]
 [ext_resource type="Texture2D" uid="uid://1pfnph0xcktp" path="res://Assets/UI/pub (4).png" id="37_yq22j"]
 [ext_resource type="Texture2D" uid="uid://cyqasysefxriu" path="res://Assets/UI/genres (8).png" id="38_7ocly"]
@@ -76,6 +85,7 @@
 [ext_resource type="Texture2D" uid="uid://6swklu0knaea" path="res://Assets/UI/aud (1).png" id="51_tnouw"]
 [ext_resource type="Texture2D" uid="uid://bbgatxi8bvl8v" path="res://Assets/UI/check-mark.png" id="52_ebcv4"]
 [ext_resource type="Texture2D" uid="uid://iestlh4lhflb" path="res://Assets/UI/aud (3).png" id="52_xif8n"]
+[ext_resource type="Texture2D" uid="uid://bl60y21h5t7gv" path="res://Assets/UI/design (2).png" id="53_7reot"]
 [ext_resource type="Texture2D" uid="uid://c721npcgdwn7x" path="res://Assets/UI/cross40.png" id="53_sk8qy"]
 [ext_resource type="Texture2D" uid="uid://cje3htsavqce4" path="res://Assets/UI/check-mark (1).png" id="55_x4cqv"]
 [ext_resource type="Texture2D" uid="uid://di862ta2317eg" path="res://Assets/UI/cancel (1).png" id="59_b4he4"]
@@ -93,29 +103,6 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndk1n"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15ym1"]
-content_margin_right = 10.0
-bg_color = Color(0.0980392, 0.164706, 0.223529, 1)
-border_width_right = 9
-border_width_bottom = 9
-border_color = Color(0.0978561, 0.166487, 0.222206, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0tww"]
-content_margin_right = 17.0
-bg_color = Color(0.459556, 0.621217, 0.752429, 1)
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.0978561, 0.166487, 0.222206, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25ywq"]
 content_margin_right = 10.0
@@ -323,6 +310,14 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2stft"]
+bg_color = Color(0.0745098, 0.156863, 0.0823529, 1)
+border_color = Color(0.0760017, 0.15509, 0.0839422, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpn7o"]
 bg_color = Color(0.551038, 0.694284, 0.510231, 0.607843)
@@ -566,6 +561,48 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4v3jy"]
+bg_color = Color(0.0745098, 0.156863, 0.0823529, 1)
+border_color = Color(0.0760017, 0.15509, 0.0839422, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrcrd"]
+content_margin_left = 36.0
+content_margin_right = 42.0
+bg_color = Color(0.323343, 0.537875, 0.344089, 1)
+border_width_right = 10
+border_width_bottom = 6
+border_color = Color(0.0760017, 0.15509, 0.0839422, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06ti2"]
+bg_color = Color(0.231373, 0.0745098, 0.0156863, 1)
+border_color = Color(0.231373, 0.0745098, 0.0156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fhu7"]
+content_margin_left = 36.0
+content_margin_right = 42.0
+bg_color = Color(0.760784, 0.317647, 0.141176, 1)
+border_width_right = 10
+border_width_bottom = 6
+border_color = Color(0.231373, 0.0745098, 0.0156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yiup"]
 bg_color = Color(0.221618, 0.478657, 0.242255, 0.607843)
 border_width_right = 8
@@ -634,6 +671,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_frgb8")
+money = 5000000
 metadata/_edit_lock_ = true
 
 [node name="Sounds" type="Node2D" parent="."]
@@ -679,7 +717,7 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 3
-text = "ALPHA - VER. 1.0.4"
+text = "ALPHA - VER. 1.0.5"
 
 [node name="M" type="Panel" parent="Info"]
 layout_mode = 1
@@ -855,7 +893,7 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 25.0
 offset_top = -215.0
-offset_right = 389.0
+offset_right = 398.0
 offset_bottom = 529.0
 grow_vertical = 2
 theme_override_constants/separation = 11
@@ -867,13 +905,13 @@ theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 50
 theme_override_icons/icon = ExtResource("13_lmow2")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_ndk1n")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/normal = SubResource("StyleBoxFlat_e0tww")
+theme_override_styles/hover_pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover_pressed = ExtResource("16_ejao6")
+theme_override_styles/hover_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover = ExtResource("16_ejao6")
+theme_override_styles/pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/pressed = ExtResource("16_ejao6")
+theme_override_styles/normal = ExtResource("17_wvmtv")
 text = "Staff"
 alignment = 2
 autowrap_mode = 3
@@ -885,13 +923,13 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 50
 theme_override_icons/icon = ExtResource("13_fx2l3")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/normal = SubResource("StyleBoxFlat_e0tww")
+theme_override_styles/hover_pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover_pressed = ExtResource("16_ejao6")
+theme_override_styles/hover_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover = ExtResource("16_ejao6")
+theme_override_styles/pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/pressed = ExtResource("16_ejao6")
+theme_override_styles/normal = ExtResource("17_wvmtv")
 text = "Offices"
 alignment = 2
 autowrap_mode = 3
@@ -903,13 +941,13 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 50
 theme_override_icons/icon = ExtResource("15_yfckf")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/normal = SubResource("StyleBoxFlat_e0tww")
+theme_override_styles/hover_pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover_pressed = ExtResource("16_ejao6")
+theme_override_styles/hover_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover = ExtResource("16_ejao6")
+theme_override_styles/pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/pressed = ExtResource("16_ejao6")
+theme_override_styles/normal = ExtResource("17_wvmtv")
 text = "Loans"
 alignment = 2
 autowrap_mode = 3
@@ -921,13 +959,13 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 50
 theme_override_icons/icon = ExtResource("16_owjh5")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_15ym1")
-theme_override_styles/normal = SubResource("StyleBoxFlat_e0tww")
+theme_override_styles/hover_pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover_pressed = ExtResource("16_ejao6")
+theme_override_styles/hover_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover = ExtResource("16_ejao6")
+theme_override_styles/pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/pressed = ExtResource("16_ejao6")
+theme_override_styles/normal = ExtResource("17_wvmtv")
 text = " Publishers"
 alignment = 2
 autowrap_mode = 3
@@ -1070,6 +1108,128 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_5rnqc")
 theme_override_styles/normal = SubResource("StyleBoxFlat_knppr")
 text = " Load  "
 icon_alignment = 2
+
+[node name="Company" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -663.0
+offset_top = -234.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("7_g83m7")
+script = ExtResource("31_v6gb0")
+
+[node name="Control" type="Control" parent="Company"]
+anchors_preset = 0
+offset_left = 431.0
+offset_top = 5.0
+offset_right = 631.0
+offset_bottom = 205.0
+
+[node name="Logo" type="TextureRect" parent="Company/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("32_5h4ff")
+
+[node name="Logo2" type="TextureRect" parent="Company/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("33_q7pt6")
+
+[node name="Logo3" type="TextureRect" parent="Company/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("34_3kq18")
+
+[node name="Logo4" type="TextureRect" parent="Company/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("35_abbki")
+
+[node name="Logo5" type="TextureRect" parent="Company/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("36_dp71l")
+
+[node name="Logo6" type="TextureRect" parent="Company/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("37_ehnxk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Company"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 426.0
+offset_bottom = -10.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Comp" type="Label" parent="Company/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Cool Games Co."
+
+[node name="Found" type="Label" parent="Company/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Poo Jones"
+
+[node name="Sold" type="Label" parent="Company/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Units Sold:"
+
+[node name="Office" type="Label" parent="Company/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Office:"
 
 [node name="During" type="Panel" parent="."]
 visible = false
@@ -1600,7 +1760,7 @@ item_count = 3
 popup/item_0/text = "2D"
 popup/item_0/icon = ExtResource("48_sskwc")
 popup/item_1/text = "3D"
-popup/item_1/icon = ExtResource("49_w4bi1")
+popup/item_1/icon = ExtResource("53_7reot")
 popup/item_1/id = 1
 popup/item_2/text = "Hybrid"
 popup/item_2/icon = ExtResource("49_w4bi1")
@@ -2249,10 +2409,10 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 129.0
-offset_top = -117.0
-offset_right = -129.0
-offset_bottom = -73.0
+offset_left = 46.0
+offset_top = -135.5
+offset_right = -212.0
+offset_bottom = -91.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
@@ -2267,15 +2427,33 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 46.0
-offset_top = -73.0
+offset_top = -95.5
 offset_right = -46.0
-offset_bottom = -29.0
+offset_bottom = -51.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/normal_font = ExtResource("7_xpq5m")
 theme_override_font_sizes/normal_font_size = 30
 text = "You have 0 staff members, meaning your office can hold 5 more."
+
+[node name="Warning" type="RichTextLabel" parent="Staff"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -57.5
+offset_right = -46.0
+offset_bottom = -13.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.999878, 0.407376, 0.338788, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "Remember your difficulty's effect on payroll!"
 
 [node name="Explain3" type="RichTextLabel" parent="Staff"]
 layout_mode = 1
@@ -2303,7 +2481,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -523.0
-offset_top = -197.0
+offset_top = -324.0
 offset_right = 690.0
 offset_bottom = 445.0
 grow_horizontal = 2
@@ -2354,9 +2532,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -552.0
-offset_top = -137.5
+offset_top = -166.0
 offset_right = 552.0
-offset_bottom = 291.5
+offset_bottom = 263.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 11
@@ -2764,15 +2942,388 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 25.0
-offset_top = -230.0
+offset_top = -244.5
 offset_right = -25.0
-offset_bottom = -158.0
+offset_bottom = -172.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/normal_font = ExtResource("7_xpq5m")
 theme_override_font_sizes/normal_font_size = 30
 text = "New offices allow you to hire more staff but can get expensive. There is also a $150,000 moving fee + $5,000 per staff member to relocate them."
+
+[node name="Warning" type="RichTextLabel" parent="Offices"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = -282.5
+offset_right = -65.0
+offset_bottom = -238.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.999878, 0.407376, 0.338788, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "Remember your difficulty's effect on rent!"
+
+[node name="Upgrades" type="Button" parent="Offices"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -323.5
+offset_top = -104.0
+offset_right = 323.5
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/disabled_mirrored = ExtResource("16_ejao6")
+theme_override_styles/disabled = ExtResource("16_ejao6")
+theme_override_styles/hover_pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover_pressed = ExtResource("16_ejao6")
+theme_override_styles/hover_mirrored = ExtResource("16_ejao6")
+theme_override_styles/hover = ExtResource("16_ejao6")
+theme_override_styles/pressed_mirrored = ExtResource("16_ejao6")
+theme_override_styles/pressed = ExtResource("16_ejao6")
+theme_override_styles/normal_mirrored = ExtResource("17_wvmtv")
+theme_override_styles/normal = ExtResource("17_wvmtv")
+text = "Office Upgrades"
+
+[node name="Upgrades" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -537.0
+offset_top = -202.0
+offset_right = 537.0
+offset_bottom = 337.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_igk02")
+
+[node name="Back3" type="Button" parent="Upgrades"]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 92.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.709804, 0.913725, 0.72549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("59_b4he4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
+icon_alignment = 1
+
+[node name="Title4" type="Label" parent="Upgrades"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 356.0
+offset_right = -356.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Office Upgrades:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Upgrades"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = 135.0
+offset_right = 368.0
+offset_bottom = -52.0
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Label5" type="Label" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Better wifi "
+horizontal_alignment = 2
+
+[node name="wifi" type="Button" parent="Upgrades/VBoxContainer/Label5"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 255.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "$100,000"
+
+[node name="Label" type="Label" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " air Conidtioning "
+horizontal_alignment = 2
+
+[node name="ac" type="Button" parent="Upgrades/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 255.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "$150,000"
+
+[node name="Label2" type="Label" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Bookshelves "
+horizontal_alignment = 2
+
+[node name="books" type="Button" parent="Upgrades/VBoxContainer/Label2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 255.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "$150,000"
+
+[node name="Label3" type="Label" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Cafeteria "
+horizontal_alignment = 2
+
+[node name="cafeteria" type="Button" parent="Upgrades/VBoxContainer/Label3"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 255.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "$500,000"
+
+[node name="Label4" type="Label" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Big WIndows "
+horizontal_alignment = 2
+
+[node name="windows" type="Button" parent="Upgrades/VBoxContainer/Label4"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 255.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "$500,000"
+
+[node name="Label6" type="Label" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Servers "
+horizontal_alignment = 2
+
+[node name="servers" type="Button" parent="Upgrades/VBoxContainer/Label6"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 255.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "$750,000"
+
+[node name="Label7" type="Label" parent="Upgrades/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Company cars "
+horizontal_alignment = 2
+
+[node name="cars" type="Button" parent="Upgrades/VBoxContainer/Label7"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 255.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2stft")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "$750,000"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Upgrades"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -413.0
+offset_top = 135.0
+offset_right = -20.0
+offset_bottom = -60.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "Each upgrade increases your rent by $27,500 and productivity by 25%. they have a unique installation fee.
+
+Remember your difficulty's effect on rent and productivity!"
 
 [node name="Contracts" type="Panel" parent="."]
 visible = false
@@ -4297,7 +4848,7 @@ theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/normal_font = ExtResource("7_xpq5m")
 theme_override_font_sizes/normal_font_size = 40
-text = "Marketing consists of 4 tasks, each adding 10% to the popularity, the remaining 60% comes from a $2,500,000 marketing budget."
+text = "Marketing consists of 4 tasks, each adding 10% to the popularity, the remaining 60% comes from a $2,000,000 marketing budget."
 
 [node name="BUDGET" type="LineEdit" parent="Market"]
 layout_mode = 0
@@ -4702,6 +5253,192 @@ theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_6ngyt")
 text = "CONTINUE"
 
+[node name="Invitation" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -286.0
+offset_right = 817.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y6jr5")
+
+[node name="CONGRATS" type="Label" parent="Invitation"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "CONGRATULATIONS!
+You have been invited to
+The g4 gaming convention!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CONGRATS2" type="Label" parent="Invitation"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 140.0
+offset_top = 280.0
+offset_right = -139.0
+offset_bottom = 363.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 35
+text = "Going to conventions gains fans for your company by pushing
+your games to a large audience, but costs $250,000 to participate."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Invitation"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -139.0
+offset_right = -60.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="ConA" type="Button" parent="Invitation/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vrcrd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vrcrd")
+text = "Accept  
+"
+
+[node name="ConD" type="Button" parent="Invitation/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_06ti2")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_6fhu7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6fhu7")
+text = "Decline
+"
+
+[node name="Convention" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = -286.0
+offset_right = 817.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_y6jr5")
+
+[node name="CONGRATS" type="Label" parent="Convention"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "g4 convention results:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Result" type="RichTextLabel" parent="Convention"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -564.5
+offset_top = -112.0
+offset_right = 564.5
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 35
+text = "You blew up at the convention and gained X fans! everyone loved your company's showcase! We hope you come again next year!"
+
+[node name="CloseConv" type="Button" parent="Convention"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -194.5
+offset_top = -139.0
+offset_right = 194.5
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4v3jy")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vrcrd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vrcrd")
+text = "Continue"
+
 [node name="Timers" type="Node" parent="."]
 
 [node name="Month" type="Timer" parent="Timers"]
@@ -4722,6 +5459,14 @@ wait_time = 5.0
 wait_time = 10.0
 
 [node name="AutosaveWait" type="Timer" parent="Timers"]
+
+[node name="ConventionInv" type="Timer" parent="Timers"]
+wait_time = 135.0
+autostart = true
+
+[node name="RealConv" type="Timer" parent="Timers"]
+wait_time = 40.0
+one_shot = true
 
 [node name="DevstageOne" type="Panel" parent="."]
 visible = false
@@ -6294,6 +7039,15 @@ vertical_alignment = 1
 [connection signal="pressed" from="Offices/Table/Move/Medium" to="." method="_on_medium_pressed"]
 [connection signal="pressed" from="Offices/Table/Move/Large" to="." method="_on_large_pressed"]
 [connection signal="pressed" from="Offices/Table/Move/Skyscraper" to="." method="_on_skyscraper_pressed"]
+[connection signal="pressed" from="Offices/Upgrades" to="." method="_on_upgrades_pressed"]
+[connection signal="pressed" from="Upgrades/Back3" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="Upgrades/VBoxContainer/Label5/wifi" to="." method="_on_wifi_pressed"]
+[connection signal="pressed" from="Upgrades/VBoxContainer/Label/ac" to="." method="_on_ac_pressed"]
+[connection signal="pressed" from="Upgrades/VBoxContainer/Label2/books" to="." method="_on_books_pressed"]
+[connection signal="pressed" from="Upgrades/VBoxContainer/Label3/cafeteria" to="." method="_on_cafeteria_pressed"]
+[connection signal="pressed" from="Upgrades/VBoxContainer/Label4/windows" to="." method="_on_windows_pressed"]
+[connection signal="pressed" from="Upgrades/VBoxContainer/Label6/servers" to="." method="_on_servers_pressed"]
+[connection signal="pressed" from="Upgrades/VBoxContainer/Label7/cars" to="." method="_on_cars_pressed"]
 [connection signal="pressed" from="Contracts/Contract1/AcceptPJ" to="." method="_on_accept_pj_pressed"]
 [connection signal="pressed" from="Contracts/Contract2/AcceptAGN" to="." method="_on_accept_agn_pressed"]
 [connection signal="pressed" from="Contracts/Contract3/AcceptC" to="." method="_on_accept_c_pressed"]
@@ -6319,6 +7073,9 @@ vertical_alignment = 1
 [connection signal="pressed" from="Market/Back2" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
+[connection signal="pressed" from="Invitation/HBoxContainer/ConA" to="." method="_on_con_a_pressed"]
+[connection signal="pressed" from="Invitation/HBoxContainer/ConD" to="." method="_on_con_d_pressed"]
+[connection signal="pressed" from="Convention/CloseConv" to="." method="_on_close_conv_pressed"]
 [connection signal="timeout" from="Timers/Month" to="." method="newmonth"]
 [connection signal="timeout" from="Timers/MonthProg" to="." method="monthprog"]
 [connection signal="timeout" from="Timers/DevProg" to="." method="_on_dev_prog_timeout"]
@@ -6326,6 +7083,8 @@ vertical_alignment = 1
 [connection signal="timeout" from="Timers/Research" to="Research" method="_on_research_timeout"]
 [connection signal="timeout" from="Timers/LOAN" to="." method="loanTIMERend"]
 [connection signal="timeout" from="Timers/AutosaveWait" to="." method="_on_autosave_wait_timeout"]
+[connection signal="timeout" from="Timers/ConventionInv" to="." method="_on_convention_inv_timeout"]
+[connection signal="timeout" from="Timers/RealConv" to="." method="_on_real_conv_timeout"]
 [connection signal="pressed" from="DevstageOne/ContinueOne" to="." method="destime"]
 [connection signal="toggled" from="DevstageOne/HBoxContainer/2D/Anim/2DAnim" to="." method="twoDchecker"]
 [connection signal="toggled" from="DevstageOne/HBoxContainer/2D/Sprites/Sprites" to="." method="twoDchecker"]

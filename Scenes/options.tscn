@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://c6ly1mauueubq"]
 
-[ext_resource type="Texture2D" uid="uid://2yy72ry4wst4" path="res://Assets/Backdrops/options.png" id="1_hjv0l"]
 [ext_resource type="Script" path="res://Scripts/options.gd" id="1_yyuko"]
+[ext_resource type="Texture2D" uid="uid://6r3kwnw12n3d" path="res://Assets/Backdrops/idle4.png" id="2_8hm5b"]
 [ext_resource type="StyleBox" uid="uid://kwitk0wgkos7" path="res://Assets/UI/panel_blue.tres" id="2_admkq"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="3_61eya"]
 [ext_resource type="Texture2D" uid="uid://bur3brpbh5mg0" path="res://Assets/UI/speaker.png" id="4_sk1bc"]
@@ -90,6 +90,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -540.0
+offset_bottom = -540.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yyuko")
@@ -98,7 +100,7 @@ script = ExtResource("1_yyuko")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_hjv0l")
+texture = ExtResource("2_8hm5b")
 metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="."]
@@ -441,8 +443,8 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 7.0
-offset_top = -296.0
-offset_right = 199.0
+offset_top = -518.0
+offset_right = 202.0
 offset_bottom = -29.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_61eya")
@@ -460,9 +462,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 7.0
-offset_top = -580.0
+offset_top = -1050.0
 offset_right = 202.0
-offset_bottom = -313.0
+offset_bottom = -562.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_61eya")
 theme_override_font_sizes/font_size = 70
@@ -497,6 +499,9 @@ bus = &"SFX"
 stream = ExtResource("17_h14v7")
 volume_db = -3.0
 bus = &"SFX"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
 
 [connection signal="pressed" from="Panel/Labels/SFX/Buttons/Mouse" to="." method="chosen_mouse"]
 [connection signal="pressed" from="Panel/Labels/SFX/Buttons/Dullmouse" to="." method="chosen_dullmouse"]

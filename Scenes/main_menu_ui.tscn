@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://wjpdlkyaksia"]
+[gd_scene load_steps=21 format=3 uid="uid://wjpdlkyaksia"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu_ui.gd" id="1_2f11h"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_gux6j"]
@@ -13,7 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://o3embdjwnr1o" path="res://Assets/UI/load.png" id="10_uvvfw"]
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="11_illxf"]
 [ext_resource type="Texture2D" uid="uid://dmjbmovmrt1n0" path="res://Assets/UI/full-folder.png" id="14_5l1yp"]
+[ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="15_omvli"]
 [ext_resource type="Texture2D" uid="uid://bju44agtkhxoe" path="res://Assets/UI/spotted-bug.png" id="15_w4xha"]
+[ext_resource type="AudioStream" uid="uid://by52yorlkoepd" path="res://Assets/Music/D.MP3" id="16_4ltm2"]
+[ext_resource type="AudioStream" uid="uid://cptms4qpuvuw5" path="res://Assets/Music/F.MP3" id="17_ddavc"]
+[ext_resource type="AudioStream" uid="uid://vgsr7yxcqj11" path="res://Assets/Music/T.MP3" id="18_d8tv6"]
+[ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="19_w4vos"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvt07"]
 content_margin_left = 10.0
@@ -183,7 +188,34 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 3
 theme_override_font_sizes/font_size = 60
-text = "ALPHA - VER. 1.0.4"
+text = "ALPHA - VER. 1.0.5"
+
+[node name="Sounds" type="Node2D" parent="."]
+position = Vector2(1149.48, 445.489)
+
+[node name="Mouse" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("15_omvli")
+volume_db = 1.0
+bus = &"SFX"
+
+[node name="Dullmouse" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("16_4ltm2")
+volume_db = 5.5
+bus = &"SFX"
+
+[node name="Filmic" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("17_ddavc")
+bus = &"SFX"
+
+[node name="Techno" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("18_d8tv6")
+bus = &"SFX"
+
+[node name="Retro" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(-546.483, 108.511)
+stream = ExtResource("19_w4vos")
+volume_db = -3.0
+bus = &"SFX"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]

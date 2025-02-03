@@ -25,7 +25,7 @@ func refresh_buttons():
 		pause.text = " Pause "
 		speed.text = " 2.5x "
 	if Engine.time_scale == 2.5:
-		pause.text = "Pause"
+		pause.text = " Pause "
 		speed.text = " 1x  "
 
 func _input(event: InputEvent) -> void:

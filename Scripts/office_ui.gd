@@ -2,7 +2,6 @@ extends Control
 
 func _ready() -> void:
 	soundfx()
-	difficulty_select()
 	Engine.time_scale = 1
 	if Global.loading_game == true:
 		LOADGAME()
@@ -47,37 +46,13 @@ var rent:int = 1500
 var fans:int = 0
 var months:int = 0
 var years:int = 0
-var money:int = 65000
+@export var money:int = 65000
 var productivity:float
 var currentS: int = 0
-var highS: int = 0
+@export var highS: int = 0
 var lowS: int = 0
 var medS:int = 0
 var expenses:int
-
-# DIFFICULTY MULTIPLIERS:
-var prodM:float
-var priceM:float
-var salesM:float
-
-func difficulty_select():
-	match Global.difficulty:
-		1: # EASY
-			prodM = 1.6
-			salesM = 1.3
-			priceM = 1.2
-		2: # NORMAL
-			prodM = 1
-			salesM = 1
-			priceM = 1
-		3: # HARD
-			prodM = .7
-			salesM = .65
-			priceM = .6
-		4: # IMPOSSIBLE
-			prodM = .45
-			salesM = .4
-			priceM = .4
 
 # BUTTON SFX:
 @onready var mouse: AudioStreamPlayer2D = $Sounds/Mouse
@@ -137,14 +112,16 @@ func refresh_inprog_ui():
 			pub.hide()
 	if Global.in_contract == true or Global.in_research == true:
 		contracts.hide()
-		develop.hide()
 		research.hide()
+		develop.hide()
 		saves.hide()
 
 @onready var moneyL: Label = $Info/M/Money
 @onready var expensesL: Label = $Info/M/Expenses
 @onready var monthsL: RichTextLabel = $Info/T/Months
 @onready var fansL: Label = $Info/F/Fans
+
+var EXPENSESmod:float = 1
 
 func refresh_info_ui():
 	if Global.charge > 0:
@@ -163,7 +140,8 @@ func refresh_info_ui():
 		moneyL.text = "Bank: $" + str(moneyT / 10) + "B+"
 	fansL.text = str(fans) + " Fans"
 	monthsL.text = "Year " + str(years) + ", month " + str(months)
-	expenses = payroll + rent
+	EXPENSESmod = 2 - Global.expM
+	expenses = int((payroll + rent + UpgradedRent) * EXPENSESmod)
 	if expenses < 1000000:
 		var expenseT:float = expenses / 100
 		expensesL.text = "Costs: $" + str(expenseT / 10) + "K+"
@@ -189,13 +167,13 @@ func refresh_during_ui():
 	if in_pol == true:
 		stage.text = "Polish Stage"
 
+var prodBoost:float = 1
+
 func refresh_productivity():
-	var prodBoost:float
+	var BOOST:float = prodBoost
 	if Global.research_level > 5:
-		prodBoost = 1.15
-	else:
-		prodBoost = 1
-	productivity = (1 + (highS * .325) + (medS * .25) + (lowS * .125)) * (prodM * prodBoost)
+		BOOST += 0.15
+	productivity = (1 + (highS * .325) + (medS * .25) + (lowS * .125)) * (Global.prodM * BOOST)
 	Global.PROD_research = productivity
 	currentS = highS + medS + lowS
 
@@ -379,8 +357,8 @@ func suggest():
 			consolefac = 30
 		4:
 			consolefac = 12.5
-	maxP = ((consolefac * SIZE)+(TECH * 4)+(DESIGN * 4)) * priceM
-	suggestedP = (((consolefac * SIZE)+(TECH * 4)+(DESIGN*4))* (quality / 100) - randi_range(0,6)) * priceM
+	maxP = ((consolefac * SIZE)+(TECH * 4)+(DESIGN * 4)) * Global.priceM
+	suggestedP = (((consolefac * SIZE)+(TECH * 4)+(DESIGN*4))* (quality / 100) - randi_range(0,6)) * Global.priceM
 	if suggestedP < 0:
 		suggestedP = 1
 
@@ -405,7 +383,8 @@ func PUBLISH():
 	quality = (stagesFAC * 20) + ((FAC - randi_range(0,3)) * 4)
 	if quality > 100:
 		quality = 100
-	sales = ((universe * marketshare) * (((popularity * 0.35) + (quality * 0.7)) / 100)) * salesM
+	sales = ((universe * marketshare) * (((popularity * 0.35) + (quality * 0.7)) / 100)) * Global.salesM
+	Global.CopiesSold += sales
 	suggest()
 	if quality < contingency and publisher == true:
 		print("contingency in place")
@@ -416,7 +395,7 @@ func PUBLISH():
 	revenue = (sales * suggestedP) * pubMOD
 	var newfans = (sales * 0.15 * pubCut) * (quality / 100)
 	var oldfans = (fans / 2) * (quality / 100)
-	fans = int(oldfans + newfans)
+	fans = int((oldfans + newfans) * Global.fansM)
 	marketmonths = int((SIZE * 3) * (quality / 100)) + 2
 	publishedG()
 	dev_prog.stop()
@@ -560,10 +539,12 @@ func _on_publisher_list_item_selected(index:int) -> void:
 			pub_id = 5
 
 @onready var officesPanel: Panel = $Offices
+@onready var upgrades: Panel = $Upgrades
 
 func _on_back_p_pressed() -> void:
 	soundfx()
 	publishdeal.hide()
+	upgrades.hide()
 	marketP.hide()
 	staff.hide()
 	the_bank.hide()
@@ -618,9 +599,11 @@ func _on_s_pressed() -> void:
 		sponsor = 10
 		refresh_popularity()
 
-func _on_budget_text_submitted(new_text:float) -> void:
-	if money > new_text and new_text < 2500001 and paid < 60.1:
-		paid += (new_text * 0.000024)
+func _on_budget_text_submitted(new_text) -> void:
+	var budget:int = int(new_text)
+	if money > budget and budget < 2000001 and paid < 60.1:
+		money -= budget
+		paid += (budget * 0.00003)
 		if paid < 60.1:
 			paid = 60.2
 		refresh_popularity()
@@ -945,7 +928,7 @@ func _on_accept_pj_pressed() -> void:
 		contractsPanel.hide()
 		REFRESH_ALL()
 		contract_id = 0
-		contract_time.wait_time = float(0.8 * contract_prod)
+		contract_time.wait_time = float(0.8 / contract_prod)
 		time_done = 0
 		payout = 500000
 		contract_time.start()
@@ -959,7 +942,7 @@ func _on_accept_agn_pressed() -> void:
 		contractsPanel.hide()
 		REFRESH_ALL()
 		contract_id = 1
-		contract_time.wait_time = float(0.6 * contract_prod)
+		contract_time.wait_time = float(0.6 / contract_prod)
 		time_done = 0
 		payout = 250000
 		contract_time.start()
@@ -973,7 +956,7 @@ func _on_accept_c_pressed() -> void:
 		contractsPanel.hide()
 		REFRESH_ALL()
 		contract_id = 2
-		contract_time.wait_time = float(0.2 * contract_prod)
+		contract_time.wait_time = float(0.2 / contract_prod)
 		time_done = 0
 		payout = 100000
 		contract_time.start()
@@ -986,7 +969,7 @@ func _on_accept_b_pressed() -> void:
 	contractsPanel.hide()
 	REFRESH_ALL()
 	contract_id = 3
-	contract_time.wait_time = float(1.2 * contract_prod)
+	contract_time.wait_time = float(1.2 / contract_prod)
 	time_done = 0
 	payout = 800000
 	contract_time.start()
@@ -1042,7 +1025,17 @@ func SAVEGAME():
 	file.store_var(expensesRem)
 	file.store_var($Info/T/MonthProg.value)
 	file.store_var(moneyRem)
-	file.store_var(Global.difficulty)
+	file.store_var(Global.loans)
+	file.store_var(Global.pubs)
+	file.store_var(Global.conts)
+	file.store_var(Global.resM)
+	file.store_var(Global.prodM)
+	file.store_var(Global.priceM)
+	file.store_var(Global.salesM)
+	file.store_var(Global.fansM)
+	file.store_var(Global.expM)
+	file.store_var(Global.CopiesSold)
+	file.store_var(Global.LogoID)
 	file.close()
 	print("game saved")
 
@@ -1069,14 +1062,24 @@ func LOADGAME():
 	expensesRem = file.get_var(expensesRem)
 	$Info/T/MonthProg.value = file.get_var($Info/T/MonthProg.value)
 	moneyRem = file.get_var(moneyRem)
-	Global.difficulty = file.get_var(Global.difficulty)
+	Global.loans = file.get_var(Global.loans)
+	Global.pubs = file.get_var(Global.pubs)
+	Global.conts = file.get_var(Global.conts)
+	Global.resM = file.get_var(Global.resM)
+	Global.prodM = file.get_var(Global.prodM)
+	Global.priceM = file.get_var(Global.priceM)
+	Global.salesM = file.get_var(Global.salesM)
+	Global.fansM = file.get_var(Global.fansM)
+	Global.expM = file.get_var(Global.expM)
+	Global.CopiesSold = file.get_var(Global.CopiesSold)
+	Global.LogoID = file.get_var(Global.LogoID)
 	file.close()
-	difficulty_select()
 	if in_loan != false:
 		refresh_loan()
 		loanTIMER.start()
 	if moneyRem != 0:
 		money += moneyRem - expensesRem
+		months += int(expensesRem / expenses)
 	REFRESH_ALL()
 	print("loaded game")
 
@@ -1282,8 +1285,8 @@ func openDESstage():
 func destime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float(0.3 * dphasemod * productivity)
-	print(str(float(0.4 * dphasemod * productivity)) + "timer")
+	dev_prog.wait_time = float((0.3 * dphasemod) / productivity)
+	print(str(float((0.4 * dphasemod) / productivity)) + "timer")
 	dev_prog.start()
 	devstage_one.hide()
 	devperc = 0
@@ -1299,8 +1302,8 @@ func openGPstage():
 func GPtime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float(0.4 * gstagemod * productivity)
-	print(str(float(0.5 * gstagemod * productivity)) + "timer")
+	dev_prog.wait_time = float((0.4 * gstagemod) / productivity)
+	print(str(float((0.5 * gstagemod) / productivity)) + "timer")
 	dev_prog.start()
 	devstage_two.hide()
 
@@ -1315,8 +1318,8 @@ func openPOLstage():
 func POLtime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float(0.25 * pstagemod * productivity)
-	print(str(float(0.3 * pstagemod * productivity)) + "timer")
+	dev_prog.wait_time = float((0.25 * pstagemod) / productivity)
+	print(str(float((0.3 * pstagemod) / productivity)) + "timer")
 	dev_prog.start()
 	devstage_three.hide()
 
@@ -1339,3 +1342,126 @@ func _on_dev_prog_timeout() -> void:
 		openPOLstage()
 	if devperc == 100 and in_pol == true:
 		GAMEDONE()
+
+# PROCESS:
+@onready var loansB: Button = $Buttons/Loans
+@onready var publisherB: Button = $Buttons/Publisher
+
+func _process(delta: float) -> void:
+	if Global.pubs != true:
+		publisherB.hide()
+	if Global.loans != true:
+		loansB.hide()
+	if Global.resM != true:
+		research.hide()
+	if Global.conts != true:
+		contracts.hide()
+
+# OFFICE UPGRADES:
+@onready var label_5: Label = $Upgrades/VBoxContainer/Label5
+@onready var label: Label = $Upgrades/VBoxContainer/Label
+@onready var label_2: Label = $Upgrades/VBoxContainer/Label2
+@onready var label_3: Label = $Upgrades/VBoxContainer/Label3
+@onready var label_4: Label = $Upgrades/VBoxContainer/Label4
+@onready var label_6: Label = $Upgrades/VBoxContainer/Label6
+@onready var label_7: Label = $Upgrades/VBoxContainer/Label7
+
+var UpgradedRent:int = 0
+
+func _on_upgrades_pressed() -> void:
+	soundfx()
+	upgrades.show()
+	officesPanel.hide()
+
+func _on_wifi_pressed() -> void:
+	if money > 100000:
+		soundfx()
+		money -= 100000
+		UpgradedRent += 27500
+		prodBoost += 0.25
+		label_5.hide()
+
+func _on_ac_pressed() -> void:
+	if money > 150000:
+		soundfx()
+		money -= 150000
+		UpgradedRent += 27500
+		prodBoost += 0.25
+		label.hide()
+
+func _on_books_pressed() -> void:
+	if money > 150000:
+		soundfx()
+		money -= 150000
+		UpgradedRent += 27500
+		prodBoost += 0.25
+		label_2.hide()
+
+func _on_cafeteria_pressed() -> void:
+	if money > 500000:
+		soundfx()
+		money -= 500000
+		UpgradedRent += 27500
+		prodBoost += 0.25
+		label_3.hide()
+
+func _on_windows_pressed() -> void:
+	if money > 500000:
+		soundfx()
+		money -= 500000
+		UpgradedRent += 27500
+		prodBoost += 0.25
+		label_4.hide()
+
+func _on_servers_pressed() -> void:
+	if money > 750000:
+		soundfx()
+		money -= 750000
+		UpgradedRent += 27500
+		prodBoost += 0.25
+		label_6.hide()
+
+func _on_cars_pressed() -> void:
+	if money > 750000:
+		soundfx()
+		money -= 750000
+		UpgradedRent += 27500
+		prodBoost += 0.25
+		label_7.hide()
+
+# CONVENTION:
+@onready var invitation: Panel = $Invitation
+@onready var convention_inv: Timer = $Timers/ConventionInv
+
+func _on_convention_inv_timeout() -> void:
+	if money > 250000 and fans > 5000:
+		soundfx()
+		invitation.show()
+	else:
+		pass
+
+func _on_con_d_pressed() -> void:
+	soundfx()
+	invitation.hide()
+
+@onready var real_conv: Timer = $Timers/RealConv
+
+func _on_con_a_pressed() -> void:
+	money -= 250000
+	real_conv.start()
+	convention_inv.stop()
+	soundfx()
+	invitation.hide()
+
+@onready var result: RichTextLabel = $Convention/Result
+@onready var convention: Panel = $Convention
+
+func _on_real_conv_timeout() -> void:
+	var gain:int = randi_range(50000,100000)
+	result.text = "You blew up at the convention and gained " + str(gain) + " fans! everyone loved your company's showcase! We hope you come again next year!"
+	convention.show()
+
+func _on_close_conv_pressed() -> void:
+	convention.hide()
+	convention_inv.start()
+	soundfx()

@@ -1,0 +1,444 @@
+[gd_scene load_steps=22 format=3 uid="uid://drunrktpa2lu3"]
+
+[ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_vgd5j"]
+[ext_resource type="Script" path="res://Scripts/customise.gd" id="1_x8815"]
+[ext_resource type="StyleBox" uid="uid://cdks4l1c2vhtw" path="res://Assets/UI/panel_info.tres" id="2_wq542"]
+[ext_resource type="StyleBox" uid="uid://cdinqi3e3r1sq" path="res://Assets/UI/info_hover.tres" id="3_s5bvl"]
+[ext_resource type="StyleBox" uid="uid://dnpyxgjomx2rt" path="res://Assets/UI/info_button.tres" id="4_2pf52"]
+[ext_resource type="Texture2D" uid="uid://do7ym2bg5qt8a" path="res://Assets/UI/click.png" id="5_584pp"]
+[ext_resource type="Texture2D" uid="uid://dup0dvlwokm64" path="res://Assets/UI/LOGOS (1).png" id="7_53rcc"]
+[ext_resource type="Texture2D" uid="uid://dr7boudlevdmj" path="res://Assets/UI/LOGOS (2).png" id="8_0h454"]
+[ext_resource type="Texture2D" uid="uid://xp8nw2wit5ij" path="res://Assets/UI/LOGOS (3).png" id="9_ms7kd"]
+[ext_resource type="Texture2D" uid="uid://cb5uqhu5xutxm" path="res://Assets/UI/LOGOS (4).png" id="10_g4nb2"]
+[ext_resource type="Texture2D" uid="uid://dp3j7wgj2bw7r" path="res://Assets/UI/LOGOS (5).png" id="11_552pt"]
+[ext_resource type="Texture2D" uid="uid://bpc84uefgxlcb" path="res://Assets/UI/LOGOS (6).png" id="12_6trjt"]
+[ext_resource type="Texture2D" uid="uid://b864t5u6upmfu" path="res://Assets/UI/play-button.png" id="13_anrj4"]
+[ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="14_eycy4"]
+[ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="15_fvhru"]
+[ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="16_p1j64"]
+[ext_resource type="AudioStream" uid="uid://by52yorlkoepd" path="res://Assets/Music/D.MP3" id="17_1geqc"]
+[ext_resource type="AudioStream" uid="uid://cptms4qpuvuw5" path="res://Assets/Music/F.MP3" id="18_1i1un"]
+[ext_resource type="AudioStream" uid="uid://vgsr7yxcqj11" path="res://Assets/Music/T.MP3" id="19_d4sc2"]
+[ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="20_55wbn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0nss"]
+bg_color = Color(0.284287, 0.495128, 0.581252, 1)
+
+[node name="Customise" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(962, 0)
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -962.0
+offset_top = -540.0
+offset_right = 958.0
+offset_bottom = 540.0
+grow_vertical = 2
+script = ExtResource("1_x8815")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="Camera2D/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d0nss")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/Control"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = 82.0
+offset_right = 768.0
+offset_bottom = -469.0
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="Label" type="Label" parent="Camera2D/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("2_wq542")
+text = "Company Name: "
+horizontal_alignment = 2
+
+[node name="Comp" type="LineEdit" parent="Camera2D/Control/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -45.5
+offset_right = 1119.0
+offset_bottom = 45.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = ExtResource("3_s5bvl")
+theme_override_styles/normal = ExtResource("4_2pf52")
+placeholder_text = "Cool Games Co."
+
+[node name="Label2" type="Label" parent="Camera2D/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("2_wq542")
+text = "Founder Name: "
+horizontal_alignment = 2
+
+[node name="Founder" type="LineEdit" parent="Camera2D/Control/VBoxContainer/Label2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -45.5
+offset_right = 1119.0
+offset_bottom = 45.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = ExtResource("3_s5bvl")
+theme_override_styles/normal = ExtResource("4_2pf52")
+placeholder_text = "Poo Jones"
+
+[node name="Label3" type="Label" parent="Camera2D/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("2_wq542")
+text = "Location: "
+horizontal_alignment = 2
+
+[node name="Loc" type="OptionButton" parent="Camera2D/Control/VBoxContainer/Label3"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -45.5
+offset_right = 1119.0
+offset_bottom = 45.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/disabled_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/disabled = ExtResource("3_s5bvl")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/hover_pressed = ExtResource("3_s5bvl")
+theme_override_styles/hover_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/hover = ExtResource("3_s5bvl")
+theme_override_styles/pressed_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/pressed = ExtResource("3_s5bvl")
+theme_override_styles/normal_mirrored = ExtResource("4_2pf52")
+theme_override_styles/normal = ExtResource("4_2pf52")
+theme_override_constants/arrow_margin = 20
+theme_override_icons/arrow = ExtResource("5_584pp")
+icon_alignment = 2
+selected = 0
+item_count = 12
+popup/item_0/text = "USA"
+popup/item_1/text = "UK"
+popup/item_1/id = 1
+popup/item_2/text = "Australia"
+popup/item_2/id = 2
+popup/item_3/text = "Canada"
+popup/item_3/id = 3
+popup/item_4/text = "China"
+popup/item_4/id = 4
+popup/item_5/text = "Italy"
+popup/item_5/id = 5
+popup/item_6/text = "Germany"
+popup/item_6/id = 6
+popup/item_7/text = "South Africa"
+popup/item_7/id = 7
+popup/item_8/text = "Russia"
+popup/item_8/id = 8
+popup/item_9/text = "Sweden"
+popup/item_9/id = 9
+popup/item_10/text = "Brazil"
+popup/item_10/id = 10
+popup/item_11/text = "Thailand"
+popup/item_11/id = 11
+
+[node name="Label4" type="Label" parent="Camera2D/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("2_wq542")
+text = "Logos: "
+horizontal_alignment = 2
+
+[node name="Logo" type="OptionButton" parent="Camera2D/Control/VBoxContainer/Label4"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -45.5
+offset_right = 1119.0
+offset_bottom = 45.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/disabled_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/disabled = ExtResource("3_s5bvl")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/hover_pressed = ExtResource("3_s5bvl")
+theme_override_styles/hover_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/hover = ExtResource("3_s5bvl")
+theme_override_styles/pressed_mirrored = ExtResource("3_s5bvl")
+theme_override_styles/pressed = ExtResource("3_s5bvl")
+theme_override_styles/normal_mirrored = ExtResource("4_2pf52")
+theme_override_styles/normal = ExtResource("4_2pf52")
+theme_override_constants/arrow_margin = 20
+theme_override_icons/arrow = ExtResource("5_584pp")
+icon_alignment = 2
+selected = 0
+item_count = 6
+popup/item_0/text = "Logo 1"
+popup/item_1/text = "Logo 2"
+popup/item_1/id = 1
+popup/item_2/text = "Logo 3"
+popup/item_2/id = 2
+popup/item_3/text = "Logo 4"
+popup/item_3/id = 3
+popup/item_4/text = "Logo 5"
+popup/item_4/id = 4
+popup/item_5/text = "Logo 6"
+popup/item_5/id = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = 108.0
+offset_right = 750.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_53rcc")
+
+[node name="Label" type="Label" parent="Camera2D/Control/HBoxContainer/Logo"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 35
+text = "Logo 1"
+horizontal_alignment = 1
+
+[node name="Logo2" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_0h454")
+
+[node name="Label2" type="Label" parent="Camera2D/Control/HBoxContainer/Logo2"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1040.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 35
+text = "Logo 6"
+horizontal_alignment = 1
+
+[node name="Logo3" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_ms7kd")
+
+[node name="Label3" type="Label" parent="Camera2D/Control/HBoxContainer/Logo3"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 520.0
+offset_top = 4.0
+offset_right = 520.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 35
+text = "Logo 5"
+horizontal_alignment = 1
+
+[node name="Logo4" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_g4nb2")
+
+[node name="Label4" type="Label" parent="Camera2D/Control/HBoxContainer/Logo4"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 35
+text = "Logo 4"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Logo5" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("11_552pt")
+
+[node name="Label5" type="Label" parent="Camera2D/Control/HBoxContainer/Logo5"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -520.0
+offset_top = 4.0
+offset_right = -520.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 35
+text = "Logo 3"
+horizontal_alignment = 1
+
+[node name="Logo6" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_6trjt")
+
+[node name="Label6" type="Label" parent="Camera2D/Control/HBoxContainer/Logo6"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1040.0
+offset_top = 4.0
+offset_right = -1040.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 35
+text = "Logo 2"
+horizontal_alignment = 1
+
+[node name="PLAY" type="Button" parent="Camera2D/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -509.0
+offset_top = -170.0
+offset_right = 510.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 100
+theme_override_icons/icon = ExtResource("13_anrj4")
+theme_override_styles/disabled_mirrored = ExtResource("14_eycy4")
+theme_override_styles/disabled = ExtResource("14_eycy4")
+theme_override_styles/hover_pressed_mirrored = ExtResource("14_eycy4")
+theme_override_styles/hover_pressed = ExtResource("14_eycy4")
+theme_override_styles/hover_mirrored = ExtResource("14_eycy4")
+theme_override_styles/hover = ExtResource("14_eycy4")
+theme_override_styles/pressed_mirrored = ExtResource("14_eycy4")
+theme_override_styles/pressed = ExtResource("14_eycy4")
+theme_override_styles/normal_mirrored = ExtResource("15_fvhru")
+theme_override_styles/normal = ExtResource("15_fvhru")
+text = "Play!"
+
+[node name="Sounds" type="Node2D" parent="."]
+position = Vector2(-730.184, -348.017)
+
+[node name="Mouse" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("16_p1j64")
+volume_db = 1.0
+bus = &"SFX"
+
+[node name="Dullmouse" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("17_1geqc")
+volume_db = 5.5
+bus = &"SFX"
+
+[node name="Filmic" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("18_1i1un")
+bus = &"SFX"
+
+[node name="Techno" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("19_d4sc2")
+bus = &"SFX"
+
+[node name="Retro" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("20_55wbn")
+volume_db = -3.0
+bus = &"SFX"
+
+[connection signal="text_changed" from="Camera2D/Control/VBoxContainer/Label/Comp" to="Camera2D/Control" method="_on_comp_text_changed"]
+[connection signal="text_changed" from="Camera2D/Control/VBoxContainer/Label2/Founder" to="Camera2D/Control" method="_on_founder_text_changed"]
+[connection signal="item_selected" from="Camera2D/Control/VBoxContainer/Label3/Loc" to="Camera2D/Control" method="_on_loc_item_selected"]
+[connection signal="item_selected" from="Camera2D/Control/VBoxContainer/Label4/Logo" to="Camera2D/Control" method="_on_logo_item_selected"]
+[connection signal="pressed" from="Camera2D/Control/PLAY" to="Camera2D/Control" method="_on_play_pressed"]
