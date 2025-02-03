@@ -208,6 +208,20 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aldit"]
+bg_color = Color(0.0775473, 0.130887, 0.210209, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6e5v"]
 bg_color = Color(0.156027, 0.354464, 0.171994, 0.607843)
 border_width_right = 8
@@ -551,20 +565,6 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aldit"]
-bg_color = Color(0.0775473, 0.130887, 0.210209, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yiup"]
 bg_color = Color(0.221618, 0.478657, 0.242255, 0.607843)
@@ -1185,6 +1185,127 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/background = ExtResource("31_cv5j1")
 theme_override_styles/fill = ExtResource("32_qx3nf")
 
+[node name="DuringResearch" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -388.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 217.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="P" type="Panel" parent="DuringResearch"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aldit")
+
+[node name="Levelinprog" type="Label" parent="DuringResearch/P"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("29_p124a")
+text = "Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResearchProg" type="ProgressBar" parent="DuringResearch"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 100.0
+offset_right = 174.0
+offset_bottom = 188.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.482353, 0.670588, 0.878431, 1)
+theme_override_colors/font_outline_color = Color(0.0784314, 0.176471, 0.278431, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/background = ExtResource("31_cv5j1")
+theme_override_styles/fill = ExtResource("32_qx3nf")
+
+[node name="DuringContract" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -388.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 217.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("7_g83m7")
+
+[node name="Panel" type="Panel" parent="DuringContract"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("29_p124a")
+
+[node name="Company" type="Label" parent="DuringContract/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+text = "Contract"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressC" type="ProgressBar" parent="DuringContract"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 100.0
+offset_right = 174.0
+offset_bottom = 188.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.482353, 0.670588, 0.878431, 1)
+theme_override_colors/font_outline_color = Color(0.0784314, 0.176471, 0.278431, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/background = ExtResource("31_cv5j1")
+theme_override_styles/fill = ExtResource("32_qx3nf")
+
 [node name="Developing" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -1193,9 +1314,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -439.0
+offset_left = -537.0
 offset_top = -518.5
-offset_right = 732.0
+offset_right = 634.0
 offset_bottom = 518.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -1775,10 +1896,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -420.0
-offset_top = -312.5
-offset_right = 837.0
-offset_bottom = 312.5
+offset_left = -522.0
+offset_top = -198.0
+offset_right = 735.0
+offset_bottom = 427.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_h6usa")
@@ -2111,16 +2232,16 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 156.0
-offset_top = -213.0
-offset_right = -156.0
-offset_bottom = -136.0
+offset_left = 140.0
+offset_top = -212.5
+offset_right = -140.0
+offset_bottom = -135.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/normal_font = ExtResource("7_xpq5m")
 theme_override_font_sizes/normal_font_size = 30
-text = "You can hire three tiers of staff to increase productivity. Low salary has a 7.5% increase, medium 15% and high 25%."
+text = "You can hire three tiers of staff to increase productivity. Low salary has a 12.5% increase, medium 25% and high 32.5%."
 
 [node name="Salaries" type="RichTextLabel" parent="Staff"]
 layout_mode = 1
@@ -2181,10 +2302,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -427.0
-offset_top = -321.0
-offset_right = 786.0
-offset_bottom = 321.0
+offset_left = -523.0
+offset_top = -197.0
+offset_right = 690.0
+offset_bottom = 445.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_igk02")
@@ -2661,9 +2782,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -462.0
+offset_left = -522.0
 offset_top = -413.5
-offset_right = 849.0
+offset_right = 789.0
 offset_bottom = 413.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -3150,9 +3271,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -372.0
+offset_left = -522.0
 offset_top = -426.5
-offset_right = 761.0
+offset_right = 611.0
 offset_bottom = 426.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -3538,10 +3659,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -366.0
-offset_top = -388.0
-offset_right = 757.0
-offset_bottom = 388.0
+offset_left = -521.0
+offset_top = -354.0
+offset_right = 602.0
+offset_bottom = 422.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_aufia")
@@ -3762,9 +3883,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -362.0
+offset_left = -521.0
 offset_top = -421.0
-offset_right = 815.0
+offset_right = 656.0
 offset_bottom = 421.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -4016,9 +4137,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -547.0
-offset_top = -517.0
+offset_top = -417.0
 offset_right = 936.0
-offset_bottom = 370.0
+offset_bottom = 470.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ggxqg")
@@ -4602,127 +4723,6 @@ wait_time = 10.0
 
 [node name="AutosaveWait" type="Timer" parent="Timers"]
 
-[node name="DuringResearch" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -388.0
-offset_top = 24.0
-offset_right = -24.0
-offset_bottom = 217.0
-grow_horizontal = 0
-theme_override_styles/panel = ExtResource("7_g83m7")
-
-[node name="P" type="Panel" parent="DuringResearch"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -175.0
-offset_top = 5.0
-offset_right = 175.0
-offset_bottom = 95.0
-grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_aldit")
-
-[node name="Levelinprog" type="Label" parent="DuringResearch/P"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 5
-theme_override_constants/outline_size = 5
-theme_override_constants/shadow_outline_size = 5
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("29_p124a")
-text = "Level"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ResearchProg" type="ProgressBar" parent="DuringResearch"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -176.0
-offset_top = 100.0
-offset_right = 174.0
-offset_bottom = 188.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.482353, 0.670588, 0.878431, 1)
-theme_override_colors/font_outline_color = Color(0.0784314, 0.176471, 0.278431, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/background = ExtResource("31_cv5j1")
-theme_override_styles/fill = ExtResource("32_qx3nf")
-
-[node name="DuringContract" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -388.0
-offset_top = 24.0
-offset_right = -24.0
-offset_bottom = 217.0
-grow_horizontal = 0
-theme_override_styles/panel = ExtResource("7_g83m7")
-
-[node name="Panel" type="Panel" parent="DuringContract"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -175.0
-offset_top = 5.0
-offset_right = 175.0
-offset_bottom = 95.0
-grow_horizontal = 2
-theme_override_styles/panel = ExtResource("29_p124a")
-
-[node name="Company" type="Label" parent="DuringContract/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 5
-theme_override_constants/outline_size = 5
-theme_override_constants/shadow_outline_size = 5
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 50
-text = "Contract"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ProgressC" type="ProgressBar" parent="DuringContract"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -176.0
-offset_top = 100.0
-offset_right = 174.0
-offset_bottom = 188.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.482353, 0.670588, 0.878431, 1)
-theme_override_colors/font_outline_color = Color(0.0784314, 0.176471, 0.278431, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/background = ExtResource("31_cv5j1")
-theme_override_styles/fill = ExtResource("32_qx3nf")
-
 [node name="DevstageOne" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -4731,10 +4731,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -491.0
-offset_top = -324.5
-offset_right = 901.0
-offset_bottom = 324.5
+offset_left = -523.0
+offset_top = -198.0
+offset_right = 869.0
+offset_bottom = 451.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6yiup")
@@ -5573,9 +5573,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -316.0
+offset_left = -522.0
 offset_top = -324.5
-offset_right = 693.0
+offset_right = 487.0
 offset_bottom = 324.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -5936,9 +5936,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -299.0
+offset_left = -522.0
 offset_top = -324.5
-offset_right = 695.0
+offset_right = 472.0
 offset_bottom = 324.5
 grow_horizontal = 2
 grow_vertical = 2

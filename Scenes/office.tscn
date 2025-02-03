@@ -1,12 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx2leahlppq4k"]
+[gd_scene load_steps=5 format=3 uid="uid://dx2leahlppq4k"]
 
 [ext_resource type="Script" path="res://Scripts/office.gd" id="1_0wskg"]
 [ext_resource type="PackedScene" uid="uid://deskdqbrni8oa" path="res://Scenes/office_ui.tscn" id="2_bytoo"]
+[ext_resource type="Texture2D" uid="uid://6r3kwnw12n3d" path="res://Assets/Backdrops/idle4.png" id="2_rcaqm"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s65gx"]
+size = Vector2(1920, 1080)
+orientation = 2
 
 [node name="Office" type="Node2D"]
 script = ExtResource("1_0wskg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+rotation = 3.14159
+mesh = SubResource("PlaneMesh_s65gx")
+texture = ExtResource("2_rcaqm")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

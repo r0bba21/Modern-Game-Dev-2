@@ -19,6 +19,9 @@ func _on_quit_pressed() -> void:
 func credits():
 	OS.shell_open("https://docs.google.com/document/d/1eWvfiP7te0Zjdpcgn5vyqkyOff3nlJ6TJlTzNyRfFPY/")
 
+func bugs():
+	OS.shell_open("https://docs.google.com/forms/d/e/1FAIpQLSd4WdRtUWqOTgbtx84H234zPXNA7oHO2jcrWqht6YjOhDGyPA/viewform?usp=sharing")
+
 # OPTIONS LOADING:
 func load_settings():
 	var file = FileAccess.open("res://settings.dat", FileAccess.READ)

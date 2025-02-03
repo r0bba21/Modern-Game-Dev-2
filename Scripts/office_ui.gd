@@ -128,16 +128,18 @@ func refresh_inprog_ui():
 		develop.hide()
 		research.hide()
 		saves.hide()
-		if Global.in_menu == false:
-			during.show()
-			if publisher == true:
-				marketing.hide()
-				pub.show()
-			else:
-				marketing.show()
-				pub.hide()
-		else:
-			during.hide()
+		during.show()
+		if publisher == true:
+			marketing.hide()
+			pub.show()
+		if publisher == false:
+			marketing.show()
+			pub.hide()
+	if Global.in_contract == true or Global.in_research == true:
+		contracts.hide()
+		develop.hide()
+		research.hide()
+		saves.hide()
 
 @onready var moneyL: Label = $Info/M/Money
 @onready var expensesL: Label = $Info/M/Expenses
@@ -193,7 +195,8 @@ func refresh_productivity():
 		prodBoost = 1.15
 	else:
 		prodBoost = 1
-	productivity = (1 + (highS * .25) + (medS * .12) + (lowS * .075)) * (prodM * prodBoost)
+	productivity = (1 + (highS * .325) + (medS * .25) + (lowS * .125)) * (prodM * prodBoost)
+	Global.PROD_research = productivity
 	currentS = highS + medS + lowS
 
 @onready var months_l: Label = $Developing/Header/ETA/MonthsL
@@ -258,7 +261,6 @@ func _on_develop_pressed() -> void:
 	soundfx()
 	pre_dev_purge()
 	developing.show()
-	Global.in_menu = true
 	REFRESH_ALL()
 
 func _on_genre_item_selected(index:int) -> void:
@@ -332,7 +334,6 @@ func DEVSTART():
 			Global.gameinprog = true
 			soundfx()
 			money -= devcost
-			Global.in_menu = false
 			developing.hide()
 			REFRESH_ALL()
 			openDESstage()
@@ -395,9 +396,11 @@ func PUBLISH():
 	if publisher == true:
 		universe = 1000000 * pubBoost
 		popularity = 100
-	else:
+	if publisher == false:
 		universe = 1000000
 		refresh_popularity()
+		pubMOD = 1
+		pubCut = 1
 	var FAC = (SIZE + DESIGN + TECH)
 	quality = (stagesFAC * 20) + ((FAC - randi_range(0,3)) * 4)
 	if quality > 100:
@@ -434,9 +437,8 @@ func PUBLISH():
 @onready var qualityl: ProgressBar = $Publish/Reviews/Label5/QUALITYL
 @onready var summaryP: RichTextLabel = $Publish/CONGRATS/Summary
 
-func publishedG():
+func publishedG(): # UI CHANGES ONLY
 	publish.show()
-	Global.in_menu = true
 	shelf.text = "Shelf life: " + str(marketmonths) + " months."
 	if Global.research_level > 1:
 		marketshare_L.text = "Marketshare: " + str(marketshare * 100) + "%"
@@ -483,25 +485,21 @@ var moneyRem:int
 
 func onmarket():
 	Global.gameinprog = false
-	Global.in_menu = false
 	publish.hide()
 	monthsdone = 0
 	moneyRem = revenue
 	REFRESH_ALL()
 	marketT.start()
-	if Global.autosave == 1:
-		print("autosaving")
-		SAVEGAME()
-	if Global.autosave == 3:
+	if Global.autosave != 0 and Global.autosave != 2:
 		print("autosaving")
 		SAVEGAME()
 
 func monthsales():
-	money += ((revenue / marketmonths) / 2) # BIWEEKLY PAY
-	moneyRem -= ((revenue / marketmonths) / 2)
-	expensesRem = expenses * (marketmonths - monthsdone)
+	var paycheck:int = ((revenue / marketmonths) / 2) # BIWEEKLY PAY
+	money += paycheck
+	moneyRem -= paycheck
 	monthsdone += 0.5
-	expensesRem = expenses * marketmonths
+	expensesRem = expenses * (marketmonths - monthsdone)
 	if monthsdone == marketmonths:
 		marketT.stop()
 
@@ -510,7 +508,6 @@ func monthsales():
 
 func _on_publisher_pressed() -> void:
 	publishdeal.show()
-	Global.in_menu = true
 
 var pub_id:int = 0
 var pubCut:float
@@ -566,7 +563,6 @@ func _on_publisher_list_item_selected(index:int) -> void:
 
 func _on_back_p_pressed() -> void:
 	soundfx()
-	Global.in_menu = false
 	publishdeal.hide()
 	marketP.hide()
 	staff.hide()
@@ -596,7 +592,6 @@ func refresh_popularity():
 
 func _on_marketing_pressed() -> void:
 	marketP.show()
-	Global.in_menu = true
 	refresh_popularity()
 
 func _on_pr_pressed() -> void:
@@ -642,7 +637,6 @@ var payroll:int = 0
 
 func open_staff():
 	soundfx()
-	Global.in_menu = true
 	refresh_staff_ui()
 	staff.show()
 	soundfx()
@@ -802,7 +796,6 @@ func loan_paid():
 	loanTIMER.stop()
 
 func _on_loans_pressed() -> void:
-	Global.in_menu = true
 	the_bank.show()
 	refresh_loan()
 
@@ -904,7 +897,6 @@ func RealEstateButton():
 	refresh_officeUI()
 	officesPanel.show()
 	soundfx()
-	Global.in_menu = true
 
 # BANKRUPTCY:
 @onready var bankruptcy_warning: Panel = $BankruptcyWarning
@@ -913,14 +905,12 @@ var warning_shown = false
 
 func warn_bankruptcy():
 	bankruptcy_warning.show()
-	Global.in_menu = true
 	warning_shown = true
 	soundfx()
 
 func exit_warning():
 	soundfx()
 	bankruptcy_warning.hide()
-	Global.in_menu = false
 	REFRESH_ALL()
 
 func BANKRUPT():
@@ -938,12 +928,15 @@ func BANKRUPT():
 var contract_id:int
 var payout:int
 var time_done:int
+var contract_prod:float = 1
 
 func _on_contracts_pressed() -> void:
 	soundfx()
 	contractsPanel.show()
-	Global.in_menu = true
 	progress_c.value = 0
+	contract_prod = productivity / 1.75
+	if contract_prod < 1:
+		contract_prod = 1
 
 func _on_accept_pj_pressed() -> void:
 	soundfx()
@@ -952,7 +945,7 @@ func _on_accept_pj_pressed() -> void:
 		contractsPanel.hide()
 		REFRESH_ALL()
 		contract_id = 0
-		contract_time.wait_time = 0.8
+		contract_time.wait_time = float(0.8 * contract_prod)
 		time_done = 0
 		payout = 500000
 		contract_time.start()
@@ -965,8 +958,8 @@ func _on_accept_agn_pressed() -> void:
 		Global.in_contract = true
 		contractsPanel.hide()
 		REFRESH_ALL()
-		contract_id = 2
-		contract_time.wait_time = 0.6
+		contract_id = 1
+		contract_time.wait_time = float(0.6 * contract_prod)
 		time_done = 0
 		payout = 250000
 		contract_time.start()
@@ -979,8 +972,8 @@ func _on_accept_c_pressed() -> void:
 		Global.in_contract = true
 		contractsPanel.hide()
 		REFRESH_ALL()
-		contract_id = 3
-		contract_time.wait_time = 0.2
+		contract_id = 2
+		contract_time.wait_time = float(0.2 * contract_prod)
 		time_done = 0
 		payout = 100000
 		contract_time.start()
@@ -993,7 +986,7 @@ func _on_accept_b_pressed() -> void:
 	contractsPanel.hide()
 	REFRESH_ALL()
 	contract_id = 3
-	contract_time.wait_time = 1.2
+	contract_time.wait_time = float(1.2 * contract_prod)
 	time_done = 0
 	payout = 800000
 	contract_time.start()
@@ -1008,16 +1001,17 @@ func during_contract_ui():
 	match contract_id:
 		0:
 			company.text = "Jones Inc."
-		2:
+		1:
 			company.text = "AGN"
-		3:
+		2:
 			company.text = "Charity"
-		4:
+		3:
 			company.text = "Blaze"
 
 func _on_contract_time_timeout() -> void:
-	progress_c.value += 1
-	if progress_c.value == 100:
+	time_done += 1
+	progress_c.value = time_done
+	if time_done >= 100:
 		contract_time.stop()
 		Global.in_contract = false
 		money += payout
@@ -1288,7 +1282,7 @@ func openDESstage():
 func destime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float(0.4 * dphasemod * productivity)
+	dev_prog.wait_time = float(0.3 * dphasemod * productivity)
 	print(str(float(0.4 * dphasemod * productivity)) + "timer")
 	dev_prog.start()
 	devstage_one.hide()
@@ -1305,7 +1299,7 @@ func openGPstage():
 func GPtime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float(0.5 * gstagemod * productivity)
+	dev_prog.wait_time = float(0.4 * gstagemod * productivity)
 	print(str(float(0.5 * gstagemod * productivity)) + "timer")
 	dev_prog.start()
 	devstage_two.hide()
@@ -1321,7 +1315,7 @@ func openPOLstage():
 func POLtime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float(0.3 * pstagemod * productivity)
+	dev_prog.wait_time = float(0.25 * pstagemod * productivity)
 	print(str(float(0.3 * pstagemod * productivity)) + "timer")
 	dev_prog.start()
 	devstage_three.hide()

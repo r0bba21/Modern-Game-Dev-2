@@ -10,49 +10,46 @@ var ETA:int
 var COST:int
 
 func _on_research_pressed() -> void:
-	researchP.show()
-	Global.in_menu = true
-	level.text = "Your level: " + str(Global.research_level)
-	tokens.text = "Your tokens: " + str(Global.research_tokens)
-	var Cost:String
-	match Global.research_level:
-		0:
-			ETA = 60
-			COST = 100000
-			Cost = "$100k"
-		1:
-			ETA = 70
-			COST = 175000
-			Cost = "$175k"
-		2:
-			ETA = 80
-			COST = 250000
-			Cost = "$250k"
-		3:
-			ETA = 90
-			COST = 300000
-			Cost = "$300k"
-		4:
-			ETA = 100
-			COST = 500000
-			Cost = "$500k"
-		5:
-			ETA = 120
-			COST = 10000000
-			Cost = "$10M"
-		6:
-			ETA = 150
-			COST = 30000000
-			Cost = "$30M"
-		7:
-			ETA = 0
-			COST = 0
-			Cost = "?"
-	eta.text = "Next level ETA: " + str(ETA / 10) + " Months"
-	cost.text = "Next level price: " + Cost
-	if Global.research_level == 7:
-		researchP.hide()
-		Global.in_menu = false
+	if Global.research_level != 7:
+		researchP.show()
+		level.text = "Your level: " + str(Global.research_level)
+		tokens.text = "Your tokens: " + str(Global.research_tokens)
+		var Cost:String
+		match Global.research_level:
+			0:
+				ETA = 30
+				COST = 0
+				Cost = "free!"
+			1:
+				ETA = 40
+				COST = 0
+				Cost = "free!"
+			2:
+				ETA = 50
+				COST = 0
+				Cost = "free!"
+			3:
+				ETA = 60
+				COST = 0
+				Cost = "free!"
+			4:
+				ETA = 70
+				COST = 1000000
+				Cost = "$1M"
+			5:
+				ETA = 80
+				COST = 10000000
+				Cost = "$10M"
+			6:
+				ETA = 90
+				COST = 25000000
+				Cost = "$25M"
+			7:
+				ETA = 0
+				COST = 0
+				Cost = "?"
+		eta.text = "Next level ETA: " + str(ETA / 10) + " Months"
+		cost.text = "Next level price: " + Cost
 
 @onready var research: Timer = $"../Timers/Research"
 @onready var during_research: Panel = $"../DuringResearch"
@@ -62,7 +59,10 @@ func _on_begin_pressed() -> void:
 		researchP.hide()
 		Global.charge = COST
 		Global.in_research = true
-		research.wait_time = float(ETA / 100)
+		var productivity = (Global.PROD_research / 1.75)
+		if productivity < 1:
+			productivity = 1
+		research.wait_time = float((ETA / 100) * productivity)
 		research_prog = 0
 		research.start()
 		Global.research_tokens -= 1

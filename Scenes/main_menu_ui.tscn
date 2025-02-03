@@ -1,19 +1,32 @@
-[gd_scene load_steps=15 format=3 uid="uid://wjpdlkyaksia"]
+[gd_scene load_steps=16 format=3 uid="uid://wjpdlkyaksia"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu_ui.gd" id="1_2f11h"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_gux6j"]
-[ext_resource type="Texture2D" uid="uid://c1l82m0jglc5k" path="res://Assets/UI/play.png" id="2_kt10b"]
+[ext_resource type="Texture2D" uid="uid://b864t5u6upmfu" path="res://Assets/UI/play-button.png" id="3_878ii"]
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="3_tsjpw"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="4_uygc4"]
-[ext_resource type="Texture2D" uid="uid://b61th4ppfg8ac" path="res://Assets/UI/info.png" id="5_kq10f"]
+[ext_resource type="Texture2D" uid="uid://bas6dymsipyv2" path="res://Assets/UI/mm (3).png" id="6_l7b7d"]
 [ext_resource type="StyleBox" uid="uid://dqutvjhnd0l0t" path="res://Assets/UI/menu_hover_blue.tres" id="6_o2t4c"]
-[ext_resource type="StyleBox" uid="uid://b1007c7d3lso6" path="res://Assets/UI/menu_blue.tres" id="7_ey7t4"]
-[ext_resource type="Texture2D" uid="uid://bycfvg2npacjh" path="res://Assets/UI/settings-knobs.png" id="8_3vjs5"]
 [ext_resource type="Texture2D" uid="uid://dg70skn7suscm" path="res://Assets/UI/cancel.png" id="9_fstcc"]
+[ext_resource type="Texture2D" uid="uid://bhxjkdsylr3h8" path="res://Assets/UI/mm (4).png" id="9_otvoa"]
 [ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="10_qmdt0"]
 [ext_resource type="Texture2D" uid="uid://o3embdjwnr1o" path="res://Assets/UI/load.png" id="10_uvvfw"]
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="11_illxf"]
 [ext_resource type="Texture2D" uid="uid://dmjbmovmrt1n0" path="res://Assets/UI/full-folder.png" id="14_5l1yp"]
+[ext_resource type="Texture2D" uid="uid://bju44agtkhxoe" path="res://Assets/UI/spotted-bug.png" id="15_w4xha"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvt07"]
+content_margin_left = 10.0
+content_margin_right = 20.0
+bg_color = Color(0.300097, 0.494749, 0.654174, 1)
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.067954, 0.144444, 0.207656, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+shadow_size = 8
 
 [node name="MainMenuUI" type="Control"]
 layout_mode = 3
@@ -26,15 +39,14 @@ script = ExtResource("1_2f11h")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 25.0
-offset_top = -450.0
-offset_right = 685.0
-offset_bottom = 450.0
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 70.0
+offset_right = 603.0
+offset_bottom = -69.0
 grow_vertical = 2
-theme_override_constants/separation = 55
+theme_override_constants/separation = 30
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -42,7 +54,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_gux6j")
 theme_override_font_sizes/font_size = 85
-theme_override_icons/icon = ExtResource("2_kt10b")
+theme_override_icons/icon = ExtResource("3_878ii")
 theme_override_styles/hover_pressed_mirrored = ExtResource("3_tsjpw")
 theme_override_styles/hover_pressed = ExtResource("3_tsjpw")
 theme_override_styles/hover = ExtResource("3_tsjpw")
@@ -56,7 +68,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_gux6j")
 theme_override_font_sizes/font_size = 85
-theme_override_icons/icon = ExtResource("2_kt10b")
+theme_override_icons/icon = ExtResource("3_878ii")
 theme_override_styles/hover_pressed_mirrored = ExtResource("3_tsjpw")
 theme_override_styles/hover_pressed = ExtResource("3_tsjpw")
 theme_override_styles/hover = ExtResource("3_tsjpw")
@@ -64,26 +76,26 @@ theme_override_styles/pressed = ExtResource("3_tsjpw")
 theme_override_styles/normal = ExtResource("4_uygc4")
 text = "Load Game"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 24
-
-[node name="Options" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
+theme_override_constants/align_to_largest_stylebox = 0
 theme_override_fonts/font = ExtResource("1_gux6j")
 theme_override_font_sizes/font_size = 65
-theme_override_icons/icon = ExtResource("8_3vjs5")
+theme_override_icons/icon = ExtResource("6_l7b7d")
 theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
 theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
 theme_override_styles/hover = ExtResource("6_o2t4c")
 theme_override_styles/pressed = ExtResource("6_o2t4c")
-theme_override_styles/normal = ExtResource("7_ey7t4")
-text = "Options"
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvt07")
+text = "Settings"
 
-[node name="Load" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Load2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
+theme_override_constants/align_to_largest_stylebox = 0
 theme_override_fonts/font = ExtResource("1_gux6j")
 theme_override_font_sizes/font_size = 65
 theme_override_icons/icon = ExtResource("10_uvvfw")
@@ -91,28 +103,60 @@ theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
 theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
 theme_override_styles/hover = ExtResource("6_o2t4c")
 theme_override_styles/pressed = ExtResource("6_o2t4c")
-theme_override_styles/normal = ExtResource("7_ey7t4")
-text = "load"
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvt07")
+text = "load settings"
 
 [node name="Tutorial" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
+theme_override_constants/align_to_largest_stylebox = 0
 theme_override_fonts/font = ExtResource("1_gux6j")
 theme_override_font_sizes/font_size = 65
-theme_override_icons/icon = ExtResource("5_kq10f")
+theme_override_icons/icon = ExtResource("9_otvoa")
 theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
 theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
 theme_override_styles/hover = ExtResource("6_o2t4c")
 theme_override_styles/pressed = ExtResource("6_o2t4c")
-theme_override_styles/normal = ExtResource("7_ey7t4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvt07")
 text = "Tutorial"
+
+[node name="Bugs" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 65
+theme_override_icons/icon = ExtResource("15_w4xha")
+theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
+theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
+theme_override_styles/hover = ExtResource("6_o2t4c")
+theme_override_styles/pressed = ExtResource("6_o2t4c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvt07")
+text = "Bugs"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 0
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 65
+theme_override_icons/icon = ExtResource("14_5l1yp")
+theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
+theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
+theme_override_styles/hover = ExtResource("6_o2t4c")
+theme_override_styles/pressed = ExtResource("6_o2t4c")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvt07")
+text = "credits"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 65
+theme_override_font_sizes/font_size = 90
 theme_override_icons/icon = ExtResource("9_fstcc")
 theme_override_styles/hover_pressed_mirrored = ExtResource("10_qmdt0")
 theme_override_styles/hover_pressed = ExtResource("10_qmdt0")
@@ -121,34 +165,31 @@ theme_override_styles/pressed = ExtResource("10_qmdt0")
 theme_override_styles/normal = ExtResource("11_illxf")
 text = "Quit"
 
-[node name="Credits" type="Button" parent="."]
+[node name="BUILD" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -366.0
-offset_top = -115.0
-offset_right = -15.0
-offset_bottom = -15.0
+offset_left = -533.0
+offset_top = -95.0
+offset_right = -12.0
+offset_bottom = -12.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 65
-theme_override_icons/icon = ExtResource("14_5l1yp")
-theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
-theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
-theme_override_styles/hover = ExtResource("6_o2t4c")
-theme_override_styles/pressed = ExtResource("6_o2t4c")
-theme_override_styles/normal = ExtResource("7_ey7t4")
-text = "credits"
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 60
+text = "ALPHA - VER. 1.0.4"
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/Load" to="." method="load_settings"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load2" to="." method="load_settings"]
 [connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/Bugs" to="." method="bugs"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="credits"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Credits" to="." method="credits"]
