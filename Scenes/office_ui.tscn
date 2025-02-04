@@ -1,4 +1,4 @@
-[gd_scene load_steps=152 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=159 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -92,6 +92,12 @@
 [ext_resource type="Texture2D" uid="uid://oc2hwmbwos0o" path="res://Assets/UI/letter-bomb.png" id="63_nwqfh"]
 [ext_resource type="StyleBox" uid="uid://boku5rwtcucw4" path="res://Assets/UI/bankrupt.tres" id="64_ps415"]
 [ext_resource type="Texture2D" uid="uid://bjb0ch1nij0ks" path="res://Assets/UI/fountain-pen.png" id="67_tn1xv"]
+[ext_resource type="Script" path="res://Scripts/stocks.gd" id="70_dw38k"]
+[ext_resource type="StyleBox" uid="uid://cdinqi3e3r1sq" path="res://Assets/UI/info_hover.tres" id="71_0ka8d"]
+[ext_resource type="StyleBox" uid="uid://cojotqmvmgex7" path="res://Assets/UI/PRICE SMALL.tres" id="71_gcane"]
+[ext_resource type="StyleBox" uid="uid://fde4dugad4tj" path="res://Assets/UI/PRICE.tres" id="71_s6m4u"]
+[ext_resource type="StyleBox" uid="uid://dnpyxgjomx2rt" path="res://Assets/UI/info_button.tres" id="72_tw0ff"]
+[ext_resource type="Texture2D" uid="uid://r06aqh07qtvs" path="res://Assets/UI/progression.png" id="78_pryq3"]
 [ext_resource type="StyleBox" uid="uid://cyku43df0ed4f" path="res://Assets/UI/cont.tres" id="81_jo1jd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fuj0"]
@@ -378,6 +384,14 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggy4k"]
+bg_color = Color(0.141176, 0.258824, 0.152941, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aufia"]
 bg_color = Color(0.701338, 0.525842, 0.740932, 0.607843)
@@ -671,7 +685,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_frgb8")
-money = 5000000
 metadata/_edit_lock_ = true
 
 [node name="Sounds" type="Node2D" parent="."]
@@ -948,7 +961,7 @@ theme_override_styles/hover = ExtResource("16_ejao6")
 theme_override_styles/pressed_mirrored = ExtResource("16_ejao6")
 theme_override_styles/pressed = ExtResource("16_ejao6")
 theme_override_styles/normal = ExtResource("17_wvmtv")
-text = "Loans"
+text = "Finances"
 alignment = 2
 autowrap_mode = 3
 icon_alignment = 2
@@ -3926,9 +3939,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 192.0
-offset_top = 138.0
+offset_top = 471.5
 offset_right = -192.0
-offset_bottom = 36.0
+offset_bottom = -296.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -3941,7 +3954,7 @@ anchor_bottom = 0.5
 offset_left = -177.0
 offset_top = -408.5
 offset_right = 177.0
-offset_bottom = -190.5
+offset_bottom = -230.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_g83m7")
@@ -3995,13 +4008,6 @@ theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
 text = "60% Interest"
 
-[node name="Term" type="Label" parent="TheBank/OutLoan/Small/Detailspretake"]
-layout_mode = 2
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 35
-text = "Loan Term: 5 Years"
-
 [node name="Amount" type="Label" parent="TheBank/OutLoan/Small/Detailspretake"]
 layout_mode = 2
 theme_override_constants/outline_size = 6
@@ -4023,9 +4029,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -175.0
-offset_top = -162.5
+offset_top = -210.0
 offset_right = 175.0
-offset_bottom = 55.5
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_g83m7")
@@ -4079,13 +4085,6 @@ theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
 text = "75% Interest"
 
-[node name="Term" type="Label" parent="TheBank/OutLoan/Medium/Detailspretake"]
-layout_mode = 2
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 35
-text = "Loan Term: 8 Years"
-
 [node name="Amount" type="Label" parent="TheBank/OutLoan/Medium/Detailspretake"]
 layout_mode = 2
 theme_override_constants/outline_size = 6
@@ -4107,9 +4106,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -177.0
-offset_top = 86.5
+offset_top = -9.0
 offset_right = 177.0
-offset_bottom = 304.5
+offset_bottom = 169.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("7_g83m7")
@@ -4163,13 +4162,6 @@ theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
 text = "85% Interest"
 
-[node name="Term" type="Label" parent="TheBank/OutLoan/Large/Detailspretake"]
-layout_mode = 2
-theme_override_constants/outline_size = 6
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 35
-text = "Loan Term: 12 Years"
-
 [node name="Amount" type="Label" parent="TheBank/OutLoan/Large/Detailspretake"]
 layout_mode = 2
 theme_override_constants/outline_size = 6
@@ -4201,6 +4193,221 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_bx8f6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
 icon_alignment = 1
+
+[node name="TakeL2" type="Button" parent="TheBank"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -353.5
+offset_top = -152.0
+offset_right = 353.5
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 75
+theme_override_icons/icon = ExtResource("78_pryq3")
+theme_override_styles/hover_pressed_mirrored = ExtResource("30_bycjq")
+theme_override_styles/hover_pressed = ExtResource("30_bycjq")
+theme_override_styles/hover_mirrored = ExtResource("30_bycjq")
+theme_override_styles/hover = ExtResource("30_bycjq")
+theme_override_styles/pressed_mirrored = ExtResource("30_bycjq")
+theme_override_styles/pressed = ExtResource("30_bycjq")
+theme_override_styles/normal_mirrored = ExtResource("31_ydjad")
+theme_override_styles/normal = ExtResource("31_ydjad")
+text = "Stock Market"
+
+[node name="Stocks" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -537.0
+offset_top = -478.0
+offset_right = 905.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6e5v")
+script = ExtResource("70_dw38k")
+
+[node name="Back" type="Button" parent="Stocks"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -729.0
+offset_right = 98.0
+offset_bottom = -663.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.709804, 0.913725, 0.72549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("59_b4he4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
+icon_alignment = 1
+
+[node name="StockOne" type="Line2D" parent="Stocks"]
+points = PackedVector2Array(25, 655)
+default_color = Color(0.533346, 0, 0.137231, 1)
+antialiased = true
+
+[node name="Title3" type="Label" parent="Stocks"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -370.0
+offset_top = 21.0
+offset_right = 370.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "The Stock Market:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Stocks"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -333.0
+offset_top = 147.0
+offset_right = -21.0
+offset_bottom = -45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.532015, 0.710993, 0.664949, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Manage Stocks:"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "You Have:"
+horizontal_alignment = 1
+
+[node name="HasU" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggy4k")
+text = "0 Units"
+horizontal_alignment = 1
+
+[node name="HasM" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("71_gcane")
+text = "$0"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Stock Price:"
+horizontal_alignment = 1
+
+[node name="PriceL" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("71_s6m4u")
+text = "$12"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Buy (enter):"
+horizontal_alignment = 1
+
+[node name="Warn" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 20
+text = "You are buying units, not
+a dollar amount!"
+horizontal_alignment = 1
+
+[node name="Buying" type="LineEdit" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("71_0ka8d")
+theme_override_styles/normal = ExtResource("72_tw0ff")
+placeholder_text = "12"
+alignment = 1
+
+[node name="Label6" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Sell (Enter):"
+horizontal_alignment = 1
+
+[node name="Warn2" type="Label" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 20
+text = "Still in units!"
+horizontal_alignment = 1
+
+[node name="Selling" type="LineEdit" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("71_0ka8d")
+theme_override_styles/normal = ExtResource("72_tw0ff")
+placeholder_text = "12"
+alignment = 1
 
 [node name="Publisher" type="Panel" parent="."]
 visible = false
@@ -6999,10 +7206,10 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
 [connection signal="pressed" from="Buttons/RealEstate" to="." method="RealEstateButton"]
-[connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Loans" to="." method="_on_loans_pressed"]
-[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
+[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Contracts" to="." method="_on_contracts_pressed"]
 [connection signal="pressed" from="Buttons/Research" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Research" to="Research" method="_on_research_pressed"]
@@ -7011,10 +7218,10 @@ vertical_alignment = 1
 [connection signal="pressed" from="Buttons/Mini/Time/Pause" to="Buttons/Mini/Time" method="_on_pause_pressed"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="Buttons/Mini/Time" method="_on_speed_pressed"]
-[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="SAVEGAME"]
-[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="LOADGAME"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="soundfx"]
 [connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
 [connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]
@@ -7060,6 +7267,10 @@ vertical_alignment = 1
 [connection signal="pressed" from="TheBank/OutLoan/Medium/Decide/TakeM" to="." method="_on_take_m_pressed"]
 [connection signal="pressed" from="TheBank/OutLoan/Large/Decide/TakeL" to="." method="_on_take_l_pressed"]
 [connection signal="pressed" from="TheBank/Back2" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="TheBank/TakeL2" to="Stocks" method="_on_take_l_2_pressed"]
+[connection signal="pressed" from="Stocks/Back" to="." method="_on_back_p_pressed"]
+[connection signal="text_submitted" from="Stocks/VBoxContainer/Buying" to="Stocks" method="_on_buying_text_submitted"]
+[connection signal="text_submitted" from="Stocks/VBoxContainer/Selling" to="Stocks" method="_on_selling_text_submitted"]
 [connection signal="item_selected" from="Publisher/PublisherList" to="." method="_on_publisher_list_item_selected"]
 [connection signal="pressed" from="Publisher/Back2" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Research/Back2" to="." method="_on_back_p_pressed"]
@@ -7071,12 +7282,13 @@ vertical_alignment = 1
 [connection signal="pressed" from="Market/Tasks/S" to="." method="_on_s_pressed"]
 [connection signal="text_submitted" from="Market/BUDGET" to="." method="_on_budget_text_submitted"]
 [connection signal="pressed" from="Market/Back2" to="." method="_on_back_p_pressed"]
-[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
+[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConA" to="." method="_on_con_a_pressed"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConD" to="." method="_on_con_d_pressed"]
 [connection signal="pressed" from="Convention/CloseConv" to="." method="_on_close_conv_pressed"]
 [connection signal="timeout" from="Timers/Month" to="." method="newmonth"]
+[connection signal="timeout" from="Timers/Month" to="Stocks" method="_on_month_timeout"]
 [connection signal="timeout" from="Timers/MonthProg" to="." method="monthprog"]
 [connection signal="timeout" from="Timers/DevProg" to="." method="_on_dev_prog_timeout"]
 [connection signal="timeout" from="Timers/Market" to="." method="monthsales"]

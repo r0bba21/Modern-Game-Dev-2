@@ -121,33 +121,44 @@ func refresh_inprog_ui():
 @onready var monthsL: RichTextLabel = $Info/T/Months
 @onready var fansL: Label = $Info/F/Fans
 
-var EXPENSESmod:float = 1
-
 func refresh_info_ui():
-	if Global.charge > 0:
+	if Global.charge != 0:
 		money -= Global.charge
 		Global.charge = 0
-	if money < 0:
-		moneyL.text = "Bank: $" + str(money)
-	if money < 1000000 and money > 0:
-		var moneyT = int(money / 100)
-		moneyL.text = "Bank: $" + str(moneyT / 10) + "K+"
-	if money < 1000000000 and money > 1000000:
-		var moneyT = int(money / 100000)
-		moneyL.text = "Bank: $" + str(moneyT / 10) + "M+"
-	if money > 1000000000:
-		var moneyT = int(money / 100000000)
-		moneyL.text = "Bank: $" + str(moneyT / 10) + "B+"
+	var formatted_value:float
+	var suffix:String
+	if money >= 1000000000:  # B
+		formatted_value = round(money / 1000000000.0 * 10) / 10.0
+		suffix = "B+"
+	elif money >= 1000000:  # M
+		formatted_value = round(money / 1000000.0 * 10) / 10.0
+		suffix = "M+"
+	elif money >= 1000:  # K
+		formatted_value = round(money / 1000.0 * 10) / 10.0
+		suffix = "K+"
+	else: # UNDER 1K:
+		formatted_value = money
+		suffix = ""
+	moneyL.text = "Bank: $" + str(formatted_value) + suffix
 	fansL.text = str(fans) + " Fans"
 	monthsL.text = "Year " + str(years) + ", month " + str(months)
-	EXPENSESmod = 2 - Global.expM
+	var EXPENSESmod:float = 2 - Global.expM
 	expenses = int((payroll + rent + UpgradedRent) * EXPENSESmod)
-	if expenses < 1000000:
-		var expenseT:float = expenses / 100
-		expensesL.text = "Costs: $" + str(expenseT / 10) + "K+"
-	if expenses < 1000000000 and expenses > 1000000:
-		var expenseT = int(expenses / 1000000)
-		moneyL.text = "Costs: $" + str(expenseT / 10) + "M+"
+	var suffixE:String
+	var formatted_valueE:float
+	if expenses >= 1000000000:  # B
+		formatted_valueE = round(expenses / 1000000000.0 * 10) / 10.0
+		suffixE = "B+"
+	elif expenses >= 1000000:  # M
+		formatted_valueE = round(expenses / 1000000.0 * 10) / 10.0
+		suffixE = "M+"
+	elif expenses >= 1000:  # K
+		formatted_valueE = round(expenses / 1000.0 * 10) / 10.0
+		suffixE = "K+"
+	else: # UNDER 1K:
+		formatted_valueE = expenses
+		suffixE = ""
+	expensesL.text = "Costs: $" + str(formatted_valueE) + suffixE
 	if money < 5000 and warning_shown == false:
 		warn_bankruptcy()
 	if money < -50000:
@@ -540,6 +551,7 @@ func _on_publisher_list_item_selected(index:int) -> void:
 
 @onready var officesPanel: Panel = $Offices
 @onready var upgrades: Panel = $Upgrades
+@onready var stocks: Panel = $Stocks
 
 func _on_back_p_pressed() -> void:
 	soundfx()
@@ -552,6 +564,7 @@ func _on_back_p_pressed() -> void:
 	contractsPanel.hide()
 	developing.hide()
 	research.hide()
+	stocks.hide()
 	REFRESH_ALL()
 
 # MARKETING:

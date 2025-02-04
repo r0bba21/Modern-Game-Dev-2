@@ -50,3 +50,6 @@ var CompName:String = "Cool Games Co."
 var FoundName:String = "Poo Jones"
 var CopiesSold:int = 0
 var LogoID:int = 0
+
+# STOCKS:
+var Sunits:int = 0
