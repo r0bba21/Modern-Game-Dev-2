@@ -1,5 +1,7 @@
 extends Panel
 
+class_name StockMarket
+
 @onready var stock_one: Line2D = $StockOne
 
 func _ready() -> void:
@@ -44,7 +46,7 @@ func _on_month_timeout() -> void:
 @onready var price_l: Label = $VBoxContainer/PriceL
 
 var price:float
-var sum:int = 0
+var sum:float = 0
 var initial:int = 0
 
 func stock_price():
@@ -53,40 +55,62 @@ func stock_price():
 	price = ((y - min_value) / (max_value - min_value)) * 50
 	price = round(price * 100) / 100 # ROUNDS TO 2DP!
 	price_l.text = "$" + str(price)
-	has_u.text = "Units: " + str(Global.Sunits)
+	var formatted_value:float
+	var suffix:String
+	if Global.Sunits >= 1000000000:  # B
+		formatted_value = round(Global.Sunits / 1000000000.0 * 10) / 10.0
+		suffix = "B"
+	elif Global.Sunits >= 1000000:  # M
+		formatted_value = round(Global.Sunits / 1000000.0 * 10) / 10.0
+		suffix = "M"
+	elif Global.Sunits >= 1000:  # K
+		formatted_value = round(Global.Sunits / 1000.0 * 10) / 10.0
+		suffix = "K"
+	else: # UNDER 1K:
+		formatted_value = round(Global.Sunits * 100.0) / 100
+		suffix = ""
+	has_u.text = "Units: " + str(formatted_value) + suffix
 	sum = Global.Sunits * price
+	sum = round(sum * 100) / 100
+	var perc:String
+	var changeExport:float
 	if sum != 0:
 		var difference:float = sum - initial
 		var change:float = (difference / sum) * 100
 		change = round(change * 100) / 100
 		if change < 0:
 			change = change * -1
+		changeExport = change
 		var style:StyleBoxFlat = load("res://Assets/UI/PRICE SMALL.tres") as StyleBoxFlat
 		print(str(change) + "change")
 		if sum >= initial:
-			has_m.text = "$" + str(sum) + ", +" + str(change) + "%"
+			perc = ",  +"
 			style.bg_color = Color("#008831")
 		elif sum < initial:
-			has_m.text = "$" + str(sum) + ", -" + str(change) + "%"
+			perc = ",  -"
 			style.bg_color = Color("#880023")
-	elif sum == 0:
-		has_m.text = "$0, +0%"
-
-func _on_selling_text_submitted(new_text: String) -> void:
-	var considered = int(new_text)
-	Global.charge -= considered * price
-	initial -= considered * price
-	Global.Sunits -= considered
-	sum = Global.Sunits * price
-	soundfx()
-	stock_price()
+	var formatted_valueS:float
+	var suffixS:String
+	if sum >= 1000000000:  # B
+		formatted_valueS = round(sum / 1000000000.0 * 10) / 10.0
+		suffixS = "B"
+	elif sum >= 1000000:  # M
+		formatted_valueS = round(sum / 1000000.0 * 10) / 10.0
+		suffixS = "M"
+	elif sum >= 1000:  # K
+		formatted_valueS = round(sum / 1000.0 * 10) / 10.0
+		suffixS = "K"
+	else: # UNDER 1K:
+		formatted_value = sum
+		suffix = ""
+	has_m.text = "$" + str(formatted_valueS) + suffixS + perc + str(changeExport) + "%"
 
 func _on_buying_text_submitted(new_text: String) -> void:
 	var considered = int(new_text)
-	Global.charge += considered * price
-	initial += considered * price
+	Global.charge += considered
+	initial += considered
 	print(str(initial) + "initial")
-	Global.Sunits += considered
+	Global.Sunits += considered / price
 	sum = Global.Sunits * price
 	soundfx()
 	stock_price()
@@ -117,3 +141,12 @@ func _on_take_l_2_pressed() -> void:
 	stocks.show()
 	the_bank.hide()
 	soundfx()
+
+func _on_sale_pressed() -> void:
+	if 0 < Global.Sunits:
+		Global.charge -= sum * 0.8
+		initial = 0
+		Global.Sunits = 0
+		sum = 0
+		soundfx()
+		stock_price()

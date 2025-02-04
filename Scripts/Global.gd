@@ -50,6 +50,8 @@ var CompName:String = "Cool Games Co."
 var FoundName:String = "Poo Jones"
 var CopiesSold:int = 0
 var LogoID:int = 0
+var LogoCOL:Color = "ffffff"
+var officeCOL:Color = "00ffff"
 
 # STOCKS:
-var Sunits:int = 0
+var Sunits:float = 0

@@ -7,7 +7,7 @@ func _on_play_pressed() -> void:
 func _on_load_pressed() -> void:
 	soundfx()
 	Global.loading_game = true
-	get_tree().change_scene_to_file("res://Scenes/customise_2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/customise.tscn")
 
 func _on_tutorial_pressed() -> void:
 	soundfx()

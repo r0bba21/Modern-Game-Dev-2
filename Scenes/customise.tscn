@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://drunrktpa2lu3"]
+[gd_scene load_steps=23 format=3 uid="uid://drunrktpa2lu3"]
 
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_vgd5j"]
 [ext_resource type="Script" path="res://Scripts/customise.gd" id="1_x8815"]
@@ -6,13 +6,14 @@
 [ext_resource type="StyleBox" uid="uid://cdinqi3e3r1sq" path="res://Assets/UI/info_hover.tres" id="3_s5bvl"]
 [ext_resource type="StyleBox" uid="uid://dnpyxgjomx2rt" path="res://Assets/UI/info_button.tres" id="4_2pf52"]
 [ext_resource type="Texture2D" uid="uid://do7ym2bg5qt8a" path="res://Assets/UI/click.png" id="5_584pp"]
-[ext_resource type="Texture2D" uid="uid://dup0dvlwokm64" path="res://Assets/UI/LOGOS (1).png" id="7_53rcc"]
-[ext_resource type="Texture2D" uid="uid://dr7boudlevdmj" path="res://Assets/UI/LOGOS (2).png" id="8_0h454"]
-[ext_resource type="Texture2D" uid="uid://xp8nw2wit5ij" path="res://Assets/UI/LOGOS (3).png" id="9_ms7kd"]
-[ext_resource type="Texture2D" uid="uid://cb5uqhu5xutxm" path="res://Assets/UI/LOGOS (4).png" id="10_g4nb2"]
-[ext_resource type="Texture2D" uid="uid://dp3j7wgj2bw7r" path="res://Assets/UI/LOGOS (5).png" id="11_552pt"]
-[ext_resource type="Texture2D" uid="uid://bpc84uefgxlcb" path="res://Assets/UI/LOGOS (6).png" id="12_6trjt"]
+[ext_resource type="Texture2D" uid="uid://cr1rbebawd85r" path="res://Assets/UI/NEW_LOGO (2).png" id="7_sbgg2"]
+[ext_resource type="Texture2D" uid="uid://b2h50hpdoh6jd" path="res://Assets/UI/NEW_LOGO (8).png" id="8_18hyv"]
+[ext_resource type="Texture2D" uid="uid://drst30f2n56dv" path="res://Assets/UI/NEW_LOGO (3).png" id="9_1rcka"]
+[ext_resource type="Texture2D" uid="uid://bq68qnlwhac0x" path="res://Assets/UI/NEW_LOGO (4).png" id="10_jokgy"]
+[ext_resource type="Texture2D" uid="uid://bievao7univdc" path="res://Assets/UI/NEW_LOGO (5).png" id="11_8p4ew"]
+[ext_resource type="Texture2D" uid="uid://dwe7qsawpx7bu" path="res://Assets/UI/NEW_LOGO (6).png" id="12_c11cq"]
 [ext_resource type="Texture2D" uid="uid://b864t5u6upmfu" path="res://Assets/UI/play-button.png" id="13_anrj4"]
+[ext_resource type="Texture2D" uid="uid://b8s35ib37pq2l" path="res://Assets/UI/NEW_LOGO (1).png" id="13_mww5i"]
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="14_eycy4"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="15_fvhru"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="16_p1j64"]
@@ -57,11 +58,11 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = 57.0
-offset_top = 82.0
+offset_top = 42.0
 offset_right = 768.0
-offset_bottom = -469.0
+offset_bottom = -539.0
 grow_vertical = 2
-theme_override_constants/separation = 55
+theme_override_constants/separation = 45
 
 [node name="Label" type="Label" parent="Camera2D/Control/VBoxContainer"]
 layout_mode = 2
@@ -91,6 +92,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/focus = ExtResource("3_s5bvl")
 theme_override_styles/normal = ExtResource("4_2pf52")
 placeholder_text = "Cool Games Co."
+right_icon = ExtResource("5_584pp")
 
 [node name="Label2" type="Label" parent="Camera2D/Control/VBoxContainer"]
 layout_mode = 2
@@ -120,6 +122,7 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/focus = ExtResource("3_s5bvl")
 theme_override_styles/normal = ExtResource("4_2pf52")
 placeholder_text = "Poo Jones"
+right_icon = ExtResource("5_584pp")
 
 [node name="Label3" type="Label" parent="Camera2D/Control/VBoxContainer"]
 layout_mode = 2
@@ -224,7 +227,7 @@ theme_override_constants/arrow_margin = 20
 theme_override_icons/arrow = ExtResource("5_584pp")
 icon_alignment = 2
 selected = 0
-item_count = 6
+item_count = 7
 popup/item_0/text = "Logo 1"
 popup/item_1/text = "Logo 2"
 popup/item_1/id = 1
@@ -236,6 +239,8 @@ popup/item_4/text = "Logo 5"
 popup/item_4/id = 4
 popup/item_5/text = "Logo 6"
 popup/item_5/id = 5
+popup/item_6/text = "Logo 7"
+popup/item_6/id = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/Control"]
 layout_mode = 1
@@ -244,10 +249,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -750.0
-offset_top = 108.0
-offset_right = 750.0
-offset_bottom = 308.0
+offset_left = -880.0
+offset_top = 26.0
+offset_right = 880.0
+offset_bottom = 226.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 60
@@ -255,7 +260,7 @@ alignment = 1
 
 [node name="Logo" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("7_53rcc")
+texture = ExtResource("7_sbgg2")
 
 [node name="Label" type="Label" parent="Camera2D/Control/HBoxContainer/Logo"]
 layout_mode = 1
@@ -275,7 +280,7 @@ horizontal_alignment = 1
 
 [node name="Logo2" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("8_0h454")
+texture = ExtResource("8_18hyv")
 
 [node name="Label2" type="Label" parent="Camera2D/Control/HBoxContainer/Logo2"]
 layout_mode = 1
@@ -297,7 +302,7 @@ horizontal_alignment = 1
 
 [node name="Logo3" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("9_ms7kd")
+texture = ExtResource("9_1rcka")
 
 [node name="Label3" type="Label" parent="Camera2D/Control/HBoxContainer/Logo3"]
 layout_mode = 1
@@ -319,7 +324,7 @@ horizontal_alignment = 1
 
 [node name="Logo4" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("10_g4nb2")
+texture = ExtResource("10_jokgy")
 
 [node name="Label4" type="Label" parent="Camera2D/Control/HBoxContainer/Logo4"]
 layout_mode = 1
@@ -336,11 +341,10 @@ theme_override_fonts/font = ExtResource("1_vgd5j")
 theme_override_font_sizes/font_size = 35
 text = "Logo 4"
 horizontal_alignment = 1
-metadata/_edit_lock_ = true
 
 [node name="Logo5" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("11_552pt")
+texture = ExtResource("11_8p4ew")
 
 [node name="Label5" type="Label" parent="Camera2D/Control/HBoxContainer/Logo5"]
 layout_mode = 1
@@ -362,7 +366,7 @@ horizontal_alignment = 1
 
 [node name="Logo6" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("12_6trjt")
+texture = ExtResource("12_c11cq")
 
 [node name="Label6" type="Label" parent="Camera2D/Control/HBoxContainer/Logo6"]
 layout_mode = 1
@@ -382,6 +386,26 @@ theme_override_font_sizes/font_size = 35
 text = "Logo 2"
 horizontal_alignment = 1
 
+[node name="Logo7" type="TextureRect" parent="Camera2D/Control/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_mww5i")
+
+[node name="Label6" type="Label" parent="Camera2D/Control/HBoxContainer/Logo7"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_vgd5j")
+theme_override_font_sizes/font_size = 35
+text = "Logo 7"
+horizontal_alignment = 1
+
 [node name="PLAY" type="Button" parent="Camera2D/Control"]
 layout_mode = 1
 anchors_preset = 7
@@ -389,9 +413,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -509.0
+offset_left = -879.0
 offset_top = -170.0
-offset_right = 510.0
+offset_right = 880.0
 offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -410,6 +434,26 @@ theme_override_styles/pressed = ExtResource("14_eycy4")
 theme_override_styles/normal_mirrored = ExtResource("15_fvhru")
 theme_override_styles/normal = ExtResource("15_fvhru")
 text = "Play!"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="Camera2D/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -864.0
+offset_top = -257.0
+offset_right = 880.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(1, 1, 1, 1)
+
+[node name="Click" type="Sprite2D" parent="Camera2D/Control"]
+position = Vector2(1832, 876)
+scale = Vector2(2, 2)
+texture = ExtResource("5_584pp")
 
 [node name="Sounds" type="Node2D" parent="."]
 position = Vector2(-730.184, -348.017)
@@ -442,3 +486,4 @@ bus = &"SFX"
 [connection signal="item_selected" from="Camera2D/Control/VBoxContainer/Label3/Loc" to="Camera2D/Control" method="_on_loc_item_selected"]
 [connection signal="item_selected" from="Camera2D/Control/VBoxContainer/Label4/Logo" to="Camera2D/Control" method="_on_logo_item_selected"]
 [connection signal="pressed" from="Camera2D/Control/PLAY" to="Camera2D/Control" method="_on_play_pressed"]
+[connection signal="color_changed" from="Camera2D/Control/ColorPickerButton" to="Camera2D/Control" method="_on_color_picker_button_color_changed"]

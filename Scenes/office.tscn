@@ -1,37 +1,136 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx2leahlppq4k"]
+[gd_scene load_steps=18 format=3 uid="uid://dx2leahlppq4k"]
 
-[ext_resource type="Script" path="res://Scripts/office.gd" id="1_0wskg"]
+[ext_resource type="Script" path="res://Scripts/office.gd" id="1_e1gqn"]
+[ext_resource type="PackedScene" uid="uid://eqw7c2g1vtnc" path="res://BLENDER/STARTER.blend" id="2_5ow17"]
 [ext_resource type="PackedScene" uid="uid://deskdqbrni8oa" path="res://Scenes/office_ui.tscn" id="2_bytoo"]
-[ext_resource type="Texture2D" uid="uid://6r3kwnw12n3d" path="res://Assets/Backdrops/idle4.png" id="2_rcaqm"]
+[ext_resource type="Material" uid="uid://defhfve165gyf" path="res://Assets/Backdrops/starter.tres" id="3_a1a58"]
+[ext_resource type="Material" uid="uid://cjnqv7stc3gs4" path="res://Assets/Backdrops/PC emission.tres" id="4_5louj"]
+[ext_resource type="PackedScene" uid="uid://bac1poaabwlio" path="res://BLENDER/AMATEUR.blend" id="4_qmut7"]
+[ext_resource type="PackedScene" uid="uid://cotijblwkoan2" path="res://BLENDER/SMALL.blend" id="6_0qk6p"]
+[ext_resource type="Texture2D" uid="uid://dmq0cmw756pej" path="res://BLENDER/SMALL.png" id="7_wquyp"]
+[ext_resource type="Texture2D" uid="uid://dyedk741jk4w8" path="res://BLENDER/SMALL N.png" id="8_mupkp"]
+[ext_resource type="PackedScene" uid="uid://cfsft23lxqgie" path="res://BLENDER/MEDIUM.blend" id="9_cmweb"]
+[ext_resource type="Material" uid="uid://cqau6dhsf2buv" path="res://Assets/Backdrops/MED.tres" id="10_m5mal"]
+[ext_resource type="PackedScene" uid="uid://c3swbt46dvidd" path="res://BLENDER/LARGE.blend" id="11_14wl0"]
+[ext_resource type="Material" uid="uid://drn8l83kfwu5s" path="res://Assets/Backdrops/LRG.tres" id="12_cv6ud"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_s65gx"]
-size = Vector2(1920, 1080)
-orientation = 2
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kx2xt"]
+sky_top_color = Color(0.249682, 0.408255, 0.497135, 1)
+sky_horizon_color = Color(0.598882, 0.638077, 0.659078, 1)
+sky_energy_multiplier = 0.25
+ground_bottom_color = Color(0.145844, 0.144051, 0.139178, 1)
+ground_horizon_color = Color(0.598882, 0.638077, 0.659078, 1)
+
+[sub_resource type="Sky" id="Sky_3hvsx"]
+sky_material = SubResource("ProceduralSkyMaterial_kx2xt")
+
+[sub_resource type="Environment" id="Environment_jkjwv"]
+background_mode = 2
+sky = SubResource("Sky_3hvsx")
+ssao_enabled = true
+sdfgi_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5cytp"]
+albedo_texture = ExtResource("7_wquyp")
+normal_enabled = true
+normal_texture = ExtResource("8_mupkp")
 
 [node name="Office" type="Node2D"]
 position = Vector2(960, 0)
-script = ExtResource("1_0wskg")
+script = ExtResource("1_e1gqn")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jkjwv")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-rotation = 3.14159
-mesh = SubResource("PlaneMesh_s65gx")
-texture = ExtResource("2_rcaqm")
+[node name="STARTER" parent="." instance=ExtResource("2_5ow17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16193, 0, -4.39695)
+
+[node name="DESK" parent="STARTER" index="0"]
+surface_material_override/10 = ExtResource("4_5louj")
+
+[node name="Walls" parent="STARTER" index="1"]
+surface_material_override/0 = ExtResource("3_a1a58")
+
+[node name="Camera" parent="STARTER" index="2"]
+current = true
+
+[node name="Point" parent="STARTER" index="3"]
+light_energy = 4.071
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="AMATEUR" parent="." instance=ExtResource("4_qmut7")]
+visible = false
+
+[node name="Wall" parent="AMATEUR" index="0"]
+surface_material_override/0 = ExtResource("3_a1a58")
+
+[node name="Point" parent="AMATEUR" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.309767, 8.88806, 0.982608)
+light_energy = 4.0
+
+[node name="DESK_001" parent="AMATEUR" index="3"]
+surface_material_override/10 = ExtResource("4_5louj")
+
+[node name="SMALL" parent="." instance=ExtResource("6_0qk6p")]
+visible = false
+
+[node name="Desk" parent="SMALL" index="0"]
+surface_material_override/14 = ExtResource("4_5louj")
+
+[node name="Wall" parent="SMALL" index="1"]
+surface_material_override/0 = ExtResource("3_a1a58")
+
+[node name="Point" parent="SMALL" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.75076, 8.88806, 0.572073)
+light_energy = 5.0
+
+[node name="Floor" parent="SMALL" index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5cytp")
+
+[node name="MEDIUM" parent="." instance=ExtResource("9_cmweb")]
+visible = false
+
+[node name="Desk" parent="MEDIUM" index="0"]
+surface_material_override/14 = ExtResource("4_5louj")
+
+[node name="Wall" parent="MEDIUM" index="1"]
+surface_material_override/0 = ExtResource("10_m5mal")
+
+[node name="Point" parent="MEDIUM" index="3"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -4.57851, 8.88806, -5.76825)
+light_energy = 10.0
+
+[node name="LARGE" parent="." instance=ExtResource("11_14wl0")]
+visible = false
+
+[node name="Monitor" parent="LARGE" index="1"]
+surface_material_override/2 = ExtResource("4_5louj")
+
+[node name="Point" parent="LARGE" index="16"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.367244, 5.09185, -11.894)
+light_energy = 5.0
+
+[node name="Plane_001" parent="LARGE" index="17"]
+surface_material_override/0 = ExtResource("12_cv6ud")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_left = -956.0
+offset_top = -7.0
+offset_right = 964.0
+offset_bottom = 1073.0
 
 [node name="Office UI" parent="Control" instance=ExtResource("2_bytoo")]
 layout_mode = 1
-offset_left = -960.0
-offset_top = -540.0
-offset_right = -960.0
-offset_bottom = -540.0
+offset_left = -4.0
+offset_top = 7.0
+offset_right = -4.0
+offset_bottom = 7.0
+
+[editable path="STARTER"]
+[editable path="AMATEUR"]
+[editable path="SMALL"]
+[editable path="MEDIUM"]
+[editable path="LARGE"]

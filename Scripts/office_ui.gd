@@ -229,6 +229,7 @@ var marketshare:float
 var devcost:int
 var popularity:float = 1
 var quality:float = 0
+var GENREPOP:float
 
 func pre_dev_purge():
 	refresh_productivity()
@@ -258,20 +259,37 @@ func _on_genre_item_selected(index:int) -> void:
 	match index:
 		0:
 			genreG = "Adventure"
+			GENREPOP = 0.9
 		1:
 			genreG = "FPS"
+			GENREPOP = 1
 		2:
 			genreG = "RPG"
+			GENREPOP = 0.8
 		3:
 			genreG = "Simulation"
+			GENREPOP = 0.7
 		4:
 			genreG = "Multiplayer"
+			GENREPOP = 1
 		5:
 			genreG = "Fighter"
+			GENREPOP = 0.7
 		6:
 			genreG = "Sports"
+			GENREPOP = 0.9
 		7:
 			genreG = "Action"
+			GENREPOP = 0.9
+		8:
+			genreG = "Gambling"
+			GENREPOP = 0.5
+		9:
+			genreG = "Platformer"
+			GENREPOP = 0.6
+		10:
+			genreG = "Battle Royale"
+			GENREPOP = 0.8
 	refresh_dev_summary()
 
 func _on_size_item_selected(index:int) -> void:
@@ -330,46 +348,53 @@ func DEVSTART():
 # CALIBRATION:
 func Mshare():
 	if PLATFORM ==1 and AUDIENCE ==1:
-		marketshare = 0.25
+		marketshare = 0.25 * GENREPOP
 	if PLATFORM ==1 and AUDIENCE ==2:
-		marketshare = 0.4
+		marketshare = 0.4 * GENREPOP
 	if PLATFORM ==1 and AUDIENCE ==3:
-		marketshare = 0.55
+		marketshare = 0.55 * GENREPOP
 	if PLATFORM ==2 and AUDIENCE ==1:
-		marketshare = 0.5
+		marketshare = 0.5 * GENREPOP
 	if PLATFORM ==2 and AUDIENCE ==2:
-		marketshare = 0.6
+		marketshare = 0.6 * GENREPOP
 	if PLATFORM ==2 and AUDIENCE ==3:
-		marketshare = 0.3
+		marketshare = 0.3 * GENREPOP
 	if PLATFORM ==3 and AUDIENCE ==1:
-		marketshare = 0.4
+		marketshare = 0.4 * GENREPOP
 	if PLATFORM ==3 and AUDIENCE ==2:
-		marketshare = 0.3
+		marketshare = 0.3 * GENREPOP
 	if PLATFORM ==3 and AUDIENCE ==3:
-		marketshare = 0.1
+		marketshare = 0.1 * GENREPOP
 	if PLATFORM ==4 and AUDIENCE ==1:
-		marketshare = 0.8
+		marketshare = 0.8 * GENREPOP
 	if PLATFORM ==4 and AUDIENCE ==2:
-		marketshare = 0.7
+		marketshare = 0.7 * GENREPOP
 	if PLATFORM ==4 and AUDIENCE ==3:
-		marketshare = 0.45
+		marketshare = 0.45 * GENREPOP
 
 var suggestedP:float
 var maxP:float
 
 func suggest():
 	var consolefac:int
-	match PLATFORM:
+	var division:float
+	match SIZE:
 		1:
-			consolefac = 20
-		2:
+			division = 3
+		2, 3:
+			division = 2.4
+	match PLATFORM:
+		1, 2:
 			consolefac = 20
 		3:
 			consolefac = 30
 		4:
 			consolefac = 12.5
-	maxP = ((consolefac * SIZE)+(TECH * 4)+(DESIGN * 4)) * Global.priceM
-	suggestedP = (((consolefac * SIZE)+(TECH * 4)+(DESIGN*4))* (quality / 100) - randi_range(0,6)) * Global.priceM
+	var FAC = (SIZE + DESIGN + TECH)
+	maxP = (FAC * consolefac * Global.priceM) / division
+	suggestedP = (maxP - randi_range(0,6)) * (quality / 90)
+	maxP = round(maxP * 100.0) / 100
+	suggestedP = round(suggestedP * 100.0) / 100
 	if suggestedP < 0:
 		suggestedP = 1
 
@@ -382,19 +407,18 @@ var marketmonths:int
 var pubMOD:float
 
 func PUBLISH():
+	universe = 1000000
 	if publisher == true:
-		universe = 1000000 * pubBoost
 		popularity = 100
 	if publisher == false:
-		universe = 1000000
 		refresh_popularity()
 		pubMOD = 1
 		pubCut = 1
 	var FAC = (SIZE + DESIGN + TECH)
-	quality = (stagesFAC * 20) + ((FAC - randi_range(0,3)) * 4)
+	quality = (randf_range(0.6, 1.1) * stagesFAC) * FAC * 3.75
 	if quality > 100:
 		quality = 100
-	sales = ((universe * marketshare) * (((popularity * 0.35) + (quality * 0.7)) / 100)) * Global.salesM
+	sales = ((universe * marketshare) * (((popularity * 0.3) + (quality * 0.65)) / 100)) * Global.salesM
 	Global.CopiesSold += sales
 	suggest()
 	if quality < contingency and publisher == true:
@@ -444,21 +468,21 @@ func publishedG(): # UI CHANGES ONLY
 		publisher_l.text = "Publisher: " + str(pubPerc) + "% cut"
 	if publisher == false:
 		publisher_l.text = "Publisher: Self-Published"
-	if quality > 95:
+	if quality >= 95:
 		reviews_l.text = "Reviews: Impeccable"
-	elif quality > 90:
+	elif quality >= 90:
 		reviews_l.text = "Reviews: Outstanding"
-	elif quality > 80:
+	elif quality >= 80:
 		reviews_l.text = "Reviews: Wonderful"
-	elif quality > 85:
+	elif quality >= 85:
 		reviews_l.text = "Reviews: Incredible"
-	elif quality > 70:
+	elif quality >= 70:
 		reviews_l.text = "Reviews: Great"
-	elif quality > 50:
+	elif quality >= 50:
 		reviews_l.text = "Reviews: Average"
-	elif quality > 40:
+	elif quality >= 40:
 		reviews_l.text = "Reviews: Bad"
-	elif quality > 0:
+	elif quality >= 0:
 		reviews_l.text = "Reviews: Abhorrent"
 	review.value = quality + randi_range(-5,5)
 	review_2.value = quality + randi_range(-5,10)
@@ -499,9 +523,7 @@ func monthsales():
 func _on_publisher_pressed() -> void:
 	publishdeal.show()
 
-var pub_id:int = 0
 var pubCut:float
-var pubBoost:float
 var pubdiscount:float = 0
 var contingency:float = 0
 
@@ -514,40 +536,28 @@ func _on_publisher_list_item_selected(index:int) -> void:
 	match index:
 		0:
 			pubCut = 0
-			pubBoost = 1
 			publisher = false
 			contingency = 0
-			pub_id = 0
 		1:
-			pubCut = 0.1 + pubdiscount
-			pubBoost = 1.3
-			publisher = true
-			contingency = 90
-			pub_id = 1
-		2:
 			pubCut = 0.15 + pubdiscount
-			pubBoost = 1.25
 			publisher = true
-			contingency = 85
-			pub_id = 2
+			contingency = 10
+		2:
+			pubCut = 0.25 + pubdiscount
+			publisher = true
+			contingency = 20
 		3:
-			pubCut = 0.3 + pubdiscount
-			pubBoost = 1.2
+			pubCut = 0.4 + pubdiscount
 			publisher = true
-			contingency = 75
-			pub_id = 3
+			contingency = 30
 		4:
-			pubCut = 0.55 + pubdiscount
-			pubBoost = 1.1
+			pubCut = 0.5 + pubdiscount
 			publisher = true
-			contingency = 60
-			pub_id = 4
+			contingency = 40
 		5:
-			pubCut = 0.7 + pubdiscount
-			pubBoost = 1.05
+			pubCut = 0.65 + pubdiscount
 			publisher = true
-			contingency = 60
-			pub_id = 5
+			contingency = 50
 
 @onready var officesPanel: Panel = $Offices
 @onready var upgrades: Panel = $Upgrades
@@ -617,7 +627,7 @@ func _on_budget_text_submitted(new_text) -> void:
 	if money > budget and budget < 2000001 and paid < 60.1:
 		money -= budget
 		paid += (budget * 0.00003)
-		if paid < 60.1:
+		if paid > 60.1:
 			paid = 60.2
 		refresh_popularity()
 
@@ -1048,7 +1058,7 @@ func SAVEGAME():
 	file.store_var(Global.fansM)
 	file.store_var(Global.expM)
 	file.store_var(Global.CopiesSold)
-	file.store_var(Global.LogoID)
+	file.store_var(Global.Sunits)
 	file.close()
 	print("game saved")
 
@@ -1085,7 +1095,7 @@ func LOADGAME():
 	Global.fansM = file.get_var(Global.fansM)
 	Global.expM = file.get_var(Global.expM)
 	Global.CopiesSold = file.get_var(Global.CopiesSold)
-	Global.LogoID = file.get_var(Global.LogoID)
+	Global.LogoID = file.get_var(Global.Sunits)
 	file.close()
 	if in_loan != false:
 		refresh_loan()
@@ -1298,8 +1308,8 @@ func openDESstage():
 func destime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float((0.3 * dphasemod) / productivity)
-	print(str(float((0.4 * dphasemod) / productivity)) + "timer")
+	dev_prog.wait_time = float((0.9 * dphasemod) / productivity)
+	print(str(float((0.4 * dphasemod) / productivity)) + " DESIGN timer")
 	dev_prog.start()
 	devstage_one.hide()
 	devperc = 0
@@ -1315,8 +1325,8 @@ func openGPstage():
 func GPtime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float((0.4 * gstagemod) / productivity)
-	print(str(float((0.5 * gstagemod) / productivity)) + "timer")
+	dev_prog.wait_time = float((1 * gstagemod) / productivity)
+	print(str(float((0.6 * gstagemod) / productivity)) + " GP timer")
 	dev_prog.start()
 	devstage_two.hide()
 
@@ -1331,8 +1341,8 @@ func openPOLstage():
 func POLtime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float((0.25 * pstagemod) / productivity)
-	print(str(float((0.3 * pstagemod) / productivity)) + "timer")
+	dev_prog.wait_time = float((0.8 * pstagemod) / productivity)
+	print(str(float((0.4 * pstagemod) / productivity)) + " POLISH timer")
 	dev_prog.start()
 	devstage_three.hide()
 
@@ -1477,4 +1487,12 @@ func _on_real_conv_timeout() -> void:
 func _on_close_conv_pressed() -> void:
 	convention.hide()
 	convention_inv.start()
+	real_conv.stop()
 	soundfx()
+
+# STOCKS:
+func _on_buying_text_submitted() -> void:
+	REFRESH_ALL()
+
+func _on_selling_text_submitted() -> void:
+	REFRESH_ALL()

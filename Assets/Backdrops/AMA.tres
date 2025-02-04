@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://hxo48eqroiy5"]
+
+[ext_resource type="Texture2D" uid="uid://bg8i0v8wjmv00" path="res://BLENDER/AMA.png" id="1_702l4"]
+
+[resource]
+albedo_texture = ExtResource("1_702l4")

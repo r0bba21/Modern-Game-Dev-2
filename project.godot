@@ -11,10 +11,13 @@ config_version=5
 [application]
 
 config/name="Modern Game Dev"
+config/description="Be a game developer!"
 run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-boot_splash/bg_color=Color(0.091699, 0.134788, 0.244413, 1)
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0.118055, 0.0537584, 1)
+boot_splash/image="res://Splash.png"
+boot_splash/fullsize=false
+config/icon="res://gamepad-cross (1).png"
 
 [autoload]
 
@@ -81,5 +84,7 @@ Savegame={
 
 [rendering]
 
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/msaa_2d=2
 anti_aliasing/quality/screen_space_aa=1

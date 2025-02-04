@@ -1,4 +1,4 @@
-[gd_scene load_steps=159 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=163 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -37,34 +37,35 @@
 [ext_resource type="Texture2D" uid="uid://do7ym2bg5qt8a" path="res://Assets/UI/click.png" id="31_j1x01"]
 [ext_resource type="Script" path="res://Scripts/companyUI.gd" id="31_v6gb0"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="31_ydjad"]
-[ext_resource type="Texture2D" uid="uid://dup0dvlwokm64" path="res://Assets/UI/LOGOS (1).png" id="32_5h4ff"]
+[ext_resource type="Texture2D" uid="uid://cr1rbebawd85r" path="res://Assets/UI/NEW_LOGO (2).png" id="32_8pq7e"]
 [ext_resource type="Texture2D" uid="uid://cyxgwh1xrwk41" path="res://Assets/UI/genres (2).png" id="32_jikvb"]
 [ext_resource type="Script" path="res://Scripts/research.gd" id="32_o67hk"]
 [ext_resource type="StyleBox" uid="uid://ca57s3ojla4ux" path="res://Assets/UI/prog.tres" id="32_qx3nf"]
-[ext_resource type="StyleBox" uid="uid://xdcn0br3fgen" path="res://Scenes/devpress.tres" id="33_0kskp"]
+[ext_resource type="StyleBox" uid="uid://xdcn0br3fgen" path="res://Assets/UI/devpress.tres" id="33_0kskp"]
 [ext_resource type="Texture2D" uid="uid://gkacovriy0k3" path="res://Assets/UI/genres (3).png" id="33_frgwy"]
 [ext_resource type="StyleBox" uid="uid://wnao1st57aem" path="res://Assets/UI/Contract.tres" id="33_jwco5"]
 [ext_resource type="Texture2D" uid="uid://7lyq115d0rkf" path="res://Assets/UI/cancel75.png" id="33_og82k"]
-[ext_resource type="Texture2D" uid="uid://dr7boudlevdmj" path="res://Assets/UI/LOGOS (2).png" id="33_q7pt6"]
+[ext_resource type="Texture2D" uid="uid://b2h50hpdoh6jd" path="res://Assets/UI/NEW_LOGO (8).png" id="33_ro7hm"]
 [ext_resource type="Texture2D" uid="uid://bukqqfs3rgueu" path="res://Assets/UI/checklist.png" id="33_vl7bk"]
-[ext_resource type="Texture2D" uid="uid://xp8nw2wit5ij" path="res://Assets/UI/LOGOS (3).png" id="34_3kq18"]
 [ext_resource type="Texture2D" uid="uid://qdngnbhhnobh" path="res://Assets/UI/pub (2).png" id="34_cuuo3"]
 [ext_resource type="StyleBox" uid="uid://dbccugfktu5v0" path="res://Assets/UI/dev.tres" id="34_pxscq"]
+[ext_resource type="Texture2D" uid="uid://drst30f2n56dv" path="res://Assets/UI/NEW_LOGO (3).png" id="34_xutnv"]
 [ext_resource type="Texture2D" uid="uid://dh053jrl28t84" path="res://Assets/UI/genres (4).png" id="34_yt8u7"]
 [ext_resource type="Texture2D" uid="uid://b52kduevwk6qn" path="res://Assets/UI/genres (5).png" id="35_5tl6v"]
 [ext_resource type="Texture2D" uid="uid://7se3a2smhoj2" path="res://Assets/UI/bank.png" id="35_5w3yo"]
-[ext_resource type="Texture2D" uid="uid://cb5uqhu5xutxm" path="res://Assets/UI/LOGOS (4).png" id="35_abbki"]
+[ext_resource type="Texture2D" uid="uid://bq68qnlwhac0x" path="res://Assets/UI/NEW_LOGO (4).png" id="35_bnuao"]
 [ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="35_nawnk"]
 [ext_resource type="Texture2D" uid="uid://dhnoyw8o2i7om" path="res://Assets/UI/pub (5).png" id="35_wuukt"]
 [ext_resource type="Texture2D" uid="uid://dx0g7xc8o36ky" path="res://Assets/UI/pub (3).png" id="36_1btaf"]
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="36_1yad1"]
 [ext_resource type="Texture2D" uid="uid://by532k21khcbi" path="res://Assets/UI/genres (6).png" id="36_co2i5"]
-[ext_resource type="Texture2D" uid="uid://dp3j7wgj2bw7r" path="res://Assets/UI/LOGOS (5).png" id="36_dp71l"]
-[ext_resource type="Texture2D" uid="uid://bpc84uefgxlcb" path="res://Assets/UI/LOGOS (6).png" id="37_ehnxk"]
+[ext_resource type="Texture2D" uid="uid://bievao7univdc" path="res://Assets/UI/NEW_LOGO (5).png" id="36_s1j7j"]
 [ext_resource type="Texture2D" uid="uid://qlhuj21m5gp3" path="res://Assets/UI/genres (7).png" id="37_u85m6"]
+[ext_resource type="Texture2D" uid="uid://dwe7qsawpx7bu" path="res://Assets/UI/NEW_LOGO (6).png" id="37_ugt3o"]
 [ext_resource type="Texture2D" uid="uid://1pfnph0xcktp" path="res://Assets/UI/pub (4).png" id="37_yq22j"]
 [ext_resource type="Texture2D" uid="uid://cyqasysefxriu" path="res://Assets/UI/genres (8).png" id="38_7ocly"]
 [ext_resource type="Texture2D" uid="uid://d8ntymrn6v2r" path="res://Assets/UI/pub (1).png" id="38_nunn4"]
+[ext_resource type="Texture2D" uid="uid://b8s35ib37pq2l" path="res://Assets/UI/NEW_LOGO (1).png" id="38_p4vuf"]
 [ext_resource type="Texture2D" uid="uid://ciekvfg8ihmvh" path="res://Assets/UI/genres (1).png" id="39_as6ri"]
 [ext_resource type="Texture2D" uid="uid://sml78f4mmn5t" path="res://Assets/UI/size (1).png" id="40_5q1qd"]
 [ext_resource type="Texture2D" uid="uid://dh1iv2rch3fs1" path="res://Assets/UI/size (2).png" id="41_o7x1i"]
@@ -87,7 +88,10 @@
 [ext_resource type="Texture2D" uid="uid://iestlh4lhflb" path="res://Assets/UI/aud (3).png" id="52_xif8n"]
 [ext_resource type="Texture2D" uid="uid://bl60y21h5t7gv" path="res://Assets/UI/design (2).png" id="53_7reot"]
 [ext_resource type="Texture2D" uid="uid://c721npcgdwn7x" path="res://Assets/UI/cross40.png" id="53_sk8qy"]
+[ext_resource type="Texture2D" uid="uid://bbnodg1cfrm4a" path="res://Assets/UI/GEN (3).png" id="54_kg25w"]
+[ext_resource type="Texture2D" uid="uid://mwn210uibs8g" path="res://Assets/UI/GEN (1).png" id="55_ggvki"]
 [ext_resource type="Texture2D" uid="uid://cje3htsavqce4" path="res://Assets/UI/check-mark (1).png" id="55_x4cqv"]
+[ext_resource type="Texture2D" uid="uid://2wybaxv3imk4" path="res://Assets/UI/GEN (2).png" id="56_li76w"]
 [ext_resource type="Texture2D" uid="uid://di862ta2317eg" path="res://Assets/UI/cancel (1).png" id="59_b4he4"]
 [ext_resource type="Texture2D" uid="uid://oc2hwmbwos0o" path="res://Assets/UI/letter-bomb.png" id="63_nwqfh"]
 [ext_resource type="StyleBox" uid="uid://boku5rwtcucw4" path="res://Assets/UI/bankrupt.tres" id="64_ps415"]
@@ -730,7 +734,7 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 3
-text = "ALPHA - VER. 1.0.5"
+text = "ALPHA - VER. 1.1.0"
 
 [node name="M" type="Panel" parent="Info"]
 layout_mode = 1
@@ -1153,7 +1157,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("32_5h4ff")
+texture = ExtResource("32_8pq7e")
 
 [node name="Logo2" type="TextureRect" parent="Company/Control"]
 visible = false
@@ -1163,7 +1167,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("33_q7pt6")
+texture = ExtResource("33_ro7hm")
 
 [node name="Logo3" type="TextureRect" parent="Company/Control"]
 visible = false
@@ -1173,7 +1177,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("34_3kq18")
+texture = ExtResource("34_xutnv")
 
 [node name="Logo4" type="TextureRect" parent="Company/Control"]
 visible = false
@@ -1183,7 +1187,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("35_abbki")
+texture = ExtResource("35_bnuao")
 
 [node name="Logo5" type="TextureRect" parent="Company/Control"]
 visible = false
@@ -1193,7 +1197,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("36_dp71l")
+texture = ExtResource("36_s1j7j")
 
 [node name="Logo6" type="TextureRect" parent="Company/Control"]
 visible = false
@@ -1203,7 +1207,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("37_ehnxk")
+texture = ExtResource("37_ugt3o")
+
+[node name="Logo7" type="TextureRect" parent="Company/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("38_p4vuf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Company"]
 layout_mode = 1
@@ -1488,9 +1502,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -537.0
-offset_top = -518.5
-offset_right = 634.0
-offset_bottom = 518.5
+offset_top = -518.0
+offset_right = 718.0
+offset_bottom = 519.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_j6e5v")
@@ -1528,7 +1542,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 16.0
 offset_top = -26.5
-offset_right = 807.0
+offset_right = 896.0
 offset_bottom = 27.5
 grow_horizontal = 0
 grow_vertical = 2
@@ -1547,7 +1561,7 @@ theme_override_styles/normal = ExtResource("34_pxscq")
 theme_override_constants/arrow_margin = 10
 theme_override_constants/modulate_arrow = 0
 theme_override_icons/arrow = ExtResource("31_j1x01")
-item_count = 8
+item_count = 11
 popup/item_0/text = "Adventure"
 popup/item_0/icon = ExtResource("32_jikvb")
 popup/item_1/text = "FPS"
@@ -1571,6 +1585,15 @@ popup/item_6/id = 6
 popup/item_7/text = "Action"
 popup/item_7/icon = ExtResource("39_as6ri")
 popup/item_7/id = 7
+popup/item_8/text = "Gambling"
+popup/item_8/icon = ExtResource("54_kg25w")
+popup/item_8/id = 8
+popup/item_9/text = "Platformer"
+popup/item_9/icon = ExtResource("55_ggvki")
+popup/item_9/id = 9
+popup/item_10/text = "Battle Royale"
+popup/item_10/icon = ExtResource("56_li76w")
+popup/item_10/id = 10
 
 [node name="Size" type="Label" parent="Developing/Header"]
 layout_mode = 2
@@ -1594,7 +1617,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 16.0
 offset_top = -23.5
-offset_right = 807.0
+offset_right = 896.0
 offset_bottom = 30.5
 grow_horizontal = 0
 grow_vertical = 2
@@ -1645,7 +1668,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 16.0
 offset_top = -24.5
-offset_right = 807.0
+offset_right = 896.0
 offset_bottom = 29.5
 grow_horizontal = 0
 grow_vertical = 2
@@ -1699,7 +1722,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 16.0
 offset_top = -24.5
-offset_right = 807.0
+offset_right = 896.0
 offset_bottom = 29.5
 grow_horizontal = 0
 grow_vertical = 2
@@ -1750,7 +1773,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 16.0
 offset_top = -23.5
-offset_right = 807.0
+offset_right = 896.0
 offset_bottom = 30.5
 grow_horizontal = 0
 grow_vertical = 2
@@ -1801,7 +1824,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 16.0
 offset_top = -23.5
-offset_right = 807.0
+offset_right = 896.0
 offset_bottom = 30.5
 grow_horizontal = 0
 grow_vertical = 2
@@ -1852,7 +1875,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 16.0
 offset_top = -24.5
-offset_right = 807.0
+offset_right = 896.0
 offset_bottom = 29.5
 grow_horizontal = 0
 grow_vertical = 2
@@ -1896,7 +1919,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 15.0
 offset_top = -32.0
-offset_right = 1143.0
+offset_right = 896.0
 offset_bottom = 32.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -1931,9 +1954,9 @@ anchor_top = 0.562
 anchor_right = 1.0
 anchor_bottom = 0.562
 offset_left = 15.0
-offset_top = -35.968
-offset_right = 1143.0
-offset_bottom = 28.032
+offset_top = -35.852
+offset_right = 895.0
+offset_bottom = 28.148
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.583792, 0.718278, 0.834268, 1)
@@ -1967,9 +1990,9 @@ anchor_top = 0.562
 anchor_right = 1.0
 anchor_bottom = 0.562
 offset_left = 15.0
-offset_top = -35.968
-offset_right = 1143.0
-offset_bottom = 28.032
+offset_top = -35.852
+offset_right = 895.0
+offset_bottom = 28.148
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.583792, 0.718278, 0.834268, 1)
@@ -2004,7 +2027,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 15.0
 offset_top = -32.0
-offset_right = 815.0
+offset_right = 908.0
 offset_bottom = 251.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -2486,7 +2509,6 @@ theme_override_font_sizes/normal_font_size = 30
 text = "There is a $50,000 severance pay fee upon firing and a $50,000 signing bonus on hiring, equal for every tier of staff member."
 
 [node name="Offices" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -4298,6 +4320,7 @@ offset_bottom = -45.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/separation = 12
+alignment = 1
 
 [node name="Label" type="Label" parent="Stocks/VBoxContainer"]
 layout_mode = 2
@@ -4360,16 +4383,15 @@ theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = ExtResource("7_g83m7")
-text = "Buy (enter):"
+text = " Buy (press enter): "
 horizontal_alignment = 1
 
-[node name="Warn" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Warn2" type="Label" parent="Stocks/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 20
-text = "You are buying units, not
-a dollar amount!"
+text = "DOLLAR AMOUNT (NO $):"
 horizontal_alignment = 1
 
 [node name="Buying" type="LineEdit" parent="Stocks/VBoxContainer"]
@@ -4379,35 +4401,34 @@ theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = ExtResource("71_0ka8d")
 theme_override_styles/normal = ExtResource("72_tw0ff")
-placeholder_text = "12"
+placeholder_text = "150000"
 alignment = 1
 
-[node name="Label6" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Sale" type="Button" parent="Stocks/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = ExtResource("7_g83m7")
-text = "Sell (Enter):"
-horizontal_alignment = 1
+theme_override_font_sizes/font_size = 60
+theme_override_styles/disabled_mirrored = ExtResource("35_nawnk")
+theme_override_styles/disabled = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal_mirrored = ExtResource("36_1yad1")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Sell All"
 
-[node name="Warn2" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Warn3" type="Label" parent="Stocks/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 20
-text = "Still in units!"
+text = "You pay 20% Capital gains
+tax on selling stocks"
 horizontal_alignment = 1
-
-[node name="Selling" type="LineEdit" parent="Stocks/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/focus = ExtResource("71_0ka8d")
-theme_override_styles/normal = ExtResource("72_tw0ff")
-placeholder_text = "12"
-alignment = 1
 
 [node name="Publisher" type="Panel" parent="."]
 visible = false
@@ -4518,7 +4539,7 @@ anchor_bottom = 0.5
 offset_left = -526.5
 offset_top = -131.0
 offset_right = 527.5
-offset_bottom = 288.0
+offset_bottom = 285.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -4545,7 +4566,7 @@ theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "Jones Inc.: 90% quality - 90% cut, + 30% outreach"
+text = "Jones Inc.: 10% quality, 85% cut"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -4558,7 +4579,7 @@ theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "Gamebox: 85% quality -  85% cut, + 25% outreach"
+text = "Gamebox: 20% quality,  75% cut"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -4571,7 +4592,7 @@ theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "Chazzard: 75% quality - 70% cut, + 20% outreach"
+text = "Chazzard: 30% quality, 60% cut"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -4584,7 +4605,7 @@ theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "Indie Cult: 70% quality - 45% cut, + 10% outreach"
+text = "Indie Cult: 40% quality, 50% cut"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -4597,7 +4618,7 @@ theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "YouBeHArd: 60% quality - 30% cut, + 5% outreach"
+text = "YouBeHArd:  50% quality, 35% cut"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -5673,7 +5694,6 @@ autostart = true
 
 [node name="RealConv" type="Timer" parent="Timers"]
 wait_time = 40.0
-one_shot = true
 
 [node name="DevstageOne" type="Panel" parent="."]
 visible = false
@@ -7206,10 +7226,10 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
 [connection signal="pressed" from="Buttons/RealEstate" to="." method="RealEstateButton"]
-[connection signal="pressed" from="Buttons/Loans" to="." method="_on_loans_pressed"]
 [connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
-[connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
+[connection signal="pressed" from="Buttons/Loans" to="." method="_on_loans_pressed"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
 [connection signal="pressed" from="Buttons/Contracts" to="." method="_on_contracts_pressed"]
 [connection signal="pressed" from="Buttons/Research" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Research" to="Research" method="_on_research_pressed"]
@@ -7218,10 +7238,10 @@ vertical_alignment = 1
 [connection signal="pressed" from="Buttons/Mini/Time/Pause" to="Buttons/Mini/Time" method="_on_pause_pressed"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Mini/Time/Speed" to="Buttons/Mini/Time" method="_on_speed_pressed"]
-[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="SAVEGAME"]
 [connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="soundfx"]
-[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="LOADGAME"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Save" to="." method="SAVEGAME"]
 [connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="soundfx"]
+[connection signal="pressed" from="Buttons/Mini/Saves/Load" to="." method="LOADGAME"]
 [connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
 [connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]
@@ -7269,8 +7289,10 @@ vertical_alignment = 1
 [connection signal="pressed" from="TheBank/Back2" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="TheBank/TakeL2" to="Stocks" method="_on_take_l_2_pressed"]
 [connection signal="pressed" from="Stocks/Back" to="." method="_on_back_p_pressed"]
+[connection signal="text_submitted" from="Stocks/VBoxContainer/Buying" to="." method="_on_buying_text_submitted"]
 [connection signal="text_submitted" from="Stocks/VBoxContainer/Buying" to="Stocks" method="_on_buying_text_submitted"]
-[connection signal="text_submitted" from="Stocks/VBoxContainer/Selling" to="Stocks" method="_on_selling_text_submitted"]
+[connection signal="pressed" from="Stocks/VBoxContainer/Sale" to="." method="_on_selling_text_submitted"]
+[connection signal="pressed" from="Stocks/VBoxContainer/Sale" to="Stocks" method="_on_sale_pressed"]
 [connection signal="item_selected" from="Publisher/PublisherList" to="." method="_on_publisher_list_item_selected"]
 [connection signal="pressed" from="Publisher/Back2" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Research/Back2" to="." method="_on_back_p_pressed"]
@@ -7282,8 +7304,8 @@ vertical_alignment = 1
 [connection signal="pressed" from="Market/Tasks/S" to="." method="_on_s_pressed"]
 [connection signal="text_submitted" from="Market/BUDGET" to="." method="_on_budget_text_submitted"]
 [connection signal="pressed" from="Market/Back2" to="." method="_on_back_p_pressed"]
-[connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
 [connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
+[connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConA" to="." method="_on_con_a_pressed"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConD" to="." method="_on_con_d_pressed"]
 [connection signal="pressed" from="Convention/CloseConv" to="." method="_on_close_conv_pressed"]
