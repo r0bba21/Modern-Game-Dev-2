@@ -102,9 +102,15 @@ func autosave_change(index:int):
 			Global.autosave = 3 # BOTH
 
 # SAVE AND BACK:
+
+@onready var options: Control = $"."
+
 func exit():
 	soundfx()
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	if Global.in_pause == false:
+		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	if Global.in_pause == true:
+		options.hide()
 
 func save_settings():
 	var file = FileAccess.open("res://settings.dat", FileAccess.WRITE)

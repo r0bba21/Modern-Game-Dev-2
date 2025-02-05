@@ -56,8 +56,8 @@ func load_settings():
 	Global.musicvol = file.get_var(Global.musicvol)
 	Global.resindex = file.get_var(Global.resindex)
 	Global.fsindex = file.get_var(Global.fsindex)
-	Global.ChosenSFX = file.get_var(Global.chosen_sfx)
-	Global.autosaving = file.get_var(Global.autosave)
+	Global.chosen_sfx = file.get_var(Global.chosen_sfx)
+	Global.autosave = file.get_var(Global.autosave)
 	file.close()
 	if Global.mastervol != 1:
 		mastervolF()

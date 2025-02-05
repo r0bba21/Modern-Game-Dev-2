@@ -34,8 +34,14 @@ func soundfx():
 		5:
 			retro.play()
 
+@onready var customise: Node2D = $"../.."
+
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/office.tscn")
+	if Global.loading_custom == false:
+		get_tree().change_scene_to_file("res://Scenes/office.tscn")
+	else:
+		customise.hide()
+		Global.loading_custom = false
 
 @onready var logo: TextureRect = $HBoxContainer/Logo
 @onready var logo_2: TextureRect = $HBoxContainer/Logo2
@@ -54,3 +60,16 @@ func _on_color_picker_button_color_changed(color: Color) -> void:
 	logo_6.self_modulate = color
 	logo_7.self_modulate = color
 	Global.LogoCOL = color
+
+@onready var comp: LineEdit = $VBoxContainer/Label/Comp
+@onready var founder: LineEdit = $VBoxContainer/Label2/Founder
+@onready var logoP: OptionButton = $VBoxContainer/Label4/Logo
+@onready var color_picker_button: ColorPickerButton = $ColorPickerButton
+
+func _ready() -> void:
+	if Global.loading_custom == true:
+		color_picker_button.color = Global.LogoCOL
+		founder.text = Global.FoundName
+		comp.text = Global.CompName
+		logoP.selected = Global.LogoID
+		_on_color_picker_button_color_changed(Global.LogoCOL)

@@ -6,15 +6,21 @@ func _ready() -> void:
 	if Global.loading_game == true:
 		LOADGAME()
 
+@onready var pause: Control = $Pause
+
 func _input(event: InputEvent) -> void: # KEYBOARD SHORTCUTS
 	if event.is_action_pressed("Return to Main Menu"):
-		if Global.autosave < 2:
-			soundfx()
-			get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 		if Global.autosave > 1:
-			soundfx()
 			SAVEGAME()
-			autosave_wait.start()
+			soundfx()
+			pause.show()
+			Engine.time_scale = 0
+			Global.in_pause = true
+		else:
+			soundfx()
+			pause.show()
+			Engine.time_scale = 0
+			Global.in_pause = true
 	if event.is_action_pressed("Develop Menu Open") and Global.gameinprog == false:
 		_on_develop_pressed()
 	if event.is_action_pressed("Savegame"):
@@ -47,9 +53,9 @@ var fans:int = 0
 var months:int = 0
 var years:int = 0
 @export var money:int = 65000
-var productivity:float
+@export var productivity:float
 var currentS: int = 0
-@export var highS: int = 0
+var highS: int = 0
 var lowS: int = 0
 var medS:int = 0
 var expenses:int
@@ -85,7 +91,7 @@ func REFRESH_ALL():
 
 @onready var develop: Button = $Buttons/Develop
 @onready var during: Panel = $During
-@onready var saves: VBoxContainer = $Buttons/Mini/Saves
+@onready var saves: Button = $Buttons/Save
 @onready var contracts: Button = $Buttons/Contracts
 @onready var marketing: Button = $During/Marketing
 @onready var research: Button = $Buttons/Research
@@ -418,7 +424,7 @@ func PUBLISH():
 	quality = (randf_range(0.6, 1.1) * stagesFAC) * FAC * 3.75
 	if quality > 100:
 		quality = 100
-	sales = ((universe * marketshare) * (((popularity * 0.3) + (quality * 0.65)) / 100)) * Global.salesM
+	sales = ((universe * marketshare) * (((popularity * 0.35) + (quality * 0.65)) / 100)) * Global.salesM
 	Global.CopiesSold += sales
 	suggest()
 	if quality < contingency and publisher == true:
@@ -539,21 +545,21 @@ func _on_publisher_list_item_selected(index:int) -> void:
 			publisher = false
 			contingency = 0
 		1:
-			pubCut = 0.15 + pubdiscount
+			pubCut = 0.35 + pubdiscount
 			publisher = true
 			contingency = 10
 		2:
-			pubCut = 0.25 + pubdiscount
+			pubCut = 0.5 + pubdiscount
 			publisher = true
 			contingency = 20
 		3:
-			pubCut = 0.4 + pubdiscount
+			pubCut = 0.55 + pubdiscount
 			publisher = true
 			contingency = 30
 		4:
-			pubCut = 0.5 + pubdiscount
+			pubCut = 0.6 + pubdiscount
 			publisher = true
-			contingency = 40
+			contingency = 35
 		5:
 			pubCut = 0.65 + pubdiscount
 			publisher = true
@@ -656,60 +662,77 @@ func refresh_staff_ui():
 
 func hireLOW():
 	soundfx()
-	if money > 50000 and currentS < Global.maxdesks:
-		payroll += 12500
-		lowS += 1
-		money -= 50000
-		refresh_productivity()
-		refresh_staff_ui()
+	operation = 1
+	tier = 1
+	staffControl()
 
 func hireMED():
 	soundfx()
-	if money > 50000 and currentS < Global.maxdesks:
-		payroll += 16000
-		medS += 1
-		money -= 50000
-		refresh_productivity()
-		refresh_staff_ui()
+	operation = 1
+	tier = 2
+	staffControl()
 
 func hireHIGH():
 	soundfx()
-	if money > 50000 and currentS < Global.maxdesks:
-		payroll += 22500
-		highS += 1
-		money -= 50000
-		refresh_productivity()
-		refresh_staff_ui()
+	operation = 1
+	tier = 3
+	staffControl()
 
 func fireLOW():
 	soundfx()
-	if money > 50000 and lowS > 0:
-		payroll -= 12500
-		lowS -= 1
-		money -= 50000
-		refresh_productivity()
-		refresh_staff_ui()
+	operation = 2
+	tier = 1
+	staffControl()
 
 func fireMED():
 	soundfx()
-	if money > 50000 and medS > 0:
-		payroll -= 16000
-		medS -= 1
-		money -= 50000
-		refresh_productivity()
-		refresh_staff_ui()
+	operation = 2
+	tier = 2
+	staffControl()
 
 func fireHIGH():
 	soundfx()
-	if money > 50000 and highS > 0:
-		payroll -= 22500
-		highS -= 1
-		money -= 50000
-		refresh_productivity()
-		refresh_staff_ui()
+	operation = 2
+	tier = 3
+	staffControl()
+
+var operation:int # 1 IS HIRE AND 2 IS FIRE
+var tier:int
+
+func staffControl():
+	var sal = 5000 + (5000 * tier)
+	match operation:
+		1:
+			if money > 25000 and currentS < Global.maxdesks:
+				payroll += sal
+				money -= 25000
+				match tier:
+					1:
+						lowS += 1
+					2:
+						medS += 1
+					3:
+						highS += 1
+		2:
+			if money > 40000 and currentS > 0:
+				payroll -= sal
+				money -= 40000
+				match tier:
+					1:
+						lowS -=1
+					2:
+						medS -= 1
+					3:
+						highS -= 1
+	refresh_productivity()
+	refresh_staff_ui()
 
 # THE BANK:
-@onready var the_bank: Panel = $TheBank
+func _on_buying_text_submitted() -> void:
+	REFRESH_ALL()
+
+func _on_selling_text_submitted() -> void:
+	REFRESH_ALL()
 
 var interestBILL:int = 0
 var amount_taken:int = 0
@@ -717,6 +740,7 @@ var in_loan = false
 var loan_id:int = 0
 var MonthLoan:int = 0
 
+@onready var the_bank: Panel = $TheBank
 @onready var in_loan_menu: Panel = $TheBank/InLoanMenu
 @onready var out_loan: Control = $TheBank/OutLoan
 @onready var loanTIMER: Timer = $Timers/LOAN
@@ -841,63 +865,64 @@ func refresh_officeUI():
 
 func _on_starter_pressed() -> void:
 	soundfx()
-	if money > (150000 + (5000 * currentS)) and currentS < 7:
-		money -= (150000 + (5000 * currentS))
-		Global.maxdesks = 6
-		Global.office_id = 0
-		rent = 1500
-		refresh_info_ui()
-		refresh_officeUI()
+	tempOffID = 0
+	move()
 
 func _on_amareur_pressed() -> void:
 	soundfx()
-	if money > (150000 + (5000 * currentS)) and currentS < 11:
-		money -= (150000 + (5000 * currentS))
-		Global.maxdesks = 10
-		Global.office_id = 1
-		rent = 7500
-		refresh_info_ui()
-		refresh_officeUI()
+	tempOffID = 1
+	move()
 
 func _on_small_pressed() -> void:
 	soundfx()
-	if money > (150000 + (5000 * currentS)) and currentS < 16:
-		money -= (150000 + (5000 * currentS))
-		Global.maxdesks = 15
-		Global.office_id = 2
-		rent = 25000
-		refresh_info_ui()
-		refresh_officeUI()
+	tempOffID = 2
+	move()
 
 func _on_medium_pressed() -> void:
 	soundfx()
-	if money > (150000 + (5000 * currentS)) and currentS < 26:
-		money -= (150000 + (5000 * currentS))
-		Global.maxdesks = 25
-		Global.office_id = 3
-		rent = 75000
-		refresh_info_ui()
-		refresh_officeUI()
+	tempOffID = 3
+	move()
 
 func _on_large_pressed() -> void:
 	soundfx()
-	if money > (150000 + (5000 * currentS)) and currentS < 41:
-		money -= (150000 + (5000 * currentS))
-		Global.maxdesks = 40
-		Global.office_id = 4
-		rent = 150000
-		refresh_info_ui()
-		refresh_officeUI()
+	tempOffID = 4
+	move()
 
 func _on_skyscraper_pressed() -> void:
 	soundfx()
-	if money > (150000 + (5000 * currentS)) and currentS < 61:
-		money -= (150000 + (5000 * currentS))
-		Global.maxdesks = 60
-		Global.office_id = 5
-		rent = 300000
-		refresh_info_ui()
-		refresh_officeUI()
+	tempOffID = 5
+	move()
+
+var limit:int = 5
+var tempOffID:int = 0
+var propRENT:int = 1500
+
+func move():
+	match tempOffID:
+		0:
+			limit = 5
+			propRENT = 1500
+		1:
+			limit = 9
+			propRENT = 10000
+		2:
+			limit = 14
+			propRENT = 30000
+		3:
+			limit = 24
+			propRENT = 75000
+		4:
+			limit = 39
+			propRENT = 125000
+		5:
+			limit = 59
+			propRENT = 200000
+	if money > 50000 + (currentS * 5000) and currentS <= limit:
+		money -= 50000 + (currentS * 5000)
+		Global.maxdesks = limit
+		Global.office_id = tempOffID
+		rent = propRENT
+		REFRESH_ALL()
 
 func RealEstateButton():
 	refresh_officeUI()
@@ -919,9 +944,15 @@ func exit_warning():
 	bankruptcy_warning.hide()
 	REFRESH_ALL()
 
+@onready var bankrupt: Control = $Bankrupt
+
 func BANKRUPT():
 	soundfx()
-	get_tree().change_scene_to_file("res://Scenes/bankrupt.tscn")
+	Global.in_contract = false
+	Global.in_research = false
+	Global.gameinprog = false
+	Engine.time_scale = 0
+	bankrupt.show()
 
 # CONTRACT WORK:
 @onready var contractsPanel: Panel = $Contracts
@@ -1102,6 +1133,8 @@ func LOADGAME():
 		loanTIMER.start()
 	if moneyRem != 0:
 		money += moneyRem - expensesRem
+		var EXPENSESmod:float = 2 - Global.expM
+		expenses = int((payroll + rent + UpgradedRent) * EXPENSESmod)
 		months += int(expensesRem / expenses)
 	REFRESH_ALL()
 	print("loaded game")
@@ -1113,12 +1146,26 @@ func _on_autosave_wait_timeout() -> void:
 	soundfx()
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
-# DESIGN STAGE:
+# DEVELOPMENT STAGES (FEATURES):
 @onready var _2dDES: VBoxContainer = $"DevstageOne/HBoxContainer/2D"
 @onready var _3dDES: VBoxContainer = $"DevstageOne/HBoxContainer/3D"
 @onready var hybridDES: VBoxContainer = $DevstageOne/HBoxContainer/Hybrid
 
-func refreshDstage():
+var dphasemod:float # DESIGN TOTAL
+var dstageog:float # DESIGN TOTAL - ART STYLE
+var amtcheckedtwoD:int = 0 # DESIGN FEATURES
+var amtcheckedthreeD:int = 0 # DESIGN FEATURES
+var amtcheckedHYBRID:int = 0 # DESIGN FEATURES
+
+var gstagemod:float # GP TOTAL
+var amtcheckedGSTAGE:int = 0 # GP FEATURES
+var gstageog:float # GP TOTAL - SIZE
+
+var pstagemod:float # POL TOTAL
+var amtcheckedPOLISH:int = 0 # POL FEATURES
+var pstageog:float # POL TOTAL - SIZE
+
+func refreshDstage(): # DESIGN
 	_2dDES.hide()
 	_3dDES.hide()
 	hybridDES.hide()
@@ -1130,11 +1177,7 @@ func refreshDstage():
 		3:
 			hybridDES.show()
 
-var dphasemod:float
-var amtcheckedtwoD:int = 0
-var dstageog:float
-
-func twoDchecker(toggled_on: bool) -> void:
+func twoDchecker(toggled_on: bool) -> void: # DESIGN 2D
 	soundfx()
 	if toggled_on == true:
 		amtcheckedtwoD += 1
@@ -1142,7 +1185,7 @@ func twoDchecker(toggled_on: bool) -> void:
 		amtcheckedtwoD -= 1
 	refresh_TWOdphase()
 
-func refresh_TWOdphase():
+func refresh_TWOdphase(): # DESIGN 2D
 	match amtcheckedtwoD:
 		1:
 			dphasemod = 0.15
@@ -1158,9 +1201,7 @@ func refresh_TWOdphase():
 			dphasemod = 1.4
 	dstageog = dphasemod
 
-var amtcheckedthreeD:int = 0
-
-func threeDchecker(toggled_on: bool) -> void:
+func threeDchecker(toggled_on: bool) -> void: # DESIGN 3D
 	soundfx()
 	if toggled_on == true:
 		amtcheckedthreeD += 1
@@ -1168,7 +1209,7 @@ func threeDchecker(toggled_on: bool) -> void:
 		amtcheckedthreeD -= 1
 	refresh_THREEdphase()
 
-func refresh_THREEdphase():
+func refresh_THREEdphase(): # DESIGN 3D
 	match amtcheckedthreeD:
 		1:
 			dphasemod = 0.15
@@ -1185,9 +1226,7 @@ func refresh_THREEdphase():
 	dstageog = dphasemod
 	dphasemod += 1
 
-var amtcheckedHYBRID:int = 0
-
-func HYchecker(toggled_on: bool) -> void:
+func HYchecker(toggled_on: bool) -> void: # DESIGN HYBRID
 	soundfx()
 	if toggled_on == true:
 		amtcheckedHYBRID += 1
@@ -1195,7 +1234,7 @@ func HYchecker(toggled_on: bool) -> void:
 		amtcheckedHYBRID -= 1
 	refresh_HYdphase()
 
-func refresh_HYdphase():
+func refresh_HYdphase(): # DESIGN HYBRID
 	match amtcheckedHYBRID:
 		1:
 			dphasemod = 0.15
@@ -1212,12 +1251,7 @@ func refresh_HYdphase():
 	dstageog = dphasemod
 	dphasemod += 2
 
-# GAMEPLAY STAGE:
-var gstagemod:float
-var amtcheckedGSTAGE:int = 0
-var gstageog:float
-
-func GPchecker(toggled_on: bool) -> void:
+func GPchecker(toggled_on: bool) -> void: # GAMEPLAY
 	
 	if toggled_on == true:
 		amtcheckedGSTAGE += 1
@@ -1225,7 +1259,7 @@ func GPchecker(toggled_on: bool) -> void:
 		amtcheckedGSTAGE -= 1
 	refresh_GPphase()
 
-func refresh_GPphase():
+func refresh_GPphase(): # GAMEPLAY
 	soundfx()
 	match amtcheckedGSTAGE:
 		0:
@@ -1253,19 +1287,14 @@ func refresh_GPphase():
 			gstageog = 1.4
 	gstagemod += (SIZE - 1)
 
-# POLISH STAGE:
-var pstagemod:float
-var amtcheckedPOLISH:int = 0
-var pstageog:float
-
-func POLchecker(toggled_on: bool) -> void:
+func POLchecker(toggled_on: bool) -> void: # POLISH
 	if toggled_on == true:
 		amtcheckedPOLISH += 1
 	if toggled_on != true:
 		amtcheckedPOLISH -= 1
 	refresh_POLphase()
 
-func refresh_POLphase():
+func refresh_POLphase(): # POLISH
 	soundfx()
 	match amtcheckedPOLISH:
 		0:
@@ -1290,7 +1319,7 @@ func refresh_POLphase():
 			pstageog = 1.4
 	pstagemod += (SIZE - 1)
 
-# DEV CYCLE:
+# DEV CYCLE (TIME MANAGEMENT):
 @onready var dev_prog: Timer = $Timers/DevProg
 @onready var devstage_two: Panel = $DevstageTwo
 @onready var devstage_three: Panel = $DevstageThree
@@ -1381,13 +1410,13 @@ func _process(delta: float) -> void:
 		contracts.hide()
 
 # OFFICE UPGRADES:
-@onready var label_5: Label = $Upgrades/VBoxContainer/Label5
-@onready var label: Label = $Upgrades/VBoxContainer/Label
-@onready var label_2: Label = $Upgrades/VBoxContainer/Label2
-@onready var label_3: Label = $Upgrades/VBoxContainer/Label3
-@onready var label_4: Label = $Upgrades/VBoxContainer/Label4
-@onready var label_6: Label = $Upgrades/VBoxContainer/Label6
-@onready var label_7: Label = $Upgrades/VBoxContainer/Label7
+@onready var Up1: Label = $Upgrades/VBoxContainer/Label5
+@onready var Up2: Label = $Upgrades/VBoxContainer/Label
+@onready var Up3: Label = $Upgrades/VBoxContainer/Label2
+@onready var Up4: Label = $Upgrades/VBoxContainer/Label3
+@onready var Up5: Label = $Upgrades/VBoxContainer/Label4
+@onready var Up6: Label = $Upgrades/VBoxContainer/Label6
+@onready var Up7: Label = $Upgrades/VBoxContainer/Label7
 
 var UpgradedRent:int = 0
 
@@ -1397,60 +1426,66 @@ func _on_upgrades_pressed() -> void:
 	officesPanel.hide()
 
 func _on_wifi_pressed() -> void:
-	if money > 100000:
-		soundfx()
-		money -= 100000
-		UpgradedRent += 27500
-		prodBoost += 0.25
-		label_5.hide()
+	propUp = 1
+	upgrade()
 
 func _on_ac_pressed() -> void:
-	if money > 150000:
-		soundfx()
-		money -= 150000
-		UpgradedRent += 27500
-		prodBoost += 0.25
-		label.hide()
+	propUp = 2
+	upgrade()
 
 func _on_books_pressed() -> void:
-	if money > 150000:
-		soundfx()
-		money -= 150000
-		UpgradedRent += 27500
-		prodBoost += 0.25
-		label_2.hide()
+	propUp = 3
+	upgrade()
 
 func _on_cafeteria_pressed() -> void:
-	if money > 500000:
-		soundfx()
-		money -= 500000
-		UpgradedRent += 27500
-		prodBoost += 0.25
-		label_3.hide()
+	propUp = 4
+	upgrade()
 
 func _on_windows_pressed() -> void:
-	if money > 500000:
-		soundfx()
-		money -= 500000
-		UpgradedRent += 27500
-		prodBoost += 0.25
-		label_4.hide()
+	propUp = 5
+	upgrade()
 
 func _on_servers_pressed() -> void:
-	if money > 750000:
-		soundfx()
-		money -= 750000
-		UpgradedRent += 27500
-		prodBoost += 0.25
-		label_6.hide()
+	propUp = 6
+	upgrade()
 
 func _on_cars_pressed() -> void:
-	if money > 750000:
-		soundfx()
-		money -= 750000
-		UpgradedRent += 27500
+	propUp = 7
+	upgrade()
+
+var propUp:int = 1
+
+func upgrade(): # UPGRADES MANAGER
+	soundfx()
+	var price:int
+	match propUp:
+		1, 2:
+			price = 50000
+		3, 4:
+			price = 125000
+		5, 6:
+			price = 300000
+		7:
+			price = 500000
+	if money > price:
+		money -= price
 		prodBoost += 0.25
-		label_7.hide()
+		UpgradedRent += 25000
+		match propUp:
+			1:
+				Up1.hide()
+			2:
+				Up2.hide()
+			3:
+				Up3.hide()
+			4:
+				Up4.hide()
+			5:
+				Up5.hide()
+			6:
+				Up6.hide()
+			7:
+				Up7.hide()
 
 # CONVENTION:
 @onready var invitation: Panel = $Invitation
@@ -1481,6 +1516,7 @@ func _on_con_a_pressed() -> void:
 
 func _on_real_conv_timeout() -> void:
 	var gain:int = randi_range(50000,100000)
+	fans += gain
 	result.text = "You blew up at the convention and gained " + str(gain) + " fans! everyone loved your company's showcase! We hope you come again next year!"
 	convention.show()
 
@@ -1489,10 +1525,3 @@ func _on_close_conv_pressed() -> void:
 	convention_inv.start()
 	real_conv.stop()
 	soundfx()
-
-# STOCKS:
-func _on_buying_text_submitted() -> void:
-	REFRESH_ALL()
-
-func _on_selling_text_submitted() -> void:
-	REFRESH_ALL()

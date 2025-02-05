@@ -105,8 +105,11 @@ func stock_price():
 		suffix = ""
 	has_m.text = "$" + str(formatted_valueS) + suffixS + perc + str(changeExport) + "%"
 
+@onready var buying: LineEdit = $VBoxContainer/Buying
+
 func _on_buying_text_submitted(new_text: String) -> void:
 	var considered = int(new_text)
+	buying.clear()
 	Global.charge += considered
 	initial += considered
 	print(str(initial) + "initial")
@@ -139,7 +142,6 @@ func soundfx():
 
 func _on_take_l_2_pressed() -> void:
 	stocks.show()
-	the_bank.hide()
 	soundfx()
 
 func _on_sale_pressed() -> void:

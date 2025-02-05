@@ -51,7 +51,11 @@ var FoundName:String = "Poo Jones"
 var CopiesSold:int = 0
 var LogoID:int = 0
 var LogoCOL:Color = "ffffff"
-var officeCOL:Color = "00ffff"
+var officeCOL:Color = "ffffff"
 
 # STOCKS:
 var Sunits:float = 0
+
+# PAUSE MENU
+var in_pause = false
+var loading_custom = false
