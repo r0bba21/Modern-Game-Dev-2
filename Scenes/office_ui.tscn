@@ -1,4 +1,4 @@
-[gd_scene load_steps=165 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=168 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -102,6 +102,8 @@
 [ext_resource type="StyleBox" uid="uid://dnpyxgjomx2rt" path="res://Assets/UI/info_button.tres" id="72_tw0ff"]
 [ext_resource type="Script" path="res://Scripts/color_picker_button.gd" id="76_5ednd"]
 [ext_resource type="StyleBox" uid="uid://cyku43df0ed4f" path="res://Assets/UI/cont.tres" id="81_jo1jd"]
+[ext_resource type="Script" path="res://Scripts/portfolio.gd" id="101_34v54"]
+[ext_resource type="StyleBox" uid="uid://cjdmlltpvd6c4" path="res://Assets/UI/portfolio.tres" id="102_hr1y0"]
 [ext_resource type="PackedScene" uid="uid://csg1emxhlorwf" path="res://Scenes/pause.tscn" id="105_yxcbe"]
 [ext_resource type="PackedScene" uid="uid://dya08vvxsxkae" path="res://Scenes/bankrupt.tscn" id="106_e8urr"]
 
@@ -632,6 +634,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fljxy"]
+bg_color = Color(1, 1, 1, 0.588235)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6yiup"]
 bg_color = Color(0.221618, 0.478657, 0.242255, 0.607843)
@@ -5658,6 +5667,195 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_vrcrd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vrcrd")
 text = "Continue"
 
+[node name="Portfolio" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -347.0
+offset_top = -292.0
+offset_right = 727.0
+offset_bottom = 287.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_igk02")
+
+[node name="Back3" type="Button" parent="Portfolio"]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 92.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.709804, 0.913725, 0.72549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("59_b4he4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
+icon_alignment = 1
+
+[node name="Title4" type="Label" parent="Portfolio"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -207.0
+offset_right = 207.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Portfolio:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Portfolio"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 194.0
+offset_right = -9.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Table" type="HBoxContainer" parent="Portfolio/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+alignment = 1
+script = ExtResource("101_34v54")
+
+[node name="NAME" type="VBoxContainer" parent="Portfolio/ScrollContainer/Table"]
+layout_mode = 2
+
+[node name="TITLEname" type="Label" parent="Portfolio/ScrollContainer/Table/NAME"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_fljxy")
+text = " Name: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AverageN" type="Label" parent="Portfolio/ScrollContainer/Table/NAME"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("102_hr1y0")
+text = " Average: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UNITS" type="VBoxContainer" parent="Portfolio/ScrollContainer/Table"]
+layout_mode = 2
+
+[node name="TITLEunits" type="Label" parent="Portfolio/ScrollContainer/Table/UNITS"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_fljxy")
+text = " Sales: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AverageU" type="Label" parent="Portfolio/ScrollContainer/Table/UNITS"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("102_hr1y0")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QUALITY" type="VBoxContainer" parent="Portfolio/ScrollContainer/Table"]
+layout_mode = 2
+
+[node name="TITLEqual" type="Label" parent="Portfolio/ScrollContainer/Table/QUALITY"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_fljxy")
+text = " Quality: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AverageQ" type="Label" parent="Portfolio/ScrollContainer/Table/QUALITY"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("102_hr1y0")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="REVENUE" type="VBoxContainer" parent="Portfolio/ScrollContainer/Table"]
+layout_mode = 2
+
+[node name="TITLErev" type="Label" parent="Portfolio/ScrollContainer/Table/REVENUE"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_fljxy")
+text = " Gross: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AverageR" type="Label" parent="Portfolio/ScrollContainer/Table/REVENUE"]
+layout_mode = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("102_hr1y0")
+text = "$0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Timers" type="Node" parent="."]
 
 [node name="Month" type="Timer" parent="Timers"]
@@ -7228,19 +7426,19 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 
-[connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Loans" to="." method="_on_loans_pressed"]
+[connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
 [connection signal="pressed" from="Buttons/RealEstate" to="." method="RealEstateButton"]
 [connection signal="pressed" from="Buttons/Stocks" to="Stocks" method="_on_take_l_2_pressed"]
-[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
+[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Contracts" to="." method="_on_contracts_pressed"]
 [connection signal="pressed" from="Buttons/Research" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Research" to="Research" method="_on_research_pressed"]
 [connection signal="pressed" from="Buttons/Develop" to="." method="_on_develop_pressed"]
-[connection signal="pressed" from="Buttons/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Save" to="." method="SAVEGAME"]
+[connection signal="pressed" from="Buttons/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Pause" to="." method="soundfx"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Pause" to="Company/VBoxContainer/HBoxContainer" method="_on_pause_pressed"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Speed" to="." method="soundfx"]
@@ -7309,11 +7507,12 @@ anchor_bottom = 0.5
 [connection signal="pressed" from="Market/Tasks/S" to="." method="_on_s_pressed"]
 [connection signal="text_submitted" from="Market/BUDGET" to="." method="_on_budget_text_submitted"]
 [connection signal="pressed" from="Market/Back2" to="." method="_on_back_p_pressed"]
-[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
+[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConA" to="." method="_on_con_a_pressed"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConD" to="." method="_on_con_d_pressed"]
 [connection signal="pressed" from="Convention/CloseConv" to="." method="_on_close_conv_pressed"]
+[connection signal="pressed" from="Portfolio/Back3" to="." method="_on_back_p_pressed"]
 [connection signal="timeout" from="Timers/Month" to="." method="newmonth"]
 [connection signal="timeout" from="Timers/Month" to="Stocks" method="_on_month_timeout"]
 [connection signal="timeout" from="Timers/MonthProg" to="." method="monthprog"]

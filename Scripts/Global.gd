@@ -59,3 +59,9 @@ var Sunits:float = 0
 # PAUSE MENU
 var in_pause = false
 var loading_custom = false
+
+# PORTFOLIO:
+var LatestName:String = "sex"
+var LatestUnits:int = 12
+var LatestQual:float = 24
+var LatestRev:int = 36
