@@ -37,6 +37,3 @@ func _ready() -> void:
 		6:
 			logo_7.show()
 			logo_7.self_modulate = Global.LogoCOL
-
-func _process(delta: float) -> void:
-	sold.text = "Copies Sold: " + str(Global.CopiesSold)

@@ -62,7 +62,7 @@ func _on_begin_pressed() -> void:
 		var productivity = (Global.PROD_research / 1.75)
 		if productivity < 1:
 			productivity = 1
-		research.wait_time = float((ETA / 100) / productivity)
+		research.wait_time = float((ETA / 4) / productivity)
 		research_prog = 0
 		research.start()
 		Global.research_tokens -= 1
@@ -73,7 +73,7 @@ func _on_begin_pressed() -> void:
 var research_prog:int = 0
 
 func _on_research_timeout() -> void:
-	research_prog += 1
+	research_prog += 25
 	refresh_during()
 	if research_prog == 100:
 		research.stop()

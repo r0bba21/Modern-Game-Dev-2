@@ -413,6 +413,7 @@ var marketmonths:int
 var pubMOD:float
 
 func PUBLISH():
+	Global.LatestName = nameG
 	universe = 1000000
 	if publisher == true:
 		popularity = 100
@@ -424,8 +425,9 @@ func PUBLISH():
 	quality = (randf_range(0.6, 1.1) * stagesFAC) * FAC * 3.75
 	if quality > 100:
 		quality = 100
+	Global.LatestQual = quality
 	sales = ((universe * marketshare) * (((popularity * 0.35) + (quality * 0.65)) / 100)) * Global.salesM
-	Global.CopiesSold += sales
+	Global.LatestUnits = sales
 	suggest()
 	if quality < contingency and publisher == true:
 		print("contingency in place")
@@ -434,6 +436,7 @@ func PUBLISH():
 		pubMOD = pubCut
 		print("contingency avoided")
 	revenue = (sales * suggestedP) * pubMOD
+	Global.LatestRev = revenue
 	var newfans = (sales * 0.15 * pubCut) * (quality / 100)
 	var oldfans = (fans / 2) * (quality / 100)
 	fans = int((oldfans + newfans) * Global.fansM)
@@ -568,18 +571,29 @@ func _on_publisher_list_item_selected(index:int) -> void:
 @onready var officesPanel: Panel = $Offices
 @onready var upgrades: Panel = $Upgrades
 @onready var stocks: Panel = $Stocks
+@onready var portfolio: Panel = $Portfolio
+@onready var researchP: Panel = $Research
+@onready var stocksP: Panel = $Stocks
+@onready var gsx_400: Panel = $GSX400
+@onready var gazdak: Panel = $Gazdak
+@onready var ag_nstock: Panel = $AGNstock
 
 func _on_back_p_pressed() -> void:
 	soundfx()
+	portfolio.hide()
+	researchP.hide()
 	publishdeal.hide()
 	upgrades.hide()
 	marketP.hide()
+	ag_nstock.hide()
+	gsx_400.hide()
+	stocksP.hide()
+	gazdak.hide()
 	staff.hide()
 	the_bank.hide()
 	officesPanel.hide()
 	contractsPanel.hide()
 	developing.hide()
-	research.hide()
 	stocks.hide()
 	REFRESH_ALL()
 
@@ -1058,7 +1072,18 @@ func _on_contract_time_timeout() -> void:
 
 func SAVEGAME():
 	print("saving")
-	var file = FileAccess.open("res://savegame.dat", FileAccess.WRITE)
+	var file
+	match Global.slot:
+		1:
+			file = FileAccess.open("res://savegame1.dat", FileAccess.WRITE)
+		2:
+			file = FileAccess.open("res://savegame2.dat", FileAccess.WRITE)
+		3:
+			file = FileAccess.open("res://savegame3.dat", FileAccess.WRITE)
+		4:
+			file = FileAccess.open("res://savegame4.dat", FileAccess.WRITE)
+		5:
+			file = FileAccess.open("res://savegame5.dat", FileAccess.WRITE)
 	file.store_var(money)
 	file.store_var(months)
 	file.store_var(years)
@@ -1091,11 +1116,22 @@ func SAVEGAME():
 	file.store_var(Global.CopiesSold)
 	file.store_var(Global.Sunits)
 	file.close()
-	print("game saved")
+	print("saved file: " + str(Global.slot))
 
 func LOADGAME():
 	print("loading")
-	var file = FileAccess.open("res://savegame.dat", FileAccess.READ)
+	var file
+	match Global.slot:
+		1:
+			file = FileAccess.open("res://savegame1.dat", FileAccess.READ)
+		2:
+			file = FileAccess.open("res://savegame2.dat", FileAccess.READ)
+		3:
+			file = FileAccess.open("res://savegame3.dat", FileAccess.READ)
+		4:
+			file = FileAccess.open("res://savegame4.dat", FileAccess.READ)
+		5:
+			file = FileAccess.open("res://savegame5.dat", FileAccess.READ)
 	money = file.get_var(money)
 	months = file.get_var(months)
 	years = file.get_var(years)
@@ -1137,7 +1173,7 @@ func LOADGAME():
 		expenses = int((payroll + rent + UpgradedRent) * EXPENSESmod)
 		months += int(expensesRem / expenses)
 	REFRESH_ALL()
-	print("loaded game")
+	print("loaded save file: " + str(Global.slot))
 
 # AUTOSAVE ON RETURN TO MAIN MENU:
 @onready var autosave_wait: Timer = $Timers/AutosaveWait
@@ -1525,3 +1561,24 @@ func _on_close_conv_pressed() -> void:
 	convention_inv.start()
 	real_conv.stop()
 	soundfx()
+
+# STOCK MARKET:
+
+func _on_a_pressed() -> void:
+	soundfx()
+	ag_nstock.show()
+	stocksP.hide()
+
+func _on_g_pressed() -> void:
+	soundfx()
+	gazdak.show()
+	stocksP.hide()
+
+func _on_gsx_pressed() -> void:
+	soundfx()
+	gsx_400.show()
+	stocksP.hide()
+
+func _on_stocks_pressed() -> void:
+	soundfx()
+	stocksP.show()

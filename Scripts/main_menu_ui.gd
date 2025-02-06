@@ -1,13 +1,32 @@
 extends Control
 
+func _ready() -> void:
+	check_saves()
+	if FileAccess.file_exists("res://settings.dat"):
+		load_settings()
+
+@onready var saves: VBoxContainer = $Saves
+@onready var play: Button = $VBoxContainer/Play
+@onready var load: Button = $VBoxContainer/Load
+
 func _on_play_pressed() -> void:
 	soundfx()
-	get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
+	s_1.show()
+	s_2.show()
+	s_3.show()
+	s_4.show()
+	s_5.show()
+	saves.show()
+	play.hide()
+	load.hide()
 
 func _on_load_pressed() -> void:
 	soundfx()
+	check_saves()
 	Global.loading_game = true
-	get_tree().change_scene_to_file("res://Scenes/customise.tscn")
+	saves.show()
+	play.hide()
+	load.hide()
 
 func _on_tutorial_pressed() -> void:
 	soundfx()
@@ -104,3 +123,83 @@ func fsindexF():
 			DisplayServer.window_set_size(Vector2i(2560,1440))
 		4:
 			DisplayServer.window_set_size(Vector2i(3480,2160))
+
+# SAVE SLOTS:
+@onready var s_1: Button = $Saves/s1
+@onready var s_2: Button = $Saves/s2
+@onready var s_3: Button = $Saves/s3
+@onready var s_4: Button = $Saves/s4
+@onready var s_5: Button = $Saves/s5
+
+func check_saves():
+	var saves:int = 0
+	if FileAccess.file_exists("res://savegame1.dat"):
+		s_1.show()
+		saves += 1
+	if FileAccess.file_exists("res://savegame2.dat"):
+		s_2.show()
+		saves += 1
+	if FileAccess.file_exists("res://savegame3.dat"):
+		s_3.show()
+		saves += 1
+	if FileAccess.file_exists("res://savegame4.dat"):
+		s_4.show()
+		saves += 1
+	if FileAccess.file_exists("res://savegame5.dat"):
+		s_5.show()
+		saves += 1
+	if saves == 0:
+		load.hide()
+
+func _on_s_1_pressed() -> void:
+	soundfx()
+	Global.slot = 1
+	match Global.loading_game:
+		false:
+			get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
+		true:
+			get_tree().change_scene_to_file("res://Scenes/customise.tscn")
+
+func _on_s_2_pressed() -> void:
+	soundfx()
+	Global.slot = 2
+	match Global.loading_game:
+		false:
+			get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
+		true:
+			get_tree().change_scene_to_file("res://Scenes/customise.tscn")
+
+func _on_s_3_pressed() -> void:
+	soundfx()
+	Global.slot = 3
+	match Global.loading_game:
+		false:
+			get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
+		true:
+			get_tree().change_scene_to_file("res://Scenes/customise.tscn")
+
+func _on_s_4_pressed() -> void:
+	soundfx()
+	Global.slot = 4
+	match Global.loading_game:
+		false:
+			get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
+		true:
+			get_tree().change_scene_to_file("res://Scenes/customise.tscn")
+
+func _on_s_5_pressed() -> void:
+	soundfx()
+	Global.slot = 5
+	match Global.loading_game:
+		false:
+			get_tree().change_scene_to_file("res://Scenes/difficulty.tscn")
+		true:
+			get_tree().change_scene_to_file("res://Scenes/customise.tscn")
+
+func _on_s_6_pressed() -> void: # CANCEL MENU
+	soundfx()
+	saves.hide()
+	Global.loading_game = false
+	play.show()
+	load.show()
+	check_saves()

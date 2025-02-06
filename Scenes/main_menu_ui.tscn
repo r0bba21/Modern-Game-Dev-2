@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://wjpdlkyaksia"]
+[gd_scene load_steps=28 format=3 uid="uid://wjpdlkyaksia"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu_ui.gd" id="1_2f11h"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_gux6j"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dg70skn7suscm" path="res://Assets/UI/cancel.png" id="9_fstcc"]
 [ext_resource type="Texture2D" uid="uid://bhxjkdsylr3h8" path="res://Assets/UI/mm (4).png" id="9_otvoa"]
 [ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="10_qmdt0"]
-[ext_resource type="Texture2D" uid="uid://o3embdjwnr1o" path="res://Assets/UI/load.png" id="10_uvvfw"]
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="11_illxf"]
 [ext_resource type="Texture2D" uid="uid://dmjbmovmrt1n0" path="res://Assets/UI/full-folder.png" id="14_5l1yp"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="15_omvli"]
@@ -19,6 +18,8 @@
 [ext_resource type="AudioStream" uid="uid://cptms4qpuvuw5" path="res://Assets/Music/F.MP3" id="17_ddavc"]
 [ext_resource type="AudioStream" uid="uid://vgsr7yxcqj11" path="res://Assets/Music/T.MP3" id="18_d8tv6"]
 [ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="19_w4vos"]
+[ext_resource type="StyleBox" uid="uid://cdks4l1c2vhtw" path="res://Assets/UI/panel_info.tres" id="20_c3qxd"]
+[ext_resource type="StyleBox" uid="uid://cdinqi3e3r1sq" path="res://Assets/UI/info_hover.tres" id="21_73x04"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvt07"]
 content_margin_left = 10.0
@@ -33,6 +34,78 @@ corner_radius_bottom_right = 35
 corner_radius_bottom_left = 35
 shadow_size = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhw7p"]
+content_margin_left = 20.0
+bg_color = Color(0.656907, 0, 0.0790123, 0.588235)
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0clm"]
+content_margin_left = 20.0
+bg_color = Color(5.96821e-06, 0.621909, 0.849743, 0.588235)
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ba4m2"]
+content_margin_left = 20.0
+bg_color = Color(0.984527, 0.146507, 1, 0.588235)
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb0yo"]
+content_margin_left = 20.0
+bg_color = Color(0.971909, 0.841552, 1.15514e-06, 0.588235)
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cggxa"]
+content_margin_left = 20.0
+bg_color = Color(0, 0, 0, 0.588235)
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6ab7"]
+content_margin_left = 20.0
+bg_color = Color(0.303132, 0.729877, 3.85046e-07, 0.588235)
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
 [node name="MainMenuUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -44,12 +117,13 @@ script = ExtResource("1_2f11h")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 28.0
-offset_top = 70.0
-offset_right = 603.0
-offset_bottom = -69.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = -413.0
+offset_right = 637.0
+offset_bottom = 413.0
 grow_vertical = 2
 theme_override_constants/separation = 30
 
@@ -95,21 +169,6 @@ theme_override_styles/hover = ExtResource("6_o2t4c")
 theme_override_styles/pressed = ExtResource("6_o2t4c")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kvt07")
 text = "Settings"
-
-[node name="Load2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_constants/outline_size = 5
-theme_override_constants/h_separation = 0
-theme_override_constants/align_to_largest_stylebox = 0
-theme_override_fonts/font = ExtResource("1_gux6j")
-theme_override_font_sizes/font_size = 65
-theme_override_icons/icon = ExtResource("10_uvvfw")
-theme_override_styles/hover_pressed_mirrored = ExtResource("6_o2t4c")
-theme_override_styles/hover_pressed = ExtResource("6_o2t4c")
-theme_override_styles/hover = ExtResource("6_o2t4c")
-theme_override_styles/pressed = ExtResource("6_o2t4c")
-theme_override_styles/normal = SubResource("StyleBoxFlat_kvt07")
-text = "load settings"
 
 [node name="Tutorial" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -189,7 +248,7 @@ theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 3
 theme_override_font_sizes/font_size = 60
 text = "Thank you for playing the game!
-Build: ALPHA - VER. 1.1.0"
+Build: ALPHA - VER. 1.1.1"
 horizontal_alignment = 2
 
 [node name="Sounds" type="Node2D" parent="."]
@@ -219,11 +278,152 @@ stream = ExtResource("19_w4vos")
 volume_db = -3.0
 bus = &"SFX"
 
+[node name="Saves" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -328.0
+offset_right = 213.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="s6" type="Button" parent="Saves"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("21_73x04")
+theme_override_styles/disabled_mirrored = ExtResource("21_73x04")
+theme_override_styles/disabled = ExtResource("21_73x04")
+theme_override_styles/hover_pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover_pressed = ExtResource("21_73x04")
+theme_override_styles/hover_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover = ExtResource("21_73x04")
+theme_override_styles/pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/pressed = ExtResource("21_73x04")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_qhw7p")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qhw7p")
+text = "Cancel"
+
+[node name="Label5" type="Label" parent="Saves"]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = ExtResource("20_c3qxd")
+text = " Save Slot: "
+horizontal_alignment = 1
+
+[node name="s1" type="Button" parent="Saves"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("21_73x04")
+theme_override_styles/disabled_mirrored = ExtResource("21_73x04")
+theme_override_styles/disabled = ExtResource("21_73x04")
+theme_override_styles/hover_pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover_pressed = ExtResource("21_73x04")
+theme_override_styles/hover_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover = ExtResource("21_73x04")
+theme_override_styles/pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/pressed = ExtResource("21_73x04")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_v0clm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_v0clm")
+text = "Slot 1"
+
+[node name="s2" type="Button" parent="Saves"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("21_73x04")
+theme_override_styles/disabled_mirrored = ExtResource("21_73x04")
+theme_override_styles/disabled = ExtResource("21_73x04")
+theme_override_styles/hover_pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover_pressed = ExtResource("21_73x04")
+theme_override_styles/hover_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover = ExtResource("21_73x04")
+theme_override_styles/pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/pressed = ExtResource("21_73x04")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_ba4m2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ba4m2")
+text = "Slot 2"
+
+[node name="s3" type="Button" parent="Saves"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("21_73x04")
+theme_override_styles/disabled_mirrored = ExtResource("21_73x04")
+theme_override_styles/disabled = ExtResource("21_73x04")
+theme_override_styles/hover_pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover_pressed = ExtResource("21_73x04")
+theme_override_styles/hover_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover = ExtResource("21_73x04")
+theme_override_styles/pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/pressed = ExtResource("21_73x04")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_eb0yo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eb0yo")
+text = "Slot 3"
+
+[node name="s4" type="Button" parent="Saves"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("21_73x04")
+theme_override_styles/disabled_mirrored = ExtResource("21_73x04")
+theme_override_styles/disabled = ExtResource("21_73x04")
+theme_override_styles/hover_pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover_pressed = ExtResource("21_73x04")
+theme_override_styles/hover_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover = ExtResource("21_73x04")
+theme_override_styles/pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/pressed = ExtResource("21_73x04")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cggxa")
+text = "Slot 4"
+
+[node name="s5" type="Button" parent="Saves"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gux6j")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = ExtResource("21_73x04")
+theme_override_styles/disabled_mirrored = ExtResource("21_73x04")
+theme_override_styles/disabled = ExtResource("21_73x04")
+theme_override_styles/hover_pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover_pressed = ExtResource("21_73x04")
+theme_override_styles/hover_mirrored = ExtResource("21_73x04")
+theme_override_styles/hover = ExtResource("21_73x04")
+theme_override_styles/pressed_mirrored = ExtResource("21_73x04")
+theme_override_styles/pressed = ExtResource("21_73x04")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w6ab7")
+text = "Slot 5"
+
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Load2" to="." method="load_settings"]
 [connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Bugs" to="." method="bugs"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="credits"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Saves/s6" to="." method="_on_s_6_pressed"]
+[connection signal="pressed" from="Saves/s1" to="." method="_on_s_1_pressed"]
+[connection signal="pressed" from="Saves/s2" to="." method="_on_s_2_pressed"]
+[connection signal="pressed" from="Saves/s3" to="." method="_on_s_3_pressed"]
+[connection signal="pressed" from="Saves/s4" to="." method="_on_s_4_pressed"]
+[connection signal="pressed" from="Saves/s5" to="." method="_on_s_5_pressed"]

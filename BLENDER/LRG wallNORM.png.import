@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://inmnd531oa72"
-path.s3tc="res://.godot/imported/LRG wallNORM.png-5ae26617ba4c5f675cb9c7c2f77ac10b.s3tc.ctex"
-path.etc2="res://.godot/imported/LRG wallNORM.png-5ae26617ba4c5f675cb9c7c2f77ac10b.etc2.ctex"
+path="res://.godot/imported/LRG wallNORM.png-5ae26617ba4c5f675cb9c7c2f77ac10b.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://BLENDER/LRG wallNORM.png"
-dest_files=["res://.godot/imported/LRG wallNORM.png-5ae26617ba4c5f675cb9c7c2f77ac10b.s3tc.ctex", "res://.godot/imported/LRG wallNORM.png-5ae26617ba4c5f675cb9c7c2f77ac10b.etc2.ctex"]
+dest_files=["res://.godot/imported/LRG wallNORM.png-5ae26617ba4c5f675cb9c7c2f77ac10b.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

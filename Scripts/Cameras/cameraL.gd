@@ -1,19 +1,18 @@
 extends Camera3D
 
-@export var sensitivity: float = 0.03 # Lower = more input
+@export var sensitivity: float = 0.03 # LOWER = MORE INPUT
 @export var deadzone: float = 0.05
-@export var smooth_speed: float = 1.75  # Higher = faster smoothing
-@export var noise_strength: float = 0.4  # Intensity of sway effect
-@export var noise_speed: float = 0.1  # Speed of sway motion
-
+@export var smooth_speed: float = 1.75  # HIGHER = FASTER
+@export var noise_strength: float = 0.4
+@export var noise_speed: float = 0.1
 var rotation_input = Vector2.ZERO
-var base_rotation = Vector3(-14.8, 160, 0)  # Default rotation
+var base_rotation = Vector3(-14.8, 160, 0)  # DEFAULT
 var min_rotation: Vector3
 var max_rotation: Vector3
 var target_rotation: Vector3
 
 var noise := FastNoiseLite.new()
-var time_passed := 0.0  # Tracks elapsed time for noise
+var time_passed := 0.0
 
 func _ready():
 	# Set initial rotation

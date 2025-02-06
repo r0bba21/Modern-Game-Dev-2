@@ -1,4 +1,4 @@
-[gd_scene load_steps=168 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=172 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://dwe7qsawpx7bu" path="res://Assets/UI/NEW_LOGO (6).png" id="37_ugt3o"]
 [ext_resource type="Texture2D" uid="uid://1pfnph0xcktp" path="res://Assets/UI/pub (4).png" id="37_yq22j"]
 [ext_resource type="Texture2D" uid="uid://cyqasysefxriu" path="res://Assets/UI/genres (8).png" id="38_7ocly"]
+[ext_resource type="Texture2D" uid="uid://croy5emnec0s5" path="res://Assets/UI/bookshelf.png" id="38_d7w6r"]
 [ext_resource type="Texture2D" uid="uid://d8ntymrn6v2r" path="res://Assets/UI/pub (1).png" id="38_nunn4"]
 [ext_resource type="Texture2D" uid="uid://b8s35ib37pq2l" path="res://Assets/UI/NEW_LOGO (1).png" id="38_p4vuf"]
 [ext_resource type="Texture2D" uid="uid://ciekvfg8ihmvh" path="res://Assets/UI/genres (1).png" id="39_as6ri"]
@@ -102,6 +103,8 @@
 [ext_resource type="StyleBox" uid="uid://dnpyxgjomx2rt" path="res://Assets/UI/info_button.tres" id="72_tw0ff"]
 [ext_resource type="Script" path="res://Scripts/color_picker_button.gd" id="76_5ednd"]
 [ext_resource type="StyleBox" uid="uid://cyku43df0ed4f" path="res://Assets/UI/cont.tres" id="81_jo1jd"]
+[ext_resource type="Script" path="res://Scripts/gsx.gd" id="83_dmspm"]
+[ext_resource type="Script" path="res://Scripts/agnstock.gd" id="89_unwi0"]
 [ext_resource type="Script" path="res://Scripts/portfolio.gd" id="101_34v54"]
 [ext_resource type="StyleBox" uid="uid://cjdmlltpvd6c4" path="res://Assets/UI/portfolio.tres" id="102_hr1y0"]
 [ext_resource type="PackedScene" uid="uid://csg1emxhlorwf" path="res://Scenes/pause.tscn" id="105_yxcbe"]
@@ -372,26 +375,6 @@ border_color = Color(0.635294, 0.772549, 0.592157, 1)
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byvpj"]
-bg_color = Color(0.241002, 0, 0.0170325, 0.607843)
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.421162, 0, 0.049098, 1)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-shadow_size = 30
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcmmx"]
-bg_color = Color(0, 0, 0, 1)
-border_color = Color(0.192157, 0.0470588, 0.054902, 1)
-border_blend = true
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx78p"]
 bg_color = Color(0.730937, 0.559699, 0.424855, 0.607843)
 border_width_right = 8
@@ -410,6 +393,17 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67nn4"]
+bg_color = Color(0.0753542, 0.340272, 0.388132, 0.607843)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.179513, 0.646863, 0.729772, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aufia"]
 bg_color = Color(0.701338, 0.525842, 0.740932, 0.607843)
@@ -702,6 +696,26 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 shadow_size = 30
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byvpj"]
+bg_color = Color(0.241002, 0, 0.0170325, 0.607843)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.421162, 0, 0.049098, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcmmx"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.192157, 0.0470588, 0.054902, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Office UI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -755,7 +769,7 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 3
-text = "ALPHA - VER. 1.1.0"
+text = "ALPHA - VER. 1.1.1"
 
 [node name="M" type="Panel" parent="Info"]
 layout_mode = 1
@@ -1201,9 +1215,9 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = 15.0
-offset_top = 10.0
-offset_right = 408.0
-offset_bottom = -10.0
+offset_top = 5.0
+offset_right = 398.0
+offset_bottom = -5.0
 grow_vertical = 2
 alignment = 1
 
@@ -1226,7 +1240,6 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_5rnqc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5rnqc")
 theme_override_styles/normal = SubResource("StyleBoxFlat_knppr")
 text = " Pause "
-icon_alignment = 2
 
 [node name="Speed" type="Button" parent="Company/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -1258,12 +1271,21 @@ theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 35
 text = "Poo Jones"
 
-[node name="Sold" type="Label" parent="Company/VBoxContainer"]
+[node name="Pause2" type="Button" parent="Company/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/outline_size = 6
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 35
-text = "Units Sold:"
+theme_override_font_sizes/font_size = 40
+theme_override_icons/icon = ExtResource("38_d7w6r")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_5rnqc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_5rnqc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_5rnqc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5rnqc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_5rnqc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5rnqc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_knppr")
+text = " Portfolio"
+alignment = 0
 
 [node name="During" type="Panel" parent="."]
 visible = false
@@ -3060,6 +3082,135 @@ position = Vector2(548, 732)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("31_j1x01")
 
+[node name="Stocks" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.0
+offset_top = -270.0
+offset_right = 771.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_igk02")
+
+[node name="Back3" type="Button" parent="Stocks"]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 92.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.709804, 0.913725, 0.72549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("59_b4he4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
+icon_alignment = 1
+
+[node name="Title3" type="Label" parent="Stocks"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 458.0
+offset_right = -458.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "The Stock Market:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Stocks"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -144.5
+offset_right = -55.0
+offset_bottom = 213.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="a" type="Button" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/disabled_mirrored = ExtResource("33_0kskp")
+theme_override_styles/disabled = ExtResource("33_0kskp")
+theme_override_styles/hover_pressed_mirrored = ExtResource("33_0kskp")
+theme_override_styles/hover_pressed = ExtResource("33_0kskp")
+theme_override_styles/hover_mirrored = ExtResource("33_0kskp")
+theme_override_styles/hover = ExtResource("33_0kskp")
+theme_override_styles/pressed_mirrored = ExtResource("33_0kskp")
+theme_override_styles/pressed = ExtResource("33_0kskp")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = " AGN Stocks "
+
+[node name="Label" type="Label" parent="Stocks/VBoxContainer/a"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -354.0
+offset_top = -11.5
+offset_right = -56.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "The lowest value stock but very steady"
+
+[node name="gsx" type="Button" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/disabled_mirrored = ExtResource("33_0kskp")
+theme_override_styles/disabled = ExtResource("33_0kskp")
+theme_override_styles/hover_pressed_mirrored = ExtResource("33_0kskp")
+theme_override_styles/hover_pressed = ExtResource("33_0kskp")
+theme_override_styles/hover_mirrored = ExtResource("33_0kskp")
+theme_override_styles/hover = ExtResource("33_0kskp")
+theme_override_styles/pressed_mirrored = ExtResource("33_0kskp")
+theme_override_styles/pressed = ExtResource("33_0kskp")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "GSX400"
+
+[node name="g" type="Button" parent="Stocks/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/disabled_mirrored = ExtResource("33_0kskp")
+theme_override_styles/disabled = ExtResource("33_0kskp")
+theme_override_styles/hover_pressed_mirrored = ExtResource("33_0kskp")
+theme_override_styles/hover_pressed = ExtResource("33_0kskp")
+theme_override_styles/hover_mirrored = ExtResource("33_0kskp")
+theme_override_styles/hover = ExtResource("33_0kskp")
+theme_override_styles/pressed_mirrored = ExtResource("33_0kskp")
+theme_override_styles/pressed = ExtResource("33_0kskp")
+theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
+theme_override_styles/normal = ExtResource("34_pxscq")
+text = "Gazdak"
+
 [node name="Upgrades" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -3805,77 +3956,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
 icon_alignment = 1
 
-[node name="BankruptcyWarning" type="Panel" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -269.0
-offset_top = -189.0
-offset_right = 658.0
-offset_bottom = 192.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_byvpj")
-
-[node name="Title4" type="Label" parent="BankruptcyWarning"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 91.0
-grow_horizontal = 2
-theme_override_constants/shadow_offset_x = 8
-theme_override_constants/shadow_offset_y = 8
-theme_override_constants/outline_size = 8
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 125
-text = "WARNING!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Explain5" type="RichTextLabel" parent="BankruptcyWarning"]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 24.0
-offset_top = -41.5
-offset_right = -24.0
-offset_bottom = 41.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/outline_size = 4
-theme_override_fonts/normal_font = ExtResource("7_xpq5m")
-theme_override_font_sizes/normal_font_size = 30
-text = "If you go over $50,000 in debt the game will end! Loans are available for you to try bounce back. Good luck!"
-
-[node name="BackP5" type="Button" parent="BankruptcyWarning"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 262.0
-offset_top = -135.0
-offset_right = -262.0
-offset_bottom = -30.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 65
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_tcmmx")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_tcmmx")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tcmmx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tcmmx")
-theme_override_styles/normal = ExtResource("64_ps415")
-text = "Continue"
-
 [node name="TheBank" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -4243,7 +4323,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
 icon_alignment = 1
 
-[node name="Stocks" type="Panel" parent="."]
+[node name="GSX400" type="Panel" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -4258,9 +4338,9 @@ offset_bottom = 285.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_j6e5v")
-script = ExtResource("70_dw38k")
+script = ExtResource("83_dmspm")
 
-[node name="Back" type="Button" parent="Stocks"]
+[node name="Back" type="Button" parent="GSX400"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -4282,12 +4362,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
 icon_alignment = 1
 
-[node name="StockOne" type="Line2D" parent="Stocks"]
+[node name="StockOne" type="Line2D" parent="GSX400"]
 points = PackedVector2Array(25, 655)
 default_color = Color(0.533346, 0, 0.137231, 1)
 antialiased = true
 
-[node name="Title3" type="Label" parent="Stocks"]
+[node name="Title3" type="Label" parent="GSX400"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -4303,11 +4383,11 @@ theme_override_constants/outline_size = 8
 theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 80
-text = "The Stock Market:"
+text = "The GSX400:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Stocks"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GSX400"]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -4322,7 +4402,7 @@ grow_vertical = 2
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="Label" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Label" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.532015, 0.710993, 0.664949, 1)
 theme_override_constants/outline_size = 6
@@ -4332,7 +4412,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "Manage Stocks:"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Label5" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4341,7 +4421,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "You Have:"
 horizontal_alignment = 1
 
-[node name="HasU" type="Label" parent="Stocks/VBoxContainer"]
+[node name="HasU" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4350,7 +4430,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ggy4k")
 text = "0 Units"
 horizontal_alignment = 1
 
-[node name="HasM" type="Label" parent="Stocks/VBoxContainer"]
+[node name="HasM" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4359,7 +4439,7 @@ theme_override_styles/normal = ExtResource("71_gcane")
 text = "$0"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Label3" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4368,7 +4448,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = "Stock Price:"
 horizontal_alignment = 1
 
-[node name="PriceL" type="Label" parent="Stocks/VBoxContainer"]
+[node name="PriceL" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4377,7 +4457,7 @@ theme_override_styles/normal = ExtResource("71_s6m4u")
 text = "$12"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Label2" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4386,7 +4466,7 @@ theme_override_styles/normal = ExtResource("7_g83m7")
 text = " Buy (press enter): "
 horizontal_alignment = 1
 
-[node name="Warn2" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Warn2" type="Label" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4394,7 +4474,7 @@ theme_override_font_sizes/font_size = 20
 text = "DOLLAR AMOUNT (NO $):"
 horizontal_alignment = 1
 
-[node name="Buying" type="LineEdit" parent="Stocks/VBoxContainer"]
+[node name="Buying" type="LineEdit" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4404,7 +4484,7 @@ theme_override_styles/normal = ExtResource("72_tw0ff")
 placeholder_text = "$"
 alignment = 1
 
-[node name="Sale" type="Button" parent="Stocks/VBoxContainer"]
+[node name="Sale" type="Button" parent="GSX400/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -4421,7 +4501,381 @@ theme_override_styles/normal_mirrored = ExtResource("36_1yad1")
 theme_override_styles/normal = ExtResource("36_1yad1")
 text = "Sell All"
 
-[node name="Warn3" type="Label" parent="Stocks/VBoxContainer"]
+[node name="Warn3" type="Label" parent="GSX400/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 20
+text = "You pay 20% Capital gains
+tax on selling stocks"
+horizontal_alignment = 1
+
+[node name="Gazdak" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -537.0
+offset_top = -478.0
+offset_right = 905.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_67nn4")
+script = ExtResource("70_dw38k")
+
+[node name="Back" type="Button" parent="Gazdak"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -729.0
+offset_right = 98.0
+offset_bottom = -663.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.709804, 0.913725, 0.72549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("59_b4he4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
+icon_alignment = 1
+
+[node name="StockOne" type="Line2D" parent="Gazdak"]
+points = PackedVector2Array(25, 655)
+default_color = Color(0.533346, 0, 0.137231, 1)
+antialiased = true
+
+[node name="Title3" type="Label" parent="Gazdak"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -370.0
+offset_top = 21.0
+offset_right = 370.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "Gazdak:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Gazdak"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -333.0
+offset_top = 147.0
+offset_right = -21.0
+offset_bottom = -45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Label" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.532015, 0.710993, 0.664949, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Manage Stocks:"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "You Have:"
+horizontal_alignment = 1
+
+[node name="HasU" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggy4k")
+text = "0 Units"
+horizontal_alignment = 1
+
+[node name="HasM" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("71_gcane")
+text = "$0"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Stock Price:"
+horizontal_alignment = 1
+
+[node name="PriceL" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("71_s6m4u")
+text = "$12"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Buy (press enter): "
+horizontal_alignment = 1
+
+[node name="Warn2" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 20
+text = "DOLLAR AMOUNT (NO $):"
+horizontal_alignment = 1
+
+[node name="Buying" type="LineEdit" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("71_0ka8d")
+theme_override_styles/normal = ExtResource("72_tw0ff")
+placeholder_text = "$"
+alignment = 1
+
+[node name="Sale" type="Button" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/disabled_mirrored = ExtResource("35_nawnk")
+theme_override_styles/disabled = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal_mirrored = ExtResource("36_1yad1")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Sell All"
+
+[node name="Warn3" type="Label" parent="Gazdak/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 20
+text = "You pay 20% Capital gains
+tax on selling stocks"
+horizontal_alignment = 1
+
+[node name="AGNstock" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -537.0
+offset_top = -478.0
+offset_right = 905.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6e5v")
+script = ExtResource("89_unwi0")
+
+[node name="Back" type="Button" parent="AGNstock"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -729.0
+offset_right = 98.0
+offset_bottom = -663.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.709804, 0.913725, 0.72549, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = ExtResource("59_b4he4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bx8f6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fdnh8")
+icon_alignment = 1
+
+[node name="StockOne" type="Line2D" parent="AGNstock"]
+points = PackedVector2Array(25, 655)
+default_color = Color(0.533346, 0, 0.137231, 1)
+antialiased = true
+
+[node name="Title3" type="Label" parent="AGNstock"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -370.0
+offset_top = 21.0
+offset_right = 370.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 80
+text = "AGN Stocks:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AGNstock"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -333.0
+offset_top = 147.0
+offset_right = -21.0
+offset_bottom = -45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Label" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.532015, 0.710993, 0.664949, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Manage Stocks:"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "You Have:"
+horizontal_alignment = 1
+
+[node name="HasU" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ggy4k")
+text = "0 Units"
+horizontal_alignment = 1
+
+[node name="HasM" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = ExtResource("71_gcane")
+text = "$0"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = "Stock Price:"
+horizontal_alignment = 1
+
+[node name="PriceL" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("71_s6m4u")
+text = "$12"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("7_g83m7")
+text = " Buy (press enter): "
+horizontal_alignment = 1
+
+[node name="Warn2" type="Label" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 20
+text = "DOLLAR AMOUNT (NO $):"
+horizontal_alignment = 1
+
+[node name="Buying" type="LineEdit" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("71_0ka8d")
+theme_override_styles/normal = ExtResource("72_tw0ff")
+placeholder_text = "$"
+alignment = 1
+
+[node name="Sale" type="Button" parent="AGNstock/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/disabled_mirrored = ExtResource("35_nawnk")
+theme_override_styles/disabled = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover_pressed = ExtResource("35_nawnk")
+theme_override_styles/hover_mirrored = ExtResource("35_nawnk")
+theme_override_styles/hover = ExtResource("35_nawnk")
+theme_override_styles/pressed_mirrored = ExtResource("35_nawnk")
+theme_override_styles/pressed = ExtResource("35_nawnk")
+theme_override_styles/normal_mirrored = ExtResource("36_1yad1")
+theme_override_styles/normal = ExtResource("36_1yad1")
+text = "Sell All"
+
+[node name="Warn3" type="Label" parent="AGNstock/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_xpq5m")
@@ -5668,6 +6122,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vrcrd")
 text = "Continue"
 
 [node name="Portfolio" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -7413,6 +7868,77 @@ more features = more quality but longer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="BankruptcyWarning" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -269.0
+offset_top = -189.0
+offset_right = 658.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_byvpj")
+
+[node name="Title4" type="Label" parent="BankruptcyWarning"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 91.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 125
+text = "WARNING!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explain5" type="RichTextLabel" parent="BankruptcyWarning"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -41.5
+offset_right = -24.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("7_xpq5m")
+theme_override_font_sizes/normal_font_size = 30
+text = "If you go over $50,000 in debt the game will end! Loans are available for you to try bounce back. Good luck!"
+
+[node name="BackP5" type="Button" parent="BankruptcyWarning"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 262.0
+offset_top = -135.0
+offset_right = -262.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xpq5m")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_tcmmx")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_tcmmx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tcmmx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tcmmx")
+theme_override_styles/normal = ExtResource("64_ps415")
+text = "Continue"
+
 [node name="Pause" parent="." instance=ExtResource("105_yxcbe")]
 visible = false
 layout_mode = 1
@@ -7430,7 +7956,7 @@ anchor_bottom = 0.5
 [connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
 [connection signal="pressed" from="Buttons/RealEstate" to="." method="RealEstateButton"]
-[connection signal="pressed" from="Buttons/Stocks" to="Stocks" method="_on_take_l_2_pressed"]
+[connection signal="pressed" from="Buttons/Stocks" to="." method="_on_stocks_pressed"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Contracts" to="." method="_on_contracts_pressed"]
@@ -7443,6 +7969,8 @@ anchor_bottom = 0.5
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Pause" to="Company/VBoxContainer/HBoxContainer" method="_on_pause_pressed"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Speed" to="." method="soundfx"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Speed" to="Company/VBoxContainer/HBoxContainer" method="_on_speed_pressed"]
+[connection signal="pressed" from="Company/VBoxContainer/Pause2" to="." method="soundfx"]
+[connection signal="pressed" from="Company/VBoxContainer/Pause2" to="Portfolio/ScrollContainer/Table" method="_on_pause_2_pressed"]
 [connection signal="pressed" from="During/Marketing" to="." method="_on_marketing_pressed"]
 [connection signal="item_selected" from="Developing/Header/Genre/Genre" to="." method="_on_genre_item_selected"]
 [connection signal="item_selected" from="Developing/Header/Size/Size" to="." method="_on_size_item_selected"]
@@ -7471,6 +7999,10 @@ anchor_bottom = 0.5
 [connection signal="color_changed" from="Offices/ColorPickerButton" to="Offices/ColorPickerButton" method="_on_color_changed"]
 [connection signal="popup_closed" from="Offices/ColorPickerButton" to="." method="soundfx"]
 [connection signal="pressed" from="Offices/ColorPickerButton" to="." method="soundfx"]
+[connection signal="pressed" from="Stocks/Back3" to="." method="_on_back_p_pressed"]
+[connection signal="pressed" from="Stocks/VBoxContainer/a" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="Stocks/VBoxContainer/gsx" to="." method="_on_gsx_pressed"]
+[connection signal="pressed" from="Stocks/VBoxContainer/g" to="." method="_on_g_pressed"]
 [connection signal="pressed" from="Upgrades/Back3" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Upgrades/VBoxContainer/Label5/wifi" to="." method="_on_wifi_pressed"]
 [connection signal="pressed" from="Upgrades/VBoxContainer/Label/ac" to="." method="_on_ac_pressed"]
@@ -7485,17 +8017,23 @@ anchor_bottom = 0.5
 [connection signal="pressed" from="Contracts/Contract4/AcceptB" to="." method="_on_accept_b_pressed"]
 [connection signal="timeout" from="Contracts/ContractTime" to="." method="_on_contract_time_timeout"]
 [connection signal="pressed" from="Contracts/Back3" to="." method="_on_back_p_pressed"]
-[connection signal="pressed" from="BankruptcyWarning/BackP5" to="." method="exit_warning"]
 [connection signal="pressed" from="TheBank/InLoanMenu/Pay" to="." method="_on_pay_pressed"]
 [connection signal="pressed" from="TheBank/OutLoan/Small/Decide/Take" to="." method="_on_take_pressed"]
 [connection signal="pressed" from="TheBank/OutLoan/Medium/Decide/TakeM" to="." method="_on_take_m_pressed"]
 [connection signal="pressed" from="TheBank/OutLoan/Large/Decide/TakeL" to="." method="_on_take_l_pressed"]
 [connection signal="pressed" from="TheBank/Back2" to="." method="_on_back_p_pressed"]
-[connection signal="pressed" from="Stocks/Back" to="." method="_on_back_p_pressed"]
-[connection signal="text_submitted" from="Stocks/VBoxContainer/Buying" to="." method="_on_buying_text_submitted"]
-[connection signal="text_submitted" from="Stocks/VBoxContainer/Buying" to="Stocks" method="_on_buying_text_submitted"]
-[connection signal="pressed" from="Stocks/VBoxContainer/Sale" to="." method="_on_selling_text_submitted"]
-[connection signal="pressed" from="Stocks/VBoxContainer/Sale" to="Stocks" method="_on_sale_pressed"]
+[connection signal="pressed" from="GSX400/Back" to="." method="_on_back_p_pressed"]
+[connection signal="text_submitted" from="GSX400/VBoxContainer/Buying" to="." method="_on_buying_text_submitted"]
+[connection signal="text_submitted" from="GSX400/VBoxContainer/Buying" to="GSX400" method="_on_buying_text_submitted"]
+[connection signal="pressed" from="GSX400/VBoxContainer/Sale" to="GSX400" method="_on_sale_pressed"]
+[connection signal="pressed" from="Gazdak/Back" to="." method="_on_back_p_pressed"]
+[connection signal="text_submitted" from="Gazdak/VBoxContainer/Buying" to="." method="_on_buying_text_submitted"]
+[connection signal="text_submitted" from="Gazdak/VBoxContainer/Buying" to="Gazdak" method="_on_buying_text_submitted"]
+[connection signal="pressed" from="Gazdak/VBoxContainer/Sale" to="Gazdak" method="_on_sale_pressed"]
+[connection signal="pressed" from="AGNstock/Back" to="." method="_on_back_p_pressed"]
+[connection signal="text_submitted" from="AGNstock/VBoxContainer/Buying" to="." method="_on_buying_text_submitted"]
+[connection signal="text_submitted" from="AGNstock/VBoxContainer/Buying" to="AGNstock" method="_on_buying_text_submitted"]
+[connection signal="pressed" from="AGNstock/VBoxContainer/Sale" to="AGNstock" method="_on_sale_pressed"]
 [connection signal="item_selected" from="Publisher/PublisherList" to="." method="_on_publisher_list_item_selected"]
 [connection signal="pressed" from="Publisher/Back2" to="." method="_on_back_p_pressed"]
 [connection signal="pressed" from="Research/Back2" to="." method="_on_back_p_pressed"]
@@ -7514,7 +8052,9 @@ anchor_bottom = 0.5
 [connection signal="pressed" from="Convention/CloseConv" to="." method="_on_close_conv_pressed"]
 [connection signal="pressed" from="Portfolio/Back3" to="." method="_on_back_p_pressed"]
 [connection signal="timeout" from="Timers/Month" to="." method="newmonth"]
-[connection signal="timeout" from="Timers/Month" to="Stocks" method="_on_month_timeout"]
+[connection signal="timeout" from="Timers/Month" to="GSX400" method="_on_month_timeout"]
+[connection signal="timeout" from="Timers/Month" to="Gazdak" method="_on_month_timeout"]
+[connection signal="timeout" from="Timers/Month" to="AGNstock" method="_on_month_timeout"]
 [connection signal="timeout" from="Timers/MonthProg" to="." method="monthprog"]
 [connection signal="timeout" from="Timers/DevProg" to="." method="_on_dev_prog_timeout"]
 [connection signal="timeout" from="Timers/Market" to="." method="monthsales"]
@@ -7557,3 +8097,4 @@ anchor_bottom = 0.5
 [connection signal="toggled" from="DevstageThree/2D/Accesibility/Accesibility" to="." method="POLchecker"]
 [connection signal="toggled" from="DevstageThree/2D/Updates/Updates" to="." method="POLchecker"]
 [connection signal="toggled" from="DevstageThree/2D/Mod Support/ModSupport" to="." method="POLchecker"]
+[connection signal="pressed" from="BankruptcyWarning/BackP5" to="." method="exit_warning"]

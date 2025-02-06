@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://drunrktpa2lu3"]
+[gd_scene load_steps=24 format=3 uid="uid://drunrktpa2lu3"]
 
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_vgd5j"]
 [ext_resource type="Script" path="res://Scripts/customise.gd" id="1_x8815"]
 [ext_resource type="StyleBox" uid="uid://cdks4l1c2vhtw" path="res://Assets/UI/panel_info.tres" id="2_wq542"]
 [ext_resource type="StyleBox" uid="uid://cdinqi3e3r1sq" path="res://Assets/UI/info_hover.tres" id="3_s5bvl"]
 [ext_resource type="StyleBox" uid="uid://dnpyxgjomx2rt" path="res://Assets/UI/info_button.tres" id="4_2pf52"]
+[ext_resource type="Script" path="res://Scenes/label_6.gd" id="4_p1vf3"]
 [ext_resource type="Texture2D" uid="uid://do7ym2bg5qt8a" path="res://Assets/UI/click.png" id="5_584pp"]
 [ext_resource type="Texture2D" uid="uid://cr1rbebawd85r" path="res://Assets/UI/NEW_LOGO (2).png" id="7_sbgg2"]
 [ext_resource type="Texture2D" uid="uid://b2h50hpdoh6jd" path="res://Assets/UI/NEW_LOGO (8).png" id="8_18hyv"]
@@ -88,6 +89,7 @@ text = "yes, sadly you still have to
  do this upon loading a save."
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("4_p1vf3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/Control"]
 layout_mode = 1

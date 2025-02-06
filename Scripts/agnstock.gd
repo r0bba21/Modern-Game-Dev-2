@@ -1,4 +1,4 @@
-extends Panel # THIS IS THE GAZDAK SCRIPT!!!
+extends Panel
 
 @onready var stock_one: Line2D = $StockOne
 
@@ -16,16 +16,14 @@ func _on_month_timeout() -> void:
 		stock_one.remove_point(0)
 		stock_one.position.x -= 50
 	var last_y = y
-	var luck:int = randi_range(1,8)
+	var luck:int = randi_range(1,3)
 	match luck:
 		1:
-			y = randi_range(550,650) # HIGHER Y = LOWER STOCK VALUE
-		2, 3, 4:
-			y = randi_range(450,550)
-		5, 6, 7:
-			y = randi_range(350,450)
-		8:
-			y = randi_range(250,350)
+			y = randi_range(500,650) # HIGHER Y = LOWER STOCK VALUE
+		2:
+			y = randi_range(350,500)
+		3:
+			y = randi_range(200,350)
 	stock_one.add_point(Vector2(x, y))
 	var style:StyleBoxFlat = load("res://Assets/UI/PRICE.tres") as StyleBoxFlat
 	if last_y < y:
@@ -47,26 +45,26 @@ var initial:int = 0
 
 func stock_price():
 	var min_value:int = 650
-	var max_value:int = 250
-	price = ((y - min_value) / (max_value - min_value)) * 140
+	var max_value:int = 200
+	price = ((y - min_value) / (max_value - min_value)) * 25
 	price = round(price * 100) / 100 # ROUNDS TO 2DP!
 	price_l.text = "$" + str(price)
 	var formatted_value:float
 	var suffix:String
-	if Global.Gunits >= 1000000000:  # B
-		formatted_value = round(Global.Gunits / 1000000000.0 * 10) / 10.0
+	if Global.Aunits >= 1000000000:  # B
+		formatted_value = round(Global.Aunits / 1000000000.0 * 10) / 10.0
 		suffix = "B"
-	elif Global.Gunits >= 1000000:  # M
-		formatted_value = round(Global.Gunits / 1000000.0 * 10) / 10.0
+	elif Global.Aunits >= 1000000:  # M
+		formatted_value = round(Global.Aunits / 1000000.0 * 10) / 10.0
 		suffix = "M"
-	elif Global.Gunits >= 1000:  # K
-		formatted_value = round(Global.Gunits / 1000.0 * 10) / 10.0
+	elif Global.Aunits >= 1000:  # K
+		formatted_value = round(Global.Aunits / 1000.0 * 10) / 10.0
 		suffix = "K"
 	else: # UNDER 1K:
-		formatted_value = round(Global.Gunits * 100.0) / 100
+		formatted_value = round(Global.Aunits * 100.0) / 100
 		suffix = ""
 	has_u.text = "Units: " + str(formatted_value) + suffix
-	sum = Global.Gunits * price
+	sum = Global.Aunits * price
 	sum = round(sum * 100) / 100
 	var perc:String
 	var changeExport:float
@@ -109,8 +107,8 @@ func _on_buying_text_submitted(new_text: String) -> void:
 	Global.charge += considered
 	initial += considered
 	print(str(initial) + "initial")
-	Global.Gunits += considered / price
-	sum = Global.Gunits * price
+	Global.Aunits += considered / price
+	sum = Global.Aunits * price
 	soundfx()
 	stock_price()
 
@@ -134,10 +132,10 @@ func soundfx():
 			retro.play()
 
 func _on_sale_pressed() -> void:
-	if 0 < Global.Gunits:
+	if 0 < Global.Aunits:
 		Global.charge -= sum * 0.8
 		initial = 0
-		Global.Gunits = 0
+		Global.Aunits = 0
 		sum = 0
 		soundfx()
 		stock_price()

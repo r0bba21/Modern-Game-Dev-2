@@ -48,20 +48,24 @@ var loading_game = false
 # COMPANY:
 var CompName:String = "Cool Games Co."
 var FoundName:String = "Poo Jones"
-var CopiesSold:int = 0
 var LogoID:int = 0
 var LogoCOL:Color = "ffffff"
 var officeCOL:Color = "ffffff"
 
 # STOCKS:
-var Sunits:float = 0
+var GSXunits:float = 0
+var Gunits:float = 0
+var Aunits:float = 0
 
 # PAUSE MENU
 var in_pause = false
 var loading_custom = false
 
 # PORTFOLIO:
-var LatestName:String = "sex"
-var LatestUnits:int = 12
-var LatestQual:float = 24
-var LatestRev:int = 36
+var LatestName:String = "?"
+var LatestUnits:int = 0
+var LatestQual:float = 0
+var LatestRev:int = 0
+
+# SAVE SLOTS
+var slot:int = 1

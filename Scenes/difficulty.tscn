@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbbw0ytomxkly"]
+[gd_scene load_steps=18 format=3 uid="uid://cbbw0ytomxkly"]
 
 [ext_resource type="Script" path="res://Scripts/new_difficulty.gd" id="1_utpel"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="2_xhjfu"]
@@ -8,8 +8,11 @@
 [ext_resource type="AudioStream" uid="uid://by52yorlkoepd" path="res://Assets/Music/D.MP3" id="5_4de0x"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="5_p8w2g"]
 [ext_resource type="AudioStream" uid="uid://cptms4qpuvuw5" path="res://Assets/Music/F.MP3" id="6_royei"]
+[ext_resource type="Texture2D" uid="uid://7lyq115d0rkf" path="res://Assets/UI/cancel75.png" id="6_vvgdi"]
 [ext_resource type="AudioStream" uid="uid://vgsr7yxcqj11" path="res://Assets/Music/T.MP3" id="7_ahh4a"]
+[ext_resource type="StyleBox" uid="uid://bunu7gyd0flm5" path="res://Assets/UI/menu_hover_red.tres" id="7_y44yp"]
 [ext_resource type="AudioStream" uid="uid://cjdrmuqrn8u3j" path="res://Assets/Music/R.MP3" id="8_3lvee"]
+[ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="8_thomx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbtv7"]
 bg_color = Color(0.258824, 0.443137, 0.482353, 0.647059)
@@ -72,9 +75,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -800.0
-offset_top = -450.0
+offset_top = -425.0
 offset_right = 800.0
-offset_bottom = 450.0
+offset_bottom = 425.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jfqpv")
@@ -514,6 +517,28 @@ theme_override_styles/normal_mirrored = ExtResource("5_p8w2g")
 theme_override_styles/normal = ExtResource("5_p8w2g")
 text = "Next"
 
+[node name="Main Menu" type="Button" parent="Camera2D/New"]
+layout_mode = 1
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 518.0
+offset_bottom = 107.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_xhjfu")
+theme_override_font_sizes/font_size = 70
+theme_override_icons/icon = ExtResource("6_vvgdi")
+theme_override_styles/disabled_mirrored = ExtResource("7_y44yp")
+theme_override_styles/disabled = ExtResource("7_y44yp")
+theme_override_styles/hover_pressed_mirrored = ExtResource("7_y44yp")
+theme_override_styles/hover_pressed = ExtResource("7_y44yp")
+theme_override_styles/hover_mirrored = ExtResource("7_y44yp")
+theme_override_styles/hover = ExtResource("7_y44yp")
+theme_override_styles/pressed_mirrored = ExtResource("7_y44yp")
+theme_override_styles/pressed = ExtResource("7_y44yp")
+theme_override_styles/normal_mirrored = ExtResource("8_thomx")
+theme_override_styles/normal = ExtResource("8_thomx")
+text = "Main Menu"
+
 [node name="Sounds" type="Node2D" parent="."]
 position = Vector2(-730.184, -348.017)
 
@@ -550,3 +575,4 @@ bus = &"SFX"
 [connection signal="value_changed" from="Camera2D/New/List/Label8/Cont" to="Camera2D/New" method="_on_cont_value_changed"]
 [connection signal="value_changed" from="Camera2D/New/List/Label9/Loans" to="Camera2D/New" method="_on_loans_value_changed"]
 [connection signal="pressed" from="Camera2D/New/PLAY" to="Camera2D/New" method="_on_play_pressed"]
+[connection signal="pressed" from="Camera2D/New/Main Menu" to="Camera2D/New" method="_on_main_menu_pressed"]

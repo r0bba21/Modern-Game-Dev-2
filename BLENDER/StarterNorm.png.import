@@ -3,21 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1lh8q7cts77i"
-path.s3tc="res://.godot/imported/StarterNorm.png-6b686c0b9e80a92df326b32d9fd6a096.s3tc.ctex"
-path.etc2="res://.godot/imported/StarterNorm.png-6b686c0b9e80a92df326b32d9fd6a096.etc2.ctex"
+path="res://.godot/imported/StarterNorm.png-6b686c0b9e80a92df326b32d9fd6a096.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://BLENDER/StarterNorm.png"
-dest_files=["res://.godot/imported/StarterNorm.png-6b686c0b9e80a92df326b32d9fd6a096.s3tc.ctex", "res://.godot/imported/StarterNorm.png-6b686c0b9e80a92df326b32d9fd6a096.etc2.ctex"]
+dest_files=["res://.godot/imported/StarterNorm.png-6b686c0b9e80a92df326b32d9fd6a096.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
