@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bq68qnlwhac0x" path="res://Assets/UI/NEW_LOGO (4).png" id="10_jokgy"]
 [ext_resource type="Texture2D" uid="uid://bievao7univdc" path="res://Assets/UI/NEW_LOGO (5).png" id="11_8p4ew"]
 [ext_resource type="Texture2D" uid="uid://dwe7qsawpx7bu" path="res://Assets/UI/NEW_LOGO (6).png" id="12_c11cq"]
-[ext_resource type="Texture2D" uid="uid://b864t5u6upmfu" path="res://Assets/UI/play-button.png" id="13_anrj4"]
 [ext_resource type="Texture2D" uid="uid://b8s35ib37pq2l" path="res://Assets/UI/NEW_LOGO (1).png" id="13_mww5i"]
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="14_eycy4"]
+[ext_resource type="Texture2D" uid="uid://bptmuc4c2esv5" path="res://Assets/UI/play-button (1).png" id="15_21f5l"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="15_fvhru"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="16_p1j64"]
 [ext_resource type="AudioStream" uid="uid://by52yorlkoepd" path="res://Assets/Music/D.MP3" id="17_1geqc"]
@@ -460,7 +460,7 @@ grow_vertical = 0
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = ExtResource("1_vgd5j")
 theme_override_font_sizes/font_size = 100
-theme_override_icons/icon = ExtResource("13_anrj4")
+theme_override_icons/icon = ExtResource("15_21f5l")
 theme_override_styles/disabled_mirrored = ExtResource("14_eycy4")
 theme_override_styles/disabled = ExtResource("14_eycy4")
 theme_override_styles/hover_pressed_mirrored = ExtResource("14_eycy4")

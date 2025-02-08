@@ -108,6 +108,8 @@ var Tot:int = 0
 @onready var average_u: Label = $UNITS/AverageU
 @onready var average_q: Label = $QUALITY/AverageQ
 @onready var average_r: Label = $REVENUE/AverageR
+@onready var tot_sales: Label = $"../../TotSales"
+@onready var tot_releases: Label = $"../../TotReleases"
 
 func calc_average():
 	if Tot > 0:
@@ -117,6 +119,8 @@ func calc_average():
 		average_q.text = " " + str(AvgQual) + " "
 		average_r.text = "$" + str(AvgRev) + " "
 		average_u.text = " " + str(AvgUnits) + " "
+		tot_sales.text = " Total Company Sales: " + str(SumUnits) + " "
+		tot_releases.text = " Total Company Releases: " + str(Tot) + " "
 		average_q.show()
 		average_r.show()
 		average_u.show()

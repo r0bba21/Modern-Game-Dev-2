@@ -27,7 +27,7 @@ func _on_month_timeout() -> void:
 		8:
 			y = randi_range(250,350)
 	stock_one.add_point(Vector2(x, y))
-	var style:StyleBoxFlat = load("res://Assets/UI/PRICE.tres") as StyleBoxFlat
+	var style:StyleBoxFlat = load("res://Assets/UI/GAZ.tres") as StyleBoxFlat
 	if last_y < y:
 		stock_one.default_color = Color("#880023")
 		style.bg_color = Color("#880023")
@@ -135,7 +135,7 @@ func soundfx():
 
 func _on_sale_pressed() -> void:
 	if 0 < Global.Gunits:
-		Global.charge -= sum * 0.8
+		Global.charge -= sum * 0.75
 		initial = 0
 		Global.Gunits = 0
 		sum = 0

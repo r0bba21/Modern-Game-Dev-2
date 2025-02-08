@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/main_menu_ui.gd" id="1_2f11h"]
 [ext_resource type="FontFile" uid="uid://dji5p2gcapptw" path="res://Assets/UI/NewyearCoffee-4nd2D.ttf" id="1_gux6j"]
-[ext_resource type="Texture2D" uid="uid://b864t5u6upmfu" path="res://Assets/UI/play-button.png" id="3_878ii"]
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="3_tsjpw"]
+[ext_resource type="Texture2D" uid="uid://bptmuc4c2esv5" path="res://Assets/UI/play-button (1).png" id="3_xmwoe"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="4_uygc4"]
 [ext_resource type="Texture2D" uid="uid://bas6dymsipyv2" path="res://Assets/UI/mm (3).png" id="6_l7b7d"]
 [ext_resource type="StyleBox" uid="uid://dqutvjhnd0l0t" path="res://Assets/UI/menu_hover_blue.tres" id="6_o2t4c"]
@@ -122,7 +122,7 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 62.0
 offset_top = -413.0
-offset_right = 637.0
+offset_right = 672.0
 offset_bottom = 413.0
 grow_vertical = 2
 theme_override_constants/separation = 30
@@ -133,7 +133,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_gux6j")
 theme_override_font_sizes/font_size = 85
-theme_override_icons/icon = ExtResource("3_878ii")
+theme_override_icons/icon = ExtResource("3_xmwoe")
 theme_override_styles/hover_pressed_mirrored = ExtResource("3_tsjpw")
 theme_override_styles/hover_pressed = ExtResource("3_tsjpw")
 theme_override_styles/hover = ExtResource("3_tsjpw")
@@ -147,7 +147,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_gux6j")
 theme_override_font_sizes/font_size = 85
-theme_override_icons/icon = ExtResource("3_878ii")
+theme_override_icons/icon = ExtResource("3_xmwoe")
 theme_override_styles/hover_pressed_mirrored = ExtResource("3_tsjpw")
 theme_override_styles/hover_pressed = ExtResource("3_tsjpw")
 theme_override_styles/hover = ExtResource("3_tsjpw")

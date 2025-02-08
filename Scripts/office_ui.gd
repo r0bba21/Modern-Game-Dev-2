@@ -7,6 +7,8 @@ func _ready() -> void:
 		LOADGAME()
 
 @onready var pause: Control = $Pause
+@onready var loansB: Button = $Buttons/Loans
+@onready var publisherB: Button = $Buttons/Publisher
 
 func _input(event: InputEvent) -> void: # KEYBOARD SHORTCUTS
 	if event.is_action_pressed("Return to Main Menu"):
@@ -29,6 +31,18 @@ func _input(event: InputEvent) -> void: # KEYBOARD SHORTCUTS
 	if event.is_action_pressed("Load Game"):
 		soundfx()
 		LOADGAME()
+
+func _process(delta: float) -> void:
+	refresh_inprog_ui()
+	refresh_info_ui()
+	if Global.pubs != true:
+		publisherB.hide()
+	if Global.loans != true:
+		loansB.hide()
+	if Global.resM != true:
+		research.hide()
+	if Global.conts != true:
+		contracts.hide()
 
 # TIMERS:
 func newmonth():
@@ -82,8 +96,6 @@ func soundfx():
 
 # REFRESH COMMANDS:
 func REFRESH_ALL():
-	refresh_inprog_ui()
-	refresh_info_ui()
 	refresh_productivity()
 	refresh_dev_summary()
 	refresh_during_ui()
@@ -265,38 +277,38 @@ func _on_genre_item_selected(index:int) -> void:
 	match index:
 		0:
 			genreG = "Adventure"
-			GENREPOP = 0.9
+			GENREPOP = randf_range(0.8,1)
 		1:
 			genreG = "FPS"
-			GENREPOP = 1
+			GENREPOP = randf_range(0.8,1)
 		2:
 			genreG = "RPG"
-			GENREPOP = 0.8
+			GENREPOP = randf_range(0.65,85)
 		3:
 			genreG = "Simulation"
-			GENREPOP = 0.7
+			GENREPOP = randf_range(0.65,85)
 		4:
 			genreG = "Multiplayer"
-			GENREPOP = 1
+			GENREPOP = randf_range(0.8,1)
 		5:
 			genreG = "Fighter"
-			GENREPOP = 0.7
+			GENREPOP = randf_range(0.65,85)
 		6:
 			genreG = "Sports"
-			GENREPOP = 0.9
+			GENREPOP = randf_range(0.65,85)
 		7:
 			genreG = "Action"
-			GENREPOP = 0.9
+			GENREPOP = randf_range(0.8,1)
 		8:
 			genreG = "Gambling"
-			GENREPOP = 0.5
+			GENREPOP = randf_range(0.4,0.7)
 		9:
 			genreG = "Platformer"
-			GENREPOP = 0.6
+			GENREPOP = randf_range(0.4,0.7)
 		10:
 			genreG = "Battle Royale"
-			GENREPOP = 0.8
-	refresh_dev_summary()
+			GENREPOP = randf_range(0.8,1)
+	Mshare()
 
 func _on_size_item_selected(index:int) -> void:
 	soundfx()
@@ -377,6 +389,7 @@ func Mshare():
 		marketshare = 0.7 * GENREPOP
 	if PLATFORM ==4 and AUDIENCE ==3:
 		marketshare = 0.45 * GENREPOP
+	refresh_dev_summary()
 
 var suggestedP:float
 var maxP:float
@@ -1430,20 +1443,6 @@ func _on_dev_prog_timeout() -> void:
 		openPOLstage()
 	if devperc == 100 and in_pol == true:
 		GAMEDONE()
-
-# PROCESS:
-@onready var loansB: Button = $Buttons/Loans
-@onready var publisherB: Button = $Buttons/Publisher
-
-func _process(delta: float) -> void:
-	if Global.pubs != true:
-		publisherB.hide()
-	if Global.loans != true:
-		loansB.hide()
-	if Global.resM != true:
-		research.hide()
-	if Global.conts != true:
-		contracts.hide()
 
 # OFFICE UPGRADES:
 @onready var Up1: Label = $Upgrades/VBoxContainer/Label5
