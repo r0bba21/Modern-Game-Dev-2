@@ -14,7 +14,7 @@
 [ext_resource type="StyleBox" uid="uid://ovt2sr7ttmqp" path="res://Assets/UI/menu_red.tres" id="10_t2qt6"]
 [ext_resource type="StyleBox" uid="uid://ry4swhay83jf" path="res://Assets/UI/menu_hover_green.tres" id="12_7jrpv"]
 [ext_resource type="StyleBox" uid="uid://cym167tr1k6t0" path="res://Assets/UI/menu_green.tres" id="13_1q7ja"]
-[ext_resource type="Texture2D" uid="uid://b864t5u6upmfu" path="res://Assets/UI/play-button.png" id="14_8polb"]
+[ext_resource type="Texture2D" uid="uid://bptmuc4c2esv5" path="res://Assets/UI/play-button (1).png" id="13_6x5u8"]
 [ext_resource type="PackedScene" uid="uid://c6ly1mauueubq" path="res://Scenes/options.tscn" id="16_44c10"]
 [ext_resource type="PackedScene" uid="uid://drunrktpa2lu3" path="res://Scenes/customise.tscn" id="17_n5ery"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="17_ora4m"]
@@ -137,7 +137,7 @@ theme_override_styles/pressed_mirrored = ExtResource("4_n3kv8")
 theme_override_styles/pressed = ExtResource("4_n3kv8")
 theme_override_styles/normal_mirrored = ExtResource("5_urxfb")
 theme_override_styles/normal = ExtResource("5_urxfb")
-text = "Bugs"
+text = "Bug report"
 
 [node name="Tutorial" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -180,7 +180,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_p4epb")
 theme_override_font_sizes/font_size = 100
-theme_override_icons/icon = ExtResource("14_8polb")
+theme_override_icons/icon = ExtResource("13_6x5u8")
 theme_override_styles/disabled_mirrored = ExtResource("12_7jrpv")
 theme_override_styles/disabled = ExtResource("12_7jrpv")
 theme_override_styles/hover_pressed_mirrored = ExtResource("12_7jrpv")

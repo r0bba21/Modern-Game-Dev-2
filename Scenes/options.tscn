@@ -522,5 +522,5 @@ position = Vector2(960, 540)
 [connection signal="item_selected" from="Panel/Labels/Autosave/AUTOSAVE" to="." method="autosave_change"]
 [connection signal="pressed" from="Panel/Labels/Autosave/AUTOSAVE" to="." method="soundfx"]
 [connection signal="pressed" from="Back" to="." method="exit"]
-[connection signal="pressed" from="Save" to="." method="save_settings"]
 [connection signal="pressed" from="Save" to="." method="soundfx"]
+[connection signal="pressed" from="Save" to="." method="save_settings"]

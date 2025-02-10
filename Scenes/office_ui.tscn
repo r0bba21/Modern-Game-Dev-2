@@ -1,4 +1,4 @@
-[gd_scene load_steps=181 format=3 uid="uid://deskdqbrni8oa"]
+[gd_scene load_steps=206 format=3 uid="uid://deskdqbrni8oa"]
 
 [ext_resource type="Script" path="res://Scripts/office_ui.gd" id="1_frgb8"]
 [ext_resource type="AudioStream" uid="uid://tejb4bspjmme" path="res://Assets/Music/M.MP3" id="2_cow7g"]
@@ -84,7 +84,6 @@
 [ext_resource type="Texture2D" uid="uid://ckaefny0enbve" path="res://Assets/UI/design (1).png" id="49_w4bi1"]
 [ext_resource type="Texture2D" uid="uid://cbxhmapiaq53n" path="res://Assets/UI/aud (2).png" id="50_qkusl"]
 [ext_resource type="Texture2D" uid="uid://6swklu0knaea" path="res://Assets/UI/aud (1).png" id="51_tnouw"]
-[ext_resource type="Texture2D" uid="uid://bbgatxi8bvl8v" path="res://Assets/UI/check-mark.png" id="52_ebcv4"]
 [ext_resource type="Texture2D" uid="uid://iestlh4lhflb" path="res://Assets/UI/aud (3).png" id="52_xif8n"]
 [ext_resource type="Texture2D" uid="uid://bl60y21h5t7gv" path="res://Assets/UI/design (2).png" id="53_7reot"]
 [ext_resource type="Texture2D" uid="uid://c721npcgdwn7x" path="res://Assets/UI/cross40.png" id="53_sk8qy"]
@@ -102,6 +101,9 @@
 [ext_resource type="StyleBox" uid="uid://fde4dugad4tj" path="res://Assets/UI/PRICE.tres" id="71_s6m4u"]
 [ext_resource type="StyleBox" uid="uid://dnpyxgjomx2rt" path="res://Assets/UI/info_button.tres" id="72_tw0ff"]
 [ext_resource type="Script" path="res://Scripts/color_picker_button.gd" id="76_5ednd"]
+[ext_resource type="Texture2D" uid="uid://6chrgnk1v6ya" path="res://Assets/UI/new/stocks (2).png" id="77_43crl"]
+[ext_resource type="Texture2D" uid="uid://c358k1dyn3spd" path="res://Assets/UI/new/stocks (3).png" id="78_oyp3x"]
+[ext_resource type="Texture2D" uid="uid://b1rog5drwhh0s" path="res://Assets/UI/new/stocks (1).png" id="79_yw7cb"]
 [ext_resource type="StyleBox" uid="uid://cyku43df0ed4f" path="res://Assets/UI/cont.tres" id="81_jo1jd"]
 [ext_resource type="Script" path="res://Scripts/gsx.gd" id="83_dmspm"]
 [ext_resource type="StyleBox" uid="uid://dho5nls6rw72b" path="res://Assets/UI/GAZ.tres" id="88_26h5l"]
@@ -111,6 +113,25 @@
 [ext_resource type="StyleBox" uid="uid://cjdmlltpvd6c4" path="res://Assets/UI/portfolio.tres" id="102_hr1y0"]
 [ext_resource type="PackedScene" uid="uid://csg1emxhlorwf" path="res://Scenes/pause.tscn" id="105_yxcbe"]
 [ext_resource type="PackedScene" uid="uid://dya08vvxsxkae" path="res://Scenes/bankrupt.tscn" id="106_e8urr"]
+[ext_resource type="Texture2D" uid="uid://bnjdk465f0bfy" path="res://Assets/UI/devstage/running-ninja.png" id="108_407n6"]
+[ext_resource type="Texture2D" uid="uid://d3updudcptnbq" path="res://Assets/UI/devstage/person.png" id="109_gqsj4"]
+[ext_resource type="Texture2D" uid="uid://bex1lnmv0scsj" path="res://Assets/UI/devstage/musical-notes.png" id="110_ctaii"]
+[ext_resource type="Texture2D" uid="uid://c87yjghaome47" path="res://Assets/UI/devstage/paint-brush.png" id="111_3ic5t"]
+[ext_resource type="Texture2D" uid="uid://dbr41la606sds" path="res://Assets/UI/devstage/village.png" id="112_nkk8h"]
+[ext_resource type="Texture2D" uid="uid://c153i68gc6u44" path="res://Assets/UI/devstage/resonance.png" id="113_5yrdo"]
+[ext_resource type="Texture2D" uid="uid://dmxbfv4iv3vqb" path="res://Assets/UI/devstage/cubeforce.png" id="114_c87vo"]
+[ext_resource type="Texture2D" uid="uid://bblpecg1n4id1" path="res://Assets/UI/devstage/highlighter.png" id="115_8rxxp"]
+[ext_resource type="Texture2D" uid="uid://83robelclgta" path="res://Assets/UI/devstage/gp (1).png" id="116_ni7qv"]
+[ext_resource type="Texture2D" uid="uid://hmtyfy7bphit" path="res://Assets/UI/devstage/gp (2).png" id="117_m1b4p"]
+[ext_resource type="Texture2D" uid="uid://cqmgt5ykw0rws" path="res://Assets/UI/devstage/gp (3).png" id="118_cf1hk"]
+[ext_resource type="Texture2D" uid="uid://brcf0wcughu1y" path="res://Assets/UI/devstage/gp (4).png" id="119_04sp1"]
+[ext_resource type="Texture2D" uid="uid://cg0cutouc4mf5" path="res://Assets/UI/devstage/gp (5).png" id="120_wpc0h"]
+[ext_resource type="Texture2D" uid="uid://r3s3afbwhh62" path="res://Assets/UI/devstage/gp (6).png" id="121_ktp8p"]
+[ext_resource type="Texture2D" uid="uid://b2ym24r4wdf7e" path="res://Assets/UI/devstage/p (1).png" id="122_eh1fl"]
+[ext_resource type="Texture2D" uid="uid://7x08shbxxw5j" path="res://Assets/UI/devstage/p (2).png" id="123_7fr8f"]
+[ext_resource type="Texture2D" uid="uid://d1pk2s7ng4qjl" path="res://Assets/UI/devstage/p (3).png" id="124_bqfr8"]
+[ext_resource type="Texture2D" uid="uid://d10b3eb0v6ron" path="res://Assets/UI/devstage/p (4).png" id="125_tevxs"]
+[ext_resource type="Texture2D" uid="uid://dm23ueq8cxe4g" path="res://Assets/UI/devstage/p (5).png" id="126_2v1df"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fuj0"]
 bg_color = Color(0.243137, 0.490196, 0.721569, 0)
@@ -175,12 +196,14 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_soyeo"]
-content_margin_left = 9.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_de36t"]
+content_margin_left = 18.0
 content_margin_top = 2.0
-content_margin_right = 11.0
+content_margin_right = 22.0
 content_margin_bottom = 8.0
-bg_color = Color(1, 1, 1, 0.666667)
+bg_color = Color(1, 1, 1, 1)
+border_width_right = 2
+border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
@@ -202,10 +225,12 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mahn"]
-content_margin_right = 10.0
-bg_color = Color(1, 1, 1, 0.588235)
-border_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnkro"]
+content_margin_left = 8.0
+bg_color = Color(1, 1, 1, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -386,6 +411,50 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icu66"]
+bg_color = Color(0.152941, 0.0941176, 0.180392, 1)
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color(0.0760017, 0.15509, 0.0839422, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vltsv"]
+content_margin_right = 12.0
+bg_color = Color(0.552959, 0.413304, 0.632865, 1)
+border_width_right = 10
+border_width_bottom = 6
+border_color = Color(0.151688, 0.0960499, 0.182038, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34dcf"]
+bg_color = Color(0.054902, 0.145098, 0.196078, 1)
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color(0.0760017, 0.15509, 0.0839422, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ud7uw"]
+content_margin_right = 12.0
+bg_color = Color(0.239899, 0.508976, 0.667758, 1)
+border_width_right = 10
+border_width_bottom = 6
+border_color = Color(0.0544474, 0.144225, 0.195567, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2stft"]
 bg_color = Color(0.0745098, 0.156863, 0.0823529, 1)
@@ -747,6 +816,8 @@ corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
+shadow_color = Color(1, 1, 1, 0.6)
+shadow_size = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeijx"]
 bg_color = Color(0.877356, 0.460065, 0.432479, 1)
@@ -754,12 +825,13 @@ border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
 border_blend = true
-corner_radius_top_left = 9
-corner_radius_top_right = 9
-corner_radius_bottom_right = 9
-corner_radius_bottom_left = 9
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4k0d"]
 bg_color = Color(0.0632298, 0.134671, 0.0704063, 1)
@@ -845,7 +917,7 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 3
-text = "ALPHA - VER. 1.1.1"
+text = "ALPHA - VER. 1.1.2"
 
 [node name="M" type="Panel" parent="Info"]
 layout_mode = 1
@@ -1197,7 +1269,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_y43i7")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_y43i7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_y43i7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7gqmk")
-text = " Save "
+text = " Save"
 alignment = 2
 icon_alignment = 2
 
@@ -1314,14 +1386,13 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
 theme_override_icons/icon = ExtResource("35_b4kck")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_soyeo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_de36t")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_4884h")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4884h")
 
@@ -1331,14 +1402,13 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
 theme_override_icons/icon = ExtResource("36_nxyiy")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_soyeo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_de36t")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_4884h")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4884h")
 
@@ -1348,14 +1418,13 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
 theme_override_icons/icon = ExtResource("37_f64ns")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/hover = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_soyeo")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_soyeo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_de36t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_de36t")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_4884h")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4884h")
 icon_alignment = 2
@@ -1385,7 +1454,14 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
 theme_override_icons/icon = ExtResource("38_c2mfq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8mahn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_lnkro")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lnkro")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_lnkro")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lnkro")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_lnkro")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lnkro")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_lnkro")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lnkro")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_winy8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_winy8")
 text = " Portfolio"
@@ -3245,7 +3321,7 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -512.0
+offset_left = -576.0
 offset_top = -144.5
 offset_right = -55.0
 offset_bottom = 213.5
@@ -3258,26 +3334,27 @@ layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 70
-theme_override_styles/disabled_mirrored = ExtResource("33_0kskp")
-theme_override_styles/disabled = ExtResource("33_0kskp")
-theme_override_styles/hover_pressed_mirrored = ExtResource("33_0kskp")
-theme_override_styles/hover_pressed = ExtResource("33_0kskp")
-theme_override_styles/hover_mirrored = ExtResource("33_0kskp")
-theme_override_styles/hover = ExtResource("33_0kskp")
-theme_override_styles/pressed_mirrored = ExtResource("33_0kskp")
-theme_override_styles/pressed = ExtResource("33_0kskp")
-theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
-theme_override_styles/normal = ExtResource("34_pxscq")
-text = " AGN Stocks "
+theme_override_icons/icon = ExtResource("77_43crl")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/hover = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_icu66")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vltsv")
+text = " AGN Stocks"
+alignment = 0
 
 [node name="Label" type="Label" parent="Stocks/VBoxContainer/a"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -488.0
+offset_left = -501.0
 offset_top = -47.5
-offset_right = -27.0
+offset_right = -40.0
 offset_bottom = 47.5
 grow_vertical = 2
 theme_override_constants/outline_size = 8
@@ -3292,6 +3369,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 70
+theme_override_icons/icon = ExtResource("78_oyp3x")
 theme_override_styles/disabled_mirrored = ExtResource("33_0kskp")
 theme_override_styles/disabled = ExtResource("33_0kskp")
 theme_override_styles/hover_pressed_mirrored = ExtResource("33_0kskp")
@@ -3302,16 +3380,17 @@ theme_override_styles/pressed_mirrored = ExtResource("33_0kskp")
 theme_override_styles/pressed = ExtResource("33_0kskp")
 theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
 theme_override_styles/normal = ExtResource("34_pxscq")
-text = "GSX400"
+text = " GSX400"
+alignment = 0
 
 [node name="Label3" type="Label" parent="Stocks/VBoxContainer/gsx"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -489.0
+offset_left = -502.0
 offset_top = -47.5
-offset_right = -28.0
+offset_right = -41.0
 offset_bottom = 47.5
 grow_vertical = 2
 theme_override_constants/outline_size = 8
@@ -3326,26 +3405,27 @@ layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 70
-theme_override_styles/disabled_mirrored = ExtResource("33_0kskp")
-theme_override_styles/disabled = ExtResource("33_0kskp")
-theme_override_styles/hover_pressed_mirrored = ExtResource("33_0kskp")
-theme_override_styles/hover_pressed = ExtResource("33_0kskp")
-theme_override_styles/hover_mirrored = ExtResource("33_0kskp")
-theme_override_styles/hover = ExtResource("33_0kskp")
-theme_override_styles/pressed_mirrored = ExtResource("33_0kskp")
-theme_override_styles/pressed = ExtResource("33_0kskp")
-theme_override_styles/normal_mirrored = ExtResource("34_pxscq")
-theme_override_styles/normal = ExtResource("34_pxscq")
-text = "Gazdak"
+theme_override_icons/icon = ExtResource("79_yw7cb")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_34dcf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ud7uw")
+text = " Gazdak"
+alignment = 0
 
 [node name="Label2" type="Label" parent="Stocks/VBoxContainer/g"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -490.0
+offset_left = -503.0
 offset_top = -47.5
-offset_right = -29.0
+offset_right = -42.0
 offset_bottom = 47.5
 grow_vertical = 2
 theme_override_constants/outline_size = 8
@@ -6417,6 +6497,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="UNITS" type="VBoxContainer" parent="Portfolio/ScrollContainer/Table"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="TITLEunits" type="Label" parent="Portfolio/ScrollContainer/Table/UNITS"]
@@ -6540,7 +6621,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -498.0
-offset_top = -362.0
+offset_top = -386.0
 offset_right = 894.0
 offset_bottom = 287.0
 grow_horizontal = 2
@@ -6553,10 +6634,10 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -353.0
-offset_top = 263.0
-offset_right = -23.0
-offset_bottom = -262.0
+offset_left = -341.0
+offset_top = 312.0
+offset_right = -24.0
+offset_bottom = -21.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.851188, 0.96804, 0.85339, 1)
@@ -6574,8 +6655,8 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -696.0
-offset_right = 366.0
+offset_left = -357.0
+offset_right = 357.0
 offset_bottom = 91.0
 grow_horizontal = 2
 theme_override_constants/shadow_offset_x = 8
@@ -6648,13 +6729,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("108_407n6")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("108_407n6")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("108_407n6")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("108_407n6")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6666,7 +6747,7 @@ theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "Sprites"
+text = "Characters"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -6687,13 +6768,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("109_gqsj4")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6726,13 +6807,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("110_ctaii")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("110_ctaii")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("110_ctaii")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("110_ctaii")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6765,13 +6846,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("111_3ic5t")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("111_3ic5t")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("111_3ic5t")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("111_3ic5t")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6804,13 +6885,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("112_nkk8h")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("112_nkk8h")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("112_nkk8h")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("112_nkk8h")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6843,13 +6924,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("113_5yrdo")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6897,13 +6978,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("108_407n6")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("108_407n6")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("108_407n6")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("108_407n6")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6936,13 +7017,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("109_gqsj4")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -6975,13 +7056,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("110_ctaii")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("110_ctaii")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("110_ctaii")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("110_ctaii")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7014,13 +7095,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("114_c87vo")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("114_c87vo")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("114_c87vo")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("114_c87vo")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7053,13 +7134,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("112_nkk8h")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("112_nkk8h")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("112_nkk8h")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("112_nkk8h")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7092,13 +7173,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("113_5yrdo")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7146,13 +7227,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("108_407n6")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("108_407n6")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("108_407n6")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("108_407n6")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7185,13 +7266,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("109_gqsj4")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("109_gqsj4")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7224,13 +7305,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("110_ctaii")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("110_ctaii")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("110_ctaii")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("110_ctaii")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7263,13 +7344,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("111_3ic5t")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("111_3ic5t")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("111_3ic5t")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("111_3ic5t")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7302,13 +7383,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("115_8rxxp")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("115_8rxxp")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("115_8rxxp")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("115_8rxxp")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7341,35 +7422,39 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("113_5yrdo")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("113_5yrdo")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
 [node name="Summary" type="Label" parent="DevstageOne"]
-layout_mode = 2
-anchor_left = 0.399
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.399
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -514.408
-offset_top = -237.5
-offset_right = 461.592
-offset_bottom = -44.5
+offset_left = -543.0
+offset_top = -235.5
+offset_right = 543.0
+offset_bottom = -42.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "Pick at least four features for high quality.
-Less features = worse quality but faster
-more features = more quality but longer"
+text = "Pick at least four features for high design quality.
+
+Less features = worse quality but faster dev time
+more features = higher quality but longer dev time"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -7382,9 +7467,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -309.0
-offset_top = -365.0
+offset_top = -327.0
 offset_right = 700.0
-offset_bottom = 284.0
+offset_bottom = 246.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6yiup")
@@ -7397,12 +7482,13 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -390.0
-offset_top = -153.0
+offset_top = -310.0
 offset_right = -31.0
 offset_bottom = -31.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/outline_size = 10
+theme_override_colors/font_color = Color(0.85098, 0.968627, 0.854902, 1)
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover_pressed_mirrored = ExtResource("81_jo1jd")
@@ -7435,9 +7521,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -336.5
-offset_top = -43.5
+offset_top = -22.5
 offset_right = -55.5
-offset_bottom = 329.5
+offset_bottom = 350.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -7470,13 +7556,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("116_ni7qv")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("116_ni7qv")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("116_ni7qv")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("116_ni7qv")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7509,13 +7595,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("117_m1b4p")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("117_m1b4p")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("117_m1b4p")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("117_m1b4p")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7548,13 +7634,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("118_cf1hk")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("118_cf1hk")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("118_cf1hk")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("118_cf1hk")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7587,52 +7673,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("119_04sp1")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("119_04sp1")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("119_04sp1")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
-theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
-icon_alignment = 1
-
-[node name="Innovative" type="Label" parent="DevstageTwo/2D"]
-layout_mode = 2
-theme_override_constants/shadow_offset_x = 8
-theme_override_constants/shadow_offset_y = 8
-theme_override_constants/outline_size = 6
-theme_override_constants/shadow_outline_size = 8
-theme_override_fonts/font = ExtResource("7_xpq5m")
-theme_override_font_sizes/font_size = 40
-text = "Innovative"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="Innvoative" type="CheckButton" parent="DevstageTwo/2D/Innovative"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 7.0
-offset_top = -24.0
-offset_right = 55.0
-offset_bottom = 24.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
-theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
-theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
-theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
-theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
-theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("119_04sp1")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7665,13 +7712,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("120_wpc0h")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("120_wpc0h")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("120_wpc0h")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("120_wpc0h")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7704,13 +7751,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("121_ktp8p")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("121_ktp8p")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("121_ktp8p")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("121_ktp8p")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7721,18 +7768,18 @@ anchor_top = 0.5
 anchor_right = 0.399
 anchor_bottom = 0.5
 offset_left = -394.591
-offset_top = -237.5
+offset_top = -216.5
 offset_right = 581.409
-offset_bottom = -44.5
+offset_bottom = -23.5
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
-text = "Pick at least five features for high quality.
+text = "Pick at least four features for high quality.
 Less features = worse quality but faster
-more features = more quality but longer"
+more features = better quality but longer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -7745,9 +7792,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -309.0
-offset_top = -365.0
+offset_top = -327.0
 offset_right = 685.0
-offset_bottom = 284.0
+offset_bottom = 246.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6yiup")
@@ -7759,13 +7806,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -388.0
-offset_top = -151.0
-offset_right = -31.0
-offset_bottom = -31.0
+offset_left = -399.0
+offset_top = -301.0
+offset_right = -42.0
+offset_bottom = -44.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/outline_size = 10
+theme_override_colors/font_color = Color(0.85098, 0.968627, 0.854902, 1)
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_n4k0d")
@@ -7833,13 +7881,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("120_wpc0h")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("120_wpc0h")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("120_wpc0h")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("120_wpc0h")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7872,13 +7920,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("122_eh1fl")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("122_eh1fl")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("122_eh1fl")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("122_eh1fl")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7911,13 +7959,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("123_7fr8f")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("123_7fr8f")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("123_7fr8f")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("123_7fr8f")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7950,13 +7998,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("124_bqfr8")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("124_bqfr8")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("124_bqfr8")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("124_bqfr8")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -7989,13 +8037,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("125_tevxs")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("125_tevxs")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("125_tevxs")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("125_tevxs")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -8028,13 +8076,13 @@ theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1cft")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xeijx")
-theme_override_icons/checked = ExtResource("52_ebcv4")
+theme_override_icons/checked = ExtResource("126_2v1df")
 theme_override_icons/unchecked = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled = ExtResource("126_2v1df")
 theme_override_icons/unchecked_disabled = ExtResource("53_sk8qy")
-theme_override_icons/checked_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_mirrored = ExtResource("126_2v1df")
 theme_override_icons/unchecked_mirrored = ExtResource("53_sk8qy")
-theme_override_icons/checked_disabled_mirrored = ExtResource("52_ebcv4")
+theme_override_icons/checked_disabled_mirrored = ExtResource("126_2v1df")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("53_sk8qy")
 icon_alignment = 1
 
@@ -8045,9 +8093,9 @@ anchor_top = 0.5
 anchor_right = 0.399
 anchor_bottom = 0.5
 offset_left = -396.606
-offset_top = -237.5
+offset_top = -207.5
 offset_right = 597.394
-offset_bottom = -44.5
+offset_bottom = -14.5
 theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 6
@@ -8056,7 +8104,7 @@ theme_override_fonts/font = ExtResource("7_xpq5m")
 theme_override_font_sizes/font_size = 40
 text = "Pick at least four features for high quality.
 Less features = worse quality but faster
-more features = more quality but longer"
+more features = better quality but longer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -8144,19 +8192,19 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 
-[connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Loans" to="." method="_on_loans_pressed"]
+[connection signal="pressed" from="Buttons/Loans" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Hire" to="." method="open_staff"]
 [connection signal="pressed" from="Buttons/RealEstate" to="." method="RealEstateButton"]
 [connection signal="pressed" from="Buttons/Stocks" to="." method="_on_stocks_pressed"]
-[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Publisher" to="." method="_on_publisher_pressed"]
+[connection signal="pressed" from="Buttons/Publisher" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Contracts" to="." method="_on_contracts_pressed"]
 [connection signal="pressed" from="Buttons/Research" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Research" to="Research" method="_on_research_pressed"]
 [connection signal="pressed" from="Buttons/Develop" to="." method="_on_develop_pressed"]
-[connection signal="pressed" from="Buttons/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Buttons/Save" to="." method="SAVEGAME"]
+[connection signal="pressed" from="Buttons/Save" to="." method="soundfx"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Pause" to="." method="soundfx"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/Pause" to="Company/VBoxContainer/HBoxContainer" method="_on_pause_pressed"]
 [connection signal="pressed" from="Company/VBoxContainer/HBoxContainer/1x" to="." method="soundfx"]
@@ -8239,8 +8287,8 @@ anchor_bottom = 0.5
 [connection signal="pressed" from="Market/Tasks/S" to="." method="_on_s_pressed"]
 [connection signal="text_submitted" from="Market/BUDGET" to="." method="_on_budget_text_submitted"]
 [connection signal="pressed" from="Market/Back2" to="." method="_on_back_p_pressed"]
-[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="pressed" from="Publish/Continue" to="." method="onmarket"]
+[connection signal="pressed" from="Publish/Continue" to="." method="soundfx"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConA" to="." method="_on_con_a_pressed"]
 [connection signal="pressed" from="Invitation/HBoxContainer/ConD" to="." method="_on_con_d_pressed"]
 [connection signal="pressed" from="Convention/CloseConv" to="." method="_on_close_conv_pressed"]
@@ -8281,7 +8329,6 @@ anchor_bottom = 0.5
 [connection signal="toggled" from="DevstageTwo/2D/Difficulty/Difficulty" to="." method="GPchecker"]
 [connection signal="toggled" from="DevstageTwo/2D/Procedural/Procedural" to="." method="GPchecker"]
 [connection signal="toggled" from="DevstageTwo/2D/Story/Story" to="." method="GPchecker"]
-[connection signal="toggled" from="DevstageTwo/2D/Innovative/Innvoative" to="." method="GPchecker"]
 [connection signal="toggled" from="DevstageTwo/2D/Open World/OpenWorld" to="." method="GPchecker"]
 [connection signal="toggled" from="DevstageTwo/2D/Immersive/Immersive" to="." method="GPchecker"]
 [connection signal="pressed" from="DevstageThree/ContinueOne" to="." method="POLtime"]

@@ -31,10 +31,17 @@ func _input(event: InputEvent) -> void: # KEYBOARD SHORTCUTS
 	if event.is_action_pressed("Load Game"):
 		soundfx()
 		LOADGAME()
+	if event.is_action_pressed("Speed Up"):
+		soundfx()
+	if event.is_action_pressed("0x Speed"):
+		soundfx()
+	if event.is_action_pressed("1x Speed"):
+		soundfx()
 
 func _process(delta: float) -> void:
 	refresh_inprog_ui()
 	refresh_info_ui()
+	FAC = (SIZE + DESIGN + TECH)
 	if Global.pubs != true:
 		publisherB.hide()
 	if Global.loans != true:
@@ -73,6 +80,7 @@ var highS: int = 0
 var lowS: int = 0
 var medS:int = 0
 var expenses:int
+var FAC:int
 
 # BUTTON SFX:
 @onready var mouse: AudioStreamPlayer2D = $Sounds/Mouse
@@ -215,14 +223,9 @@ func refresh_dev_summary():
 	suggest()
 	Mshare()
 	if Global.research_level > 3:
-		months_l.text = str(devtime / 10) + " Months"
+		months_l.text = str((2.7 + (FAC / 2)) * 10) + " Months"
 	else:
 		months_l.text = "??? Months"
-	if Global.research_level > 3:
-		var share:int = marketshare * 100
-		m_share_l.text = str(share)+ "% Marketshare"
-	else:
-		m_share_l.text = "???% Marketshare"
 	if Global.research_level > 2:
 		price_l.text = "$" + str(maxP)
 	else:
@@ -389,7 +392,11 @@ func Mshare():
 		marketshare = 0.7 * GENREPOP
 	if PLATFORM ==4 and AUDIENCE ==3:
 		marketshare = 0.45 * GENREPOP
-	refresh_dev_summary()
+	if Global.research_level > 3:
+		var share:int = marketshare * 100
+		m_share_l.text = str(share)+ "% Marketshare"
+	else:
+		m_share_l.text = "???% Marketshare"
 
 var suggestedP:float
 var maxP:float
@@ -409,7 +416,6 @@ func suggest():
 			consolefac = 30
 		4:
 			consolefac = 12.5
-	var FAC = (SIZE + DESIGN + TECH)
 	maxP = (FAC * consolefac * Global.priceM) / division
 	suggestedP = (maxP - randi_range(0,6)) * (quality / 90)
 	maxP = round(maxP * 100.0) / 100
@@ -434,10 +440,11 @@ func PUBLISH():
 		refresh_popularity()
 		pubMOD = 1
 		pubCut = 1
-	var FAC = (SIZE + DESIGN + TECH)
-	quality = (randf_range(0.6, 1.1) * stagesFAC) * FAC * 3.75
-	if quality > 100:
-		quality = 100
+	quality = stagesFAC * FAC * 3.75
+	var random_factor = randf_range(-0.05, 0.05)
+	quality += random_factor * quality
+	if quality > 105:
+		quality = 105
 	Global.LatestQual = quality
 	sales = ((universe * marketshare) * (((popularity * 0.35) + (quality * 0.65)) / 100)) * Global.salesM
 	Global.LatestUnits = sales
@@ -962,6 +969,8 @@ func RealEstateButton():
 var warning_shown = false
 
 func warn_bankruptcy():
+	_on_back_p_pressed()
+	Engine.time_scale = 0
 	bankruptcy_warning.show()
 	warning_shown = true
 	soundfx()
@@ -1127,7 +1136,9 @@ func SAVEGAME():
 	file.store_var(Global.fansM)
 	file.store_var(Global.expM)
 	file.store_var(Global.CopiesSold)
-	file.store_var(Global.Sunits)
+	file.store_var(Global.Gunits)
+	file.store_var(Global.GSXunits)
+	file.store_var(Global.Aunits)
 	file.close()
 	print("saved file: " + str(Global.slot))
 
@@ -1175,7 +1186,9 @@ func LOADGAME():
 	Global.fansM = file.get_var(Global.fansM)
 	Global.expM = file.get_var(Global.expM)
 	Global.CopiesSold = file.get_var(Global.CopiesSold)
-	Global.LogoID = file.get_var(Global.Sunits)
+	Global.Gunits = file.get_var(Global.Gunits)
+	Global.GSXunits = file.get_var(Global.GSXunits)
+	Global.Aunits = file.get_var(Global.Aunits)
 	file.close()
 	if in_loan != false:
 		refresh_loan()
@@ -1249,6 +1262,8 @@ func refresh_TWOdphase(): # DESIGN 2D
 		6:
 			dphasemod = 1.4
 	dstageog = dphasemod
+	if FAC > 3:
+		dphasemod += (FAC / 2) - 1
 
 func threeDchecker(toggled_on: bool) -> void: # DESIGN 3D
 	soundfx()
@@ -1273,7 +1288,8 @@ func refresh_THREEdphase(): # DESIGN 3D
 		6:
 			dphasemod = 1.4
 	dstageog = dphasemod
-	dphasemod += 1
+	if FAC > 3:
+		dphasemod += (FAC / 2) - 1
 
 func HYchecker(toggled_on: bool) -> void: # DESIGN HYBRID
 	soundfx()
@@ -1298,7 +1314,8 @@ func refresh_HYdphase(): # DESIGN HYBRID
 		6:
 			dphasemod = 1.4
 	dstageog = dphasemod
-	dphasemod += 2
+	if FAC > 3:
+		dphasemod += (FAC / 2) - 1
 
 func GPchecker(toggled_on: bool) -> void: # GAMEPLAY
 	
@@ -1311,30 +1328,21 @@ func GPchecker(toggled_on: bool) -> void: # GAMEPLAY
 func refresh_GPphase(): # GAMEPLAY
 	soundfx()
 	match amtcheckedGSTAGE:
-		0:
-			print("AMTCHECKED for g stage is zero")
 		1:
-			gstagemod = 0.2
-			gstageog = 0.2
+			gstagemod = 0.15
 		2:
-			gstagemod = 0.4
-			gstageog = 0.4
+			gstagemod = 0.5
 		3:
-			gstagemod = 0.6
-			gstageog = 0.6
+			gstagemod = 0.75
 		4:
-			gstagemod = 0.8
-			gstageog = 0.8
-		5:
 			gstagemod = 1
-			gstageog = 1
-		6:
+		5:
 			gstagemod = 1.2
-			gstageog = 1.2
-		7:
+		6:
 			gstagemod = 1.4
-			gstageog = 1.4
-	gstagemod += (SIZE - 1)
+	gstageog = gstagemod
+	if FAC > 3:
+		gstagemod += (FAC / 2) - 1
 
 func POLchecker(toggled_on: bool) -> void: # POLISH
 	if toggled_on == true:
@@ -1346,27 +1354,21 @@ func POLchecker(toggled_on: bool) -> void: # POLISH
 func refresh_POLphase(): # POLISH
 	soundfx()
 	match amtcheckedPOLISH:
-		0:
-			print("AMTCHECKED for POL stage is zero")
 		1:
 			pstagemod = 0.15
-			pstageog = 0.15
 		2:
 			pstagemod = 0.5
-			pstageog = 0.5
 		3:
 			pstagemod = 0.75
-			pstageog = 0.75
 		4:
 			pstagemod = 1
-			pstageog = 1
 		5:
 			pstagemod = 1.2
-			pstageog = 1.2
 		6:
 			pstagemod = 1.4
-			pstageog = 1.4
-	pstagemod += (SIZE - 1)
+	pstageog = pstagemod
+	if FAC > 3:
+		gstagemod += (FAC / 2) - 1
 
 # DEV CYCLE (TIME MANAGEMENT):
 @onready var dev_prog: Timer = $Timers/DevProg
@@ -1381,13 +1383,14 @@ var in_pol = false
 func openDESstage():
 	refreshDstage()
 	devstage_one.show()
+	Engine.time_scale = 0
 	in_des = true
 
 func destime():
 	soundfx()
 	refresh_productivity()
 	dev_prog.wait_time = float((0.9 * dphasemod) / productivity)
-	print(str(float((0.4 * dphasemod) / productivity)) + " DESIGN timer")
+	print(str(float((0.9 * dphasemod) / productivity)) + " DESIGN timer")
 	dev_prog.start()
 	devstage_one.hide()
 	devperc = 0
@@ -1398,13 +1401,14 @@ func openGPstage():
 	in_gp = true
 	devstage_two.show()
 	devperc = 0
+	Engine.time_scale = 0
 	print(str(dstageog) + "dstage")
 
 func GPtime():
 	soundfx()
 	refresh_productivity()
-	dev_prog.wait_time = float((1 * gstagemod) / productivity)
-	print(str(float((0.6 * gstagemod) / productivity)) + " GP timer")
+	dev_prog.wait_time = float(gstagemod / productivity)
+	print(str(float(gstagemod / productivity)) + " GP timer")
 	dev_prog.start()
 	devstage_two.hide()
 
@@ -1414,13 +1418,14 @@ func openPOLstage():
 	in_pol = true
 	devstage_three.show()
 	devperc = 0
+	Engine.time_scale = 0
 	print(str(gstageog) + "gstage")
 
 func POLtime():
 	soundfx()
 	refresh_productivity()
 	dev_prog.wait_time = float((0.8 * pstagemod) / productivity)
-	print(str(float((0.4 * pstagemod) / productivity)) + " POLISH timer")
+	print(str(float((0.8 * pstagemod) / productivity)) + " POLISH timer")
 	dev_prog.start()
 	devstage_three.hide()
 
@@ -1432,6 +1437,7 @@ func GAMEDONE():
 	print(str(stagesFAC) + "STAGES FACTOR")
 	in_pol = false
 	dev_prog.stop()
+	Engine.time_scale = 0
 	PUBLISH()
 
 func _on_dev_prog_timeout() -> void:

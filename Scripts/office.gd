@@ -59,12 +59,12 @@ func pc_col():
 	if Global.in_research != false:
 		PC.emission_enabled = true
 		PC.emission = "85ffff"
-		PC.emission_energy_multiplier = 1.8
+		PC.emission_energy_multiplier = 1.75
 	if Global.gameinprog != false:
 		PC.emission_enabled = true
 		PC.emission = "85ff87"
-		PC.emission_energy_multiplier = 1.9
+		PC.emission_energy_multiplier = 1.75
 	if Global.in_contract != false:
 		PC.emission_enabled = true
 		PC.emission = "ff8369"
-		PC.emission_energy_multiplier = 1.7
+		PC.emission_energy_multiplier = 1.75
